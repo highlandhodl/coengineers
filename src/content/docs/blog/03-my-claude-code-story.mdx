@@ -1,0 +1,167 @@
+---
+title: My Claude Code Story
+description: How one tool changed everything about how I work
+---
+
+import { Card, CardGrid, Aside, Badge, Steps } from '@astrojs/starlight/components';
+import EmailSignup from '../../../components/EmailSignup.astro';
+
+# My Claude Code Story
+
+<Badge text="Week 1" variant="note" /> <Badge text="5 min read" variant="tip" />
+
+I've tried every AI tool going. This is the one that stuck.
+
+---
+
+## The Problem With Every Other Tool
+
+Before Claude Code, my AI workflow looked like this:
+
+<Steps>
+  1. Open ChatGPT in a browser tab 2. Copy content from a file 3. Paste into chat 4. Wait for
+  response 5. Copy response 6. Paste into a new file 7. Repeat 47 times 8. Lose the will to live
+</Steps>
+
+Every. Single. Time.
+
+The AI was useful. The workflow was painful. I spent more time copying and pasting than actually thinking.
+
+---
+
+## What Makes Claude Code Different
+
+Claude Code isn't a chatbot. It's an AI that can actually _do things_.
+
+<CardGrid>
+  <Card title="It reads your files" icon="document">
+    No more copy-paste. Point Claude at a folder and it reads everything. Context? Handled.
+  </Card>
+  <Card title="It writes files directly" icon="pencil">
+    Output goes straight to your filesystem. No more copying responses into documents.
+  </Card>
+  <Card title="It runs commands" icon="laptop">
+    Need to process something? Convert a format? Claude can run terminal commands directly.
+  </Card>
+  <Card title="It chains everything" icon="random">
+    Read this file, transform it, write it there, then do the same for the next 50. One command.
+  </Card>
+</CardGrid>
+
+---
+
+## My "Holy Shit" Moment
+
+Two weeks after installing Claude Code, I had a task:
+
+> Process 12 hours of interview recordings into structured case studies.
+
+Old workflow:
+
+- Transcribe with Whisper (manual)
+- Clean up transcripts (manual)
+- Extract key quotes (manual)
+- Structure into case study format (manual)
+- Repeat for each interview
+
+Time estimate: 3 days.
+
+With Claude Code, I wrote one slash command:
+
+```bash
+/process-interview
+```
+
+It:
+
+1. Found all audio files in the folder
+2. Ran Whisper on each one
+3. Cleaned up the transcripts
+4. Extracted key themes and quotes
+5. Generated structured case studies
+6. Saved everything with proper filenames
+
+Time taken: **47 minutes**. While I made coffee.
+
+<Aside type="tip" title="This is the course">
+  That slash command? That's Day 25. You'll build it yourself.
+</Aside>
+
+---
+
+## What I've Built Since
+
+Here's a sample of the automations running in my Claude Code setup:
+
+| Command          | What It Does                                     | Time Saved       |
+| ---------------- | ------------------------------------------------ | ---------------- |
+| `/meeting-notes` | Transforms raw transcripts into structured notes | 30 min → 2 min   |
+| `/blog-draft`    | Turns voice memos into blog post outlines        | 2 hours → 10 min |
+| `/deck-prep`     | Creates Gamma-ready presentation content         | 1 day → 1 hour   |
+| `/newsletter`    | Assembles weekly newsletter from notes           | 3 hours → 15 min |
+| `/proposal`      | Generates client proposals from briefs           | 4 hours → 30 min |
+
+Each one took an afternoon to build. Each one saves hours every week.
+
+---
+
+## Why Not Just Use ChatGPT?
+
+Fair question. ChatGPT is great for:
+
+- Quick questions
+- Brainstorming
+- One-off tasks
+
+But for **repeated workflows**? For **file processing**? For **anything involving your actual work files**?
+
+ChatGPT hits a wall:
+
+- No file system access
+- No command execution
+- No persistent context
+- No automation
+
+Claude Code breaks through that wall.
+
+<Card title="The difference">ChatGPT is a conversation. Claude Code is a tool.</Card>
+
+---
+
+## The Learning Curve
+
+I won't lie — there's a curve.
+
+If you've never used a terminal, the first few days will feel unfamiliar. But here's the thing: you don't need to become a developer.
+
+You need to learn:
+
+- How to navigate folders
+- How to run a slash command
+- How to read an error message
+
+That's it. Three skills. Week 1 of the course covers all of them.
+
+---
+
+## Is It Worth It?
+
+Quick maths:
+
+| Investment                    | Return                       |
+| ----------------------------- | ---------------------------- |
+| 31 days × 30 minutes          | **15.5 hours** learning      |
+| 5 hours/week saved × 50 weeks | **250 hours** saved per year |
+
+That's a 16x return on time invested. In the first year alone.
+
+---
+
+## What's Next?
+
+Next week we get into the course itself. Starting with: **What You'll Learn** — a week-by-week breakdown of the journey.
+
+<EmailSignup
+  heading="Want to follow along?"
+  subheading="Get each post delivered to your inbox. No spam, ever."
+/>

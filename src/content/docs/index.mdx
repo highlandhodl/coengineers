@@ -1,0 +1,48 @@
+---
+title: 31 Days of Claude Code
+description: From chaos to production assets. No coding required.
+template: splash
+hero:
+  tagline: A free 31-day course teaching you to automate your workflow with Claude Code. Start learning today.
+  actions:
+    - text: Start Free Course
+      link: /getting-started/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: Watch on YouTube
+      link: https://www.youtube.com/@coengineers
+      icon: external
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import EmailSignup from '../../components/EmailSignup.astro';
+
+<CardGrid stagger>
+  <LinkCard
+    title="Week 1: Foundations"
+    href="/week-1/overview/"
+    description="Your first conversation, folder structure, project memory, templates, daily notes, and custom slash commands."
+  />
+  <LinkCard
+    title="Week 2: Content Processing"
+    href="/week-2/overview/"
+    description="Transform meeting transcripts, voice memos, YouTube videos, PDFs, web pages, and emails into structured notes."
+  />
+  <LinkCard
+    title="Week 3: Creative Outputs"
+    href="/week-3/overview/"
+    description="Generate presentations, image prompts, audio scripts, diagrams, social content, and video briefs."
+  />
+  <LinkCard
+    title="Week 4: Building Software"
+    href="/week-4/overview/"
+    description="Spec-driven development: from product idea to shipped feature in 7 days."
+  />
+  <LinkCard
+    title="Bonus: Capstone"
+    href="/bonus/overview/"
+    description="BMAD Method, PRP Framework, and shipping your own project."
+  />
+</CardGrid>
+
+<EmailSignup heading="Get course updates and tips" />

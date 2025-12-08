@@ -1,0 +1,357 @@
+/* Google Fonts import - must be first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* CoEngineers Brand Styles
+   Bitcoin Orange + Claude-inspired neutrals
+   ========================================= */
+
+/* Starlight colour overrides */
+:root {
+  /* Accent - Bitcoin Orange */
+  --sl-color-accent-low: #402806;
+  --sl-color-accent: #f7931a;
+  --sl-color-accent-high: #fef3e2;
+
+  /* Text colours */
+  --sl-color-white: #fafaf9;
+  --sl-color-gray-1: #f5f5f4;
+  --sl-color-gray-2: #e7e5e4;
+  --sl-color-gray-3: #d6d3d1;
+  --sl-color-gray-4: #a8a29e;
+  --sl-color-gray-5: #78716c;
+  --sl-color-gray-6: #57534e;
+
+  /* Dark mode backgrounds (default) */
+  --sl-color-black: #1c1917;
+  --sl-color-bg: #1c1917;
+  --sl-color-bg-nav: #292524;
+  --sl-color-bg-sidebar: #292524;
+  --sl-color-hairline-light: #44403c;
+  --sl-color-hairline: #44403c;
+
+  /* Typography */
+  --sl-font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --sl-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /* Font sizes */
+  --sl-text-h1: 2.25rem;
+  --sl-text-h2: 1.5rem;
+  --sl-text-h3: 1.25rem;
+  --sl-text-h4: 1.125rem;
+  --sl-text-body: 1rem;
+  --sl-text-sm: 0.875rem;
+  --sl-text-xs: 0.75rem;
+}
+
+/* Light mode overrides */
+:root[data-theme='light'] {
+  --sl-color-accent-low: #fef3e2;
+  --sl-color-accent: #f7931a;
+  --sl-color-accent-high: #402806;
+
+  /* Backgrounds - warm cream like Claude */
+  --sl-color-bg: #faf8f5;
+  --sl-color-bg-nav: #f5f3ef;
+  --sl-color-bg-sidebar: #f5f3ef;
+  --sl-color-hairline-light: #ebe8e3;
+  --sl-color-hairline: #ddd9d2;
+
+  /* Text colours - CRITICAL: invert grays for light mode */
+  --sl-color-text: #1c1917;
+  --sl-color-text-accent: #c77a15;
+
+  /* Invert gray scale for light mode (dark text on light bg) */
+  --sl-color-white: #1c1917;
+  --sl-color-gray-1: #292524;
+  --sl-color-gray-2: #44403c;
+  --sl-color-gray-3: #57534e;
+  --sl-color-gray-4: #78716c;
+  --sl-color-gray-5: #a8a29e;
+  --sl-color-gray-6: #d6d3d1;
+  --sl-color-black: #fafaf9;
+
+  /* Headings */
+  --sl-color-heading: #1c1917;
+}
+
+/* Link styling with Bitcoin Orange */
+a {
+  color: var(--sl-color-accent);
+}
+
+a:hover {
+  color: #e8850f;
+}
+
+/* Code block styling */
+pre {
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.5rem;
+}
+
+code {
+  font-family: var(--sl-font-mono);
+  background: var(--sl-color-bg-nav);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+/* Button-like links */
+.sl-link-button {
+  background: var(--sl-color-accent) !important;
+  border-color: var(--sl-color-accent) !important;
+  color: white !important;
+}
+
+.sl-link-button:hover {
+  background: #e8850f !important;
+  border-color: #e8850f !important;
+  color: white !important;
+}
+
+/* Sidebar active state */
+[aria-current='page'] {
+  background: rgba(247, 147, 26, 0.1);
+  border-left: 3px solid var(--sl-color-accent);
+}
+
+/* Custom video wrapper */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--sl-color-bg-nav);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Email signup styling - base overrides for global consistency */
+.email-signup {
+  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .email-signup {
+    padding: 2rem;
+  }
+}
+
+/* Countdown timer styling */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.countdown-unit {
+  text-align: center;
+  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  min-width: 5rem;
+}
+
+.countdown-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--sl-color-accent);
+  font-family: var(--sl-font-mono);
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--sl-color-gray-4);
+  margin-top: 0.25rem;
+}
+
+/* Slash command display */
+.slash-command {
+  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-accent);
+  border-left: 4px solid var(--sl-color-accent);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-family: var(--sl-font-mono);
+}
+
+.slash-command code {
+  font-size: 1.125rem;
+  color: var(--sl-color-accent);
+  background: transparent;
+  padding: 0;
+}
+
+/* ========================================
+   Mobile Responsiveness
+   ======================================== */
+
+/* Mobile-first base styles */
+@media (max-width: 639px) {
+  /* Reduce base font sizes on mobile */
+  :root {
+    --sl-text-h1: 1.75rem;
+    --sl-text-h2: 1.25rem;
+    --sl-text-h3: 1.125rem;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  /* Countdown timer wrapping on mobile */
+  .countdown {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .countdown-unit {
+    padding: 0.75rem 1rem;
+    min-width: 4rem;
+  }
+
+  .countdown-value {
+    font-size: 1.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.625rem;
+  }
+
+  /* Card grid single column on mobile */
+  .card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* Email signup mobile tweaks */
+  .email-signup {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .email-signup h3 {
+    font-size: 1rem;
+  }
+
+  /* Buttons full width on mobile */
+  .sl-link-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+  }
+
+  /* Better touch targets */
+  a,
+  button {
+    min-height: 44px;
+  }
+
+  /* Reduce content padding */
+  .sl-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .countdown-unit {
+    padding: 1rem 1.25rem;
+    min-width: 5rem;
+  }
+
+  .countdown-value {
+    font-size: 1.75rem;
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+  .countdown-unit {
+    padding: 1.25rem 1.75rem;
+    min-width: 6rem;
+  }
+
+  .countdown-value {
+    font-size: 2.5rem;
+  }
+}
+
+/* ========================================
+   Mobile Hamburger Menu Fix
+   ======================================== */
+
+@media (max-width: 50rem) {
+  /* Starlight mobile menu button - fix stretched ellipse */
+  starlight-menu-button button,
+  .sl-mobile-menu-button,
+  header button[aria-expanded] {
+    aspect-ratio: 1 / 1;
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    border-radius: 0.375rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  starlight-menu-button button svg,
+  header button[aria-expanded] svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* ========================================
+   Reference Hub Callout Styling
+   ======================================== */
+
+.reference-hub-callout {
+  background: var(--sl-color-accent-low);
+  border-left: 4px solid var(--sl-color-accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.reference-hub-callout p {
+  margin: 0;
+}
+
+.reference-hub-callout code {
+  background: var(--sl-color-bg-nav);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}

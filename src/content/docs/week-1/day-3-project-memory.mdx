@@ -1,0 +1,51 @@
+---
+title: 'Day 3: Project Memory'
+description: 'Create CLAUDE.md files so Claude remembers your project context'
+day: 3
+week: 1
+---
+
+import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
+
+<ReferenceHubCallout command="/w1.d3" />
+
+## Start the Lesson
+
+<SlashCommand code="/w1.d3" label="Give Claude project memory" />
+
+## What You'll Learn
+
+- Understand what CLAUDE.md files are and why they matter
+- Create a CLAUDE.md file with project-specific instructions
+- Update and refine instructions based on what you learn
+- Recognise how Claude Code uses this memory across conversations
+
+## The Scenario
+
+Jamie keeps explaining the same things to Claude. "We're a whisky distillery... we use metric measurements... we write in British English..." There's a better way: CLAUDE.md gives Claude persistent memory.
+
+## Key Concepts
+
+| Concept             | Description                                                    |
+| ------------------- | -------------------------------------------------------------- |
+| **CLAUDE.md**       | A special file Claude reads at the start of every conversation |
+| **Project Context** | Description, tech stack, goals, and current focus              |
+| **Preferences**     | Language preferences, coding standards, communication style    |
+| **Hierarchy**       | Global (home directory) vs project-level CLAUDE.md files       |
+
+## What You'll Create
+
+- `CLAUDE.md` in your project root with personalised context
+- Instructions Claude follows automatically in every conversation
+
+## Quick Reference
+
+- **Location**: Place CLAUDE.md in your project root
+- **Sections**: Project Description, Preferences, Coding Standards, Current Focus
+- **Global vs Local**: Home directory = all projects, project folder = this project only
+- **Keep it concise**: Claude reads it every time - brevity matters
+
+---
+
+**Navigation:** [Day 2: Your Digital Home](/week-1/day-2-your-digital-home/) | [Day 4: Template Factory](/week-1/day-4-template-factory/)

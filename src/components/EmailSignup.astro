@@ -1,0 +1,397 @@
+---
+/**
+ * Email Signup Component
+ *
+ * Captures email addresses with GDPR consent.
+ * Progressive enhancement: works without JS, enhanced with JS.
+ *
+ * Usage:
+ * <EmailSignup />
+ * <EmailSignup source="community-page" />
+ * <EmailSignup heading="Get notified" subheading="No spam, ever." />
+ */
+
+interface Props {
+  heading?: string;
+  subheading?: string;
+  buttonText?: string;
+  source?: 'website' | 'homepage' | 'community-page' | 'day-page';
+}
+
+const {
+  heading = 'Get notified when each day drops',
+  subheading = 'No spam. Unsubscribe anytime.',
+  buttonText = 'Subscribe',
+  source = 'website',
+} = Astro.props;
+
+// Generate unique ID for this instance
+const formId = `email-signup-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<div class="email-signup" data-email-signup>
+  <h3>{heading}</h3>
+
+  <form
+    id={formId}
+    class="email-signup-form"
+    method="POST"
+    action="/api/subscribe"
+    data-source={source}
+  >
+    <div class="email-signup-fields">
+      <input
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        autocomplete="email"
+        aria-label="Email address"
+      />
+      <input type="hidden" name="source" value={source} />
+      <button type="submit">
+        <span class="button-text">{buttonText}</span>
+        <span class="button-loading" aria-hidden="true">
+          <svg
+            class="spinner"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+            <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <label class="email-signup-consent">
+      <input type="checkbox" name="consent" required />
+      <span>I agree to receive email updates about this course</span>
+    </label>
+  </form>
+
+  <div class="email-signup-message email-signup-success" role="alert" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M9 12l2 2 4-4"></path>
+    </svg>
+    <span>You're in! Check your inbox.</span>
+  </div>
+
+  <div class="email-signup-message email-signup-error" role="alert" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M15 9l-6 6M9 9l6 6"></path>
+    </svg>
+    <span class="error-text">Something went wrong. Please try again.</span>
+  </div>
+
+  <p class="email-signup-note">{subheading}</p>
+  <p class="email-signup-privacy">
+    We'll only email you about this course. View our <a href="/privacy">Privacy Policy</a>.
+  </p>
+</div>
+
+<style>
+  .email-signup {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .email-signup h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .email-signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .email-signup-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .email-signup-fields {
+      flex-direction: row;
+    }
+  }
+
+  .email-signup input[type='email'] {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.5rem;
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    font-family: var(--sl-font);
+    font-size: 1rem;
+    min-height: 3.25rem;
+    transition:
+      border-color 0.2s,
+      outline 0.2s;
+  }
+
+  .email-signup input[type='email']:focus {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 2px;
+    border-color: var(--sl-color-accent);
+  }
+
+  .email-signup input[type='email']:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+  }
+
+  .email-signup button {
+    position: relative;
+    padding: 1rem 2rem;
+    background: var(--sl-color-accent);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      opacity 0.2s;
+    min-height: 3.25rem;
+    white-space: nowrap;
+  }
+
+  .email-signup button:hover:not(:disabled) {
+    background: #e8850f;
+  }
+
+  .email-signup button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  .button-loading {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .email-signup.is-loading .button-text {
+    visibility: hidden;
+  }
+
+  .email-signup.is-loading .button-loading {
+    display: flex;
+  }
+
+  .spinner {
+    width: 1.25rem;
+    height: 1.25rem;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Consent checkbox */
+  .email-signup-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    text-align: left;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-3);
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  .email-signup-consent input[type='checkbox'] {
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--sl-color-accent);
+  }
+
+  .email-signup-consent span {
+    line-height: 1.4;
+  }
+
+  /* Messages */
+  .email-signup-message {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+  }
+
+  .email-signup-message svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .email-signup-success {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  :global([data-theme='dark']) .email-signup-success {
+    background: rgba(34, 197, 94, 0.15);
+    color: #86efac;
+  }
+
+  .email-signup-error {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  :global([data-theme='dark']) .email-signup-error {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+  }
+
+  .email-signup.is-success .email-signup-form,
+  .email-signup.is-error .email-signup-form {
+    display: none;
+  }
+
+  .email-signup.is-success .email-signup-success {
+    display: flex;
+  }
+
+  .email-signup.is-error .email-signup-error {
+    display: flex;
+  }
+
+  .email-signup.is-success .email-signup-consent,
+  .email-signup.is-error .email-signup-consent {
+    display: none;
+  }
+
+  .email-signup-note {
+    margin: 0.75rem 0 0 0;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-4);
+  }
+
+  .email-signup.is-success .email-signup-note,
+  .email-signup.is-error .email-signup-note {
+    display: none;
+  }
+
+  .email-signup-privacy {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.75rem;
+    color: var(--sl-color-gray-5);
+  }
+
+  .email-signup-privacy a {
+    color: var(--sl-color-gray-4);
+    text-decoration: underline;
+  }
+
+  .email-signup-privacy a:hover {
+    color: var(--sl-color-accent);
+  }
+
+  .email-signup.is-success .email-signup-privacy,
+  .email-signup.is-error .email-signup-privacy {
+    display: none;
+  }
+</style>
+
+<script>
+  // Progressive enhancement: enhance form with async submission
+  document.querySelectorAll('[data-email-signup]').forEach((container) => {
+    const form = container.querySelector('form') as HTMLFormElement | null;
+    if (!form) return;
+
+    const source = form.dataset.source || 'website';
+    const emailInput = form.querySelector('input[type="email"]') as HTMLInputElement;
+    const consentInput = form.querySelector('input[name="consent"]') as HTMLInputElement;
+    const errorTextEl = container.querySelector('.error-text') as HTMLElement;
+
+    // Client-side validation
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const email = emailInput?.value?.trim();
+
+      // Validate email format
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('Please enter a valid email address.');
+        emailInput?.focus();
+        return;
+      }
+
+      // Validate consent
+      if (!consentInput?.checked) {
+        showError('Please agree to receive email updates.');
+        consentInput?.focus();
+        return;
+      }
+
+      // Show loading state
+      container.classList.add('is-loading');
+      container.classList.remove('is-error', 'is-success');
+      const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      if (submitButton) submitButton.disabled = true;
+
+      try {
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, source }),
+        });
+
+        const data = await response.json();
+
+        container.classList.remove('is-loading');
+        if (submitButton) submitButton.disabled = false;
+
+        if (data.success) {
+          container.classList.add('is-success');
+          // Update success message if different
+          const successText = container.querySelector('.email-signup-success span');
+          if (successText && data.message) {
+            successText.textContent = data.message;
+          }
+        } else {
+          showError(data.error || 'Something went wrong. Please try again.');
+        }
+      } catch {
+        container.classList.remove('is-loading');
+        if (submitButton) submitButton.disabled = false;
+        showError('Network error. Please check your connection and try again.');
+      }
+    });
+
+    function showError(message: string) {
+      container.classList.add('is-error');
+      container.classList.remove('is-success', 'is-loading');
+      if (errorTextEl) {
+        errorTextEl.textContent = message;
+      }
+    }
+  });
+</script>

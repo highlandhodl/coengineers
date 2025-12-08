@@ -1,0 +1,316 @@
+---
+title: Troubleshooting
+description: Common issues and solutions for the 31 Days of Claude Code course
+---
+
+Getting stuck is a normal part of learning. This guide covers the most common issues you might encounter and how to fix them.
+
+---
+
+## Installation Issues
+
+### Claude Code Not Recognised After Install
+
+**Symptom:** You type `claude` in your terminal and get "command not found".
+
+**Solutions:**
+
+1. **Close and reopen your terminal** — The install adds Claude Code to your PATH, but existing terminals don't see it automatically.
+
+2. **Check the installation completed** — Run the installer again:
+
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+
+3. **Verify it's installed** — Check npm's global packages:
+
+   ```bash
+   npm list -g @anthropic-ai/claude-code
+   ```
+
+4. **Manually add to PATH** (advanced) — If Claude Code installed but isn't found, you may need to add npm's global bin directory to your PATH.
+
+### Permission Denied Errors
+
+**Symptom:** You see `EACCES` or "permission denied" when installing.
+
+**Solutions:**
+
+**macOS/Linux:**
+
+```bash
+# Fix npm permissions (recommended)
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
+**Windows:**
+
+- Run Command Prompt or PowerShell as Administrator
+- Or use Node Version Manager (nvm) which avoids permission issues
+
+### Node.js Version Issues
+
+**Symptom:** Claude Code won't install or run, mentioning Node.js version.
+
+**Check your version:**
+
+```bash
+node --version
+```
+
+**Required:** Node.js 18 or higher
+
+**To upgrade:**
+
+- **macOS:** `brew install node` or download from [nodejs.org](https://nodejs.org)
+- **Windows:** Download from [nodejs.org](https://nodejs.org)
+- **Linux:** Use your package manager or [nvm](https://github.com/nvm-sh/nvm)
+
+### API Key Not Working
+
+**Symptom:** Claude Code says your API key is invalid or you get authentication errors.
+
+**Check these:**
+
+1. **Correct key:** Anthropic API keys start with `sk-ant-`. Make sure you're not using a different service's key.
+
+2. **No extra spaces:** When copying your key, ensure there are no leading or trailing spaces.
+
+3. **Environment variable set:**
+
+   ```bash
+   # Check if it's set
+   echo $ANTHROPIC_API_KEY
+
+   # Set it (add to your shell config file)
+   export ANTHROPIC_API_KEY="sk-ant-your-key-here"
+   ```
+
+4. **Key not expired:** Check your [Anthropic Console](https://console.anthropic.com) to ensure the key is still valid.
+
+---
+
+## Slash Command Issues
+
+### Command Not Found
+
+**Symptom:** You type a slash command like `/w1.d1` and Claude Code says it doesn't exist.
+
+**Solutions:**
+
+1. **Are you in the right project?** — Slash commands are project-specific. Make sure you're in the CoEngineers project folder:
+
+   ```bash
+   pwd  # Should show the coengineers folder
+   ```
+
+2. **Did you clone the repository?** — Commands live in `.claude/commands/`. If you downloaded files manually, you might be missing them.
+
+3. **Check the file exists:**
+   ```bash
+   ls .claude/commands/w1.d1.md
+   ```
+
+### Command Produces Unexpected Output
+
+**Symptom:** The command runs but doesn't do what the lesson describes.
+
+**Things to check:**
+
+1. **Read the lesson first** — Some commands need context from the lesson to make sense.
+
+2. **Answer the questions** — Many commands ask questions before generating output. Make sure you're providing the information it asks for.
+
+3. **Check your inputs** — If the output seems wrong, try running the command again with different answers.
+
+### Custom Commands Not Loading
+
+**Symptom:** Commands you created aren't being recognised.
+
+**Verify:**
+
+1. **File location:** Custom commands must be in `.claude/commands/` directory
+
+2. **File extension:** Must be `.md` (markdown)
+
+3. **File name:** Becomes the command name (e.g., `mycommand.md` → `/mycommand`)
+
+4. **Restart Claude Code:** After adding new commands, you may need to restart.
+
+---
+
+## Course Content Issues
+
+### Videos Not Playing
+
+**Symptom:** Video embeds show errors or won't load.
+
+**Try these:**
+
+1. **Check your internet connection** — Videos stream from YouTube
+
+2. **Disable ad blockers** — Some ad blockers prevent video embeds
+
+3. **Try a different browser** — Chrome, Firefox, and Safari all work
+
+4. **Open on YouTube directly** — Click the YouTube logo in the player
+
+### Code Examples Not Working
+
+**Symptom:** Copy-pasting code from lessons produces errors.
+
+**Common causes:**
+
+1. **Smart quotes:** Some browsers convert `"` to `"` or `"`. Use a code editor that converts them back.
+
+2. **Indentation:** Python is sensitive to spaces vs tabs. Ensure consistent indentation.
+
+3. **Missing dependencies:** Check if the lesson mentions packages to install first.
+
+4. **Different file location:** Make sure you're in the right folder when running commands.
+
+### Links Not Working
+
+**Symptom:** Clicking a link gives a 404 error or goes nowhere.
+
+**What to do:**
+
+1. **Report it** — Email us at john@coengineers.ai with the page and broken link
+
+2. **Try the URL manually** — Sometimes the link text shows the intended destination
+
+3. **Check if the page exists** — Use the sidebar to navigate to similar content
+
+---
+
+## Email Issues
+
+### Welcome Email Not Received
+
+**Symptom:** You signed up but never got the welcome email.
+
+**Check these:**
+
+1. **Spam/Junk folder** — Most common! Check your spam folder and mark us as "not spam"
+
+2. **Correct email** — Did you type your email correctly? Try signing up again if unsure.
+
+3. **Give it time** — Email can take up to 5 minutes to arrive
+
+4. **Check Promotions tab** — Gmail users: check the Promotions tab
+
+### Unsubscribe Link Not Working
+
+**Symptom:** Clicking unsubscribe shows an error.
+
+**What to try:**
+
+1. **Copy the full link** — Sometimes email clients truncate long URLs. Try copying and pasting the full link.
+
+2. **Use a different browser** — Your email app's built-in browser might have issues.
+
+3. **Email us** — If all else fails, email john@coengineers.ai and we'll unsubscribe you manually.
+
+### Not Receiving Updates
+
+**Symptom:** You're subscribed but not getting new lesson notifications.
+
+**Possible reasons:**
+
+1. **Check spam regularly** — Email filters learn over time and might start filtering us
+
+2. **You unsubscribed** — Try signing up again on the homepage
+
+3. **Lessons haven't launched yet** — The full course launches January 2026
+
+---
+
+## Browser/Device Issues
+
+### Site Not Loading Properly
+
+**Symptom:** Page looks broken, missing styles, or shows errors.
+
+**Solutions:**
+
+1. **Hard refresh:**
+   - **Mac:** Cmd + Shift + R
+   - **Windows:** Ctrl + Shift + R
+   - This clears cached files
+
+2. **Clear cache:** In browser settings, clear cached images and files
+
+3. **Try incognito/private mode:** This rules out extensions causing issues
+
+4. **Update your browser:** Ensure you're on a recent version
+
+### Navigation Not Working on Mobile
+
+**Symptom:** Menu won't open, or pages don't load on your phone.
+
+**Try:**
+
+1. **Tap the hamburger menu (☰)** — On mobile, the sidebar is hidden behind this icon
+
+2. **Rotate your phone** — Some layouts work better in landscape
+
+3. **Request desktop site** — In your browser's menu, try "Request Desktop Site"
+
+4. **Use a different browser** — Safari, Chrome, and Firefox all support the site
+
+### Content Cut Off
+
+**Symptom:** Text or images are partially hidden.
+
+**Fixes:**
+
+1. **Scroll horizontally** — Code blocks can scroll left/right
+
+2. **Zoom out:** Pinch to zoom out on mobile, or Cmd/Ctrl + minus on desktop
+
+3. **Check orientation** — Some content displays better in landscape
+
+4. **Resize browser window** — On desktop, try making the window wider
+
+---
+
+## Getting Help
+
+### Where to Ask Questions
+
+- **YouTube comments** — Ask under the lesson videos
+- **LinkedIn** — Connect and message [John Gordon](https://linkedin.com/in/john-gordon-39135287)
+- **Community** — Launching January 2026
+
+### How to Report Bugs
+
+Email **john@coengineers.ai** with:
+
+1. What you were trying to do
+2. What happened instead
+3. Your browser and device
+4. Screenshots if possible
+
+### Community Resources
+
+- **[Claude Code Docs](https://docs.anthropic.com/en/docs/claude-code)** — Official documentation
+- **[Anthropic Discord](https://discord.gg/anthropic)** — General Claude discussion
+- **[CoEngineers YouTube](https://youtube.com/@coengineers)** — Video tutorials
+
+---
+
+## Still Stuck?
+
+Don't worry — everyone gets stuck sometimes. That's how we learn!
+
+If none of these solutions work:
+
+1. **Take a break** — Fresh eyes often spot the issue
+2. **Search for the error message** — Someone else has probably seen it
+3. **Email us** — john@coengineers.ai
+
+We're here to help you succeed.
