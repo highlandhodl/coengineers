@@ -1,0 +1,49 @@
+---
+title: 31 Days of Claude Code
+description: From chaos to production assets. No coding required.
+template: splash
+hero:
+  tagline: A free course teaching you to automate your entire workflow with AI. Launching January 1st, 2026.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Get Started
+      link: /getting-started/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/coengineers/coengineers-productivity-course
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import Countdown from '../../components/Countdown.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
+
+<Countdown target="2026-01-01T00:00:00Z" heading="Launching in" />
+
+## What You'll Learn
+
+<CardGrid stagger>
+  <Card title="Week 1: Foundations" icon="rocket">
+    Get Claude Code installed and build your personal knowledge system. Master the terminal commands you actually need.
+  </Card>
+  <Card title="Week 2: Content Processing" icon="document">
+    Transform messy transcripts, voice memos, and PDFs into structured, searchable notes.
+  </Card>
+  <Card title="Week 3: Visual & Audio" icon="pencil">
+    Generate presentation decks, image prompts, podcast outlines, and video briefs from your notes.
+  </Card>
+  <Card title="Week 4: Business Assets" icon="star">
+    Create blog posts, newsletters, proposals, and case studies that drive revenue.
+  </Card>
+</CardGrid>
+
+## Why This Course?
+
+- **31 daily videos** (5-10 mins each)
+- **Downloadable slash commands** for every lesson
+- **Free community** to ask questions and share wins
+- **Zero coding required** — if you can type, you can do this
+
+<EmailSignup heading="Be first to know when we launch" />

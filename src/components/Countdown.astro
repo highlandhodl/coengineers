@@ -1,0 +1,139 @@
+---
+/**
+ * Countdown Timer Component
+ *
+ * Displays a countdown to a target date.
+ *
+ * Usage:
+ * <Countdown target="2026-01-01T00:00:00Z" />
+ * <Countdown target="2026-01-01T00:00:00Z" heading="Launching in" />
+ */
+
+interface Props {
+  target: string;
+  heading?: string;
+}
+
+const {
+  target,
+  heading = "Launching in"
+} = Astro.props;
+---
+
+<div class="countdown-container">
+  <p class="countdown-heading">{heading}</p>
+  <div class="countdown" data-target={target}>
+    <div class="countdown-unit">
+      <span class="countdown-value" data-unit="days">--</span>
+      <span class="countdown-label">Days</span>
+    </div>
+    <div class="countdown-unit">
+      <span class="countdown-value" data-unit="hours">--</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+    <div class="countdown-unit">
+      <span class="countdown-value" data-unit="minutes">--</span>
+      <span class="countdown-label">Minutes</span>
+    </div>
+    <div class="countdown-unit">
+      <span class="countdown-value" data-unit="seconds">--</span>
+      <span class="countdown-label">Seconds</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .countdown-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .countdown-heading {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--sl-color-gray-4);
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .countdown-unit {
+    text-align: center;
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    min-width: 4.5rem;
+  }
+
+  .countdown-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--sl-color-accent);
+    font-family: var(--sl-font-mono);
+    line-height: 1;
+  }
+
+  .countdown-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--sl-color-gray-4);
+    margin-top: 0.375rem;
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: 640px) {
+    .countdown-unit {
+      padding: 1.25rem 1.5rem;
+      min-width: 5.5rem;
+    }
+
+    .countdown-value {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+
+<script>
+  function updateCountdown() {
+    const countdownEl = document.querySelector('.countdown');
+    if (!countdownEl) return;
+
+    const targetDate = new Date(countdownEl.getAttribute('data-target') || '');
+    const now = new Date();
+    const diff = targetDate.getTime() - now.getTime();
+
+    if (diff <= 0) {
+      // Countdown finished
+      const values = countdownEl.querySelectorAll('.countdown-value');
+      values.forEach(el => el.textContent = '0');
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    const daysEl = countdownEl.querySelector('[data-unit="days"]');
+    const hoursEl = countdownEl.querySelector('[data-unit="hours"]');
+    const minutesEl = countdownEl.querySelector('[data-unit="minutes"]');
+    const secondsEl = countdownEl.querySelector('[data-unit="seconds"]');
+
+    if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+    if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+    if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+    if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+  }
+
+  // Update immediately and then every second
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>

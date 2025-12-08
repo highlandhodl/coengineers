@@ -1,0 +1,121 @@
+---
+/**
+ * Email Signup Component
+ *
+ * Captures email addresses for the course newsletter.
+ * TODO: Wire up to Supabase + Resend backend
+ *
+ * Usage:
+ * <EmailSignup />
+ * <EmailSignup heading="Get notified" subheading="No spam, ever." />
+ */
+
+interface Props {
+  heading?: string;
+  subheading?: string;
+  buttonText?: string;
+}
+
+const {
+  heading = "Get notified when each day drops",
+  subheading = "No spam. Unsubscribe anytime. British bloke's honour.",
+  buttonText = "Subscribe"
+} = Astro.props;
+---
+
+<div class="email-signup">
+  <h3>{heading}</h3>
+  <form id="email-signup-form" method="POST" action="/api/subscribe">
+    <input
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+      autocomplete="email"
+    />
+    <button type="submit">{buttonText}</button>
+  </form>
+  <p class="email-signup-note">{subheading}</p>
+</div>
+
+<style>
+  .email-signup {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .email-signup h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .email-signup form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .email-signup form {
+      flex-direction: row;
+    }
+  }
+
+  .email-signup input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.5rem;
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    font-family: var(--sl-font);
+    font-size: 1rem;
+  }
+
+  .email-signup input[type="email"]:focus {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 2px;
+  }
+
+  .email-signup button {
+    padding: 0.75rem 1.5rem;
+    background: var(--sl-color-accent);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .email-signup button:hover {
+    background: #E8850F;
+  }
+
+  .email-signup-note {
+    margin: 0.75rem 0 0 0;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-4);
+  }
+</style>
+
+<script>
+  // Client-side form handling - to be replaced with Supabase integration
+  const form = document.getElementById('email-signup-form');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form as HTMLFormElement);
+    const email = formData.get('email');
+
+    // TODO: Replace with actual API call
+    console.log('Email signup:', email);
+    alert('Thanks for signing up! (Demo mode - not yet connected to backend)');
+  });
+</script>

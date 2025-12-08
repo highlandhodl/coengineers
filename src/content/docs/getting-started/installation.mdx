@@ -1,0 +1,90 @@
+---
+title: Installation
+description: Get Claude Code installed and running in 5 minutes
+---
+
+# Installing Claude Code
+
+Let's get Claude Code installed on your machine. This takes about 5 minutes.
+
+## Prerequisites
+
+Before we start, make sure you have:
+
+- A Mac, Windows, or Linux computer
+- An internet connection
+- An Anthropic account (we'll set this up if you don't have one)
+
+## Step 1: Install Node.js (if you don't have it)
+
+Claude Code runs on Node.js. Don't worry — you don't need to know what that means, just install it.
+
+**On Mac:**
+```bash
+# Open Terminal (press Cmd + Space, type "Terminal", hit Enter)
+# Then paste this and hit Enter:
+brew install node
+```
+
+Don't have Homebrew? Get it first:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+**On Windows:**
+1. Download the installer from [nodejs.org](https://nodejs.org/)
+2. Run it and click "Next" through all the steps
+3. Restart your computer
+
+**On Linux:**
+```bash
+sudo apt update && sudo apt install nodejs npm
+```
+
+## Step 2: Install Claude Code
+
+Open your terminal and run:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+This installs Claude Code globally so you can use it from anywhere.
+
+## Step 3: Authenticate
+
+Run this command:
+
+```bash
+claude auth
+```
+
+This opens your browser. Sign in to your Anthropic account (or create one if you haven't).
+
+## Step 4: Verify It Works
+
+```bash
+claude
+```
+
+You should see Claude Code start up. Type "Hello" and hit Enter. If Claude responds, you're all set.
+
+Type `/exit` to quit.
+
+## Troubleshooting
+
+**"command not found: claude"**
+- Try closing and reopening your terminal
+- On Mac/Linux, you might need to add npm to your PATH
+
+**"Authentication failed"**
+- Make sure you're signed in to the correct Anthropic account
+- Try running `claude auth` again
+
+**Still stuck?**
+- Join our [community](/community/) and ask for help
+- Check the [Claude Code documentation](https://docs.anthropic.com/claude-code)
+
+## Next Steps
+
+Now that you've got Claude Code installed, check the [Prerequisites](/getting-started/prerequisites/) for the optional tools we'll use throughout the course.

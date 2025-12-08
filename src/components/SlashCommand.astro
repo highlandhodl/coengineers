@@ -1,0 +1,134 @@
+---
+/**
+ * Slash Command Display Component
+ *
+ * Displays a slash command with copy functionality.
+ *
+ * Usage:
+ * <SlashCommand code="/w1.d1" />
+ * <SlashCommand code="/w1.d1" label="Today's command" />
+ */
+
+interface Props {
+  code: string;
+  label?: string;
+  downloadUrl?: string;
+}
+
+const {
+  code,
+  label = "Grab this command",
+  downloadUrl
+} = Astro.props;
+---
+
+<div class="slash-command">
+  <div class="slash-command-header">
+    <span class="slash-command-label">{label}</span>
+    <button class="slash-command-copy" data-code={code} aria-label="Copy command">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      </svg>
+      <span>Copy</span>
+    </button>
+  </div>
+  <code>{code}</code>
+  {downloadUrl && (
+    <a href={downloadUrl} class="slash-command-download">
+      Download from GitHub →
+    </a>
+  )}
+</div>
+
+<style>
+  .slash-command {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-accent);
+    border-left: 4px solid var(--sl-color-accent);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .slash-command-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .slash-command-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--sl-color-gray-4);
+  }
+
+  .slash-command-copy {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.625rem;
+    background: transparent;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.375rem;
+    color: var(--sl-color-gray-4);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .slash-command-copy:hover {
+    border-color: var(--sl-color-accent);
+    color: var(--sl-color-accent);
+  }
+
+  .slash-command-copy.copied {
+    border-color: #22C55E;
+    color: #22C55E;
+  }
+
+  .slash-command code {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--sl-color-accent);
+    background: transparent;
+    padding: 0;
+    font-family: var(--sl-font-mono);
+  }
+
+  .slash-command-download {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--sl-color-accent);
+    text-decoration: none;
+  }
+
+  .slash-command-download:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.slash-command-copy').forEach(button => {
+    button.addEventListener('click', async () => {
+      const code = button.getAttribute('data-code');
+      if (!code) return;
+
+      try {
+        await navigator.clipboard.writeText(code);
+        button.classList.add('copied');
+        const span = button.querySelector('span');
+        if (span) span.textContent = 'Copied!';
+
+        setTimeout(() => {
+          button.classList.remove('copied');
+          if (span) span.textContent = 'Copy';
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    });
+  });
+</script>
