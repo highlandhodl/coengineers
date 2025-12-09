@@ -27,11 +27,15 @@ Jamie finds themselves asking Claude the same things repeatedly. "Summarise this
 
 <SlashCommand code="/w1.d6" />
 
-Today you become a slash command creator.
+This command guides you through an **interactive walkthrough** to identify the RIGHT command to build - one that will actually save you time.
 
-### What We're Building
+### What the Command Does
 
-Your own custom slash command that solves a real problem you face regularly.
+1. **Finds your repetition** - What do you ask Claude repeatedly?
+2. **Identifies the pain** - Which task is most tedious?
+3. **Captures the dream** - What would the perfect command do?
+4. **Designs the command** - Input, output, format
+5. **Creates and tests it** - Iterate until it works
 
 ### How Slash Commands Work
 
@@ -40,96 +44,30 @@ Your own custom slash command that solves a real problem you face regularly.
 3. When you type `/command-name`, Claude reads the file
 4. You can include instructions, context, and examples
 
-### Let's Go
+## Example Output
 
-#### Step 1: Create the Commands Folder
+After running the command, you'll have:
 
-```
-Check if I have a .claude/commands folder. If not, create it.
-This is where all my slash commands will live.
-```
-
-#### Step 2: Create a Simple Command
-
-Let's build a meeting summariser.
-
-```
-Create a slash command at .claude/commands/summarise-meeting.md
-with this content:
-
-# Summarise Meeting
-
-You are helping me summarise meeting notes.
-
-Take the meeting content I provide and create:
-1. A one-sentence summary
-2. Key decisions (bullet list)
-3. Action items with owners (table format)
-4. Any open questions
-
-Format the output in clean markdown.
-
-Keep it concise. No fluff.
-```
-
-#### Step 3: Test Your Command
-
-Now test it. Run `/summarise-meeting` and provide some notes:
-
-```
-Here's a test meeting:
-
-Meeting: Q4 Planning
-Attendees: Fiona, Jamie, Sarah
-
-Discussion:
-- Website needs updating before Christmas
-- Jamie will handle social media posts
-- Consider running a Christmas tasting event
-- Sarah worried about capacity for events
-- Fiona wants to focus on premium customers
-
-Decision: Go ahead with tasting event, cap at 20 people
-Decision: Website update by Dec 1st
-
-Next: Jamie to draft social calendar by Friday
-```
-
-#### Step 4: Iterate and Improve
-
-Based on the output, refine your command.
-
-```
-Update my summarise-meeting command to also include:
-- A 'Mood/Vibe' one-liner at the start
-- Deadlines highlighted in bold in action items
-```
-
-#### Step 5: Create Your Own Command
-
-What do you ask Claude repeatedly? Turn it into a command.
-
-Ideas:
-- `/explain` - Explain something simply
-- `/fix-grammar` - Fix grammar and spelling
-- `/action-items` - Extract action items from text
-- `/daily-review` - End of day reflection prompts
-- `/idea-expand` - Take a rough idea and expand it
-
-```
-Create a slash command called [YOUR NAME] that [WHAT IT DOES].
-Include clear instructions and an example of good output.
-```
-
-### Your Turn
-
-Create at least 2 more slash commands for tasks you do regularly. Test each one with real content.
-
-## Example Outputs
-
-- `.claude/commands/summarise-meeting.md`
-- At least 2 personal slash commands
+- A custom slash command for something YOU do repeatedly
 - Understanding of command structure
+- Confidence to create more commands
+
+### Command Ideas
+
+| Command | Purpose |
+|---------|---------|
+| `/summarise` | Summarise any content into key points |
+| `/action-items` | Extract action items from any text |
+| `/explain` | Explain something simply |
+| `/fix-writing` | Fix grammar and improve clarity |
+| `/daily-review` | End of day reflection prompts |
+
+## Tips for Success
+
+- **Build for real pain** - Not hypothetical needs
+- **Keep it focused** - One command, one purpose
+- **Test with real content** - Not just examples
+- **Iterate** - First version is rarely perfect
 
 ## What You Learned
 

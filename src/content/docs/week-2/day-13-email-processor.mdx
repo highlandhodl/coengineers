@@ -27,139 +27,44 @@ Fiona's inbox is chaos. Buried in a 47-email thread with a supplier are three cr
 
 <SlashCommand code="/w2.d13" />
 
-Extract action items and clarity from email chaos.
+This command guides you through an **interactive walkthrough** to extract clarity from email chaos.
 
-### What We're Building
+### What the Command Does
 
-A system for processing email threads into clear summaries, decisions, and action items.
+1. **Gets the email thread** - Paste or describe
+2. **Identifies participants** - Who's involved and their role
+3. **Chooses output mode** - Full processing, just actions, or draft reply
+4. **Flags urgency** - Any deadlines to highlight
+5. **Creates actionable output** - Ready to use
 
-### The Challenge
+### What You'll Extract
 
-47 emails between Fiona, Duncan (barley supplier), and their accountant about pricing, delivery schedules, and payment terms. Somewhere in there are decisions. Let's find them.
+- **Thread overview** - What's this about?
+- **Key decisions** - What was agreed
+- **Action items** - Who does what, by when
+- **Open questions** - What's still unresolved
+- **Follow-up needed** - What you need to do
 
-### Step 1: Create the Email Processor
+## Example Output
 
-"Create a slash command at .claude/commands/process-email.md:
+**Full Processing**:
+- Thread summary
+- Decision table
+- Action items table
+- Open questions
+- Draft response (if needed)
 
-# Process Email Thread
+**Just Actions**:
+- My actions
+- Waiting on others
+- Key decisions
 
-You are helping me extract actionable information from an email thread.
+## Tips for Success
 
-## Input
-I'll paste an email thread. It may include:
-- Multiple participants
-- Replies and forwards
-- Mixed topics
-- Attached file references
-
-## Your Task
-Create a structured summary with:
-
-1. **Thread Overview**
-   - Subject
-   - Participants
-   - Date range
-   - Topic summary (1-2 sentences)
-
-2. **Key Decisions**
-   - What was agreed or decided?
-   - Who agreed to it?
-
-3. **Action Items**
-   Table: Action | Owner | Due Date | Context
-
-4. **Open Questions**
-   - What's still unresolved?
-   - Who needs to respond?
-
-5. **Attachments/References**
-   - Files mentioned
-   - Links shared
-
-6. **Follow-up Required**
-   - What should I do next?
-   - Draft a response if needed
-
-## Output Format
-Clean markdown. Focus on actionable content."
-
-### Step 2: Process a Sample Thread
-
-Here's a sample email thread:
-
-"Process this email thread:
-
-```
-From: Duncan <duncan@highland-barley.co.uk>
-To: Fiona <fiona@thistle-thorn.com>
-Subject: RE: RE: RE: Barley order Q1 2025
-
-Fiona,
-
-Following up on our call. I can confirm:
-- 500kg at £2.10/kg for January delivery
-- Same terms as last year
-- Let me know by Dec 15 if you want the February option too
-
-Need the PO number when you get a chance.
-
-Duncan
-
----
-From: Fiona <fiona@thistle-thorn.com>
-To: Duncan <duncan@highland-barley.co.uk>
-CC: sarah@thistle-thorn.com
-
-Duncan,
-
-Thanks. Can you also quote for 750kg in February? We might
-need extra if the Christmas sales go well.
-
-Sarah - can you send Duncan the PO number for January?
-
-Fiona
-
----
-From: Sarah <sarah@thistle-thorn.com>
-To: Duncan <duncan@highland-barley.co.uk>
-CC: fiona@thistle-thorn.com
-
-Hi Duncan,
-
-PO number is TT-2025-0012.
-
-Payment terms: net 30 as usual?
-
-Sarah
-```
-
-Save to week-2-outputs/barley-supplier-thread.md"
-
-### Step 3: Quick Actions Mode
-
-Sometimes you just want the tasks:
-
-"Create a slash command process-email-actions.md that ONLY outputs:
-- Action items as a checklist
-- With owners and due dates
-- Nothing else"
-
-### Step 4: Response Drafting
-
-Add the ability to draft responses:
-
-"Update process-email.md to include a section that drafts a suggested response if one is needed. Mark it as 'Draft Response (review before sending)'."
-
-### Privacy Note
-
-When processing emails, consider privacy:
-- Remove sensitive information if sharing
-- Process locally when possible
-- Be mindful of confidential content
-
-### Your Turn
-
-Find an email thread that has buried action items. Process it and extract the tasks. How many did you find that you'd forgotten about?
+- **Include the whole thread** - Context matters
+- **Identify relationships** - Client, colleague, boss affects tone
+- **Flag urgency** - Deadlines get highlighted
+- **Consider privacy** - Remove sensitive details if sharing
 
 ## What You Learned
 
@@ -167,12 +72,6 @@ Find an email thread that has buried action items. Process it and extract the ta
 - Structured extraction reveals actions
 - Multiple participants = multiple action owners
 - Quick action mode for busy days
-
-## Example Outputs
-
-- `.claude/commands/process-email.md`
-- `.claude/commands/process-email-actions.md`
-- `barley-supplier-thread.md` with extracted actions
 
 ## What's Next?
 

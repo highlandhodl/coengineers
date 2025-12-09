@@ -6,6 +6,7 @@ week: 5
 ---
 
 import SlashCommand from '../../../components/SlashCommand.astro';
+import YouTube from '../../../components/YouTube.astro';
 
 
 {/* TODO: Add video ID when uploaded */}
@@ -28,19 +29,29 @@ A pattern for AI-assisted creation:
 2. **Response** - What the AI produces
 3. **Product** - The refined, shipped output
 
-## What We're Building
+## The Slash Command
 
-The core of your Capstone project, structured with Prompt-Response-Product methodology.
+<SlashCommand code="/bonus.d30" />
 
-## PRP Framework
+This command guides you through an **interactive walkthrough** to execute your Day 30 build using PRP.
+
+### What the Command Does
+
+1. **Reviews yesterday's progress** - What got done on Day 29?
+2. **Lists today's tasks** - What's the Day 30 focus?
+3. **Structures each component** - Using PRP for quality
+4. **Tracks completion** - What's done, what's left?
+5. **Prepares for Ship Day** - What must happen tomorrow?
+
+## PRP in Action
 
 For each piece of your project:
 
 ### 1. Prompt - Write a detailed request
-- Context: What exists already
-- Task: What you need created
-- Format: How it should look
-- Constraints: Any limitations
+- **Context:** What exists already
+- **Task:** What you need created
+- **Format:** How it should look
+- **Constraints:** Any limitations
 
 ### 2. Response - Get the AI output
 - Review what's produced
@@ -52,58 +63,7 @@ For each piece of your project:
 - Ensure consistency
 - Polish for shipping
 
-## Let's Go
-
-### Step 1: Review Yesterday's Progress
-
-<SlashCommand command="/bonus.d30" />
-
-```
-Review my BMAD plan and Day 29 work. What's the status?
-What should I focus on today?
-```
-
-### Step 2: List Today's Build Tasks
-
-```
-From my BMAD plan, extract the Day 30 tasks. List them
-in order of priority with estimated time for each.
-```
-
-### Step 3: Execute with PRP
-
-For each major component, use PRP:
-
-```
-I need to build [COMPONENT]. Using PRP:
-
-**Context:** [What exists]
-**Task:** [What to create]
-**Format:** [How it should look]
-**Constraints:** [Limitations]
-
-Create this component.
-```
-
-### Step 4: Review and Refine
-
-```
-Review what we've built today:
-- What's complete?
-- What needs refinement?
-- What's ready for Day 31 polish?
-```
-
-### Step 5: Prepare for Ship Day
-
-```
-What needs to happen tomorrow to ship this project?
-Create a Day 31 checklist.
-```
-
-## PRP in Action
-
-Example PRP cycle:
+## Example PRP Cycle
 
 **Prompt:**
 ```
@@ -119,13 +79,31 @@ Constraints: British English, warm but professional tone.
 **Product:**
 [You review, edit, refine, and finalise]
 
-## Your Turn
+## Day 30 Focus
 
-Execute your Day 30 tasks using PRP for each component. Build the core of your project.
+Today is about building the core:
+- Execute your BMAD plan's Day 30 tasks
+- Use PRP for each major component
+- Track what's complete vs in-progress
+- Prepare for tomorrow's ship day
+
+## Tips for Success
+
+- **Don't skip the prompt** - Detailed context = better output
+- **Review critically** - AI output is a draft, not final
+- **Iterate quickly** - Better to refine than restart
+- **Keep shipping in mind** - What must be done vs nice-to-have?
+
+## What You Learned
+
+- PRP structures AI-assisted creation
+- Detailed prompts get better responses
+- Refinement is where quality happens
+- Build day requires focus and momentum
 
 ## What's Next?
 
-Day 31: Ship It! - Polish and launch. Run `/bonus.d31` when you're ready!
+Tomorrow in [Day 31: Ship It!](/bonus/day-31-ship-it/), we'll polish and launch your Capstone project.
 
 ---
 

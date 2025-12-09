@@ -27,92 +27,38 @@ Fiona receives industry reports, supplier price lists, and regulatory documents 
 
 <SlashCommand code="/w2.d11" />
 
-Liberate information locked in PDF documents.
+This command guides you through an **interactive walkthrough** to extract what you need from PDF documents.
 
-### What We're Building
+### What the Command Does
 
-A system for extracting insights, data, and summaries from PDF reports and documents.
+1. **Gets the PDF** - File path or description
+2. **Identifies the type** - Report, form, data sheet, manual?
+3. **Understands your goal** - Summary, specific data, or conversion?
+4. **Processes appropriately** - Different PDFs need different approaches
+5. **Creates useful output** - Ready to use
 
-### The Challenge
+### What Claude Can Do with PDFs
 
-The Scotch Whisky Association sends quarterly industry reports. 40 pages of PDF. Fiona needs to know the three things that affect Thistle & Thorn. Let's find them.
+- **Read and summarise** - Extract key points
+- **Find specific information** - Answer targeted questions
+- **Extract tables** - Convert to markdown tables
+- **Pull quotes** - With page references
+- **Convert to markdown** - Make content editable
 
-### Claude Code and PDFs
+## Example Output
 
-Claude Code can read PDF files directly. Just point it at the file and ask questions.
+Depending on your needs:
+- **Full summary**: Key findings, implications, action items
+- **Data extraction**: Tables, figures, statistics
+- **Q&A**: Direct answers with page references
+- **Markdown conversion**: Editable document
 
-### Step 1: Create the PDF Processor
+## Tips for Success
 
-"Create a slash command at .claude/commands/process-pdf.md:
-
-# Process PDF Document
-
-You are helping me extract key information from a PDF document.
-
-## Input
-I'll provide a path to a PDF file.
-
-## Your Task
-1. Read the PDF content
-2. Identify what type of document it is
-3. Create a summary with:
-   - Document title and source
-   - Date/version
-   - Key findings (bullet points)
-   - Any tables or data as markdown tables
-   - Action items or implications
-   - Notable quotes
-
-## Output Format
-Markdown file with frontmatter including source file path.
-Preserve important data, discard boilerplate.
-
-If there are tables, convert them to markdown format."
-
-### Step 2: Process a Sample PDF
-
-Let's process an industry report:
-
-"Read the PDF at [PATH TO SAMPLE PDF] and:
-1. Tell me what type of document it is
-2. Summarise the key points relevant to a craft distillery
-3. Extract any statistics or data tables
-4. Save the summary to week-2-outputs/industry-report-summary.md"
-
-### Step 3: Targeted Extraction
-
-Sometimes you need specific data:
-
-"Create a slash command process-pdf-data.md that:
-- Asks what specific data I'm looking for
-- Searches the PDF for relevant sections
-- Extracts only the requested information
-- Outputs as a focused brief"
-
-### Step 4: Handle Tables
-
-PDF tables are tricky. Practise extracting them:
-
-"If the PDF has any tables:
-1. Identify all tables in the document
-2. Convert the most relevant table to markdown format
-3. Explain what the table shows"
-
-### Step 5: Build a Reports Library
-
-"Create a folder at 03-resources/reports/ for processed PDF summaries. Add a README explaining the structure."
-
-### Sample PDF Types to Practise
-
-If you don't have PDFs handy, try:
-- Any industry report (Google "[your industry] report 2024 pdf")
-- A user manual for software you use
-- A research paper from Google Scholar
-- A government publication
-
-### Your Turn
-
-Find a PDF relevant to your work. Process it with your new command. Extract at least one table or data set.
+- **Know what you need** - Summary vs specific data
+- **Provide context** - Why are you reading this PDF?
+- **Ask follow-up questions** - Claude can dig deeper
+- **Save tables as markdown** - Much more useful than PDFs
 
 ## What You Learned
 
@@ -120,13 +66,6 @@ Find a PDF relevant to your work. Process it with your new command. Extract at l
 - Summaries beat re-reading 40-page documents
 - Tables can be extracted as markdown
 - Targeted extraction for specific data
-
-## Example Outputs
-
-- `.claude/commands/process-pdf.md`
-- `.claude/commands/process-pdf-data.md`
-- `industry-report-summary.md`
-- Reports folder setup
 
 ## What's Next?
 

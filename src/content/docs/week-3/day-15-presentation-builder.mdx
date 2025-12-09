@@ -27,18 +27,15 @@ Fiona has a meeting with a potential Edinburgh distributor. She has notes from p
 
 <SlashCommand code="/w3.d15" />
 
-Transform your notes into presentation-ready outlines.
+This command guides you through an **interactive walkthrough** to transform your notes into presentation-ready outlines.
 
-### What We're Building
-A Gamma-ready presentation outline from your notes, with compelling structure and clear messaging.
+### What the Command Does
 
-### The Scenario
-Fiona needs a deck for Edinburgh Spirits Distributors. She has:
-- Notes from a discovery call
-- Key points about Thistle & Thorn
-- Pricing information
-
-Jamie needs to create a 10-slide deck. No design skills needed.
+1. **Asks about your presentation** - What's it for and who's the audience?
+2. **Understands your content** - What notes or material do you have?
+3. **Gets your goal** - What do you want the audience to do?
+4. **Chooses structure** - Full deck, quick pitch, or custom length
+5. **Creates Gamma-ready output** - Clean markdown for import
 
 ### Presentation Principles
 
@@ -47,81 +44,23 @@ Jamie needs to create a 10-slide deck. No design skills needed.
 3. **Start with why** - Problem before solution
 4. **End with action** - What do you want them to do?
 
-### Gamma Import Format
+## Gamma Import Format
 
 Gamma works best with:
 - Clear hierarchy (# for slide titles)
 - Bullet points for key messages
 - Simple markdown formatting
 
-### Let's Go
+## Example Output
 
-#### Step 1: Create the Presentation Builder
-"Create a slash command at .claude/commands/build-presentation.md:
+A clean markdown file with:
+- Title slide with compelling headline
+- Problem/opportunity framing
+- Content slides (one idea each)
+- Supporting bullets and visual suggestions
+- Strong call to action
 
-# Build Presentation Outline
-
-You are helping me create a presentation outline ready for Gamma import.
-
-## Input
-I'll provide:
-- Topic or purpose of the presentation
-- Any source notes or content
-- Target audience
-- Desired length (number of slides)
-
-## Your Task
-Create a presentation outline with:
-
-1. **Title Slide**
-   - Compelling headline
-   - Subtitle with context
-
-2. **Problem/Opportunity Slide**
-   - Why this matters to the audience
-
-3. **Content Slides** (as many as needed)
-   - One key message per slide
-   - 3-4 supporting bullet points
-   - Suggestion for visual if applicable
-
-4. **Call to Action Slide**
-   - Clear next step
-   - Contact information
-
-## Output Format
-Markdown with # for slide titles, ## for slide subtitles, and - for bullet points. Add [VISUAL: description] notes for images/charts.
-
-Keep it punchy. Less text = better slides."
-
-#### Step 2: Build the Distributor Deck
-"Using my presentation builder, create a 10-slide deck for Thistle & Thorn's meeting with Edinburgh Spirits Distributors.
-
-Context:
-- Thistle & Thorn is a craft whisky distillery in Speyside
-- 4th generation family owned
-- Products: Single malt (12yr, 18yr), seasonal gin
-- Looking for Edinburgh distribution partner
-- Key selling points: authenticity, craft quality, growing demand
-
-Audience: Distribution manager, interested in premium spirits
-Goal: Get them to agree to a trial order
-
-Save to week-3-outputs/edinburgh-distributor-deck.md"
-
-#### Step 3: Review and Refine
-"Review the deck outline. For each slide:
-- Is the headline compelling enough to stand alone?
-- Are there too many bullets?
-- Suggest one improvement per slide"
-
-#### Step 4: Create a Quick Version
-"Create a slash command build-presentation-quick.md that creates a 5-slide deck outline: Title, Problem, Solution, Proof, Action. Ultra-concise."
-
-#### Step 5: Export for Gamma
-"Format the deck outline for direct Gamma import. Remove any notes or comments. Clean markdown only."
-
-### Importing to Gamma
+## Importing to Gamma
 
 1. Go to gamma.app
 2. Click "Create New" → "Import"
@@ -129,37 +68,19 @@ Save to week-3-outputs/edinburgh-distributor-deck.md"
 4. Gamma generates designed slides
 5. Customise colours/fonts as needed
 
-### Sample Notes to Practice
+## Tips for Success
 
-Here are Jamie's notes for the distributor meeting:
+- **Share your actual notes** - The more context, the better
+- **Be clear about the audience** - Affects tone and depth
+- **Specify the call to action** - Every presentation should drive action
+- **Less is more** - Fight the urge to add slides
 
----
-Edinburgh Spirits call - key points:
-- They're looking for premium Scottish spirits
-- Current gap: authentic craft whisky (not industrial)
-- Their buyers want a story
-- Trial order minimum: 50 cases
-- 30% margin expected
-- They handle all Edinburgh bars and restaurants
-- Growing demand for local/authentic
-- They liked our Instagram content
-- Fiona could do a tasting event for their buyers
----
+## What You Learned
 
-### Your Turn
-Take notes from a real presentation you need to create. Run them through the presentation builder. Import to Gamma.
-
-### What You Learned
 - Notes → outline → designed deck
 - One idea per slide
 - Headlines should tell the story alone
 - Gamma does the design work
-
-## Example Outputs
-
-- `.claude/commands/build-presentation.md`
-- `.claude/commands/build-presentation-quick.md`
-- `edinburgh-distributor-deck.md`
 
 ## What's Next?
 

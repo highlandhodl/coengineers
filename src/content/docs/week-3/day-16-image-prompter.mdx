@@ -27,18 +27,15 @@ Jamie needs images for the Christmas campaign: product shots, lifestyle images, 
 
 <SlashCommand code="/w3.d16" />
 
-Create detailed prompts for AI image generation.
+This command guides you through an **interactive walkthrough** to create detailed prompts for AI image generation.
 
-### What We're Building
-A set of detailed image prompts for Gemini that produce consistent, professional-looking images.
+### What the Command Does
 
-### The Scenario
-Jamie needs 5 images for the Christmas campaign:
-1. Hero product shot of the 12-year whisky
-2. Lifestyle shot: whisky by a fireplace
-3. Behind-the-scenes: cask warehouse
-4. Christmas theme: gift packaging
-5. Social media: quote graphic background
+1. **Asks what you need** - What image are you trying to create?
+2. **Understands the use** - Website, social, print, etc.
+3. **Gets style preferences** - Photography, illustration, mood
+4. **Defines consistency** - Brand colours and visual language
+5. **Creates detailed prompts** - Ready to paste into Gemini
 
 ### Anatomy of a Good Prompt
 
@@ -52,7 +49,7 @@ shallow depth of field, warm golden hour lighting from
 the left, cosy and inviting mood, 4K, photorealistic"
 ```
 
-### Style Consistency
+## Style Consistency
 
 For a coherent campaign, define:
 - **Colour palette:** Warm ambers, deep browns, cream whites
@@ -60,81 +57,15 @@ For a coherent campaign, define:
 - **Photography style:** Lifestyle/editorial, not clinical
 - **Mood:** Cosy, authentic, premium
 
-### Let's Go
+## Example Output
 
-#### Step 1: Create the Image Prompter
-"Create a slash command at .claude/commands/create-image-prompt.md:
-
-# Create Image Prompt
-
-You are helping me write detailed prompts for AI image generation (Gemini, DALL-E, Midjourney).
-
-## Input
-I'll describe:
-- What I want in the image
-- The intended use (social media, website, print)
-- Any style preferences
-
-## Your Task
-Create a detailed prompt including:
-
-1. **Subject** - What's in the image
-2. **Style** - Photography/illustration style
-3. **Composition** - How elements are arranged
-4. **Lighting** - Type, direction, quality
-5. **Colours** - Palette and tones
-6. **Mood** - Emotional feeling
-7. **Technical** - Quality descriptors (4K, photorealistic, etc.)
-
-## Output Format
-Provide:
-- The full prompt (ready to paste into Gemini)
+A complete prompt set with:
+- Main prompt ready for Gemini
 - 2-3 variations with different approaches
 - Negative prompt (what to avoid)
+- Style guide for consistency across images
 
-Keep prompts under 100 words each."
-
-#### Step 2: Create the Campaign Images
-"Create image prompts for Thistle & Thorn's Christmas campaign:
-
-1. Hero product shot: 12-year single malt whisky bottle
-   - Premium feel, gift-worthy
-   - For website hero banner
-
-2. Lifestyle: Whisky being enjoyed by a fireplace
-   - Cosy, inviting, winter evening
-   - For Instagram
-
-3. Behind-the-scenes: The cask warehouse
-   - Authentic, heritage feel
-   - For brand storytelling
-
-4. Christmas: Gift box with whisky and glasses
-   - Festive but elegant
-   - For promotional materials
-
-5. Quote background: Abstract warm texture
-   - For overlaying text
-   - Instagram quotes
-
-Create all 5 prompts with consistent style.
-Save to week-3-outputs/christmas-campaign-prompts.md"
-
-#### Step 3: Create Style Guide Prompt
-"Create a 'style guide' section at the top of the prompts file that defines the consistent elements across all images. Someone should be able to use this to create new images in the same style."
-
-#### Step 4: Test in Gemini
-Take one prompt and run it in Google AI Studio:
-
-1. Go to aistudio.google.com
-2. Select Gemini with image generation
-3. Paste your prompt
-4. Generate and iterate
-
-#### Step 5: Iteration Prompt
-"Create a slash command improve-image-prompt.md that takes a prompt and an issue (e.g., 'too dark', 'wrong style') and improves the prompt to fix it."
-
-### Prompt Patterns That Work
+## Prompt Patterns That Work
 
 **For products:**
 "Product photography of [item], [surface/background], studio lighting, [brand mood], commercial quality, 4K"
@@ -145,25 +76,19 @@ Take one prompt and run it in Google AI Studio:
 **For textures/backgrounds:**
 "Abstract [texture type], [colour palette], soft gradients, suitable for text overlay, [mood], high resolution"
 
-### Your Turn
-Create 3 image prompts for something you actually need:
-- A product you're selling
-- A blog post header
-- A social media graphic
+## Tips for Success
 
-Generate them in Gemini and iterate.
+- **Be specific about mood** - "Warm" is better than "nice"
+- **Include technical details** - 4K, photorealistic, shallow DOF
+- **Create a style guide** - Keeps multiple images consistent
+- **Iterate in Gemini** - First output is rarely perfect
 
-### What You Learned
+## What You Learned
+
 - Detailed prompts = better images
 - Consistency comes from defined style elements
 - Iteration is normal and expected
 - Structure: subject + style + composition + lighting + mood
-
-## Example Outputs
-
-- `.claude/commands/create-image-prompt.md`
-- `.claude/commands/improve-image-prompt.md`
-- `christmas-campaign-prompts.md` with 5 prompts + style guide
 
 ## What's Next?
 

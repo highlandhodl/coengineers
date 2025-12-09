@@ -27,11 +27,15 @@ Jamie keeps recreating the same structures. Meeting notes, project briefs, custo
 
 <SlashCommand code="/w1.d4" />
 
-Today we build reusable templates for every type of note you create.
+This command guides you through an **interactive walkthrough** to discover what templates YOU actually need based on your real work patterns.
 
-### What We're Building
+### What the Command Does
 
-A library of templates: meeting notes, project briefs, person profiles, and any others you need regularly.
+1. **Discovers your patterns** - What notes do you create repeatedly?
+2. **Explores meeting styles** - What structure fits your meetings?
+3. **Designs project tracking** - What info do new projects need?
+4. **Considers people records** - Who do you need to track?
+5. **Uncovers unique needs** - Templates specific to your work
 
 ### What Makes a Good Template
 
@@ -40,87 +44,20 @@ A library of templates: meeting notes, project briefs, person profiles, and any 
 3. **Prompts** - Questions or placeholders to fill in
 4. **Flexibility** - Sections you can delete if not needed
 
-### Let's Go
+## Example Output
 
-#### Step 1: Meeting Notes Template
+After running the command, you'll have:
 
-Create a template for meeting notes.
+- `templates/meeting-note.md` - For all your meetings
+- `templates/project-brief.md` - For new projects
+- `templates/person-profile.md` - For tracking people
+- Custom templates based on YOUR unique needs
 
-```
-Create a meeting notes template at templates/meeting-note.md
-with:
-- Frontmatter: title, date, attendees (list), type: meeting
-- Sections: Attendees, Agenda, Discussion, Decisions, Actions
-- The Actions section should have columns: Action, Owner, Due Date
-- Add placeholder text showing what goes where
-```
+## Tips for Success
 
-#### Step 2: Project Brief Template
-
-Create a template for new projects.
-
-```
-Create a project brief template at templates/project-brief.md
-with:
-- Frontmatter: title, date, status (not-started/active/complete),
-  priority (high/medium/low), owner
-- Sections: Overview, Objectives, Success Criteria, Timeline,
-  Resources Needed, Risks, Next Steps
-- Add guiding questions as placeholders in each section
-```
-
-#### Step 3: Person Profile Template
-
-For tracking customers, contacts, team members.
-
-```
-Create a person profile template at templates/person-profile.md
-with:
-- Frontmatter: name, company, role, relationship (customer/partner/
-  team/contact), last-contact date, tags
-- Sections: Background, Key Interests, Conversation History,
-  Notes, Follow-up Actions
-- This is for Thistle & Thorn tracking their trade customers
-```
-
-#### Step 4: Use a Template
-
-Now let's use one. Ask Claude:
-
-```
-Using my meeting template, create a new meeting note for:
-Meeting: Weekly Marketing Sync
-Date: Today
-Attendees: Jamie, Fiona
-Agenda: Social media plan, Christmas campaign, website updates
-```
-
-#### Step 5: Create Your Own Template
-
-What note type do you create repeatedly?
-
-Ideas:
-- Weekly review
-- Book/article notes
-- Idea capture
-- Daily standup
-- Customer call
-
-```
-Create a template for [YOUR TEMPLATE TYPE] with appropriate
-frontmatter and sections.
-```
-
-### Your Turn
-
-Create at least 2 more templates for notes you regularly create. Use them for something real.
-
-## Example Outputs
-
-- `templates/meeting-note.md`
-- `templates/project-brief.md`
-- `templates/person-profile.md`
-- At least one personal template
+- **Focus on what you actually create** - Not hypothetical needs
+- **Keep templates simple** - You can always add sections later
+- **Use the templates immediately** - Create a real note to test them
 
 ## What You Learned
 

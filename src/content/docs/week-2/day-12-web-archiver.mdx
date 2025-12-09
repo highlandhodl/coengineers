@@ -27,91 +27,52 @@ Jamie bookmarks interesting articles. The bookmarks pile up. Links break. Paywal
 
 <SlashCommand code="/w2.d12" />
 
-Save web articles as clean, permanent markdown.
+This command guides you through an **interactive walkthrough** to save web articles as permanent, useful markdown.
 
-### What We're Building
+### What the Command Does
 
-An archiving system that captures web articles in clean markdown with metadata, notes, and proper organisation.
+1. **Gets the URL** - What are we archiving?
+2. **Asks why it matters** - Becomes part of your notes
+3. **Identifies context** - What project or topic?
+4. **Captures your thoughts** - Initial reactions
+5. **Creates enriched archive** - Not just content, but context
 
-### The Challenge
+### What Gets Cleaned Out
 
-Jamie finds a brilliant article on whisky tourism trends. Six months from now they'll want to reference it. But will the link still work? Will it be paywalled? Archive it now.
+- Navigation menus
+- Advertisements
+- Cookie banners and popups
+- Sidebars
+- Footer links
+- Social sharing buttons
+- Comments sections
 
-### Step 1: Create the Web Archiver
+### What Gets Preserved
 
-"Create a slash command at .claude/commands/archive-webpage.md:
+- Article headline and subheadings
+- Author and date
+- Main body content
+- Key images (as links)
+- Important embedded links
+- Block quotes
 
-# Archive Web Page
+## Example Output
 
-You are helping me save a web article as clean markdown.
+A clean markdown file with:
+- Frontmatter (title, source, URL, date archived)
+- "Why I Saved This" section
+- Summary of the article
+- Clean article content
+- Key quotes
+- Your notes
+- Action items
 
-## Input
-I'll provide a URL.
+## Tips for Success
 
-## Your Task
-1. Fetch the page content
-2. Extract the main article content
-3. Remove: ads, navigation, sidebars, footers, popups
-4. Convert to clean markdown
-5. Add frontmatter:
-   - title
-   - source (domain)
-   - url
-   - date-archived: today
-   - tags (suggest based on content)
-6. Preserve:
-   - Headings structure
-   - Key images (as markdown image links)
-   - Important links
-   - Author and date if available
-
-## Output Format
-Clean markdown with frontmatter. Reading-focused."
-
-### Step 2: Archive a Sample Article
-
-Let's archive something relevant:
-
-"Archive this URL: [RELEVANT URL]
-
-Save to 03-resources/articles/ with a slug-based filename."
-
-### Step 3: Add Personal Notes
-
-Make archived articles more useful:
-
-"Update archive-webpage.md to also include:
-- A 'My Notes' section at the end for personal annotations
-- A 'Why I Saved This' prompt I should fill in
-- A 'Key Quotes' section with 2-3 notable quotes"
-
-### Step 4: Batch Archive
-
-Sometimes you have a list of URLs:
-
-"I'll give you a list of URLs. For each one, tell me the title and ask if I want to archive it. Then process the ones I approve."
-
-### Step 5: Organise by Topic
-
-"In my articles folder, create subfolders:
-- marketing
-- industry
-- operations
-- reference
-
-Move any archived articles to appropriate subfolders."
-
-### Good Sources to Archive
-
-For practice, try archiving:
-- A blog post you want to remember
-- A how-to article for a tool you use
-- An industry news piece
-- A recipe or guide
-
-### Your Turn
-
-Archive 3 articles you've been meaning to save. Add personal notes to each. Organise by topic.
+- **Explain why you're saving it** - Crucial for future retrieval
+- **Add your thoughts** - Future-you will thank present-you
+- **Organise by topic** - Not just a pile of articles
+- **Archive now, read later** - Don't lose what matters
 
 ## What You Learned
 
@@ -119,12 +80,6 @@ Archive 3 articles you've been meaning to save. Add personal notes to each. Orga
 - Clean markdown beats cluttered bookmarks
 - Personal notes add context for future you
 - Organisation makes retrieval easy
-
-## Example Outputs
-
-- `.claude/commands/archive-webpage.md`
-- Archived articles with clean formatting
-- Articles folder with topic subfolders
 
 ## What's Next?
 

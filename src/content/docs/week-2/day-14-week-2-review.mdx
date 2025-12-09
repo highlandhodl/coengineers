@@ -27,11 +27,15 @@ Jamie now has six processing commands. But they're separate. What if one command
 
 <SlashCommand code="/w2.d14" />
 
-Build your unified content processing pipeline.
+This command guides you through a **Week 2 retrospective** and helps you build a master processing pipeline.
 
-### What We're Building
+### What the Command Does
 
-A master processor that routes content to the right handler automatically, plus a Week 2 retrospective.
+1. **Reviews what you processed** - What content did you actually handle?
+2. **Identifies winners** - Which processor will you use most?
+3. **Finds friction** - What needs tweaking?
+4. **Audits commands** - Shows what you've built
+5. **Creates master router** - One command for everything
 
 ## This Week You Built
 
@@ -44,79 +48,7 @@ A master processor that routes content to the right handler automatically, plus 
 | 12 | `/archive-webpage` | Web articles |
 | 13 | `/process-email` | Email threads |
 
-### Step 1: Create the Master Processor
-
-"Create a slash command at .claude/commands/process.md:
-
-# Process Content
-
-You are my content processing assistant.
-
-## What I'll Give You
-Any type of content:
-- Meeting transcript
-- Voice memo transcript
-- YouTube video transcript
-- PDF file path
-- Web URL
-- Email thread
-
-## Your Task
-1. Identify what type of content this is
-2. Apply the appropriate processing approach:
-   - Meetings → speakers, decisions, actions
-   - Voice memos → ideas, observations, actions
-   - YouTube → summary, key points, quotes
-   - PDFs → summary, data extraction
-   - Web → clean archive with metadata
-   - Email → decisions, actions, follow-ups
-3. Ask me where to save the output
-4. Suggest what to do next
-
-## Intelligence
-- Infer content type from context
-- Ask if you're not sure
-- Combine approaches if content is mixed"
-
-### Step 2: Test the Master Processor
-
-Try it with different content types:
-
-"Here's some content to process:
-
-[PASTE ANY CONTENT TYPE]
-
-Process it appropriately."
-
-### Step 3: Review Your Commands
-
-"List all the slash commands I created during Week 2. For each:
-- Show the file path
-- One-line description
-- Count how many times I might have used it"
-
-### Step 4: Create Week 2 Retrospective
-
-"Create a retrospective at 01-projects/learning-claude-code/week-2-retro.md with:
-- Frontmatter: date, week: 2
-- What I processed this week
-- Which command I'll use most
-- What I want to refine
-- Ideas for new processors"
-
-### Step 5: Prepare for Week 3
-
-Week 3 is about creative outputs - using your processed content to generate new assets.
-
-"Review my 03-resources folder. What content do I have that could be turned into:
-- A presentation
-- Social media posts
-- Visual content
-- Audio/video scripts
-
-Give me 3 specific suggestions for Week 3."
-
-## The Content Processing Pipeline
+## The Processing Pipeline
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -136,11 +68,7 @@ Give me 3 specific suggestions for Week 3."
 └─────────────────────────────────────────────────┘
 ```
 
-### Your Turn
-
-Process 3 different types of content through your master processor. Verify each works correctly.
-
-## What You Learned This Week
+## Week 2 Summary
 
 | Day | Skill | Superpower |
 |-----|-------|------------|
@@ -154,7 +82,7 @@ Process 3 different types of content through your master processor. Verify each 
 
 ## Ready for Week 3?
 
-Week 3: Creative Outputs - From notes to assets that impress
+Week 3: **Creative Outputs** - From notes to assets that impress
 
 We'll generate:
 - Presentations (Gamma)
@@ -165,12 +93,6 @@ We'll generate:
 - Video briefs (HeyGen, Kling)
 
 Run `/w3.d15` when you're ready!
-
-## Example Outputs
-
-- `.claude/commands/process.md` (master router)
-- `week-2-retro.md`
-- Verified processing pipeline
 
 ---
 Day 14 of 31 | CoEngineers.ai

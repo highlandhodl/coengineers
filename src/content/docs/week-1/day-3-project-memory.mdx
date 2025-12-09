@@ -27,15 +27,17 @@ Jamie keeps explaining the same things to Claude. "We're a whisky distillery... 
 
 <SlashCommand code="/w1.d3" />
 
-Today we teach Claude to remember your project context.
+This command guides you through an **interactive walkthrough** to create a CLAUDE.md that captures everything important about your project.
 
-### What We're Building
+### What the Command Does
 
-A CLAUDE.md file that gives Claude persistent memory about your project - who you are, what you're building, how you work.
+1. **Asks about your project** - What is it? What are you building?
+2. **Identifies key people** - Who's involved?
+3. **Captures conventions** - Language, terminology, patterns
+4. **Gathers context** - What should Claude always know?
+5. **Documents anti-patterns** - What should Claude avoid?
 
 ### What Goes in CLAUDE.md
-
-A typical CLAUDE.md includes:
 
 ```markdown
 # Project Name
@@ -43,87 +45,36 @@ A typical CLAUDE.md includes:
 ## Overview
 What this project is about, in 2-3 sentences.
 
-## Key Context
-- Who uses this
-- What problem it solves
-- Important constraints
+## Key People
+- Who's involved and what they do
 
 ## Conventions
 - Spelling (British/American)
 - Terminology
 - File naming patterns
 
-## Tech Stack (if applicable)
-- Languages/frameworks
-- Key dependencies
+## Important Context
+- Domain knowledge
+- Constraints
 
-## Patterns
-- Code patterns to follow
-- Document structures used
-- Naming conventions
+## What to Avoid
+- Anti-patterns
+- Previous mistakes
 ```
 
-### Let's Go
+## Example Output
 
-#### Step 1: Create CLAUDE.md for Your Learning Project
+After running the command, you'll have:
 
-Navigate to your learning-claude-code project folder.
+- `CLAUDE.md` in your project root
+- Personalised context Claude reads automatically
+- The ability to test it by starting a fresh conversation
 
-```
-Create a CLAUDE.md file in my learning-claude-code project.
-Include: an overview explaining I'm learning Claude Code over
-31 days, that I use British English, and that I work in
-[YOUR FIELD/CONTEXT]. Add sections for conventions and patterns.
-```
+## Tips for Success
 
-#### Step 2: Add Specific Context
-
-Now add details relevant to YOUR situation.
-
-```
-Update the CLAUDE.md to include:
-- My role/job context: [YOUR DETAILS]
-- File naming convention: lowercase-with-dashes
-- Preferred output format: markdown with frontmatter
-- Any tools I commonly use: [YOUR TOOLS]
-```
-
-#### Step 3: Test the Memory
-
-Start a fresh conversation and see if Claude remembers.
-
-```
-Based on my project context, what conventions should I follow
-when creating a new document?
-```
-
-Claude should reference your CLAUDE.md without you reminding it.
-
-#### Step 4: Create CLAUDE.md for Thistle & Thorn
-
-Let's practice with the fictional company.
-
-```
-Create a CLAUDE.md for Thistle & Thorn Distillery with:
-- Overview: Craft whisky distillery in Speyside, 4th generation
-- British English spelling
-- Key people: Fiona (owner), Jamie (marketing), Hamish (cooper)
-- Products: Single malt whisky, gin, distillery experiences
-- Tone: Warm, proud heritage, approachable
-```
-
-### Your Turn
-
-Create a CLAUDE.md for a real project of your own. Include:
-- What the project is
-- Your conventions and preferences
-- Any context Claude should always know
-
-## Example Outputs
-
-- CLAUDE.md for learning project
-- CLAUDE.md for Thistle & Thorn
-- Experience of context-aware responses
+- **Keep it concise** - Claude reads it every time, so brevity matters
+- **Focus on what changes behaviour** - Not general information
+- **Be specific about conventions** - They matter for consistency
 
 ## What You Learned
 

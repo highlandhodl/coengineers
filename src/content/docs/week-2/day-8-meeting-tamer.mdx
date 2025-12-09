@@ -27,97 +27,40 @@ Sarah recorded last week's distributor call. The raw transcript is 47 minutes of
 
 <SlashCommand code="/w2.d8" />
 
-Turn messy meeting transcripts into structured, actionable notes.
+This command guides you through an **interactive walkthrough** to process a meeting transcript. It asks about context before processing.
 
-### What We're Building
+### What the Command Does
 
-A processed meeting note from a raw transcript, with speakers identified, decisions captured, and action items extracted.
+1. **Asks for the transcript** - Paste it or give a file path
+2. **Gathers context** - What kind of meeting? Who was there?
+3. **Identifies what matters** - What do you need from this?
+4. **Processes with understanding** - Context improves extraction
+5. **Creates structured output** - Ready for action
 
-### The Input
+### What You'll Extract
 
-A raw meeting transcript - messy, unstructured, possibly without clear speaker labels.
+- **Summary** (2-3 sentences)
+- **Attendees** (identified from context)
+- **Key Discussion Points**
+- **Decisions Made**
+- **Action Items** (who, what, when)
+- **Open Questions**
 
-### The Output
+## Example Output
 
 A clean meeting note with:
 - Frontmatter (date, attendees, type)
-- Summary (2-3 sentences)
-- Key discussion points
-- Decisions made
-- Action items (who, what, when)
+- Executive summary
+- Decisions with owners
+- Action items table
+- Parking lot for unresolved items
 
-### Step 1: Create the Meeting Processor Command
+## Tips for Success
 
-First, let's build a reusable command:
-
-"Create a slash command at .claude/commands/process-meeting.md:
-
-# Process Meeting Transcript
-
-You are helping me turn a raw meeting transcript into structured notes.
-
-## Input
-I'll provide a raw meeting transcript. It may be:
-- Messy with poor punctuation
-- Missing clear speaker labels
-- Long and rambling
-
-## Your Task
-1. Identify speakers if possible (from context clues)
-2. Summarise the meeting in 2-3 sentences
-3. Extract key discussion points (bullet list)
-4. Identify decisions that were made
-5. Extract action items as a table: Action | Owner | Due Date
-6. Note any open questions or parking lot items
-
-## Output Format
-Create a markdown file with frontmatter and clear sections.
-Use British English. Be concise - cut the fluff."
-
-### Step 2: Process the Example Transcript
-
-Now let's use it. I'll give you a sample transcript:
-
-"Process this meeting transcript using my meeting processor:
-
-[PASTE SAMPLE TRANSCRIPT]
-
-Meeting was between Jamie and Fiona discussing Q1 marketing plans.
-Save the output to 01-projects/learning-claude-code/week-2-outputs/distributor-call-processed.md"
-
-### Step 3: Refine the Output
-
-Review what Claude created. Iterate:
-
-"The action items section needs due dates. Can you infer reasonable dates from context, or mark as 'TBD' if unclear? Update the file."
-
-### Step 4: Add to Your Template Library
-
-"Update my meeting note template (templates/meeting-note.md) to match the structure we used for processed meetings. Add a 'Source: transcript' field to frontmatter."
-
-### Sample Transcript for Practice
-
-Here's a sample Thistle & Thorn meeting to process:
-
-```
-so fiona was saying we need to get the christmas stuff sorted
-jamie said yeah definitely what were you thinking fiona well
-i was thinking maybe a tasting event but sarah thinks we dont
-have capacity sarah said look we can maybe do 20 people max
-if we use the warehouse jamie asked about the social media
-plan fiona said priority one is the website its looking dated
-jamie agreed to update it by december first sarah will handle
-event bookings fiona wants to focus on premium customers not
-volume jamie asked about budget fiona said lets keep it under
-two thousand pounds for the whole campaign sarah worried about
-staffing for the event decided to hire two temp staff for
-december jamie to draft social calendar by friday next week
-we'll review the website mockups...
-```
-
-### Your Turn
-
-Find a real meeting transcript (or create one from notes) and process it with your new command. Compare the before and after.
+- **Provide context** - Meeting type, attendees, purpose
+- **Accept imperfection** - Transcripts are messy, that's OK
+- **Review action items** - Ensure owners and dates are clear
+- **Save the command** - You'll use it again
 
 ## What You Learned
 
@@ -125,12 +68,6 @@ Find a real meeting transcript (or create one from notes) and process it with yo
 - Speaker identification from context works surprisingly well
 - Consistent output format makes notes usable
 - Save the command for reuse
-
-## Example Outputs
-
-- `.claude/commands/process-meeting.md`
-- `distributor-call-processed.md` with clean structure
-- Updated meeting template
 
 ## What's Next?
 

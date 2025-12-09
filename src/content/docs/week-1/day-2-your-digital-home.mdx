@@ -27,16 +27,20 @@ Jamie needs somewhere to put everything. The distillery's files are scattered ac
 
 <SlashCommand code="/w1.d2" />
 
-Today we build the folder structure that holds everything.
+This command guides you through an **interactive walkthrough** to design a folder structure that fits YOUR workflow - not a generic template.
 
-### What We're Building
+### What the Command Does
 
-A complete folder hierarchy for your personal knowledge system, ready to hold projects, notes, templates, and archives.
+1. **Asks about your current situation** - Where are files now? What's the pain?
+2. **Discovers your work patterns** - What kinds of projects do you have?
+3. **Identifies ongoing areas** - Responsibilities without deadlines
+4. **Helps you choose a location** - Where should your vault live?
+5. **Creates personalised structure** - With READMEs that match YOUR context
 
-### The Structure We'll Create
+### The Structure You'll Create
 
 ```
-thistle-thorn-vault/
+[your-vault-name]/
 ├── 00-inbox/           # Temporary landing zone
 ├── 01-projects/        # Active work with deadlines
 ├── 02-areas/           # Ongoing responsibilities
@@ -47,66 +51,20 @@ thistle-thorn-vault/
     └── commands/       # Your slash commands
 ```
 
-### Let's Go
+## Example Output
 
-#### Step 1: Choose Your Location
+After running the command, you'll have:
 
-First, decide where this vault will live. Common choices:
-- `~/Documents/vault/`
-- `~/notes/`
-- `~/second-brain/`
+- Complete folder structure at your chosen location
+- README.md files in each folder explaining what goes there
+- Your first project folder for this learning journey
+- Your learning-log.md moved into the right place
 
-Tell Claude:
+## Tips for Success
 
-```
-Create a folder structure for my personal knowledge system at
-[YOUR CHOSEN PATH]. Use these folders: 00-inbox, 01-projects,
-02-areas, 03-resources, 04-archive, templates. Also create a
-.claude/commands folder for slash commands.
-```
-
-#### Step 2: Add README Files
-
-Each folder should explain itself. Ask Claude:
-
-```
-Add a README.md to each folder explaining what goes there.
-Keep it simple - just 2-3 sentences per folder. Use Thistle &
-Thorn Distillery as an example business for the descriptions.
-```
-
-#### Step 3: Create Your First Project Folder
-
-Let's add a real project inside 01-projects.
-
-```
-Create a folder called 'learning-claude-code' inside 01-projects.
-Move my learning-log.md from yesterday into this project folder.
-Add a README explaining this is my course learning project.
-```
-
-#### Step 4: Understand the System
-
-Ask Claude to explain how this should work:
-
-```
-Explain how I should use this folder structure day-to-day.
-When does something go in inbox vs projects? When do I archive?
-Keep it practical.
-```
-
-### Your Turn
-
-Customise your structure. Ask Claude to:
-- Add any additional folders you need
-- Create a folder for a real project you're working on
-- Move some existing files into the right places
-
-## Example Outputs
-
-- Complete folder structure with READMEs
-- First project folder with learning log moved
-- Understanding of PARA-style organisation
+- **Be honest about your chaos** - The messier the truth, the better the solution
+- **Think about real projects** - Give examples from your actual work
+- **Don't over-engineer** - Start simple, add folders as needed
 
 ## What You Learned
 

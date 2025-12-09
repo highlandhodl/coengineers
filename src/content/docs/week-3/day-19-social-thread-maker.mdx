@@ -27,18 +27,15 @@ Jamie has blog posts, notes, and ideas but no social media content. Every platfo
 
 <SlashCommand code="/w3.d19" />
 
-Transform long-form content into engaging social media posts.
+This command guides you through an **interactive walkthrough** to transform long-form content into engaging social media posts.
 
-### What We're Building
-Social media content for multiple platforms from your existing notes and content.
+### What the Command Does
 
-### The Scenario
-Jamie wrote a blog post about "Why Craft Whisky Beats Mass Market." Now they need:
-- A Twitter/X thread
-- LinkedIn posts
-- Instagram captions
-
-One piece of content, multiple platforms.
+1. **Gets your source content** - Blog post, notes, or idea
+2. **Asks which platforms** - Twitter/X, LinkedIn, Instagram?
+3. **Understands the goal** - Awareness, engagement, traffic?
+4. **Gets your voice** - Professional, casual, provocative?
+5. **Creates platform-specific posts** - Ready to copy and paste
 
 ### Platform Differences
 
@@ -60,83 +57,7 @@ One piece of content, multiple platforms.
 - Hashtags matter
 - More emotional/visual language
 
-### Let's Go
-
-#### Step 1: Create the Social Content Generator
-"Create a slash command at .claude/commands/create-social.md:
-
-# Create Social Media Content
-
-You are helping me turn content into social media posts.
-
-## Input
-I'll provide:
-- Source content (notes, blog post, idea)
-- Target platform(s)
-- Tone preference
-- Call to action (if any)
-
-## Your Task
-Create platform-specific content:
-
-**For Twitter/X:**
-- Hook tweet (stops the scroll)
-- Thread if content is substantial (numbered)
-- Each tweet under 280 chars
-- End with CTA
-
-**For LinkedIn:**
-- Hook (first line visible before 'see more')
-- Story structure or key points
-- Professional but human tone
-- CTA in final paragraph
-
-**For Instagram:**
-- Caption with hook
-- Emoji usage (moderate)
-- Hashtag suggestions (10-15)
-- CTA
-
 ## Hook Formulas That Work
-- Contrarian: 'Unpopular opinion: [thing]'
-- Numbers: '5 things I learnt about [X]'
-- Story: 'I used to think [X]. Then [Y] happened.'
-- Question: 'Why do most [X] fail at [Y]?'
-
-## Output Format
-Separate sections for each platform. Ready to copy and paste."
-
-#### Step 2: Create Thistle & Thorn Social Content
-"Create social content from this blog post outline:
-
-Title: Why Craft Whisky Beats Mass Market (Every Time)
-
-Key points:
-- Mass market whisky is blended for consistency, not character
-- Craft distilleries use local ingredients, unique water sources
-- You can taste the place in craft whisky
-- Small batches mean the distiller knows every cask
-- The story matters - who made this, why, how
-- Craft whisky supports local economy and traditions
-- Price reflects care, not just marketing
-
-Create:
-1. Twitter/X thread (7 tweets)
-2. LinkedIn post
-3. Instagram caption
-
-Save to week-3-outputs/craft-whisky-social.md"
-
-#### Step 3: Create a Hook Generator
-"Create a slash command create-hooks.md that takes a topic and generates 10 different hooks using different formulas (contrarian, numbers, story, question, etc.)."
-
-#### Step 4: Content Calendar Helper
-"Create a slash command plan-social-week.md that takes a topic or content piece and suggests 5 different posts for the week, each with a different angle."
-
-#### Step 5: Carousel Outline
-"Create a 10-slide Instagram carousel outline from the craft whisky content. Each slide should have a headline and 1-2 bullet points. First slide is the hook."
-
-### Hook Formulas
 
 | Formula | Example |
 |---------|---------|
@@ -147,21 +68,27 @@ Save to week-3-outputs/craft-whisky-social.md"
 | Challenge | "Stop buying whisky based on age. Here's what actually matters." |
 | Behind the scenes | "This is what happens in a cask for 12 years" |
 
-### Your Turn
-Take a piece of content you've created and run it through the social content generator. Create posts for at least 2 platforms.
+## Example Output
 
-### What You Learned
+Platform-specific content with:
+- Hook that stops the scroll
+- Body content optimised for platform
+- Call to action
+- Hashtag suggestions (where appropriate)
+
+## Tips for Success
+
+- **Lead with the hook** - First line is everything
+- **One idea = multiple posts** - Repurpose ruthlessly
+- **Know the platform norms** - LinkedIn ≠ Twitter
+- **Include a CTA** - What should readers do next?
+
+## What You Learned
+
 - One idea = multiple platform posts
 - Hooks are the most important element
 - Each platform has different norms
 - Repurposing beats creating from scratch
-
-## Example Outputs
-
-- `.claude/commands/create-social.md`
-- `.claude/commands/create-hooks.md`
-- `.claude/commands/plan-social-week.md`
-- `craft-whisky-social.md` with multi-platform content
 
 ## What's Next?
 

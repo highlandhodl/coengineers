@@ -27,26 +27,15 @@ Thistle & Thorn wants video content for the website but can't afford a film crew
 
 <SlashCommand code="/w3.d20" />
 
-Create production briefs for HeyGen avatar videos.
+This command guides you through an **interactive walkthrough** to create production briefs for HeyGen avatar videos.
 
-### What We're Building
-Complete video scripts with scene directions, ready for HeyGen avatar generation.
+### What the Command Does
 
-### The Scenario
-Thistle & Thorn needs:
-- A welcome video for the website
-- Product explainer videos
-- FAQ responses
-
-No film crew. No expensive production. Just HeyGen.
-
-### HeyGen Basics
-
-HeyGen creates talking head videos with:
-- AI avatars (or your own)
-- Text-to-speech voices
-- Scene transitions
-- Background changes
+1. **Asks about the video** - What's it for and where will it live?
+2. **Gets key messages** - What must the video communicate?
+3. **Understands the tone** - Professional, friendly, energetic?
+4. **Specifies length** - 30 seconds, 60 seconds, 2 minutes?
+5. **Creates scene-by-scene script** - Ready for HeyGen
 
 ### Script Structure for Avatars
 
@@ -63,86 +52,24 @@ SCENE 2: [Background description]
 ...
 ```
 
-### Let's Go
+## HeyGen Basics
 
-#### Step 1: Create the Video Brief Creator
-"Create a slash command at .claude/commands/create-video-brief.md:
+HeyGen creates talking head videos with:
+- AI avatars (or your own)
+- Text-to-speech voices
+- Scene transitions
+- Background changes
 
-# Create Video Brief
+## Example Output
 
-You are helping me create video scripts for HeyGen avatar generation.
+A complete video brief with:
+- Video overview (title, duration, purpose)
+- Avatar and voice recommendations
+- Scene-by-scene script
+- Background suggestions
+- Pause markers and transitions
 
-## Input
-I'll provide:
-- Video topic/purpose
-- Target length (in seconds/minutes)
-- Key messages to convey
-- Tone (professional, friendly, energetic)
-- Where it will be used
-
-## Your Task
-Create a video script with:
-
-1. **Video Overview**
-   - Title
-   - Duration
-   - Purpose
-   - Avatar suggestions
-
-2. **Scene-by-Scene Script**
-   - Scene number and description
-   - Background suggestion
-   - Avatar expression/gesture
-   - Dialogue (written for speaking)
-   - Pause markers
-   - Transitions
-
-3. **Technical Notes**
-   - Pacing guidance
-   - Music suggestions (if any)
-   - Text overlays needed
-
-## Output Format
-Production-ready script with clear scene breaks.
-Dialogue written for natural speech (contractions, pauses).
-Keep individual scenes under 30 seconds for best results."
-
-#### Step 2: Create Welcome Video Script
-"Create a 90-second welcome video script for Thistle & Thorn's website homepage.
-
-Messages to convey:
-- Welcome to our distillery
-- Four generations of whisky-making
-- We're in the heart of Speyside
-- Visit us for tours and tastings
-- Sign up for the newsletter for exclusive releases
-
-Tone: Warm, inviting, proud but not boastful
-Avatar: Professional woman, 40s, friendly smile
-
-Save to week-3-outputs/welcome-video-brief.md"
-
-#### Step 3: Create Product Video Series
-"Create briefs for 3 short (30-second) product videos:
-
-1. The 12-Year Single Malt - our signature whisky
-2. The Thistle Gin - seasonal small batch
-3. The Distillery Experience - tours and tastings
-
-Each should follow the same format for consistency.
-Save to week-3-outputs/product-video-briefs.md"
-
-#### Step 4: FAQ Video Generator
-"Create a slash command create-faq-video.md that takes a question and answer and creates a 30-second video script for a friendly FAQ response."
-
-#### Step 5: Prepare for HeyGen
-"Add a section to welcome-video-brief.md with:
-- HeyGen avatar recommendations
-- Voice selections (match Scottish tone if possible)
-- Background options
-- Export settings for web"
-
-### HeyGen Tips
+## HeyGen Tips
 
 1. **Keep scenes short** - Under 30 seconds each
 2. **Vary backgrounds** - Keep visual interest
@@ -150,26 +77,19 @@ Save to week-3-outputs/product-video-briefs.md"
 4. **Match voice to content** - Professional vs casual
 5. **Test with shortest video first** - Iterate quickly
 
-### Your Turn
-Create a video brief for something you need:
-- A welcome/intro video
-- A product/service explainer
-- An FAQ response
+## Tips for Success
 
-Generate it in HeyGen and see the result.
+- **Write for speaking** - Contractions, natural rhythm
+- **Be specific about scenes** - Help yourself in HeyGen
+- **Include timing** - Know your target duration
+- **Think visually** - What's happening on screen?
 
-### What You Learned
+## What You Learned
+
 - Avatars need natural speech patterns
 - Scene structure keeps videos engaging
 - Shorter scenes work better
 - Pre-planning saves generation credits
-
-## Example Outputs
-
-- `.claude/commands/create-video-brief.md`
-- `.claude/commands/create-faq-video.md`
-- `welcome-video-brief.md`
-- `product-video-briefs.md`
 
 ## What's Next?
 
