@@ -49,14 +49,29 @@
   --sl-color-accent: #F7931A;
   --sl-color-accent-high: #402806;
 
+  /* Backgrounds */
   --sl-color-bg: #FAFAF9;
   --sl-color-bg-nav: #F5F5F4;
   --sl-color-bg-sidebar: #F5F5F4;
   --sl-color-hairline-light: #E7E5E4;
-  --sl-color-hairline: #E7E5E4;
+  --sl-color-hairline: #D6D3D1;
 
+  /* Text colours - CRITICAL: invert grays for light mode */
   --sl-color-text: #1C1917;
   --sl-color-text-accent: #C77A15;
+
+  /* Invert gray scale for light mode (dark text on light bg) */
+  --sl-color-white: #1C1917;
+  --sl-color-gray-1: #292524;
+  --sl-color-gray-2: #44403C;
+  --sl-color-gray-3: #57534E;
+  --sl-color-gray-4: #78716C;
+  --sl-color-gray-5: #A8A29E;
+  --sl-color-gray-6: #D6D3D1;
+  --sl-color-black: #FAFAF9;
+
+  /* Headings */
+  --sl-color-heading: #1C1917;
 }
 
 /* Link styling with Bitcoin Orange */
@@ -85,11 +100,13 @@ code {
 .sl-link-button {
   background: var(--sl-color-accent) !important;
   border-color: var(--sl-color-accent) !important;
+  color: white !important;
 }
 
 .sl-link-button:hover {
   background: #E8850F !important;
   border-color: #E8850F !important;
+  color: white !important;
 }
 
 /* Sidebar active state */
@@ -97,6 +114,7 @@ code {
   background: rgba(247, 147, 26, 0.1);
   border-left: 3px solid var(--sl-color-accent);
 }
+
 
 /* Custom video wrapper */
 .video-wrapper {
@@ -118,7 +136,7 @@ code {
   border: none;
 }
 
-/* Email signup styling */
+/* Email signup styling - base overrides for global consistency */
 .email-signup {
   background: var(--sl-color-bg-nav);
   border: 1px solid var(--sl-color-hairline);
@@ -127,31 +145,10 @@ code {
   margin: 2rem 0;
 }
 
-.email-signup input[type="email"] {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--sl-color-hairline);
-  border-radius: 0.5rem;
-  background: var(--sl-color-bg);
-  color: var(--sl-color-text);
-  font-family: var(--sl-font);
-  margin-bottom: 0.75rem;
-}
-
-.email-signup button {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: var(--sl-color-accent);
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.email-signup button:hover {
-  background: #E8850F;
+@media (min-width: 640px) {
+  .email-signup {
+    padding: 2rem;
+  }
 }
 
 /* Countdown timer styling */
@@ -201,4 +198,110 @@ code {
   color: var(--sl-color-accent);
   background: transparent;
   padding: 0;
+}
+
+/* ========================================
+   Mobile Responsiveness
+   ======================================== */
+
+/* Mobile-first base styles */
+@media (max-width: 639px) {
+  /* Reduce base font sizes on mobile */
+  :root {
+    --sl-text-h1: 1.75rem;
+    --sl-text-h2: 1.25rem;
+    --sl-text-h3: 1.125rem;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  /* Countdown timer wrapping on mobile */
+  .countdown {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .countdown-unit {
+    padding: 0.75rem 1rem;
+    min-width: 4rem;
+  }
+
+  .countdown-value {
+    font-size: 1.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.625rem;
+  }
+
+  /* Card grid single column on mobile */
+  .card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* Email signup mobile tweaks */
+  .email-signup {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .email-signup h3 {
+    font-size: 1rem;
+  }
+
+  /* Buttons full width on mobile */
+  .sl-link-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+  }
+
+  /* Better touch targets */
+  a, button {
+    min-height: 44px;
+  }
+
+  /* Reduce content padding */
+  .sl-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .countdown-unit {
+    padding: 1rem 1.25rem;
+    min-width: 5rem;
+  }
+
+  .countdown-value {
+    font-size: 1.75rem;
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+  .countdown-unit {
+    padding: 1.25rem 1.75rem;
+    min-width: 6rem;
+  }
+
+  .countdown-value {
+    font-size: 2.5rem;
+  }
 }

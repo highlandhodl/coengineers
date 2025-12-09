@@ -8,7 +8,8 @@ export default defineConfig({
       title: 'CoEngineers',
       description: '31 Days of Claude Code to Save Time',
       logo: {
-        src: './src/assets/logo.svg',
+        light: './src/assets/logo-light.svg',
+        dark: './src/assets/logo-dark.svg',
         replacesTitle: true,
       },
       social: [
@@ -27,6 +28,20 @@ export default defineConfig({
         './src/styles/custom.css',
       ],
       sidebar: [
+        {
+          label: 'Blog',
+          collapsed: true,
+          items: [
+            { label: 'My AI Story', slug: 'blog/01-my-ai-story' },
+            { label: 'Thoughts on GenAI', slug: 'blog/02-thoughts-on-genai' },
+            { label: 'Why Claude Code', slug: 'blog/03-my-claude-code-story' },
+            { label: 'What You\'ll Learn', slug: 'blog/04-what-you-will-learn' },
+            { label: 'Who It\'s For', slug: 'blog/05-who-this-course-is-for' },
+            { label: 'Why It\'s Different', slug: 'blog/06-why-this-course-is-different' },
+            { label: 'What You\'ll Build', slug: 'blog/07-what-you-will-build' },
+            { label: 'Launch Day', slug: 'blog/08-website-launch', badge: { text: '🚀', variant: 'note' } },
+          ],
+        },
         {
           label: 'Getting Started',
           items: [

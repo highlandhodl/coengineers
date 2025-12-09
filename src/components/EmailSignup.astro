@@ -68,13 +68,16 @@ const {
 
   .email-signup input[type="email"] {
     flex: 1;
-    padding: 0.75rem 1rem;
+    min-width: 0;
+    width: 100%;
+    padding: 1rem 1.25rem;
     border: 1px solid var(--sl-color-hairline);
     border-radius: 0.5rem;
     background: var(--sl-color-bg);
     color: var(--sl-color-text);
     font-family: var(--sl-font);
     font-size: 1rem;
+    min-height: 3.25rem;
   }
 
   .email-signup input[type="email"]:focus {
@@ -83,7 +86,7 @@ const {
   }
 
   .email-signup button {
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     background: var(--sl-color-accent);
     color: white;
     border: none;
@@ -92,6 +95,8 @@ const {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.2s;
+    min-height: 3.25rem;
+    white-space: nowrap;
   }
 
   .email-signup button:hover {
