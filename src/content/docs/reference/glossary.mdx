@@ -1,0 +1,207 @@
+---
+title: Glossary
+description: Key terms and definitions used throughout the course
+---
+
+This glossary defines technical terms used throughout the 31 Days of Claude Code course. If you encounter an unfamiliar word, look it up here.
+
+---
+
+## A
+
+### Agent
+
+An AI system that can take actions autonomously. Unlike a simple chatbot that just responds to questions, an agent can browse the web, run code, create files, and complete multi-step tasks without constant human guidance.
+
+### API (Application Programming Interface)
+
+A way for programs to communicate with each other. Think of it like a menu at a restaurant — the menu tells you what dishes (data/services) are available and how to order them (make requests).
+
+### API Key
+
+A secret code that authenticates you to a service. Like a password, but specifically for programs to identify themselves. Your Anthropic API key lets Claude Code access Claude on your behalf.
+
+**Example:** `sk-ant-api-xxxxx...`
+
+### Astro
+
+The web framework this course site is built with. Astro creates fast, content-focused websites. You don't need to know Astro to take this course — it's just what powers the lessons you're reading.
+
+---
+
+## C
+
+### Claude
+
+Anthropic's AI assistant. Claude can understand and generate text, answer questions, write code, and help with a wide variety of tasks. It's the AI brain behind Claude Code.
+
+### Claude Code
+
+The command-line tool for interacting with Claude directly from your terminal. Instead of using a web interface, Claude Code lets you work with Claude where you already work — in your code editor and terminal.
+
+### CLI (Command Line Interface)
+
+A text-based way to interact with your computer. Instead of clicking buttons, you type commands. Examples include Terminal (Mac), Command Prompt (Windows), and PowerShell.
+
+**Example command:** `npm install`
+
+### Context Window
+
+The amount of text Claude can consider at once. Think of it as Claude's working memory. Current Claude models can consider roughly 200,000 tokens (about 150,000 words) at once.
+
+---
+
+## E
+
+### Environment Variable
+
+A setting stored outside your code that programs can read. Used for things like API keys that shouldn't be written directly in code. They're set in your terminal or a `.env` file.
+
+**Example:**
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-..."
+```
+
+---
+
+## G
+
+### Git
+
+A version control system for tracking code changes. Git lets you save snapshots of your work, go back to previous versions, and collaborate with others. It's like "track changes" in Word, but for code.
+
+**Common commands:**
+
+- `git status` — See what's changed
+- `git add .` — Stage changes
+- `git commit -m "message"` — Save a snapshot
+
+---
+
+## L
+
+### LLM (Large Language Model)
+
+The type of AI that powers Claude. LLMs are trained on vast amounts of text to understand and generate human-like language. They can write, summarise, translate, code, and reason about text.
+
+---
+
+## M
+
+### Markdown
+
+A simple text formatting syntax. Instead of clicking Bold, you write `**bold**`. Markdown is used for documentation, README files, and many other purposes.
+
+**Common syntax:**
+
+- `**bold**` → **bold**
+- `*italic*` → _italic_
+- `# Heading` → Heading
+- `[link text](url)` → clickable link
+
+### MDX
+
+Markdown with JavaScript components. It lets you write content in Markdown but include interactive elements like videos, signup forms, and code playgrounds. This course's lessons are written in MDX.
+
+### MCP (Model Context Protocol)
+
+A standard for connecting AI to external tools. MCP lets Claude Code interact with databases, APIs, and other services through a consistent interface. You can add new capabilities by installing MCP servers.
+
+---
+
+## N
+
+### Node.js
+
+A JavaScript runtime for running code outside browsers. While JavaScript was originally only for websites, Node.js lets you run JavaScript anywhere — for servers, command-line tools, and more.
+
+**Check your version:** `node --version`
+
+### npm (Node Package Manager)
+
+A package manager for JavaScript. It lets you install, update, and manage code libraries. When you run `npm install`, it downloads the packages your project needs.
+
+**Common commands:**
+
+- `npm install` — Install dependencies
+- `npm run dev` — Run development server
+- `npm test` — Run tests
+
+---
+
+## P
+
+### Prompt
+
+Instructions you give to an AI. A good prompt tells Claude what you want, provides context, and specifies the format for the response. Writing effective prompts is a skill this course teaches.
+
+**Example prompt:** "Summarise this article in 3 bullet points"
+
+---
+
+## R
+
+### Repository (Repo)
+
+A project folder tracked by Git. A repository contains your code, history, and configuration. You can host repositories on services like GitHub.
+
+---
+
+## S
+
+### Serverless
+
+Cloud functions that run on demand. Instead of running a server 24/7, serverless functions only run when needed — like when someone submits a form. You pay only for execution time.
+
+### Slash Command
+
+A custom command starting with `/`. In Claude Code, slash commands run predefined prompts. For example, `/w1.d1` runs the Day 1 lesson command.
+
+**Course commands follow this pattern:**
+
+- `/w1.d1` — Week 1, Day 1
+- `/w2.d8` — Week 2, Day 8
+- `/bonus.d29` — Bonus Day 29
+
+### Supabase
+
+A database service. It provides PostgreSQL databases with a nice interface and API. This course site uses Supabase to store email subscriptions.
+
+---
+
+## T
+
+### Terminal
+
+An application for running command-line programs. On Mac, it's called "Terminal". On Windows, you can use Command Prompt, PowerShell, or Windows Terminal.
+
+### Token
+
+A unit of text that AI models process. Roughly 1 token = 0.75 words in English. When you see "200K context window", it means the model can process about 200,000 tokens at once.
+
+**Rough guide:**
+
+- 1 word ≈ 1.3 tokens
+- 1 page ≈ 400 tokens
+- This glossary ≈ 1,500 tokens
+
+### TypeScript
+
+JavaScript with type safety. TypeScript adds type checking to JavaScript, catching errors before your code runs. Many modern projects use TypeScript for reliability.
+
+---
+
+## V
+
+### Vercel
+
+A hosting platform for web apps. Vercel can deploy websites with a single command and handles scaling automatically. This course site is hosted on Vercel.
+
+---
+
+## Questions?
+
+If you encounter a term not listed here, ask in the community (launching January 2026) or email john@coengineers.ai.
+
+We'll keep expanding this glossary based on your feedback.

@@ -29,4 +29,6 @@ npm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
-.vercel
+
+# Test coverage
+coverage/

@@ -1,75 +1,53 @@
 ---
-title: "Day 11: PDF Crusher"
-description: "Liberate information locked in PDF documents"
+title: 'Day 11: PDF Crusher'
+description: 'Liberate information locked in PDF documents'
 day: 11
 week: 2
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w2.d11" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 11: PDF Crusher" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w2.d11" label="Process PDF documents" />
 
 ## What You'll Learn
 
-- Extract text and data from PDF documents
-- Handle different PDF types (text, scanned, tables)
-- Create markdown summaries from reports
-- Extract specific data points
+- Extract key information from long reports or documents
+- Summarise research papers and technical documentation
+- Create executive summaries from detailed documents
+- Answer specific questions about document content
 
 ## The Scenario
 
 Fiona receives industry reports, supplier price lists, and regulatory documents - all as PDFs. The information is locked in. Time to unlock it.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w2.d11" />
+| Concept                       | Description                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------- |
+| **Document Types**            | Different approaches for research papers, business reports, technical specs |
+| **Executive Summaries**       | Extract objectives, findings, recommendations, and risks                    |
+| **Question-Based Extraction** | Ask targeted questions instead of reading everything                        |
+| **Data Liberation**           | Extract tables and metrics into structured formats                          |
 
-This command guides you through an **interactive walkthrough** to extract what you need from PDF documents.
+## What You'll Create
 
-### What the Command Does
+- One-page executive summaries from lengthy reports
+- Targeted answers to specific document questions
+- Comparison tables from multiple vendor proposals
+- Extracted data tables from scattered metrics
 
-1. **Gets the PDF** - File path or description
-2. **Identifies the type** - Report, form, data sheet, manual?
-3. **Understands your goal** - Summary, specific data, or conversion?
-4. **Processes appropriately** - Different PDFs need different approaches
-5. **Creates useful output** - Ready to use
-
-### What Claude Can Do with PDFs
-
-- **Read and summarise** - Extract key points
-- **Find specific information** - Answer targeted questions
-- **Extract tables** - Convert to markdown tables
-- **Pull quotes** - With page references
-- **Convert to markdown** - Make content editable
-
-## Example Output
-
-Depending on your needs:
-- **Full summary**: Key findings, implications, action items
-- **Data extraction**: Tables, figures, statistics
-- **Q&A**: Direct answers with page references
-- **Markdown conversion**: Editable document
-
-## Tips for Success
-
-- **Know what you need** - Summary vs specific data
-- **Provide context** - Why are you reading this PDF?
-- **Ask follow-up questions** - Claude can dig deeper
-- **Save tables as markdown** - Much more useful than PDFs
-
-## What You Learned
+## Quick Reference
 
 - Claude Code reads PDFs natively
-- Summaries beat re-reading 40-page documents
-- Tables can be extracted as markdown
-- Targeted extraction for specific data
-
-## What's Next?
-
-Tomorrow in [Day 12: Web Archiver](/week-2/day-12-web-archiver/), we'll save articles as clean markdown.
+- Start with document type to determine extraction approach
+- Ask specific questions for targeted information
+- Extract tables as markdown for further analysis
 
 ---
-Day 11 of 31 | CoEngineers.ai
+
+**Navigation:** [Day 10: YouTube Brain](/week-2/day-10-youtube-brain/) | [Day 12: Web Archiver](/week-2/day-12-web-archiver/)

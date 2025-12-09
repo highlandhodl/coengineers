@@ -1,78 +1,53 @@
 ---
-title: "Day 9: Voice to Text"
-description: "Turn rambling voice memos into organised thoughts"
+title: 'Day 9: Voice to Text'
+description: 'Turn rambling voice memos into organised thoughts'
 day: 9
 week: 2
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w2.d9" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 9: Voice to Text" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w2.d9" label="Process voice memos" />
 
 ## What You'll Learn
 
-- Process rambling voice memos into structured thoughts
-- Extract key ideas from conversational audio
-- Create different output formats (notes, tasks, ideas)
-- Use Whisper for transcription (local, free)
+- Transform raw voice transcriptions into polished written content
+- Remove filler words and false starts whilst preserving meaning
+- Restructure rambling thoughts into clear paragraphs
+- Maintain the speaker's voice and intent during cleanup
 
 ## The Scenario
 
 Fiona records voice memos whilst walking through the distillery. Observations about the whisky, ideas for new products, things she needs to remember. It's all in recordings on her phone - unusable until now.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w2.d9" />
+| Concept                  | Description                                                       |
+| ------------------------ | ----------------------------------------------------------------- |
+| **Cleanup Levels**       | Light, medium, or heavy polish depending on purpose               |
+| **Meaning Preservation** | Keep the speaker's intent whilst removing verbal clutter          |
+| **Output Modes**         | Full processing, just ideas, or just actions                      |
+| **Natural Voice**        | Personal notes vs professional documents need different treatment |
 
-This command guides you through an **interactive walkthrough** to extract structured content from voice memo transcripts.
+## What You'll Create
 
-### What the Command Does
+- Polished text from stream-of-consciousness recordings
+- Action-only extractions from rambling memos
+- Idea lists from brainstorming sessions
+- Multiple output formats from the same input
 
-1. **Asks for the transcript** - Voice memos are messy, that's OK
-2. **Understands context** - When/where recorded, what prompted it
-3. **Identifies your goal** - Full extraction, just ideas, or just actions?
-4. **Extracts the gold** - From stream-of-consciousness to structure
-5. **Creates appropriate output** - Based on what you needed
+## Quick Reference
 
-### Voice Memo Challenges
-
-Voice memos are different from meetings:
-- Single speaker (usually)
-- Stream of consciousness
-- Topic jumping
-- Incomplete thoughts
-- Filler words and thinking pauses
-
-The command handles all of this.
-
-## Example Output
-
-Based on your needs:
-- **Full processing**: Ideas, observations, actions, everything
-- **Just ideas**: Creative thoughts extracted
-- **Just actions**: Task list ready to do
-- **Quick summary**: 5 bullet points, done
-
-## Tips for Success
-
-- **Share the context** - Where were you? What prompted this?
-- **Don't clean up the transcript** - Messy is fine
-- **Choose your output mode** - Different needs, different formats
-- **Try Whisper** - Free local transcription
-
-## What You Learned
-
-- Voice memos need different processing than meetings
-- Multiple output formats serve different purposes
-- The "action items only" filter is powerful
-- Whisper + Claude = free voice-to-structured-notes
-
-## What's Next?
-
-Tomorrow in [Day 10: YouTube Brain](/week-2/day-10-youtube-brain/), we'll extract insights from videos.
+- Voice memos need different handling than written notes
+- Choose cleanup level based on your purpose
+- Don't clean up the transcript first - let Claude handle it
+- Try Whisper for free local transcription
 
 ---
-Day 9 of 31 | CoEngineers.ai
+
+**Navigation:** [Day 8: Meeting Tamer](/week-2/day-8-meeting-tamer/) | [Day 10: YouTube Brain](/week-2/day-10-youtube-brain/)

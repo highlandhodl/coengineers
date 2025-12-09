@@ -1,16 +1,18 @@
 ---
-title: "Day 20: Video Brief Creator"
-description: "Create production briefs for HeyGen avatar videos"
+title: 'Day 20: Video Brief Creator'
+description: 'Create production briefs for HeyGen avatar videos'
 day: 20
 week: 3
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w3.d20" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 20: Video Brief Creator" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w3.d20" label="Create video briefs" />
 
 ## What You'll Learn
 
@@ -23,77 +25,29 @@ import SlashCommand from '../../../components/SlashCommand.astro';
 
 Thistle & Thorn wants video content for the website but can't afford a film crew. HeyGen avatars can deliver brand messages. Jamie needs to write the scripts.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w3.d20" />
+| Concept             | Description                                       |
+| ------------------- | ------------------------------------------------- |
+| **Scene Structure** | Scene number, background, avatar action, dialogue |
+| **Natural Speech**  | Contractions, pauses, conversational rhythm       |
+| **Short Scenes**    | Under 30 seconds each for engagement              |
+| **Pre-Planning**    | Detailed briefs save generation credits           |
 
-This command guides you through an **interactive walkthrough** to create production briefs for HeyGen avatar videos.
+## What You'll Create
 
-### What the Command Does
-
-1. **Asks about the video** - What's it for and where will it live?
-2. **Gets key messages** - What must the video communicate?
-3. **Understands the tone** - Professional, friendly, energetic?
-4. **Specifies length** - 30 seconds, 60 seconds, 2 minutes?
-5. **Creates scene-by-scene script** - Ready for HeyGen
-
-### Script Structure for Avatars
-
-```
-SCENE 1: [Background description]
-[Avatar action: e.g., "smiling, looking at camera"]
-
-DIALOGUE:
-"Welcome to Thistle and Thorn..."
-
-[Pause: 1 second]
-
-SCENE 2: [Background description]
-...
-```
-
-## HeyGen Basics
-
-HeyGen creates talking head videos with:
-- AI avatars (or your own)
-- Text-to-speech voices
-- Scene transitions
-- Background changes
-
-## Example Output
-
-A complete video brief with:
-- Video overview (title, duration, purpose)
+- Video overview with title, duration, and purpose
 - Avatar and voice recommendations
-- Scene-by-scene script
-- Background suggestions
-- Pause markers and transitions
+- Scene-by-scene script with timing
+- Background suggestions and transitions
 
-## HeyGen Tips
+## Quick Reference
 
-1. **Keep scenes short** - Under 30 seconds each
-2. **Vary backgrounds** - Keep visual interest
-3. **Include pauses** - Natural speech has gaps
-4. **Match voice to content** - Professional vs casual
-5. **Test with shortest video first** - Iterate quickly
-
-## Tips for Success
-
-- **Write for speaking** - Contractions, natural rhythm
-- **Be specific about scenes** - Help yourself in HeyGen
-- **Include timing** - Know your target duration
-- **Think visually** - What's happening on screen?
-
-## What You Learned
-
-- Avatars need natural speech patterns
-- Scene structure keeps videos engaging
-- Shorter scenes work better
-- Pre-planning saves generation credits
-
-## What's Next?
-
-Tomorrow in [Day 21: Video Prompt Master & Week 3 Review](/week-3/day-21-week-3-review/), we'll create cinematic video prompts for Kling and review everything we've built.
+- Write for speaking - contractions, natural rhythm
+- Be specific about scenes - help yourself in HeyGen
+- Include timing - know your target duration
+- Think visually - what's happening on screen?
 
 ---
-Day 20 of 31 | CoEngineers.ai
+
+**Navigation:** [Day 19: Social Thread Maker](/week-3/day-19-social-thread-maker/) | [Day 21: Week 3 Review](/week-3/day-21-week-3-review/)

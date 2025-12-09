@@ -1,158 +1,282 @@
-# CoEngineers Development Guidelines
+## Active Technologies
+
+- Node.js 18+, TypeScript 5.x (via Astro) + Astro 5.1, @astrojs/starlight, @supabase/supabase-js, Resend (004-production-release)
+- Supabase PostgreSQL (external service, service role access only) (004-production-release)
+
+## Recent Changes
+
+- 004-production-release: Added Node.js 18+, TypeScript 5.x (via Astro) + Astro 5.1, @astrojs/starlight, @supabase/supabase-js, Resend
+
+---
 
 ## Project Overview
 
-Astro + Starlight documentation site for a 31-day Claude Code course. British English throughout.
+**CoEngineers** is a 31-day immersive course teaching product managers, content creators, and knowledge workers how to use Claude Code for productivity. The course requires no coding experience and focuses on practical, real-world workflows.
 
-## Stack
+**Target Audience:**
 
-| Component | Technology |
-|-----------|------------|
-| Framework | Astro 5.x + Starlight |
-| Styling | Tailwind CSS + Starlight custom properties |
-| Hosting | Vercel |
-| Email/Data | Supabase |
+- Product managers automating workflows
+- Content creators processing media
+- Knowledge workers managing information
+- Non-technical professionals learning AI tools
 
-## Commands
+**Course Structure:**
 
-```bash
-npm run dev       # Start dev server
-npm run build     # Production build
-npm run preview   # Preview production build
+- Week 1 (Days 1-7): Foundation — Digital workspace, templates, slash commands
+- Week 2 (Days 8-14): Content Processing — Meetings, voice, PDFs, web
+- Week 3 (Days 15-21): Creative Outputs — Presentations, images, social
+- Week 4 (Days 22-28): Building Software — Spec-driven development
+- Bonus (Days 29-31): Capstone — BMAD Method, PRP Framework
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Vercel (Hosting)                         │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────────────┐    ┌─────────────────────────┐    │
+│  │   Static Site       │    │   Serverless API        │    │
+│  │   (Astro/Starlight) │    │   (/api/subscribe)      │    │
+│  │   ~50 MDX pages     │    │   (/api/unsubscribe)    │    │
+│  └─────────────────────┘    └───────────┬─────────────┘    │
+│                                         │                   │
+└─────────────────────────────────────────┼───────────────────┘
+                                          │
+                    ┌─────────────────────┴─────────────────────┐
+                    │                                           │
+          ┌─────────▼─────────┐                    ┌────────────▼────────────┐
+          │     Supabase      │                    │        Resend           │
+          │   (PostgreSQL)    │                    │   (Transactional Email) │
+          │                   │                    │                         │
+          │ - subscribers     │                    │ - Welcome emails        │
+          │ - email_sends     │                    │ - British English       │
+          └───────────────────┘                    └─────────────────────────┘
 ```
 
-## Project Structure
+## Key Directories
 
 ```
 src/
-├── assets/           # Images, logo, static assets
-├── components/       # Custom Astro components
-├── content/
-│   └── docs/         # MDX documentation pages
-│       ├── getting-started/
-│       ├── week-1/
-│       ├── week-2/
-│       ├── week-3/
-│       ├── week-4/
-│       └── bonus/
-├── styles/
-│   └── custom.css    # CSS custom properties overrides
-└── pages/            # Non-docs pages (landing, etc.)
+├── content/docs/           # MDX course content (31 days + blog + reference)
+├── pages/api/              # Serverless endpoints
+│   ├── subscribe.ts        # POST /api/subscribe
+│   └── unsubscribe.ts      # GET /api/unsubscribe
+├── lib/                    # Shared utilities
+│   ├── supabase.ts         # Database client (service role)
+│   ├── email.ts            # Resend email service
+│   └── types.ts            # TypeScript interfaces
+├── components/             # Custom Astro components
+│   ├── YouTube.astro       # Video embeds
+│   ├── EmailSignup.astro   # Subscription form
+│   ├── Countdown.astro     # Launch countdown
+│   └── SlashCommand.astro  # Interactive command display
+└── styles/
+    └── custom.css          # Starlight customisations
+
+tests/
+├── setup.ts                # Global mocks (Supabase, Resend)
+└── unit/
+    ├── subscribe.test.ts   # Subscribe endpoint tests
+    ├── unsubscribe.test.ts # Unsubscribe endpoint tests
+    └── email.test.ts       # Email template tests
+
+.claude/commands/           # Interactive slash commands for learners
+specs/                      # Feature specifications (speckit workflow)
+docs/                       # Technical documentation
 ```
 
-## Astro/Starlight Rules
-
-### Content
-
-- All course content lives in `src/content/docs/` as `.mdx` files
-- Frontmatter schema defined in `src/content.config.ts` — validates at build time
-- Use content collections API for type-safe queries
-
-### Components
-
-- Custom components go in `src/components/`
-- Override Starlight components via `components` config in `astro.config.mjs`
-- Components render zero client-side JS by default — use `client:` directives only when needed:
-  - `client:load` — hydrate on page load
-  - `client:visible` — hydrate when visible
-  - `client:idle` — hydrate when browser is idle
-
-### Styling
-
-- Override Starlight's colours via CSS custom properties in `src/styles/custom.css`
-- Key properties: `--sl-color-accent`, `--sl-color-gray-*`
-- Tailwind classes work alongside Starlight's built-in styles
-- Use cascade layers for clean overrides:
-  ```css
-  @layer my-overrides {
-    /* Takes precedence over Starlight defaults */
-  }
-  ```
-
-### Configuration
-
-- Sidebar structure defined in `astro.config.mjs` under `starlight.sidebar`
-- Social links, logo, and site metadata in same config
-- Custom CSS imported via `starlight.customCss` array
-
-## Code Patterns
-
-### MDX Page Template
-
-```mdx
----
-title: "Day X: Title Here"
-description: "Brief description for SEO"
----
-
-import YouTube from '../../components/YouTube.astro';
-import EmailSignup from '../../components/EmailSignup.astro';
-
-# Day X: Title Here
-
-<YouTube id="VIDEO_ID" />
-
-## What You'll Learn
-
-- Point one
-- Point two
-
-## The Slash Command
+## Development Commands
 
 ```bash
-/w1.d1
+# Development
+npm run dev           # Start dev server (localhost:4321)
+npm run build         # Production build
+npm run preview       # Preview production build
+
+# Code Quality
+npm run lint          # ESLint check
+npm run lint:fix      # ESLint auto-fix
+npm run format        # Prettier format
+npm run format:check  # Prettier check
+npm run type-check    # TypeScript check
+
+# Testing
+npm run test          # Watch mode
+npm run test:run      # Single run (CI)
+npm run test:coverage # With coverage report
 ```
 
-<EmailSignup />
-```
+## Code Style Guidelines
 
-### Custom Component Pattern
+### British English
 
-```astro
----
-// Component Script (server-side)
-interface Props {
-  id: string;
+All content, comments, and user-facing text must use British English:
+
+- colour (not color)
+- organisation (not organization)
+- behaviour (not behavior)
+- optimised (not optimized)
+- licence (not license, for noun)
+
+### TypeScript
+
+- Strict mode enabled
+- Explicit return types on functions
+- Interface over type where possible
+- No `any` without justification
+
+### Prettier (2 space indent, single quotes, trailing commas)
+
+```json
+{
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5"
 }
-const { id } = Astro.props;
----
-
-<!-- Component Template -->
-<div class="video-wrapper">
-  <iframe src={`https://youtube.com/embed/${id}`} />
-</div>
-
-<style>
-  .video-wrapper {
-    aspect-ratio: 16/9;
-  }
-</style>
 ```
 
-## British English
+### ESLint
 
-- Use British spellings: colour, organisation, behaviour, catalogue
-- Use British terminology: "pop this in", not "go ahead and"
-- Informal, accessible tone in all copy
+- Astro plugin enabled
+- jsx-a11y for accessibility
+- No unused variables
+- No console in production code
 
-## Quality Checklist
+## Environment Variables
 
-- [ ] Build passes (`npm run build`)
-- [ ] No client-side JS unless absolutely necessary
-- [ ] Frontmatter validates against schema
-- [ ] Links and navigation work
-- [ ] Dark/light mode both look correct
+```env
+# Required for API endpoints
+SUPABASE_URL=https://xxx.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=eyJ...      # Service role, NOT anon key
 
-## Key Resources
+# Required for email
+RESEND_API_KEY=re_xxx
 
+# Site URL for email links
+PUBLIC_SITE_URL=https://coengineers.ai
+```
+
+**Note:** `PUBLIC_` prefix exposes variables to client-side code. Database keys must NOT have this prefix.
+
+## API Endpoints
+
+### POST /api/subscribe
+
+```typescript
+// Request
+{ email: string, source?: 'website' | 'homepage' | 'community-page' | 'day-page' }
+
+// Responses
+201: { success: true, message: "You're in! Check your inbox." }
+200: { success: true, message: "You're already subscribed!" }
+400: { success: false, error: "Please enter a valid email address." }
+500: { success: false, error: "Something went wrong. Please try again later." }
+```
+
+### GET /api/unsubscribe
+
+```typescript
+// Request
+?token=<uuid>
+
+// Responses
+200: HTML confirmation page
+400: { success: false, error: "Invalid unsubscribe link." }
+404: { success: false, error: "Subscription not found." }
+500: { success: false, error: "Something went wrong. Please try again." }
+```
+
+## Database Schema
+
+### subscribers
+
+| Column            | Type        | Description           |
+| ----------------- | ----------- | --------------------- |
+| id                | UUID        | Primary key           |
+| email             | TEXT        | Unique, lowercase     |
+| subscribed_at     | TIMESTAMPTZ | Initial subscription  |
+| unsubscribed      | BOOLEAN     | Current status        |
+| unsubscribed_at   | TIMESTAMPTZ | When unsubscribed     |
+| unsubscribe_token | UUID        | One-click unsubscribe |
+| source            | TEXT        | Signup location       |
+
+### email_sends
+
+| Column        | Type        | Description       |
+| ------------- | ----------- | ----------------- |
+| id            | UUID        | Primary key       |
+| subscriber_id | UUID        | FK to subscribers |
+| email_type    | TEXT        | 'welcome'         |
+| sent_at       | TIMESTAMPTZ | When sent         |
+| resend_id     | TEXT        | Resend message ID |
+
+**Security:** RLS enabled with deny-all policies. Service role key bypasses RLS.
+
+## Testing
+
+Tests use Vitest with mocked external services:
+
+```typescript
+// Example test structure
+describe('POST /api/subscribe', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it('creates new subscriber with valid email', async () => {
+    // Arrange
+    mockSupabaseSelect.mockResolvedValueOnce({ data: null });
+    mockSupabaseInsert.mockResolvedValueOnce({ data: mockSubscriber });
+
+    // Act
+    const response = await POST(mockContext);
+
+    // Assert
+    expect(response.status).toBe(201);
+  });
+});
+```
+
+## Common Tasks
+
+### Adding a New Lesson
+
+1. Create MDX file in `src/content/docs/week-N/day-N-slug.mdx`
+2. Add to sidebar in `astro.config.mjs`
+3. Create slash command in `.claude/commands/wN.dN.md`
+
+### Creating a Component
+
+1. Create in `src/components/ComponentName.astro`
+2. Import in MDX: `import ComponentName from '../../../components/ComponentName.astro'`
+
+### Adding an API Endpoint
+
+1. Create in `src/pages/api/endpoint.ts`
+2. Export async function for HTTP method (GET, POST, etc.)
+3. Set `export const prerender = false`
+4. Add tests in `tests/unit/endpoint.test.ts`
+
+## Troubleshooting
+
+**Build fails with TypeScript errors:**
+
+```bash
+npm run type-check -- --build --clean
+npm run type-check
+```
+
+**Tests fail with import errors:**
+Ensure `vitest.config.ts` uses `getViteConfig()` from `astro/config`.
+
+**API returns 500:**
+Check environment variables are set and Supabase connection is working.
+
+## Resources
+
+- [Astro Docs](https://docs.astro.build/)
 - [Starlight Docs](https://starlight.astro.build/)
-- [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/)
-- [Overriding Starlight Components](https://starlight.astro.build/guides/overriding-components/)
-- [Starlight CSS & Styling](https://starlight.astro.build/guides/css-and-tailwind/)
-
-## Active Technologies
-- TypeScript (ESM) via Astro 5.x + Astro 5.1, @astrojs/starlight 0.34, Supabase JS client, Resend SDK (001-email-capture)
-- Supabase (PostgreSQL) - subscribers and email_sends tables (001-email-capture)
-
-## Recent Changes
-- 001-email-capture: Added TypeScript (ESM) via Astro 5.x + Astro 5.1, @astrojs/starlight 0.34, Supabase JS client, Resend SDK
+- [Supabase Docs](https://supabase.com/docs)
+- [Resend Docs](https://resend.com/docs)
+- [Vitest Docs](https://vitest.dev/)

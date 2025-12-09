@@ -1,16 +1,18 @@
 ---
-title: "Day 18: Diagram Generator"
-description: "Create clear diagrams from plain text descriptions using Mermaid"
+title: 'Day 18: Diagram Generator'
+description: 'Create clear diagrams from plain text descriptions using Mermaid'
 day: 18
 week: 3
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w3.d18" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 18: Diagram Generator" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w3.d18" label="Generate diagrams" />
 
 ## What You'll Learn
 
@@ -23,89 +25,29 @@ import SlashCommand from '../../../components/SlashCommand.astro';
 
 Fiona wants to explain the whisky-making process to visitors. Old Hamish knows every step but it's all in his head. Time to visualise it.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w3.d18" />
+| Concept       | Description                                |
+| ------------- | ------------------------------------------ |
+| **Flowchart** | Processes with decisions and branches      |
+| **Sequence**  | Step-by-step interactions between entities |
+| **Timeline**  | Events over time                           |
+| **Mindmap**   | Hierarchical ideas from a central concept  |
 
-This command guides you through an **interactive walkthrough** to create clear diagrams from plain text descriptions.
+## What You'll Create
 
-### What the Command Does
-
-1. **Asks what you're visualising** - A process, relationships, timeline?
-2. **Gets the details** - What are the steps or elements?
-3. **Chooses diagram type** - Flowchart, sequence, mindmap, etc.
-4. **Specifies the audience** - Technical or general?
-5. **Creates Mermaid code** - Ready to render
-
-### Diagram Types
-
-1. **Flowchart** - Processes with decisions
-2. **Sequence** - Step-by-step interactions
-3. **Timeline** - Events over time
-4. **Entity Relationship** - How things connect
-5. **Mindmap** - Hierarchical ideas
-
-## Mermaid Syntax Quick Reference
-
-**Flowchart:**
-```mermaid
-flowchart LR
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Action 1]
-    B -->|No| D[Action 2]
-```
-
-**Timeline:**
-```mermaid
-timeline
-    title Project Timeline
-    2024-01 : Planning
-    2024-03 : Development
-    2024-06 : Launch
-```
-
-**Mindmap:**
-```mermaid
-mindmap
-  root((Central Idea))
-    Branch 1
-      Leaf 1
-      Leaf 2
-    Branch 2
-```
-
-## Where Mermaid Renders
-
-- Obsidian (built-in)
-- VS Code (with extension)
-- GitHub markdown
-- Many documentation tools
-
-## Example Output
-
-A complete Mermaid diagram with:
-- Valid syntax ready to render
-- Brief explanation of the diagram
+- Valid Mermaid syntax ready to render
+- Brief explanation of each diagram
 - Suggestions for improvements
 - Alternative diagram types if applicable
 
-## Tips for Success
+## Quick Reference
 
-- **Start simple** - Add complexity after it works
-- **Describe the flow** - Claude will translate to syntax
-- **Test rendering** - Paste into Obsidian or GitHub
-- **Keep it readable** - Too many nodes = confusion
-
-## What You Learned
-
-- Text → diagram with Mermaid
-- Multiple diagram types for different needs
-- Renders in most documentation tools
-- No design skills required
-
-## What's Next?
-
-Tomorrow in [Day 19: Social Thread Maker](/week-3/day-19-social-thread-maker/), we'll create social media content from long-form notes.
+- Start simple - add complexity after it works
+- Describe the flow - Claude translates to syntax
+- Test rendering - paste into Obsidian or GitHub
+- Keep it readable - too many nodes = confusion
 
 ---
-Day 18 of 31 | CoEngineers.ai
+
+**Navigation:** [Day 17: Audio Script Writer](/week-3/day-17-audio-script-writer/) | [Day 19: Social Thread Maker](/week-3/day-19-social-thread-maker/)

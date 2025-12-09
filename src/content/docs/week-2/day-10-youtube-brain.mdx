@@ -1,77 +1,53 @@
 ---
-title: "Day 10: YouTube Brain"
-description: "Extract lasting value from every video you watch"
+title: 'Day 10: YouTube Brain'
+description: 'Extract lasting value from every video you watch'
 day: 10
 week: 2
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w2.d10" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 10: YouTube Brain" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w2.d10" label="Extract video insights" />
 
 ## What You'll Learn
 
-- Extract transcripts from YouTube videos
-- Summarise video content effectively
-- Pull key quotes and timestamps
-- Create reference notes from video content
+- Extract key insights from video transcripts without watching the full video
+- Identify actionable takeaways and specific techniques from educational content
+- Create study notes and summaries from conference talks or tutorials
+- Build custom prompts for different video types
 
 ## The Scenario
 
 Jamie watches YouTube videos about whisky marketing, distillery tours, and industry trends. Hours of watching, but nothing captured. Time to extract the value.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w2.d10" />
+| Concept                         | Description                                                    |
+| ------------------------------- | -------------------------------------------------------------- |
+| **Transcript Access**           | YouTube's built-in transcripts or yt-dlp for downloads         |
+| **Content-Specific Extraction** | Different prompts for tutorials, interviews, and presentations |
+| **Timestamp Navigation**        | Jump-to guides for key moments worth watching                  |
+| **Comparative Analysis**        | Synthesise insights from multiple videos on the same topic     |
 
-This command guides you through an **interactive walkthrough** to extract lasting value from YouTube video transcripts.
+## What You'll Create
 
-### What the Command Does
+- Structured study notes from conference talks
+- Jump-to guides with key timestamps
+- Comparison analyses across multiple videos
+- Actionable takeaways from educational content
 
-1. **Gets video details** - Title, channel, URL
-2. **Understands why you watched** - Context for better extraction
-3. **Chooses output mode** - Full notes, quick capture, or quotes only
-4. **Identifies connections** - Links to your projects
-5. **Processes the transcript** - Distils hours into minutes
+## Quick Reference
 
-### Getting Transcripts
-
-**Option 1: YouTube's built-in transcript**
-- Click "..." under video → "Show transcript" → Copy
-
-**Option 2: yt-dlp (command line)**
-```bash
-yt-dlp --write-auto-sub --skip-download "VIDEO_URL"
-```
-
-## Example Output
-
-- **Summary**: 3-5 sentences on the video's message
-- **Key Points**: 5-7 main ideas
-- **Notable Quotes**: With timestamps
-- **Action Items**: What to do based on this
-- **Related Topics**: What to explore next
-
-## Tips for Success
-
-- **Get the transcript first** - The command can't watch videos
-- **Share why you watched** - Context improves extraction
-- **Choose the right mode** - Full notes vs quick capture
-- **Link to your work** - Make it actionable
-
-## What You Learned
-
-- YouTube transcripts are freely available
-- Long videos distil into short, useful notes
-- Quotes with timestamps are referenceable
-- Two modes: full notes and quick capture
-
-## What's Next?
-
-Tomorrow in [Day 11: PDF Crusher](/week-2/day-11-pdf-crusher/), we'll rip data from PDF reports.
+- YouTube transcripts are freely available (click "..." → "Show transcript")
+- Different video types need different extraction structures
+- Timestamps let you jump to specific moments
+- Always specify what you're trying to learn
 
 ---
-Day 10 of 31 | CoEngineers.ai
+
+**Navigation:** [Day 9: Voice to Text](/week-2/day-9-voice-to-text/) | [Day 11: PDF Crusher](/week-2/day-11-pdf-crusher/)

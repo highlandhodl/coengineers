@@ -1,71 +1,53 @@
 ---
-title: "Day 4: Template Factory"
-description: "Create reusable note templates with frontmatter for consistent structure"
+title: 'Day 4: Template Factory'
+description: 'Build reusable prompt templates with variable placeholders'
 day: 4
 week: 1
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w1.d4" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 4: Template Factory" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w1.d4" label="Build your template factory" />
 
 ## What You'll Learn
 
-- Understand template-based note creation
-- Design templates for common note types
-- Learn frontmatter basics
-- Create at least 3 reusable templates
+- Create reusable prompt templates with variable placeholders
+- Organise templates in a logical folder structure
+- Adapt templates for different use cases
+- Recognise when to create a template vs. write a one-off prompt
 
 ## The Scenario
 
-Jamie keeps recreating the same structures. Meeting notes, project briefs, customer records - all start from blank. Templates solve this.
+Jamie keeps typing the same prompts over and over - meeting summaries, article analyses, file processing. Templates let you write once and reuse forever, just by filling in the blanks.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w1.d4" />
+| Concept              | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
+| **Template**         | A saved prompt with placeholders like [FILENAME] that you fill in   |
+| **Placeholder**      | Variables in brackets that you replace with actual values           |
+| **Template Library** | Organised collection of reusable prompts by category                |
+| **When to Template** | Use 2-3 times = consider templating; 3+ times = definitely template |
 
-This command guides you through an **interactive walkthrough** to discover what templates YOU actually need based on your real work patterns.
+## What You'll Create
 
-### What the Command Does
+- `templates/` folder structure with categories
+- Meeting summary template with placeholders
+- Project brief template
+- At least one custom template for your own workflow
 
-1. **Discovers your patterns** - What notes do you create repeatedly?
-2. **Explores meeting styles** - What structure fits your meetings?
-3. **Designs project tracking** - What info do new projects need?
-4. **Considers people records** - Who do you need to track?
-5. **Uncovers unique needs** - Templates specific to your work
+## Quick Reference
 
-### What Makes a Good Template
+- **Placeholder format**: Use [CLEAR_NAME] like [FILENAME] or [ARTICLE_URL]
+- **Include instructions**: Add "How to Use" section in each template
+- **Stay focused**: One template = one task
+- **Evolve**: Update templates as you learn what works
 
-1. **Frontmatter** - Metadata at the top (title, date, type, tags)
-2. **Consistent sections** - Same structure every time
-3. **Prompts** - Questions or placeholders to fill in
-4. **Flexibility** - Sections you can delete if not needed
+---
 
-## Example Output
-
-After running the command, you'll have:
-
-- `templates/meeting-note.md` - For all your meetings
-- `templates/project-brief.md` - For new projects
-- `templates/person-profile.md` - For tracking people
-- Custom templates based on YOUR unique needs
-
-## Tips for Success
-
-- **Focus on what you actually create** - Not hypothetical needs
-- **Keep templates simple** - You can always add sections later
-- **Use the templates immediately** - Create a real note to test them
-
-## What You Learned
-
-- Templates ensure consistency
-- Frontmatter adds searchable metadata
-- Placeholders guide what to fill in
-- Build templates for your actual workflow
-
-## What's Next?
-
-Tomorrow in [Day 5: The Daily Note](/week-1/day-5-the-daily-note/), we'll build a daily note system.
+**Navigation:** [Day 3: Project Memory](/week-1/day-3-project-memory/) | [Day 5: The Daily Note](/week-1/day-5-the-daily-note/)

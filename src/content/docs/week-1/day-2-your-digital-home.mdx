@@ -1,78 +1,52 @@
 ---
-title: "Day 2: Your Digital Home"
-description: "Create a consistent, scalable folder structure for all your knowledge"
+title: 'Day 2: Your Digital Home'
+description: 'Set up your Claude Code workspace with proper folder structure'
 day: 2
 week: 1
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w1.d2" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 2: Your Digital Home" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w1.d2" label="Set up your digital home" />
 
 ## What You'll Learn
 
-- Understand folder organisation principles (PARA-inspired)
-- Create a consistent, scalable structure
-- Learn Claude's file system capabilities
-- Set up a home for all future work
+- Understand what a project workspace is and why it matters
+- Create and navigate folders using Claude Code
+- Organise files in a logical structure
+- Recognise where Claude Code 'sees' files (the current working directory)
 
 ## The Scenario
 
-Jamie needs somewhere to put everything. The distillery's files are scattered across desktops, email attachments, and "that folder Fiona has somewhere". Time to build a proper home.
+Jamie needs a place to work - a proper workspace where everything has its home. The distillery's files are scattered everywhere. Today you'll build the folder structure that scales with your projects.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w1.d2" />
+| Concept               | Description                                                                       |
+| --------------------- | --------------------------------------------------------------------------------- |
+| **Working Directory** | The folder Claude Code currently operates in - where files are created by default |
+| **Project Structure** | Organised folders for notes, code, data, and other file types                     |
+| **Path Navigation**   | Specifying exactly where files should go using folder paths                       |
+| **PARA Method**       | Projects, Areas, Resources, Archive - a proven organisation system                |
 
-This command guides you through an **interactive walkthrough** to design a folder structure that fits YOUR workflow - not a generic template.
-
-### What the Command Does
-
-1. **Asks about your current situation** - Where are files now? What's the pain?
-2. **Discovers your work patterns** - What kinds of projects do you have?
-3. **Identifies ongoing areas** - Responsibilities without deadlines
-4. **Helps you choose a location** - Where should your vault live?
-5. **Creates personalised structure** - With READMEs that match YOUR context
-
-### The Structure You'll Create
-
-```
-[your-vault-name]/
-├── 00-inbox/           # Temporary landing zone
-├── 01-projects/        # Active work with deadlines
-├── 02-areas/           # Ongoing responsibilities
-├── 03-resources/       # Reference material
-├── 04-archive/         # Completed/inactive items
-├── templates/          # Reusable templates
-└── .claude/
-    └── commands/       # Your slash commands
-```
-
-## Example Output
-
-After running the command, you'll have:
+## What You'll Create
 
 - Complete folder structure at your chosen location
 - README.md files in each folder explaining what goes there
 - Your first project folder for this learning journey
-- Your learning-log.md moved into the right place
 
-## Tips for Success
+## Quick Reference
 
-- **Be honest about your chaos** - The messier the truth, the better the solution
-- **Think about real projects** - Give examples from your actual work
-- **Don't over-engineer** - Start simple, add folders as needed
+- **Check location**: Ask "What's my current working directory?"
+- **Create folders**: "Create a folder called [name] in [location]"
+- **Create with path**: "Create [filename] in [folder/subfolder/]"
+- **View structure**: "Show me all files and folders in [folder]"
 
-## What You Learned
+---
 
-- Consistent folder structure reduces cognitive load
-- 00-inbox catches everything before you organise it
-- Projects are temporary, Areas are ongoing
-- Claude can create and organise files for you
-
-## What's Next?
-
-Tomorrow in [Day 3: Project Memory](/week-1/day-3-project-memory/), we'll build your first CLAUDE.md.
+**Navigation:** [Day 1: First Conversation](/week-1/day-1-first-conversation/) | [Day 3: Project Memory](/week-1/day-3-project-memory/)

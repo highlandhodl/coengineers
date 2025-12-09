@@ -14,13 +14,16 @@ export async function GET(context: APIContext): Promise<Response> {
 
   // Validate token exists and is UUID format
   if (!token || !isValidUUID(token)) {
-    return new Response(JSON.stringify({
-      success: false,
-      error: 'Invalid unsubscribe link.',
-    }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return new Response(
+      JSON.stringify({
+        success: false,
+        error: 'Invalid unsubscribe link.',
+      }),
+      {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
   }
 
   try {
@@ -34,13 +37,16 @@ export async function GET(context: APIContext): Promise<Response> {
       .single();
 
     if (selectError || !subscriber) {
-      return new Response(JSON.stringify({
-        success: false,
-        error: 'Subscription not found.',
-      }), {
-        status: 404,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'Subscription not found.',
+        }),
+        {
+          status: 404,
+          headers: { 'Content-Type': 'application/json' },
+        }
+      );
     }
 
     // Already unsubscribed - still show success
@@ -62,13 +68,16 @@ export async function GET(context: APIContext): Promise<Response> {
 
     if (updateError) {
       console.error('Unsubscribe update error:', updateError);
-      return new Response(JSON.stringify({
-        success: false,
-        error: 'Something went wrong. Please try again.',
-      }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'Something went wrong. Please try again.',
+        }),
+        {
+          status: 500,
+          headers: { 'Content-Type': 'application/json' },
+        }
+      );
     }
 
     // Return confirmation HTML
@@ -76,16 +85,18 @@ export async function GET(context: APIContext): Promise<Response> {
       status: 200,
       headers: { 'Content-Type': 'text/html' },
     });
-
   } catch (error) {
     console.error('Unsubscribe endpoint error:', error);
-    return new Response(JSON.stringify({
-      success: false,
-      error: 'Something went wrong. Please try again.',
-    }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return new Response(
+      JSON.stringify({
+        success: false,
+        error: 'Something went wrong. Please try again.',
+      }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
   }
 }
 

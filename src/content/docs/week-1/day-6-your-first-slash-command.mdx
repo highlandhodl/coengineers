@@ -1,81 +1,53 @@
 ---
-title: "Day 6: Your First Slash Command"
-description: "Create your own custom slash commands for tasks you do repeatedly"
+title: 'Day 6: Your First Slash Command'
+description: 'Create custom slash commands to automate your workflows'
 day: 6
 week: 1
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w1.d6" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 6: Your First Slash Command" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w1.d6" label="Create your first slash command" />
 
 ## What You'll Learn
 
-- Understand how slash commands work
-- Write a slash command from scratch
-- Test and iterate on commands
-- Build a command for a real use case
+- Understand what slash commands are and how they work
+- Create a custom slash command in the .claude/commands folder
+- Execute slash commands from the terminal
+- Build commands for your own repetitive workflows
 
 ## The Scenario
 
-Jamie finds themselves asking Claude the same things repeatedly. "Summarise this meeting..." "Turn this into action items..." What if they could save these prompts and reuse them with one command?
+Jamie has workflows they run daily - creating notes, processing files, summarising content. Instead of typing full prompts each time, slash commands let you type `/daily-note` and it just happens. One word, instant execution.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w1.d6" />
+| Concept             | Description                                               |
+| ------------------- | --------------------------------------------------------- |
+| **Slash Command**   | A shortcut that executes a saved prompt with one word     |
+| **Commands Folder** | `.claude/commands/` where command files live              |
+| **Frontmatter**     | The name and description at the top of command files      |
+| **Automation**      | Turning repetitive prompts into instant one-word triggers |
 
-This command guides you through an **interactive walkthrough** to identify the RIGHT command to build - one that will actually save you time.
+## What You'll Create
 
-### What the Command Does
+- `.claude/commands/` folder structure
+- `/daily-note` command for automatic daily note creation
+- `/weekly-summary` command for reviewing your week
+- At least one custom command for your own workflow
 
-1. **Finds your repetition** - What do you ask Claude repeatedly?
-2. **Identifies the pain** - Which task is most tedious?
-3. **Captures the dream** - What would the perfect command do?
-4. **Designs the command** - Input, output, format
-5. **Creates and tests it** - Iterate until it works
+## Quick Reference
 
-### How Slash Commands Work
+- **Location**: `.claude/commands/[name].md`
+- **Format**: Frontmatter (name, description) + prompt body
+- **Execute**: Type `/command-name` in Claude Code
+- **Naming**: Use clear, descriptive names like `/meeting-summary`
 
-1. They live in `.claude/commands/` folder
-2. They're markdown files with prompts
-3. When you type `/command-name`, Claude reads the file
-4. You can include instructions, context, and examples
+---
 
-## Example Output
-
-After running the command, you'll have:
-
-- A custom slash command for something YOU do repeatedly
-- Understanding of command structure
-- Confidence to create more commands
-
-### Command Ideas
-
-| Command | Purpose |
-|---------|---------|
-| `/summarise` | Summarise any content into key points |
-| `/action-items` | Extract action items from any text |
-| `/explain` | Explain something simply |
-| `/fix-writing` | Fix grammar and improve clarity |
-| `/daily-review` | End of day reflection prompts |
-
-## Tips for Success
-
-- **Build for real pain** - Not hypothetical needs
-- **Keep it focused** - One command, one purpose
-- **Test with real content** - Not just examples
-- **Iterate** - First version is rarely perfect
-
-## What You Learned
-
-- Slash commands are reusable prompts
-- They live in `.claude/commands/`
-- You can iterate and improve them
-- One command can save hours over time
-
-## What's Next?
-
-Tomorrow in [Day 7: Week 1 Review](/week-1/day-7-week-1-review/), we'll consolidate everything we've learned.
+**Navigation:** [Day 5: The Daily Note](/week-1/day-5-the-daily-note/) | [Day 7: Week 1 Review](/week-1/day-7-week-1-review/)

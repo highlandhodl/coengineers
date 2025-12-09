@@ -3,37 +3,46 @@ title: 31 Days of Claude Code
 description: From chaos to production assets. No coding required.
 template: splash
 hero:
-  tagline: A free course teaching you to automate your entire workflow with AI. Launching January 1st, 2026.
+  tagline: A free 31-day course teaching you to automate your workflow with Claude Code. Start learning today.
   actions:
-    - text: Get Started
+    - text: Start Free Course
       link: /getting-started/introduction/
       icon: right-arrow
       variant: primary
-    - text: View on GitHub
-      link: https://github.com/coengineers/coengineers-productivity-course
+    - text: Watch on YouTube
+      link: https://www.youtube.com/@coengineers
       icon: external
 ---
 
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
-import Countdown from '../../components/Countdown.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
 
-<Countdown target="2026-01-01T00:00:00Z" heading="Launching in" />
-
-## What You'll Learn
-
 <CardGrid stagger>
-  <LinkCard title="Week 1: Foundations" href="/week-1/overview/" description="Get Claude Code installed and build your personal knowledge system. Master the terminal commands you actually need." />
-  <LinkCard title="Week 2: Content Processing" href="/week-2/overview/" description="Transform messy transcripts, voice memos, and PDFs into structured, searchable notes." />
-  <LinkCard title="Week 3: Visual & Audio" href="/week-3/overview/" description="Generate presentation decks, image prompts, podcast outlines, and video briefs from your notes." />
-  <LinkCard title="Week 4: Business Assets" href="/week-4/overview/" description="Create blog posts, newsletters, proposals, and case studies that drive revenue." />
+  <LinkCard
+    title="Week 1: Foundations"
+    href="/week-1/overview/"
+    description="Your first conversation, folder structure, project memory, templates, daily notes, and custom slash commands."
+  />
+  <LinkCard
+    title="Week 2: Content Processing"
+    href="/week-2/overview/"
+    description="Transform meeting transcripts, voice memos, YouTube videos, PDFs, web pages, and emails into structured notes."
+  />
+  <LinkCard
+    title="Week 3: Creative Outputs"
+    href="/week-3/overview/"
+    description="Generate presentations, image prompts, audio scripts, diagrams, social content, and video briefs."
+  />
+  <LinkCard
+    title="Week 4: Building Software"
+    href="/week-4/overview/"
+    description="Spec-driven development: from product idea to shipped feature in 7 days."
+  />
+  <LinkCard
+    title="Bonus: Capstone"
+    href="/bonus/overview/"
+    description="BMAD Method, PRP Framework, and shipping your own project."
+  />
 </CardGrid>
 
-## Why This Course?
-
-- **31 daily videos** (5-10 mins each)
-- **Downloadable slash commands** for every lesson
-- **Free community** to ask questions and share wins
-- **Zero coding required** — if you can type, you can do this
-
-<EmailSignup heading="Be first to know when we launch" />
+<EmailSignup heading="Get course updates and tips" />

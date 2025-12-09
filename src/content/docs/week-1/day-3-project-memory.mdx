@@ -1,88 +1,51 @@
 ---
-title: "Day 3: Project Memory"
-description: "Build a CLAUDE.md file that gives Claude persistent memory about your project"
+title: 'Day 3: Project Memory'
+description: 'Create CLAUDE.md files so Claude remembers your project context'
 day: 3
 week: 1
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w1.d3" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 3: Project Memory" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w1.d3" label="Give Claude project memory" />
 
 ## What You'll Learn
 
-- Understand what CLAUDE.md does (persistent project context)
-- Learn what to include vs exclude
-- Create a CLAUDE.md for a real project
-- Experience Claude "remembering" your context
+- Understand what CLAUDE.md files are and why they matter
+- Create a CLAUDE.md file with project-specific instructions
+- Update and refine instructions based on what you learn
+- Recognise how Claude Code uses this memory across conversations
 
 ## The Scenario
 
-Jamie keeps explaining the same things to Claude. "We're a whisky distillery... we use metric measurements... we write in British English..." There must be a better way. There is: CLAUDE.md.
+Jamie keeps explaining the same things to Claude. "We're a whisky distillery... we use metric measurements... we write in British English..." There's a better way: CLAUDE.md gives Claude persistent memory.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w1.d3" />
+| Concept             | Description                                                    |
+| ------------------- | -------------------------------------------------------------- |
+| **CLAUDE.md**       | A special file Claude reads at the start of every conversation |
+| **Project Context** | Description, tech stack, goals, and current focus              |
+| **Preferences**     | Language preferences, coding standards, communication style    |
+| **Hierarchy**       | Global (home directory) vs project-level CLAUDE.md files       |
 
-This command guides you through an **interactive walkthrough** to create a CLAUDE.md that captures everything important about your project.
+## What You'll Create
 
-### What the Command Does
+- `CLAUDE.md` in your project root with personalised context
+- Instructions Claude follows automatically in every conversation
 
-1. **Asks about your project** - What is it? What are you building?
-2. **Identifies key people** - Who's involved?
-3. **Captures conventions** - Language, terminology, patterns
-4. **Gathers context** - What should Claude always know?
-5. **Documents anti-patterns** - What should Claude avoid?
+## Quick Reference
 
-### What Goes in CLAUDE.md
+- **Location**: Place CLAUDE.md in your project root
+- **Sections**: Project Description, Preferences, Coding Standards, Current Focus
+- **Global vs Local**: Home directory = all projects, project folder = this project only
+- **Keep it concise**: Claude reads it every time - brevity matters
 
-```markdown
-# Project Name
+---
 
-## Overview
-What this project is about, in 2-3 sentences.
-
-## Key People
-- Who's involved and what they do
-
-## Conventions
-- Spelling (British/American)
-- Terminology
-- File naming patterns
-
-## Important Context
-- Domain knowledge
-- Constraints
-
-## What to Avoid
-- Anti-patterns
-- Previous mistakes
-```
-
-## Example Output
-
-After running the command, you'll have:
-
-- `CLAUDE.md` in your project root
-- Personalised context Claude reads automatically
-- The ability to test it by starting a fresh conversation
-
-## Tips for Success
-
-- **Keep it concise** - Claude reads it every time, so brevity matters
-- **Focus on what changes behaviour** - Not general information
-- **Be specific about conventions** - They matter for consistency
-
-## What You Learned
-
-- CLAUDE.md gives Claude persistent project memory
-- Put it in the project root folder
-- Include conventions, not conversations
-- Keep it concise - Claude reads it every time
-
-## What's Next?
-
-Tomorrow in [Day 4: Template Factory](/week-1/day-4-template-factory/), we'll create reusable note templates.
+**Navigation:** [Day 2: Your Digital Home](/week-1/day-2-your-digital-home/) | [Day 4: Template Factory](/week-1/day-4-template-factory/)

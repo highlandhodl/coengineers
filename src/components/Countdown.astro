@@ -14,10 +14,7 @@ interface Props {
   heading?: string;
 }
 
-const {
-  target,
-  heading = "Launching in"
-} = Astro.props;
+const { target, heading = 'Launching in' } = Astro.props;
 ---
 
 <div class="countdown-container">
@@ -113,7 +110,7 @@ const {
     if (diff <= 0) {
       // Countdown finished
       const values = countdownEl.querySelectorAll('.countdown-value');
-      values.forEach(el => el.textContent = '0');
+      values.forEach((el) => (el.textContent = '0'));
       return;
     }
 

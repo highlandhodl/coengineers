@@ -1,16 +1,18 @@
 ---
-title: "Day 17: Audio Script Writer"
-description: "Write scripts optimised for text-to-speech with SSML formatting"
+title: 'Day 17: Audio Script Writer'
+description: 'Write scripts optimised for text-to-speech with SSML formatting'
 day: 17
 week: 3
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w3.d17" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 17: Audio Script Writer" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w3.d17" label="Write audio scripts" />
 
 ## What You'll Learn
 
@@ -23,75 +25,29 @@ import SlashCommand from '../../../components/SlashCommand.astro';
 
 Thistle & Thorn wants to create audio content: podcast snippets, video voiceovers, and audio guides for distillery tours. ElevenLabs will generate the voice.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w3.d17" />
+| Concept             | Description                                      |
+| ------------------- | ------------------------------------------------ |
+| **Writing for Ear** | Shorter sentences, contractions, natural rhythm  |
+| **SSML Tags**       | `<break>` for pauses, `<emphasis>` for stress    |
+| **Duration Guide**  | 150 words ≈ 1 minute of audio                    |
+| **Voice Matching**  | Professional vs casual tone affects voice choice |
 
-This command guides you through an **interactive walkthrough** to create voice-ready scripts with SSML markup.
+## What You'll Create
 
-### What the Command Does
-
-1. **Asks about your audio need** - What are you creating?
-2. **Gets the content** - What should the script say?
-3. **Understands the tone** - Professional, warm, energetic?
-4. **Chooses format** - Full SSML or plain script
-5. **Creates voice-ready output** - Ready for ElevenLabs
-
-### Writing for Ear vs Eye
-
-**Reading:** "Thistle & Thorn Distillery, est. 1892, produces premium single malt whisky using traditional methods."
-
-**Listening:** "Thistle and Thorn has been making whisky since eighteen ninety-two. Four generations of the MacTavish family, using the same methods their great-grandfather used."
-
-Key differences:
-- Shorter sentences
-- Write numbers as spoken
-- Add pauses for emphasis
-- Use contractions (we're, it's)
-- Avoid acronyms
-
-## SSML Basics
-
-```xml
-<speak>
-  Welcome to Thistle and Thorn.
-  <break time="0.5s"/>
-  We've been making whisky for over a century.
-  <emphasis level="strong">Four generations</emphasis>
-  of craft and tradition.
-</speak>
-```
-
-Common tags:
-- `<break time="Xs"/>` - Pause for X seconds
-- `<emphasis level="strong/moderate">` - Stress words
-- `<prosody rate="slow/medium/fast">` - Speaking speed
-
-## Example Output
-
-A complete audio script with:
-- Clean version (no SSML, for preview)
-- SSML version (for ElevenLabs)
+- Clean scripts for preview (no SSML)
+- SSML-formatted scripts for ElevenLabs
 - Word count and estimated duration
 - Voice recommendations
 
-## Tips for Success
+## Quick Reference
 
-- **Write for speaking** - Read it aloud yourself first
-- **Include pauses** - Natural speech has gaps
-- **Specify target length** - 150 words ≈ 1 minute
-- **Test early** - Generate a short sample first
-
-## What You Learned
-
-- Writing for ear is different from eye
-- Short sentences and pauses matter
-- SSML adds natural emphasis
-- Iteration improves naturalness
-
-## What's Next?
-
-Tomorrow in [Day 18: Diagram Generator](/week-3/day-18-diagram-generator/), we'll build process diagrams with Mermaid.
+- Write for speaking - read it aloud yourself first
+- Include pauses - natural speech has gaps
+- Specify target length - know your duration
+- Test early - generate a short sample first
 
 ---
-Day 17 of 31 | CoEngineers.ai
+
+**Navigation:** [Day 16: Image Prompter](/week-3/day-16-image-prompter/) | [Day 18: Diagram Generator](/week-3/day-18-diagram-generator/)

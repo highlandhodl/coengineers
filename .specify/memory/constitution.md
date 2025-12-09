@@ -1,129 +1,157 @@
+<!--
+  SYNC IMPACT REPORT
+
+  Version Change: 0.0.0 → 1.0.0
+
+  Modified Principles: N/A (initial creation)
+
+  Added Sections:
+  - Core Principles (5 principles)
+  - Content Standards
+  - Development Workflow
+  - Governance
+
+  Removed Sections: N/A (initial creation)
+
+  Templates Requiring Updates:
+  - .specify/templates/plan-template.md: ✅ Compatible (Constitution Check section present)
+  - .specify/templates/spec-template.md: ✅ Compatible (no constitution-specific updates needed)
+  - .specify/templates/tasks-template.md: ✅ Compatible (no constitution-specific updates needed)
+
+  Follow-up TODOs: None
+-->
+
 # CoEngineers Constitution
 
 ## Core Principles
 
-### I. British English Throughout
+### I. Learner-First Design
 
-All content uses British English spelling and terminology.
+Every decision MUST prioritise the learner experience above all else.
 
-- **Spellings**: colour, organised, behaviour, centre, catalogue, programme
-- **Terminology**: "pop this in" not "go ahead and", "sorted" not "set up"
-- **Tone**: Casual, cheeky, accessible — never corporate or robotic
-- **Code comments**: British English in all user-facing comments and documentation
+- Content MUST be accessible to non-technical professionals (product managers, marketers, business analysts)
+- Explanations MUST avoid jargon; when technical terms are necessary, they MUST be defined
+- Examples MUST be relevant to real-world professional scenarios, not abstract or contrived
+- Learning curves MUST be gradual — each day builds on previous knowledge
+- Error messages and guidance MUST be encouraging, never condescending
 
-### II. Accessibility First
+**Rationale**: The course exists to empower learners. Complexity for its own sake fails them.
 
-Every piece of content assumes zero technical experience.
+### II. British English Throughout
 
-- **No jargon**: If a technical term is unavoidable, explain it immediately
-- **Second person**: "You'll learn" not "Users will learn"
-- **Show don't tell**: Concrete examples over abstract explanations
-- **One concept per section**: Don't overwhelm — build understanding incrementally
+All content MUST use British English spelling, grammar, and idioms.
 
-### III. Obsidian-Friendly Markdown
+- Use British spellings: colour, organisation, behaviour, catalogue, programme
+- Use British terminology: "pop this in", "have a look", "brilliant", not "go ahead and", "awesome"
+- Dates MUST use DD/MM/YYYY format in user-facing content
+- Maintain an informal, warm, accessible tone — professional but not stuffy
 
-All course materials must render correctly in Obsidian for non-technical contributors.
+**Rationale**: Consistency in voice builds trust and brand identity. The course has a distinct British personality.
 
-**Required**:
-- Standard markdown only (no framework-specific syntax in learner-facing files)
-- YAML frontmatter for metadata (Obsidian handles this natively)
-- Relative links between files (`[[filename]]` or `[text](./path.md)`)
-- No HTML in markdown unless absolutely necessary
+### III. Progressive Disclosure
 
-**Forbidden in course content**:
-- JSX/MDX component syntax (`<Component />`)
-- Import statements
-- Framework-specific shortcodes
-- Astro-specific syntax
+Content MUST be structured for incremental knowledge building.
 
-**File structure for Obsidian users**:
-```
-content/           ← Non-devs edit here (pure markdown)
-├── week-1/
-├── week-2/
-├── week-3/
-├── week-4/
-└── bonus/
+- Each week MUST have a clear theme and learning outcomes
+- Each day MUST build on skills from previous days
+- Advanced concepts MUST NOT be introduced before foundational concepts
+- Slash commands MUST match the complexity level of their corresponding day
+- Cross-references to future content are permitted; assumptions of future knowledge are not
 
-src/content/docs/  ← Build copies from content/ with MDX wrappers
-```
+**Rationale**: Cognitive overload destroys learning. Proper sequencing enables mastery.
 
-### IV. Steal-Ready Outputs
+### IV. Interactive Learning (Tool-as-Teacher)
 
-Every lesson delivers something the learner can immediately copy and use.
+Lessons MUST use interactive teaching patterns, not passive content delivery.
 
-- **Slash commands**: Complete, tested, ready to paste into `.claude/commands/`
-- **Example files**: Real inputs and outputs, not lorem ipsum
-- **No setup required**: Commands work out of the box with Claude Code installed
-- **Self-contained**: Each day's materials work independently
+- Teaching scripts MUST include "Check:" points where Claude waits for learner response
+- "Say:" blocks MUST contain the exact content Claude delivers verbatim
+- "Action:" blocks MUST specify exact commands Claude executes
+- Learners MUST DO exercises, not just read about them
+- Claude MUST stay in character as a teacher, never breaking the fourth wall
 
-### V. Separation of Content and Code
+**Rationale**: Active learning produces retention. The ccforpms.com inspiration demonstrates this approach's effectiveness.
 
-Course content and website code live in distinct spaces.
+### V. Spec-Driven Development
 
-| Layer | Location | Edited by | Format |
-|-------|----------|-----------|--------|
-| Course content | `content/` | Anyone (Obsidian) | Pure Markdown |
-| Website source | `src/` | Developers | Astro/MDX |
-| Slash commands | `.claude/commands/` | Anyone (Obsidian) | Pure Markdown |
-| Examples | `examples/` | Anyone (Obsidian) | Various |
+For Week 4 (Building Software) and any code-generating features, specifications MUST precede implementation.
 
-**Build process** syncs `content/` → `src/content/docs/` with necessary MDX wrappers.
+- User requirements MUST be captured in spec.md before any code is written
+- Plans MUST be approved before implementation begins
+- Implementation MUST trace back to specification requirements
+- Changes MUST update specifications first, then implementation
 
-### VI. Minimal Dependencies
-
-Slash commands and course materials should work with minimal tooling.
-
-- **Required**: Claude Code only
-- **Optional**: Listed clearly at the start of each lesson
-- **No assumption**: Learners have Node, Python, or any dev environment
-- **Graceful degradation**: If a tool isn't available, provide alternatives
+**Rationale**: One structured iteration matches accuracy of eight unstructured iterations (Anthropic research). This is also what we teach.
 
 ## Content Standards
 
-### Markdown Formatting
+### Course Materials
 
-```markdown
-# Day Title (H1 - one per file)
+- MDX files in `src/content/docs/` MUST validate against frontmatter schema
+- Supporting materials (meeting notes, interviews, etc.) MUST use .md extension
+- Supporting materials MUST feel realistic — messy, imperfect, professional
+- Company context (personas, product details) MUST be consistent across all lessons
+- Each lesson folder MUST be self-contained with all referenced materials
 
-## Major Sections (H2)
+### Slash Commands
 
-### Subsections (H3)
+- Commands MUST follow naming convention: `w[week].d[day]` (e.g., `/w1.d1`, `/w2.d8`)
+- Commands MUST be thin launchers that load teaching scripts, not self-contained prompts
+- Teaching scripts MUST reside in lesson-modules folders as CLAUDE.md files
+- Dynamic variables MUST be used for all navigation references (no hardcoded module numbers)
 
-**Bold** for emphasis
-`code` for commands, file names, technical terms
-```code blocks``` for multi-line code or outputs
+### Site Quality
 
-- Bullet lists for unordered items
-1. Numbered lists for sequential steps
-```
+- Build MUST pass (`npm run build`) before any merge
+- No client-side JavaScript unless absolutely necessary
+- Dark/light modes MUST both render correctly
+- Links and navigation MUST work
 
-### Frontmatter Schema
+## Development Workflow
 
-Every content file includes:
+### Feature Development
 
-```yaml
----
-title: "Day X: Title Here"
-description: "One sentence for SEO and previews"
-day: 1
-week: 1
-slug: "day-1-title-slug"
----
-```
+1. **Specify**: Create specification via `/speckit.specify`
+2. **Clarify**: Resolve ambiguities via `/speckit.clarify` (if needed)
+3. **Plan**: Design implementation via `/speckit.plan`
+4. **Tasks**: Generate task list via `/speckit.tasks`
+5. **Implement**: Execute tasks via `/speckit.implement`
 
-### File Naming
+### Code Review
 
-- Lowercase with hyphens: `day-1-claude-code-essentials.md`
-- Prefix with day number for sort order
-- Match slug in frontmatter
+- All PRs MUST verify constitutional compliance
+- Learner experience impact MUST be considered in every review
+- British English MUST be verified in content changes
+
+### Testing
+
+- Content changes MUST be tested by running the corresponding slash command
+- Site changes MUST pass build and preview checks
+- Interactive elements MUST be tested through complete user flows
 
 ## Governance
 
-This constitution supersedes conflicting guidance elsewhere.
+This Constitution supersedes all other development practices for the CoEngineers project.
 
-**Amendments**: Document the change, update version, note the date.
+**Amendment Process**:
 
-**Conflicts**: If CLAUDE.md and Constitution disagree, Constitution wins for principles; CLAUDE.md wins for technical implementation details.
+1. Propose amendment with rationale
+2. Document impact on existing content
+3. Update Constitution via `/speckit.constitution`
+4. Propagate changes to affected templates and content
 
-**Version**: 1.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
+**Versioning Policy**:
+
+- MAJOR: Backward-incompatible principle changes or removals
+- MINOR: New principle or section added, material guidance expansion
+- PATCH: Clarifications, wording improvements, typo fixes
+
+**Compliance**:
+
+- All PRs MUST verify alignment with Core Principles
+- CLAUDE.md MUST reference relevant constitutional principles
+- Complexity beyond principles MUST be justified in plan documentation
+
+**Guidance File**: CLAUDE.md serves as runtime development guidance; this Constitution provides the foundational rules.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-09

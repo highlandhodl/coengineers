@@ -1,16 +1,18 @@
 ---
-title: "Day 16: Image Prompter"
-description: "Create detailed prompts for AI image generation with style consistency"
+title: 'Day 16: Image Prompter'
+description: 'Create detailed prompts for AI image generation with style consistency'
 day: 16
 week: 3
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w3.d16" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 16: Image Prompter" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w3.d16" label="Create image prompts" />
 
 ## What You'll Learn
 
@@ -23,76 +25,29 @@ import SlashCommand from '../../../components/SlashCommand.astro';
 
 Jamie needs images for the Christmas campaign: product shots, lifestyle images, and social media graphics. Photographer is too expensive. AI generation is the answer.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w3.d16" />
+| Concept               | Description                                                      |
+| --------------------- | ---------------------------------------------------------------- |
+| **Prompt Anatomy**    | Subject + Style + Composition + Lighting + Mood + Technical      |
+| **Style Consistency** | Define colour palette, lighting, and mood for coherent campaigns |
+| **Negative Prompts**  | Specify what to avoid for better results                         |
+| **Iteration**         | First output is rarely perfect - refine in Gemini                |
 
-This command guides you through an **interactive walkthrough** to create detailed prompts for AI image generation.
+## What You'll Create
 
-### What the Command Does
-
-1. **Asks what you need** - What image are you trying to create?
-2. **Understands the use** - Website, social, print, etc.
-3. **Gets style preferences** - Photography, illustration, mood
-4. **Defines consistency** - Brand colours and visual language
-5. **Creates detailed prompts** - Ready to paste into Gemini
-
-### Anatomy of a Good Prompt
-
-```
-[Subject] + [Style] + [Composition] + [Lighting] + [Mood] + [Technical]
-
-Example:
-"A bottle of single malt whisky on a rustic oak table,
-product photography style, centred composition with
-shallow depth of field, warm golden hour lighting from
-the left, cosy and inviting mood, 4K, photorealistic"
-```
-
-## Style Consistency
-
-For a coherent campaign, define:
-- **Colour palette:** Warm ambers, deep browns, cream whites
-- **Lighting style:** Warm, natural, golden
-- **Photography style:** Lifestyle/editorial, not clinical
-- **Mood:** Cosy, authentic, premium
-
-## Example Output
-
-A complete prompt set with:
-- Main prompt ready for Gemini
+- Detailed image prompts ready for Gemini
 - 2-3 variations with different approaches
-- Negative prompt (what to avoid)
+- Negative prompts for quality control
 - Style guide for consistency across images
 
-## Prompt Patterns That Work
+## Quick Reference
 
-**For products:**
-"Product photography of [item], [surface/background], studio lighting, [brand mood], commercial quality, 4K"
-
-**For lifestyle:**
-"[Person/scene] with [product], [location], natural lighting, [mood], editorial photography style, shallow depth of field"
-
-**For textures/backgrounds:**
-"Abstract [texture type], [colour palette], soft gradients, suitable for text overlay, [mood], high resolution"
-
-## Tips for Success
-
-- **Be specific about mood** - "Warm" is better than "nice"
-- **Include technical details** - 4K, photorealistic, shallow DOF
-- **Create a style guide** - Keeps multiple images consistent
-- **Iterate in Gemini** - First output is rarely perfect
-
-## What You Learned
-
-- Detailed prompts = better images
-- Consistency comes from defined style elements
-- Iteration is normal and expected
-- Structure: subject + style + composition + lighting + mood
-
-## What's Next?
-
-Tomorrow in [Day 17: Audio Script Writer](/week-3/day-17-audio-script-writer/), we'll create scripts for ElevenLabs voice synthesis.
+- Be specific about mood - "warm" beats "nice"
+- Include technical details - 4K, photorealistic, shallow DOF
+- Create a style guide - keeps multiple images consistent
+- Iterate in Gemini - refinement is expected
 
 ---
-Day 16 of 31 | CoEngineers.ai
+
+**Navigation:** [Day 15: Presentation Builder](/week-3/day-15-presentation-builder/) | [Day 17: Audio Script Writer](/week-3/day-17-audio-script-writer/)

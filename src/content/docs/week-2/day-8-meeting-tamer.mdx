@@ -1,77 +1,53 @@
 ---
-title: "Day 8: Meeting Tamer"
-description: "Turn messy meeting transcripts into structured, actionable notes"
+title: 'Day 8: Meeting Tamer'
+description: 'Turn messy meeting transcripts into structured, actionable notes'
 day: 8
 week: 2
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w2.d8" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 8: Meeting Tamer" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w2.d8" label="Process meeting notes" />
 
 ## What You'll Learn
 
-- Process raw meeting transcripts into structured notes
-- Extract speakers, decisions, and action items
-- Create consistent meeting note format
-- Handle messy, real-world transcripts
+- Process raw meeting notes into structured action items
+- Identify key decisions and next steps from unstructured text
+- Create consistent meeting summaries with clear ownership and deadlines
+- Build reusable prompts for meeting note processing
 
 ## The Scenario
 
 Sarah recorded last week's distributor call. The raw transcript is 47 minutes of rambling. Fiona needs to know what was decided. Jamie to the rescue.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w2.d8" />
+| Concept                  | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| **Structure Extraction** | Pulling decisions, actions, and questions from chaotic notes |
+| **Action Item Clarity**  | Every action needs an owner and a deadline                   |
+| **Reusable Templates**   | Save your best prompts for repeated use                      |
+| **Context Matters**      | Meeting type and attendees affect what to extract            |
 
-This command guides you through an **interactive walkthrough** to process a meeting transcript. It asks about context before processing.
+## What You'll Create
 
-### What the Command Does
+- Clean meeting summaries with frontmatter
+- Action items table with owners and deadlines
+- Open questions for follow-up
+- Reusable processing template
 
-1. **Asks for the transcript** - Paste it or give a file path
-2. **Gathers context** - What kind of meeting? Who was there?
-3. **Identifies what matters** - What do you need from this?
-4. **Processes with understanding** - Context improves extraction
-5. **Creates structured output** - Ready for action
+## Quick Reference
 
-### What You'll Extract
-
-- **Summary** (2-3 sentences)
-- **Attendees** (identified from context)
-- **Key Discussion Points**
-- **Decisions Made**
-- **Action Items** (who, what, when)
-- **Open Questions**
-
-## Example Output
-
-A clean meeting note with:
-- Frontmatter (date, attendees, type)
-- Executive summary
-- Decisions with owners
-- Action items table
-- Parking lot for unresolved items
-
-## Tips for Success
-
-- **Provide context** - Meeting type, attendees, purpose
-- **Accept imperfection** - Transcripts are messy, that's OK
-- **Review action items** - Ensure owners and dates are clear
-- **Save the command** - You'll use it again
-
-## What You Learned
-
-- Claude can parse messy, unstructured text
-- Speaker identification from context works surprisingly well
-- Consistent output format makes notes usable
-- Save the command for reuse
-
-## What's Next?
-
-Tomorrow in [Day 9: Voice to Text](/week-2/day-9-voice-to-text/), we'll process voice memo transcripts into organised thoughts.
+- Messier input = more valuable the processing becomes
+- Always specify the structure you want in your output
+- Include context about who needs to see this
+- Save your best prompts as templates
 
 ---
-Day 8 of 31 | CoEngineers.ai
+
+**Navigation:** [Week 1 Review](/week-1/day-7-week-1-review/) | [Day 9: Voice to Text](/week-2/day-9-voice-to-text/)

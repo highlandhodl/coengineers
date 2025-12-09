@@ -1,72 +1,52 @@
 ---
-title: "Day 5: The Daily Note"
-description: "Build a daily note practice that captures everything you do and think"
+title: 'Day 5: The Daily Note'
+description: 'Automate daily documentation to track progress and spot patterns'
 day: 5
 week: 1
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w1.d5" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 5: The Daily Note" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w1.d5" label="Start your daily note habit" />
 
 ## What You'll Learn
 
-- Understand daily notes as a practice
-- Design a daily note template
-- Create dated notes automatically
-- Link daily notes to projects and people
+- Create structured daily notes using Claude Code
+- Build a template for consistent daily documentation
+- Organise daily notes in a date-based structure
+- Use daily notes to track progress and spot patterns
 
 ## The Scenario
 
-Jamie wants to track what they do each day - for accountability, memory, and building a trail of work. Daily notes are the foundation.
+Jamie does loads of work every day but can't remember what they did last Tuesday. Daily notes fix this - simple documents tracking focus, progress, blockers, and ideas. They're breadcrumbs for future you.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w1.d5" />
+| Concept                | Description                                                     |
+| ---------------------- | --------------------------------------------------------------- |
+| **Daily Note**         | A dated document tracking your day's work and thinking          |
+| **Focus vs Completed** | What you plan to do vs what you actually finish                 |
+| **Blockers**           | What's stopping progress - patterns here reveal systemic issues |
+| **Weekly Review**      | Summarising daily notes to spot patterns and plan ahead         |
 
-This command guides you through an **interactive walkthrough** to design a daily note system that fits YOUR routine.
+## What You'll Create
 
-### What the Command Does
+- `daily-notes/` folder with date-organised files
+- A daily note template for consistent structure
+- Your first real daily note with actual content
 
-1. **Understands your current habits** - How do you capture things now?
-2. **Maps your daily rhythm** - When are you busy? When can you reflect?
-3. **Identifies what matters** - What's worth recording for future-you?
-4. **Considers tracking needs** - Energy, mood, or simple logging?
-5. **Sets up the structure** - Template and folder where notes live
+## Quick Reference
 
-### Daily Note Purpose
+- **Structure**: Focus, Completed, In Progress, Blockers, Notes, Tomorrow
+- **Timing**: Pick morning or evening and stay consistent
+- **Keep it short**: 5-10 minutes daily, bullet points not essays
+- **Review weekly**: Ask Claude to summarise patterns across notes
 
-- **Capture** everything that happens
-- **Plan** what you'll do today
-- **Reflect** on what you learned
-- **Link** to projects, people, ideas
+---
 
-## Example Output
-
-After running the command, you'll have:
-
-- `templates/daily-note.md` - Your daily note template
-- Today's daily note - Already created and started
-- A folder structure for daily notes
-- A practice that compounds over time
-
-## Tips for Success
-
-- **Quick capture beats perfect capture** - Something is better than nothing
-- **Timestamps help** - Future-you will want to know when
-- **Don't overthink it** - Start simple, refine over time
-- **Consistency matters more than detail** - Show up daily
-
-## What You Learned
-
-- Daily notes are low-effort, high-value
-- Timestamped logs create an audit trail
-- The practice compounds over time
-- Quick capture beats perfect capture
-
-## What's Next?
-
-Tomorrow in [Day 6: Your First Slash Command](/week-1/day-6-your-first-slash-command/), we'll create custom commands.
+**Navigation:** [Day 4: Template Factory](/week-1/day-4-template-factory/) | [Day 6: Your First Slash Command](/week-1/day-6-your-first-slash-command/)

@@ -20,9 +20,12 @@ export async function POST(context: APIContext): Promise<Response> {
 
     const contentType = context.request.headers.get('content-type') || '';
 
-    if (contentType.includes('application/x-www-form-urlencoded') || contentType.includes('multipart/form-data')) {
+    if (
+      contentType.includes('application/x-www-form-urlencoded') ||
+      contentType.includes('multipart/form-data')
+    ) {
       const formData = await context.request.formData();
-      email = formData.get('email') as string | null ?? undefined;
+      email = (formData.get('email') as string | null) ?? undefined;
       const formSource = formData.get('source') as string | null;
       if (formSource && isValidSource(formSource)) {
         source = formSource;

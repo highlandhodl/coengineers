@@ -1,0 +1,14 @@
+---
+interface Props {
+  command: string;
+}
+const { command } = Astro.props;
+---
+
+<aside class="reference-hub-callout">
+  <p>
+    <strong>This is a Reference Hub.</strong> The real learning happens in Claude Code. Run <code
+      >{command}</code
+    > to begin your interactive lesson.
+  </p>
+</aside>

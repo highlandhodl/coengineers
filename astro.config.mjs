@@ -17,9 +17,17 @@ export default defineConfig({
         replacesTitle: true,
       },
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/coengineers/coengineers-productivity-course' },
+        {
+          icon: 'github',
+          label: 'GitHub',
+          href: 'https://github.com/coengineers/coengineers-productivity-course',
+        },
         { icon: 'youtube', label: 'YouTube', href: 'https://youtube.com/@coengineers' },
-        { icon: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com/company/coengineers' },
+        {
+          icon: 'linkedin',
+          label: 'LinkedIn',
+          href: 'https://linkedin.com/in/john-gordon-39135287',
+        },
       ],
       defaultLocale: 'root',
       locales: {
@@ -28,9 +36,7 @@ export default defineConfig({
           lang: 'en-GB',
         },
       },
-      customCss: [
-        './src/styles/custom.css',
-      ],
+      customCss: ['./src/styles/custom.css'],
       sidebar: [
         {
           label: 'Blog',
@@ -39,11 +45,15 @@ export default defineConfig({
             { label: 'My AI Story', slug: 'blog/01-my-ai-story' },
             { label: 'Thoughts on GenAI', slug: 'blog/02-thoughts-on-genai' },
             { label: 'Why Claude Code', slug: 'blog/03-my-claude-code-story' },
-            { label: 'What You\'ll Learn', slug: 'blog/04-what-you-will-learn' },
-            { label: 'Who It\'s For', slug: 'blog/05-who-this-course-is-for' },
-            { label: 'Why It\'s Different', slug: 'blog/06-why-this-course-is-different' },
-            { label: 'What You\'ll Build', slug: 'blog/07-what-you-will-build' },
-            { label: 'Launch Day', slug: 'blog/08-website-launch', badge: { text: '🚀', variant: 'note' } },
+            { label: "What You'll Learn", slug: 'blog/04-what-you-will-learn' },
+            { label: "Who It's For", slug: 'blog/05-who-this-course-is-for' },
+            { label: "Why It's Different", slug: 'blog/06-why-this-course-is-different' },
+            { label: "What You'll Build", slug: 'blog/07-what-you-will-build' },
+            {
+              label: 'Launch Day',
+              slug: 'blog/08-website-launch',
+              badge: { text: '🚀', variant: 'note' },
+            },
           ],
         },
         {
@@ -64,7 +74,10 @@ export default defineConfig({
             { label: 'Day 3: Project Memory', slug: 'week-1/day-3-project-memory' },
             { label: 'Day 4: Template Factory', slug: 'week-1/day-4-template-factory' },
             { label: 'Day 5: The Daily Note', slug: 'week-1/day-5-the-daily-note' },
-            { label: 'Day 6: Your First Slash Command', slug: 'week-1/day-6-your-first-slash-command' },
+            {
+              label: 'Day 6: Your First Slash Command',
+              slug: 'week-1/day-6-your-first-slash-command',
+            },
             { label: 'Day 7: Week 1 Review', slug: 'week-1/day-7-week-1-review' },
           ],
         },
@@ -97,17 +110,17 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Week 4: Business Assets',
+          label: 'Week 4: Building Software',
           collapsed: true,
           items: [
             { label: 'Overview', slug: 'week-4/overview' },
-            { label: 'Day 22: Blog Compiler', slug: 'week-4/day-22-blog-compiler' },
-            { label: 'Day 23: Newsletter Assembler', slug: 'week-4/day-23-newsletter-assembler' },
-            { label: 'Day 24: Case Study Packager', slug: 'week-4/day-24-case-study-packager' },
-            { label: 'Day 25: Proposal Generator', slug: 'week-4/day-25-proposal-generator' },
-            { label: 'Day 26: Competitive Intel', slug: 'week-4/day-26-competitive-intel' },
-            { label: 'Day 27: Chatbot Trainer', slug: 'week-4/day-27-chatbot-trainer' },
-            { label: 'Day 28: Week 4 Review', slug: 'week-4/day-28-week-4-review' },
+            { label: 'Day 22: The Product Idea', slug: 'week-4/day-22-the-product-idea' },
+            { label: 'Day 23: The Product Backlog', slug: 'week-4/day-23-the-product-backlog' },
+            { label: 'Day 24: The User Story', slug: 'week-4/day-24-the-user-story' },
+            { label: 'Day 25: Code the Story', slug: 'week-4/day-25-code-the-story' },
+            { label: 'Day 26: Test the Story', slug: 'week-4/day-26-test-the-story' },
+            { label: 'Day 27: Document the Story', slug: 'week-4/day-27-document-the-story' },
+            { label: 'Day 28: Ship It!', slug: 'week-4/day-28-ship-it' },
           ],
         },
         {
@@ -123,6 +136,15 @@ export default defineConfig({
         {
           label: 'Community',
           slug: 'community',
+        },
+        {
+          label: 'Reference',
+          collapsed: true,
+          items: [
+            { label: 'Troubleshooting', slug: 'reference/troubleshooting' },
+            { label: 'Glossary', slug: 'reference/glossary' },
+            { label: 'FAQ', slug: 'reference/faq' },
+          ],
         },
         {
           label: 'Privacy Policy',

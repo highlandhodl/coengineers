@@ -1,16 +1,18 @@
 ---
-title: "Day 15: Presentation Builder"
-description: "Transform your notes into presentation-ready outlines for Gamma"
+title: 'Day 15: Presentation Builder'
+description: 'Transform your notes into presentation-ready outlines for Gamma'
 day: 15
 week: 3
 ---
 
-import YouTube from '../../../components/YouTube.astro';
 import SlashCommand from '../../../components/SlashCommand.astro';
+import ReferenceHubCallout from '../../../components/ReferenceHubCallout.astro';
 
+<ReferenceHubCallout command="/w3.d15" />
 
-{/* TODO: Add video ID when uploaded */}
-{/* <YouTube id="VIDEO_ID_HERE" title="Day 15: Presentation Builder" /> */}
+## Start the Lesson
+
+<SlashCommand code="/w3.d15" label="Build presentations" />
 
 ## What You'll Learn
 
@@ -21,70 +23,31 @@ import SlashCommand from '../../../components/SlashCommand.astro';
 
 ## The Scenario
 
-Fiona has a meeting with a potential Edinburgh distributor. She has notes from previous conversations but no deck. Jamie needs to create a compelling presentation.
+Fiona has a meeting with a potential Edinburgh distributor. She has notes from previous conversations but no deck. Time to create a compelling presentation.
 
-## The Slash Command
+## Key Concepts
 
-<SlashCommand code="/w3.d15" />
+| Concept                        | Description                                     |
+| ------------------------------ | ----------------------------------------------- |
+| **One Idea Per Slide**         | Don't cram - each slide communicates one thing  |
+| **Headlines That Stand Alone** | Slide titles should tell the story              |
+| **Start with Why**             | Problem before solution                         |
+| **End with Action**            | Every presentation needs a clear call to action |
 
-This command guides you through an **interactive walkthrough** to transform your notes into presentation-ready outlines.
+## What You'll Create
 
-### What the Command Does
+- Presentation outlines ready for Gamma import
+- Clear slide narratives with compelling headlines
+- Visual suggestions for each slide
+- Strong calls to action
 
-1. **Asks about your presentation** - What's it for and who's the audience?
-2. **Understands your content** - What notes or material do you have?
-3. **Gets your goal** - What do you want the audience to do?
-4. **Chooses structure** - Full deck, quick pitch, or custom length
-5. **Creates Gamma-ready output** - Clean markdown for import
+## Quick Reference
 
-### Presentation Principles
-
-1. **One idea per slide** - Don't cram
-2. **Headlines that stand alone** - Each slide title tells the story
-3. **Start with why** - Problem before solution
-4. **End with action** - What do you want them to do?
-
-## Gamma Import Format
-
-Gamma works best with:
-- Clear hierarchy (# for slide titles)
-- Bullet points for key messages
-- Simple markdown formatting
-
-## Example Output
-
-A clean markdown file with:
-- Title slide with compelling headline
-- Problem/opportunity framing
-- Content slides (one idea each)
-- Supporting bullets and visual suggestions
-- Strong call to action
-
-## Importing to Gamma
-
-1. Go to gamma.app
-2. Click "Create New" → "Import"
-3. Paste your markdown outline
-4. Gamma generates designed slides
-5. Customise colours/fonts as needed
-
-## Tips for Success
-
-- **Share your actual notes** - The more context, the better
-- **Be clear about the audience** - Affects tone and depth
-- **Specify the call to action** - Every presentation should drive action
-- **Less is more** - Fight the urge to add slides
-
-## What You Learned
-
-- Notes → outline → designed deck
-- One idea per slide
-- Headlines should tell the story alone
-- Gamma does the design work
-
-## What's Next?
-
-Tomorrow in [Day 16: Image Prompter](/week-3/day-16-image-prompter/), we'll generate detailed AI image prompts for Gemini.
+- Share actual notes - more context means better output
+- Be clear about your audience - affects tone and depth
+- Specify the call to action - drive action, not just information
+- Less is more - fight the urge to add slides
 
 ---
-Day 15 of 31 | CoEngineers.ai
+
+**Navigation:** [Week 3 Overview](/week-3/overview/) | [Day 16: Image Prompter](/week-3/day-16-image-prompter/)
