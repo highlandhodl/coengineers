@@ -1,0 +1,217 @@
+---
+title: "Day 21: Video Prompt Master & Week 3 Review"
+description: "Create cinematic video prompts and consolidate your creative toolkit"
+day: 21
+week: 3
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 21: Video Prompt Master & Week 3 Review" /> */}
+
+## What You'll Learn
+
+- Create cinematic video prompts for Kling
+- Review and consolidate Week 3 skills
+- Build a creative outputs toolkit
+- Prepare for Week 4
+
+## The Scenario
+
+Jamie wants cinematic B-roll footage: whisky being poured, flames in the kiln, casks in the warehouse. Kling can generate these. Plus, time to review everything we've built.
+
+## The Slash Command
+
+<SlashCommand code="/w3.d21" />
+
+Create cinematic video prompts and consolidate your creative toolkit.
+
+## Part 1: Kling Video Prompts
+
+### What We're Building
+Prompts for AI video generation that create cinematic B-roll and atmospheric footage.
+
+### The Scenario
+Thistle & Thorn needs B-roll for their brand video:
+- Whisky being poured in slow motion
+- Flames dancing in the kiln
+- Light streaming through the warehouse
+- Hands checking cask quality
+
+### Video Prompt Anatomy
+
+```
+[Subject] + [Action] + [Camera Movement] + [Style] + [Lighting] + [Duration]
+
+Example:
+"Amber whisky being poured into a crystal glass, slow motion,
+close-up tracking shot following the liquid, cinematic style,
+warm golden backlighting, 4 seconds"
+```
+
+### Step 1: Create Video Prompt Generator
+"Create a slash command at .claude/commands/create-video-prompt.md:
+
+# Create Video Prompt
+
+You are helping me write prompts for AI video generation (Kling, etc.)
+
+## Input
+I'll describe:
+- What I want to see
+- The mood/feeling
+- How it will be used
+
+## Your Task
+Create a video prompt including:
+
+1. **Subject** - What's in frame
+2. **Action** - What's happening
+3. **Camera** - Movement and angle
+4. **Style** - Cinematic, documentary, etc.
+5. **Lighting** - Type and mood
+6. **Duration** - 2-4 seconds typically
+
+## Camera Movement Options
+- Static: Fixed camera
+- Pan: Horizontal movement
+- Tilt: Vertical movement
+- Tracking: Following subject
+- Dolly: Moving towards/away
+- Aerial/drone: High angle moving
+
+## Output Format
+Provide:
+- Main prompt (ready for Kling)
+- 2 variations with different approaches
+- Duration recommendation
+- Any post-processing suggestions"
+
+### Step 2: Create Thistle & Thorn B-Roll Prompts
+"Create 5 cinematic video prompts for Thistle & Thorn:
+
+1. Whisky pour - Glamour shot of liquid gold
+2. Kiln flames - Dancing fire, atmospheric
+3. Cask warehouse - Light beams, scale, heritage
+4. Hands on cask - Craftsmanship, human touch
+5. Steam from still - Magical, process in action
+
+Each should feel premium, cinematic, brand-worthy.
+Save to week-3-outputs/video-prompts-broll.md"
+
+---
+
+## Part 2: Week 3 Review
+
+### What You Built This Week
+
+| Day | Tool | What You Created |
+|-----|------|------------------|
+| 15 | Gamma | Presentation outlines |
+| 16 | Gemini | Image generation prompts |
+| 17 | ElevenLabs | Audio scripts with SSML |
+| 18 | Mermaid | Process diagrams |
+| 19 | Social | Multi-platform content |
+| 20 | HeyGen | Avatar video scripts |
+| 21 | Kling | Cinematic video prompts |
+
+### Step 3: Audit Your Creative Commands
+"List all slash commands I created during Week 3. For each:
+- Show the file path
+- One-line description
+- Which tool it works with"
+
+### Step 4: Create Week 3 Retrospective
+"Create a retrospective at 01-projects/learning-claude-code/week-3-retro.md with:
+- Frontmatter: date, week: 3
+- Creative outputs I generated
+- Which command I'll use most
+- Tools I need to sign up for
+- Ideas for using these in my work"
+
+### Step 5: Build a Creative Brief Router
+"Create a slash command at .claude/commands/create-asset.md that asks what type of creative asset I need, then routes to the appropriate creator:
+- Presentation → build-presentation
+- Image → create-image-prompt
+- Audio → write-audio-script
+- Diagram → create-diagram
+- Social → create-social
+- Video (talking head) → create-video-brief
+- Video (cinematic) → create-video-prompt"
+
+### Step 6: Preview Week 4
+Week 4 is about business assets - documents that drive revenue.
+
+"Look at my notes and processed content. Suggest 3 things I could create in Week 4:
+- Blog posts
+- Newsletters
+- Proposals
+- Case studies
+- Reports"
+
+### The Creative Outputs Pipeline
+
+```
+┌─────────────────────────────────────────────────┐
+│              YOUR NOTES & CONTENT               │
+└──────────────────────┬──────────────────────────┘
+                       ↓
+┌──────────────────────┴──────────────────────────┐
+│              /create-asset                      │
+│         (routes to right creator)               │
+└──────────────────────┬──────────────────────────┘
+                       ↓
+┌─────────────┬────────┼────────┬─────────────────┐
+│ Presentations│ Images │ Audio  │ Video          │
+│ (Gamma)      │(Gemini)│(Eleven)│(HeyGen/Kling)  │
+├─────────────┼────────┼────────┼─────────────────┤
+│ Diagrams    │ Social │        │                │
+│ (Mermaid)   │(Multi) │        │                │
+└─────────────┴────────┴────────┴─────────────────┘
+```
+
+### Your Turn
+1. Complete your Week 3 retrospective
+2. Create at least one video prompt and test in Kling
+3. Test the asset router with different requests
+
+### What You Learnt This Week
+
+| Day | Skill | Superpower |
+|-----|-------|------------|
+| 15 | Presentations | Notes → decks in minutes |
+| 16 | Image prompts | Professional visuals, no design |
+| 17 | Audio scripts | Voice content without recording |
+| 18 | Diagrams | Complex processes made clear |
+| 19 | Social content | One idea, every platform |
+| 20 | Video briefs | Talking heads without cameras |
+| 21 | Video prompts | Cinematic B-roll on demand |
+
+## Example Outputs
+
+- `.claude/commands/create-video-prompt.md`
+- `.claude/commands/create-asset.md` (router)
+- `video-prompts-broll.md`
+- `week-3-retro.md`
+
+## Ready for Week 4?
+
+Week 4: Business Assets - Documents that drive revenue
+
+We'll create:
+- Blog posts and articles
+- Newsletters
+- Case studies
+- Proposals
+- Competitive intelligence
+- Chatbot training data
+
+Run `/w4.d22` when you're ready!
+
+---
+Day 21 of 31 | CoEngineers.ai
+
+Week 3 Complete!

@@ -1,8 +1,12 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+import vercel from '@astrojs/vercel';
+
 export default defineConfig({
   site: 'https://coengineers.ai',
+  output: 'static',
+  adapter: vercel(),
   integrations: [
     starlight({
       title: 'CoEngineers',
@@ -51,17 +55,17 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Week 1: Foundations',
+          label: 'Week 1: Foundation',
           collapsed: false,
           items: [
             { label: 'Overview', slug: 'week-1/overview' },
-            { label: 'Day 1: Claude Code Essentials', slug: 'week-1/day-1-claude-code-essentials' },
-            { label: 'Day 2: Command Line Basics', slug: 'week-1/day-2-command-line-basics' },
-            { label: 'Day 3: Markdown Mastery', slug: 'week-1/day-3-markdown-mastery' },
-            { label: 'Day 4: Second Brain Setup', slug: 'week-1/day-4-second-brain-setup' },
-            { label: 'Day 5: CLAUDE.md Builder', slug: 'week-1/day-5-claude-md-builder' },
-            { label: 'Day 6: Note Templates', slug: 'week-1/day-6-note-templates' },
-            { label: 'Day 7: Frontmatter Schema', slug: 'week-1/day-7-frontmatter-schema' },
+            { label: 'Day 1: First Conversation', slug: 'week-1/day-1-first-conversation' },
+            { label: 'Day 2: Your Digital Home', slug: 'week-1/day-2-your-digital-home' },
+            { label: 'Day 3: Project Memory', slug: 'week-1/day-3-project-memory' },
+            { label: 'Day 4: Template Factory', slug: 'week-1/day-4-template-factory' },
+            { label: 'Day 5: The Daily Note', slug: 'week-1/day-5-the-daily-note' },
+            { label: 'Day 6: Your First Slash Command', slug: 'week-1/day-6-your-first-slash-command' },
+            { label: 'Day 7: Week 1 Review', slug: 'week-1/day-7-week-1-review' },
           ],
         },
         {
@@ -69,27 +73,27 @@ export default defineConfig({
           collapsed: true,
           items: [
             { label: 'Overview', slug: 'week-2/overview' },
-            { label: 'Day 8: Transcript Processor', slug: 'week-2/day-8-transcript-processor' },
-            { label: 'Day 9: Voice Memo Structurer', slug: 'week-2/day-9-voice-memo-structurer' },
-            { label: 'Day 10: YouTube Summariser', slug: 'week-2/day-10-youtube-summariser' },
-            { label: 'Day 11: Meeting Notes Standardiser', slug: 'week-2/day-11-meeting-notes-standardiser' },
-            { label: 'Day 12: PDF Extractor', slug: 'week-2/day-12-pdf-extractor' },
-            { label: 'Day 13: Whisper Pipeline', slug: 'week-2/day-13-whisper-pipeline' },
-            { label: 'Day 14: Web Archiver', slug: 'week-2/day-14-web-archiver' },
+            { label: 'Day 8: Meeting Tamer', slug: 'week-2/day-8-meeting-tamer' },
+            { label: 'Day 9: Voice to Text', slug: 'week-2/day-9-voice-to-text' },
+            { label: 'Day 10: YouTube Brain', slug: 'week-2/day-10-youtube-brain' },
+            { label: 'Day 11: PDF Crusher', slug: 'week-2/day-11-pdf-crusher' },
+            { label: 'Day 12: Web Archiver', slug: 'week-2/day-12-web-archiver' },
+            { label: 'Day 13: Email Processor', slug: 'week-2/day-13-email-processor' },
+            { label: 'Day 14: Week 2 Review', slug: 'week-2/day-14-week-2-review' },
           ],
         },
         {
-          label: 'Week 3: Visual & Audio',
+          label: 'Week 3: Creative Outputs',
           collapsed: true,
           items: [
             { label: 'Overview', slug: 'week-3/overview' },
-            { label: 'Day 15: Gamma Deck Generator', slug: 'week-3/day-15-gamma-generator' },
-            { label: 'Day 16: Gemini Image Prompter', slug: 'week-3/day-16-gemini-image-prompter' },
-            { label: 'Day 17: ElevenLabs Preparer', slug: 'week-3/day-17-elevenlabs-preparer' },
-            { label: 'Day 18: Podcast Builder', slug: 'week-3/day-18-podcast-builder' },
-            { label: 'Day 19: Mermaid Diagrams', slug: 'week-3/day-19-mermaid-diagrams' },
-            { label: 'Day 20: HeyGen Briefs', slug: 'week-3/day-20-heygen-briefs' },
-            { label: 'Day 21: Kling Prompts', slug: 'week-3/day-21-kling-prompts' },
+            { label: 'Day 15: Presentation Builder', slug: 'week-3/day-15-presentation-builder' },
+            { label: 'Day 16: Image Prompter', slug: 'week-3/day-16-image-prompter' },
+            { label: 'Day 17: Audio Script Writer', slug: 'week-3/day-17-audio-script-writer' },
+            { label: 'Day 18: Diagram Generator', slug: 'week-3/day-18-diagram-generator' },
+            { label: 'Day 19: Social Thread Maker', slug: 'week-3/day-19-social-thread-maker' },
+            { label: 'Day 20: Video Brief Creator', slug: 'week-3/day-20-video-brief-creator' },
+            { label: 'Day 21: Week 3 Review', slug: 'week-3/day-21-week-3-review' },
           ],
         },
         {
@@ -99,26 +103,30 @@ export default defineConfig({
             { label: 'Overview', slug: 'week-4/overview' },
             { label: 'Day 22: Blog Compiler', slug: 'week-4/day-22-blog-compiler' },
             { label: 'Day 23: Newsletter Assembler', slug: 'week-4/day-23-newsletter-assembler' },
-            { label: 'Day 24: Social Threads', slug: 'week-4/day-24-social-threads' },
-            { label: 'Day 25: Case Study Packager', slug: 'week-4/day-25-case-study-packager' },
-            { label: 'Day 26: Proposal Generator', slug: 'week-4/day-26-proposal-generator' },
-            { label: 'Day 27: Chatbot Exporter', slug: 'week-4/day-27-chatbot-exporter' },
-            { label: 'Day 28: Competitor Report', slug: 'week-4/day-28-competitor-report' },
+            { label: 'Day 24: Case Study Packager', slug: 'week-4/day-24-case-study-packager' },
+            { label: 'Day 25: Proposal Generator', slug: 'week-4/day-25-proposal-generator' },
+            { label: 'Day 26: Competitive Intel', slug: 'week-4/day-26-competitive-intel' },
+            { label: 'Day 27: Chatbot Trainer', slug: 'week-4/day-27-chatbot-trainer' },
+            { label: 'Day 28: Week 4 Review', slug: 'week-4/day-28-week-4-review' },
           ],
         },
         {
-          label: 'Bonus: Frameworks',
+          label: 'Bonus: Capstone',
           collapsed: true,
           items: [
             { label: 'Overview', slug: 'bonus/overview' },
             { label: 'Day 29: BMAD Method', slug: 'bonus/day-29-bmad-method' },
             { label: 'Day 30: PRP Framework', slug: 'bonus/day-30-prp-framework' },
-            { label: 'Day 31: SpecKit Integration', slug: 'bonus/day-31-speckit-integration' },
+            { label: 'Day 31: Ship It!', slug: 'bonus/day-31-ship-it' },
           ],
         },
         {
           label: 'Community',
           slug: 'community',
+        },
+        {
+          label: 'Privacy Policy',
+          slug: 'privacy',
         },
       ],
       components: {

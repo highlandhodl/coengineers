@@ -1,0 +1,143 @@
+---
+title: "Day 6: Your First Slash Command"
+description: "Create your own custom slash commands for tasks you do repeatedly"
+day: 6
+week: 1
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 6: Your First Slash Command" /> */}
+
+## What You'll Learn
+
+- Understand how slash commands work
+- Write a slash command from scratch
+- Test and iterate on commands
+- Build a command for a real use case
+
+## The Scenario
+
+Jamie finds themselves asking Claude the same things repeatedly. "Summarise this meeting..." "Turn this into action items..." What if they could save these prompts and reuse them with one command?
+
+## The Slash Command
+
+<SlashCommand code="/w1.d6" />
+
+Today you become a slash command creator.
+
+### What We're Building
+
+Your own custom slash command that solves a real problem you face regularly.
+
+### How Slash Commands Work
+
+1. They live in `.claude/commands/` folder
+2. They're markdown files with prompts
+3. When you type `/command-name`, Claude reads the file
+4. You can include instructions, context, and examples
+
+### Let's Go
+
+#### Step 1: Create the Commands Folder
+
+```
+Check if I have a .claude/commands folder. If not, create it.
+This is where all my slash commands will live.
+```
+
+#### Step 2: Create a Simple Command
+
+Let's build a meeting summariser.
+
+```
+Create a slash command at .claude/commands/summarise-meeting.md
+with this content:
+
+# Summarise Meeting
+
+You are helping me summarise meeting notes.
+
+Take the meeting content I provide and create:
+1. A one-sentence summary
+2. Key decisions (bullet list)
+3. Action items with owners (table format)
+4. Any open questions
+
+Format the output in clean markdown.
+
+Keep it concise. No fluff.
+```
+
+#### Step 3: Test Your Command
+
+Now test it. Run `/summarise-meeting` and provide some notes:
+
+```
+Here's a test meeting:
+
+Meeting: Q4 Planning
+Attendees: Fiona, Jamie, Sarah
+
+Discussion:
+- Website needs updating before Christmas
+- Jamie will handle social media posts
+- Consider running a Christmas tasting event
+- Sarah worried about capacity for events
+- Fiona wants to focus on premium customers
+
+Decision: Go ahead with tasting event, cap at 20 people
+Decision: Website update by Dec 1st
+
+Next: Jamie to draft social calendar by Friday
+```
+
+#### Step 4: Iterate and Improve
+
+Based on the output, refine your command.
+
+```
+Update my summarise-meeting command to also include:
+- A 'Mood/Vibe' one-liner at the start
+- Deadlines highlighted in bold in action items
+```
+
+#### Step 5: Create Your Own Command
+
+What do you ask Claude repeatedly? Turn it into a command.
+
+Ideas:
+- `/explain` - Explain something simply
+- `/fix-grammar` - Fix grammar and spelling
+- `/action-items` - Extract action items from text
+- `/daily-review` - End of day reflection prompts
+- `/idea-expand` - Take a rough idea and expand it
+
+```
+Create a slash command called [YOUR NAME] that [WHAT IT DOES].
+Include clear instructions and an example of good output.
+```
+
+### Your Turn
+
+Create at least 2 more slash commands for tasks you do regularly. Test each one with real content.
+
+## Example Outputs
+
+- `.claude/commands/summarise-meeting.md`
+- At least 2 personal slash commands
+- Understanding of command structure
+
+## What You Learned
+
+- Slash commands are reusable prompts
+- They live in `.claude/commands/`
+- You can iterate and improve them
+- One command can save hours over time
+
+## What's Next?
+
+Tomorrow in [Day 7: Week 1 Review](/week-1/day-7-week-1-review/), we'll consolidate everything we've learned.

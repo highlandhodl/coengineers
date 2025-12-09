@@ -1,0 +1,183 @@
+---
+title: "Day 24: Case Study Packager"
+description: Turn your project wins into compelling case studies with clear problem-solution-results structure
+day: 24
+week: 4
+---
+
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 24: Case Study Packager" /> */}
+
+## What You'll Learn
+
+- Structure case studies effectively
+- Extract stories from project notes
+- Write compelling before/after narratives
+- Create credible, shareable case studies
+
+## The Scenario
+
+Thistle & Thorn hosted a corporate whisky tasting that was a huge success. They want to use it to attract more corporate clients. Jamie needs to package it as a case study.
+
+## The Slash Command
+
+<SlashCommand code="/w4.d24" />
+
+
+Turn your project wins into compelling case studies.
+
+## What We're Building
+A professional case study from project notes, with clear
+problem-solution-results structure.
+
+## The Scenario
+Edinburgh Tech Company booked a team-building whisky tasting.
+25 people, private tour, custom tasting, dinner. It was a hit.
+Now we want to attract more corporate clients.
+
+## Case Study Structure
+
+```
+1. HEADLINE - Results-focused
+2. OVERVIEW - Client + challenge + outcome (one paragraph)
+3. THE CHALLENGE - What problem they faced
+4. THE SOLUTION - What we did
+5. THE RESULTS - Measurable outcomes
+6. QUOTE - In their words
+7. CTA - Want the same?
+```
+
+## Let's Go
+
+### Step 1: Create the Case Study Packager
+"Create a slash command at .claude/commands/package-case-study.md:
+
+# Package Case Study
+
+You are helping me turn project notes into a case study.
+
+## Input
+I'll provide:
+- Project notes and details
+- Client information (may need to anonymise)
+- Problem they faced
+- What we did
+- Results/outcomes
+- Any quotes or feedback
+
+## Your Task
+Create a case study with:
+
+1. **Headline** - Focus on the result, not the client
+   - Example: 'How a tech company rebuilt team morale with whisky'
+
+2. **Overview Box**
+   - Client: [Name/type]
+   - Industry: [Sector]
+   - Challenge: [One line]
+   - Result: [One line]
+
+3. **The Challenge** (2-3 paragraphs)
+   - What was the situation?
+   - Why did it matter?
+   - What had they tried before?
+
+4. **The Solution** (2-3 paragraphs)
+   - What did we propose?
+   - How did we deliver?
+   - What made it special?
+
+5. **The Results** (bullets or numbers)
+   - Measurable outcomes
+   - Qualitative feedback
+   - Follow-on effects
+
+6. **Quote** (if available)
+   - In their words
+   - Attribution
+
+7. **CTA**
+   - Want similar results? Here's how to start.
+
+## Writing Style
+- Storytelling, not reporting
+- Show, don't tell
+- Use specific numbers
+- Keep it credible (not overselling)"
+
+### Step 2: Package the Tech Company Case Study
+"Create a case study from these notes:
+
+Client: Nexus Solutions (Edinburgh tech company, 120 employees)
+Contact: Sarah Chen, Head of People
+
+The Challenge:
+- Remote work had fragmented the team
+- In-person events felt forced ('not another pizza party')
+- Needed something memorable to rebuild connections
+- Budget: £2000 for 25 senior team members
+
+What We Did:
+- Private after-hours distillery tour
+- Hamish explained cask selection (hands-on)
+- Tasting of 4 whiskies with food pairings
+- Created a 'Nexus Single Cask' concept (their own future cask)
+- Group dinner in the tasting room
+
+Results:
+- NPS of the event: 94
+- 3 attendees booked personal visits within a month
+- They've already asked about an annual booking
+- Sarah shared on LinkedIn (18,000 impressions)
+
+Quote from Sarah: 'This was the first team event where nobody
+checked their phone. Genuinely special.'
+
+Save to week-4-outputs/case-study-nexus.md"
+
+### Step 3: Create Anonymised Version
+"Create a version of the case study that doesn't name the
+client - for use before getting formal approval. Call them
+'A leading Edinburgh tech company'."
+
+### Step 4: Case Study Template
+"Create a template at templates/case-study-template.md
+that I can reuse for future case studies."
+
+### Step 5: Quick Win Version
+"Create a slash command case-study-quick.md that creates a
+one-page case study summary (200-300 words) for quick sharing."
+
+## Case Study Tips
+
+1. **Get permission** before publishing with client name
+2. **Use specifics** - "94 NPS" beats "great feedback"
+3. **Include photos** if possible (add [PHOTO: description])
+4. **Focus on results** the reader wants
+5. **Make it skimmable** - headers, bullets, bold text
+
+## Your Turn
+Think of a project that went well. Package it as a case study.
+Even if you can't publish it, the exercise is valuable.
+
+## What You Learned
+- Case studies are stories with structure
+- Results matter more than process
+- Quotes add credibility
+- Permission is essential
+
+## Example Outputs
+- `.claude/commands/package-case-study.md`
+- `.claude/commands/case-study-quick.md`
+- `templates/case-study-template.md`
+- `case-study-nexus.md`
+
+## What's Next?
+
+Tomorrow in [Day 25: Proposal Generator](/week-4/day-25-proposal-generator/), we'll turn meeting notes into professional proposals.
+
+---
+Day 24 of 31 | CoEngineers.ai

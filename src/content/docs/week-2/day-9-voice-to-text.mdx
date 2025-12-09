@@ -1,0 +1,152 @@
+---
+title: "Day 9: Voice to Text"
+description: "Turn rambling voice memos into organised thoughts"
+day: 9
+week: 2
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 9: Voice to Text" /> */}
+
+## What You'll Learn
+
+- Process rambling voice memos into structured thoughts
+- Extract key ideas from conversational audio
+- Create different output formats (notes, tasks, ideas)
+- Use Whisper for transcription (local, free)
+
+## The Scenario
+
+Fiona records voice memos whilst walking through the distillery. Observations about the whisky, ideas for new products, things she needs to remember. It's all in recordings on her phone - unusable until now.
+
+## The Slash Command
+
+<SlashCommand code="/w2.d9" />
+
+Turn rambling voice memos into organised thoughts.
+
+### What We're Building
+
+A system for processing voice memo transcripts into structured notes, extracting the gold from stream-of-consciousness audio.
+
+### Understanding Voice Memo Challenges
+
+Voice memos are different from meetings:
+- Single speaker (usually)
+- Stream of consciousness
+- Topic jumping
+- Incomplete thoughts
+- Filler words and thinking pauses
+
+### Step 1: Create the Voice Memo Processor
+
+"Create a slash command at .claude/commands/process-voice-memo.md:
+
+# Process Voice Memo
+
+You are helping me extract structured content from a voice memo transcript.
+
+## The Challenge
+Voice memos are rambling by nature. The speaker jumps between topics, has incomplete thoughts, and mixes observations with action items.
+
+## Your Task
+From the transcript, extract:
+
+1. **Key Topics** - What subjects were mentioned?
+2. **Observations** - Facts, notices, things seen/heard
+3. **Ideas** - Suggestions, possibilities, creative thoughts
+4. **Action Items** - Things to do, people to contact, tasks
+5. **Questions** - Things to figure out, uncertainties
+6. **Random Notes** - Anything else worth capturing
+
+## Output Format
+Create sections for each category. Only include sections that have content. Be concise - voice memos have lots of filler.
+
+Use British English. Date the output."
+
+### Step 2: Process Fiona's Voice Memo
+
+Here's a sample voice memo transcript:
+
+"Process this voice memo transcript:
+
+```
+so i'm walking past the warehouse and cask 47 is definitely
+leaking a wee bit, not urgent but hamish should check it
+this week... um... what else... oh the Henderson order, did
+we confirm that, i need to check with sarah... thinking about
+the christmas event again, what if we did whisky and chocolate
+pairings, could be something different... the barley delivery
+is tuesday i think, need to be here for that... hmm that new
+recipe jamie mentioned for the gin, worth exploring, maybe
+spring launch... the website really does need updating, saw
+a competitor's site yesterday and ours looks ancient...
+oh and call duncan about barley prices going up, he mentioned
+something at the pub... remind me to check the fermentation
+temps this afternoon...
+```
+
+Save to week-2-outputs/fiona-voice-memo-processed.md"
+
+### Step 3: Create Different Output Modes
+
+Sometimes you want different formats:
+
+"Create two more slash commands:
+1. process-voice-ideas.md - Only extract ideas and creative thoughts
+2. process-voice-actions.md - Only extract action items as a task list"
+
+### Step 4: Batch Process
+
+If you have multiple voice memos:
+
+"Look in [YOUR FOLDER] for any .txt files that look like voice memo transcripts. List them and ask which ones I want to process."
+
+### Sample Voice Memos for Practice
+
+**Voice Memo 2 - Jamie thinking about social media:**
+```
+okay so social media plan for december... instagram definitely,
+we should show the casks, people love that behind the scenes
+stuff... maybe a countdown to christmas, like 12 drams of
+christmas or something cheesy like that... need to ask fiona
+about budget for promoted posts... should we do tiktok,
+probably not our demographic but maybe... the competitor in
+islay is doing really well on linkedin actually, b2b angle,
+we should try that for trade customers... oh remind me to
+get photos of the new batch, the colour is really good...
+```
+
+### Your Turn
+
+Record a voice memo of yourself thinking about a project. Transcribe it (use Whisper or any tool). Process it with your new command. See what Claude extracts.
+
+## What You Learned
+
+- Voice memos need different processing than meetings
+- Multiple output formats serve different purposes
+- The "action items only" filter is powerful
+- Whisper + Claude = free voice-to-structured-notes
+
+## Prerequisites
+
+- Whisper installed locally (free, runs on your machine)
+- Or: Use a transcription service of your choice
+
+## Example Outputs
+
+- `.claude/commands/process-voice-memo.md`
+- `.claude/commands/process-voice-ideas.md`
+- `.claude/commands/process-voice-actions.md`
+- Processed voice memo with structured output
+
+## What's Next?
+
+Tomorrow in [Day 10: YouTube Brain](/week-2/day-10-youtube-brain/), we'll extract insights from videos.
+
+---
+Day 9 of 31 | CoEngineers.ai

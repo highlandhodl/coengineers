@@ -1,0 +1,171 @@
+---
+title: "Day 26: Competitive Intel"
+description: Create structured competitive analysis from research to identify opportunities and threats
+day: 26
+week: 4
+---
+
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 26: Competitive Intel" /> */}
+
+## What You'll Learn
+
+- Structure competitive analysis
+- Compare features and positioning
+- Identify opportunities and threats
+- Create actionable intel reports
+
+## The Scenario
+
+Fiona wants to understand what other Speyside distilleries are doing. Are they offering experiences? What do they charge? How do they market themselves?
+
+## The Slash Command
+
+<SlashCommand code="/w4.d26" />
+
+
+Create structured competitive analysis from research.
+
+## What We're Building
+A competitive intelligence report that identifies opportunities
+and threats from competitor analysis.
+
+## The Scenario
+Three other Speyside distilleries are within 10 miles. Fiona wants
+to know: What are they doing? What can we learn? Where can we win?
+
+## Competitive Analysis Structure
+
+```
+1. EXECUTIVE SUMMARY - Key findings
+2. COMPETITOR PROFILES - Who they are
+3. COMPARISON MATRIX - Features side by side
+4. PRICING ANALYSIS - What they charge
+5. STRENGTHS & WEAKNESSES - Per competitor
+6. OPPORTUNITIES - Where we can win
+7. THREATS - What to watch
+8. RECOMMENDATIONS - What to do next
+```
+
+## Let's Go
+
+### Step 1: Create the Competitor Analyzer
+"Create a slash command at .claude/commands/analyze-competitors.md:
+
+# Analyze Competitors
+
+You are helping me create a competitive analysis report.
+
+## Input
+I'll provide:
+- Our company/product details
+- Competitor information (can be notes, websites, research)
+- Specific questions to answer
+
+## Your Task
+Create a competitive analysis with:
+
+1. **Executive Summary** (1 paragraph)
+   - Key findings
+   - Main opportunities
+   - Primary threats
+
+2. **Competitor Profiles** (per competitor)
+   - Name and overview
+   - Products/services
+   - Target market
+   - Positioning
+
+3. **Comparison Matrix** (table)
+   - Key features/offerings
+   - Us vs each competitor
+   - Use ✓, ✗, ~ for yes/no/partial
+
+4. **Pricing Comparison** (if available)
+   - Their prices vs ours
+   - Value positioning
+
+5. **SWOT per Competitor**
+   - Their strengths
+   - Their weaknesses
+
+6. **Opportunities**
+   - Gaps we can fill
+   - Weaknesses we can exploit
+   - Unserved segments
+
+7. **Threats**
+   - Where they're stronger
+   - What they might do
+   - Market shifts
+
+8. **Recommendations** (3-5 bullets)
+   - Specific actions to take
+   - Prioritised
+
+## Tone
+Analytical, objective, actionable."
+
+### Step 2: Analyze Speyside Competitors
+"Create a competitive analysis for Thistle & Thorn:
+
+Our positioning: Family distillery, authentic experience,
+premium but accessible, 4th generation
+
+Competitor 1: Glen Morrison Distillery
+- Larger, corporate-owned (bought by big brand 2019)
+- Slick visitor centre, café, shop
+- Tours: £20 (basic), £50 (premium)
+- High volume, less personal
+- Great website, professional marketing
+
+Competitor 2: Cairn Spirits
+- Similar size to us, family-owned
+- Focus on gin more than whisky
+- Tours: £25 (combined whisky/gin)
+- Strong local following
+- Weak online presence
+
+Competitor 3: The Whisky Collective
+- Not a distillery - a whisky experience venue
+- Partners with multiple distilleries
+- Tours: N/A, tastings from £30
+- Modern, millennial-focused
+- Excellent Instagram
+
+Save to week-4-outputs/competitive-analysis-speyside.md"
+
+### Step 3: Create Quick Competitor Profile
+"Create a slash command competitor-profile.md that creates
+a one-page profile of a single competitor from notes or
+website research."
+
+### Step 4: Opportunity Finder
+"Based on the competitive analysis, create a 'Top 5
+Opportunities' summary document with specific actions
+Thistle & Thorn could take."
+
+## Your Turn
+Identify 2-3 competitors in your space. Research them
+(websites, social, reviews). Run the analysis.
+
+## What You Learned
+- Structured analysis beats gut feel
+- Comparison matrices reveal gaps
+- Competitor weaknesses = opportunities
+- Regular updates keep it relevant
+
+## Example Outputs
+- `.claude/commands/analyze-competitors.md`
+- `.claude/commands/competitor-profile.md`
+- `competitive-analysis-speyside.md`
+
+## What's Next?
+
+Tomorrow in [Day 27: Chatbot Trainer](/week-4/day-27-chatbot-trainer/), we'll prepare content for chatbot and RAG training.
+
+---
+Day 26 of 31 | CoEngineers.ai

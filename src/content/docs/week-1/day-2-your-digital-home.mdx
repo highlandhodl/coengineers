@@ -1,0 +1,120 @@
+---
+title: "Day 2: Your Digital Home"
+description: "Create a consistent, scalable folder structure for all your knowledge"
+day: 2
+week: 1
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 2: Your Digital Home" /> */}
+
+## What You'll Learn
+
+- Understand folder organisation principles (PARA-inspired)
+- Create a consistent, scalable structure
+- Learn Claude's file system capabilities
+- Set up a home for all future work
+
+## The Scenario
+
+Jamie needs somewhere to put everything. The distillery's files are scattered across desktops, email attachments, and "that folder Fiona has somewhere". Time to build a proper home.
+
+## The Slash Command
+
+<SlashCommand code="/w1.d2" />
+
+Today we build the folder structure that holds everything.
+
+### What We're Building
+
+A complete folder hierarchy for your personal knowledge system, ready to hold projects, notes, templates, and archives.
+
+### The Structure We'll Create
+
+```
+thistle-thorn-vault/
+├── 00-inbox/           # Temporary landing zone
+├── 01-projects/        # Active work with deadlines
+├── 02-areas/           # Ongoing responsibilities
+├── 03-resources/       # Reference material
+├── 04-archive/         # Completed/inactive items
+├── templates/          # Reusable templates
+└── .claude/
+    └── commands/       # Your slash commands
+```
+
+### Let's Go
+
+#### Step 1: Choose Your Location
+
+First, decide where this vault will live. Common choices:
+- `~/Documents/vault/`
+- `~/notes/`
+- `~/second-brain/`
+
+Tell Claude:
+
+```
+Create a folder structure for my personal knowledge system at
+[YOUR CHOSEN PATH]. Use these folders: 00-inbox, 01-projects,
+02-areas, 03-resources, 04-archive, templates. Also create a
+.claude/commands folder for slash commands.
+```
+
+#### Step 2: Add README Files
+
+Each folder should explain itself. Ask Claude:
+
+```
+Add a README.md to each folder explaining what goes there.
+Keep it simple - just 2-3 sentences per folder. Use Thistle &
+Thorn Distillery as an example business for the descriptions.
+```
+
+#### Step 3: Create Your First Project Folder
+
+Let's add a real project inside 01-projects.
+
+```
+Create a folder called 'learning-claude-code' inside 01-projects.
+Move my learning-log.md from yesterday into this project folder.
+Add a README explaining this is my course learning project.
+```
+
+#### Step 4: Understand the System
+
+Ask Claude to explain how this should work:
+
+```
+Explain how I should use this folder structure day-to-day.
+When does something go in inbox vs projects? When do I archive?
+Keep it practical.
+```
+
+### Your Turn
+
+Customise your structure. Ask Claude to:
+- Add any additional folders you need
+- Create a folder for a real project you're working on
+- Move some existing files into the right places
+
+## Example Outputs
+
+- Complete folder structure with READMEs
+- First project folder with learning log moved
+- Understanding of PARA-style organisation
+
+## What You Learned
+
+- Consistent folder structure reduces cognitive load
+- 00-inbox catches everything before you organise it
+- Projects are temporary, Areas are ongoing
+- Claude can create and organise files for you
+
+## What's Next?
+
+Tomorrow in [Day 3: Project Memory](/week-1/day-3-project-memory/), we'll build your first CLAUDE.md.

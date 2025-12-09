@@ -1,0 +1,107 @@
+---
+title: "Day 5: The Daily Note"
+description: "Build a daily note practice that captures everything you do and think"
+day: 5
+week: 1
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 5: The Daily Note" /> */}
+
+## What You'll Learn
+
+- Understand daily notes as a practice
+- Design a daily note template
+- Create dated notes automatically
+- Link daily notes to projects and people
+
+## The Scenario
+
+Jamie wants to track what they do each day - for accountability, memory, and building a trail of work. Daily notes are the foundation.
+
+## The Slash Command
+
+<SlashCommand code="/w1.d5" />
+
+Today we build a daily note practice that captures everything.
+
+### What We're Building
+
+A daily note template and your first daily note for today.
+
+### Daily Note Purpose
+
+- **Capture** everything that happens
+- **Plan** what you'll do today
+- **Reflect** on what you learned
+- **Link** to projects, people, ideas
+
+### Let's Go
+
+#### Step 1: Create Daily Note Template
+
+```
+Create a daily note template at templates/daily-note.md with:
+- Frontmatter: date, weekday, energy-level (1-5), tags
+- Sections:
+  - Focus (top 3 priorities today)
+  - Log (timestamped entries)
+  - Notes (thoughts, ideas, learnings)
+  - Tomorrow (what's carrying over)
+- Make the Log section a simple bullet list for quick entries
+```
+
+#### Step 2: Create Today's Daily Note
+
+```
+Using my daily note template, create today's note at
+01-projects/learning-claude-code/daily/[TODAY'S DATE].md
+
+Fill in:
+- Today's date and weekday
+- Focus: Learning Claude Code Day 5
+- Add a log entry for right now about completing Day 5
+```
+
+#### Step 3: Practice Quick Capture
+
+Throughout today, add entries to your daily note.
+
+```
+Add a log entry to today's daily note:
+[TIME] - Completed daily note template setup
+```
+
+#### Step 4: Create a Folder for Daily Notes
+
+```
+Create a 'daily' folder inside my learning project if it
+doesn't exist. This is where all daily notes will live.
+```
+
+### Your Turn
+
+- Create tomorrow's daily note in advance
+- Add 3 entries to today's note about things you're doing
+- Link to a project or person if relevant: [[project-name]]
+
+## Example Outputs
+
+- `templates/daily-note.md`
+- Today's daily note with real entries
+- Daily notes folder structure
+
+## What You Learned
+
+- Daily notes are low-effort, high-value
+- Timestamped logs create an audit trail
+- The practice compounds over time
+- Quick capture beats perfect capture
+
+## What's Next?
+
+Tomorrow in [Day 6: Your First Slash Command](/week-1/day-6-your-first-slash-command/), we'll create custom commands.

@@ -1,0 +1,182 @@
+---
+title: "Day 13: Email Processor"
+description: "Extract action items and clarity from email chaos"
+day: 13
+week: 2
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 13: Email Processor" /> */}
+
+## What You'll Learn
+
+- Process email threads to extract action items
+- Summarise long email conversations
+- Identify decisions and next steps
+- Create follow-up tasks from emails
+
+## The Scenario
+
+Fiona's inbox is chaos. Buried in a 47-email thread with a supplier are three critical things she needs to do. Let's find them.
+
+## The Slash Command
+
+<SlashCommand code="/w2.d13" />
+
+Extract action items and clarity from email chaos.
+
+### What We're Building
+
+A system for processing email threads into clear summaries, decisions, and action items.
+
+### The Challenge
+
+47 emails between Fiona, Duncan (barley supplier), and their accountant about pricing, delivery schedules, and payment terms. Somewhere in there are decisions. Let's find them.
+
+### Step 1: Create the Email Processor
+
+"Create a slash command at .claude/commands/process-email.md:
+
+# Process Email Thread
+
+You are helping me extract actionable information from an email thread.
+
+## Input
+I'll paste an email thread. It may include:
+- Multiple participants
+- Replies and forwards
+- Mixed topics
+- Attached file references
+
+## Your Task
+Create a structured summary with:
+
+1. **Thread Overview**
+   - Subject
+   - Participants
+   - Date range
+   - Topic summary (1-2 sentences)
+
+2. **Key Decisions**
+   - What was agreed or decided?
+   - Who agreed to it?
+
+3. **Action Items**
+   Table: Action | Owner | Due Date | Context
+
+4. **Open Questions**
+   - What's still unresolved?
+   - Who needs to respond?
+
+5. **Attachments/References**
+   - Files mentioned
+   - Links shared
+
+6. **Follow-up Required**
+   - What should I do next?
+   - Draft a response if needed
+
+## Output Format
+Clean markdown. Focus on actionable content."
+
+### Step 2: Process a Sample Thread
+
+Here's a sample email thread:
+
+"Process this email thread:
+
+```
+From: Duncan <duncan@highland-barley.co.uk>
+To: Fiona <fiona@thistle-thorn.com>
+Subject: RE: RE: RE: Barley order Q1 2025
+
+Fiona,
+
+Following up on our call. I can confirm:
+- 500kg at £2.10/kg for January delivery
+- Same terms as last year
+- Let me know by Dec 15 if you want the February option too
+
+Need the PO number when you get a chance.
+
+Duncan
+
+---
+From: Fiona <fiona@thistle-thorn.com>
+To: Duncan <duncan@highland-barley.co.uk>
+CC: sarah@thistle-thorn.com
+
+Duncan,
+
+Thanks. Can you also quote for 750kg in February? We might
+need extra if the Christmas sales go well.
+
+Sarah - can you send Duncan the PO number for January?
+
+Fiona
+
+---
+From: Sarah <sarah@thistle-thorn.com>
+To: Duncan <duncan@highland-barley.co.uk>
+CC: fiona@thistle-thorn.com
+
+Hi Duncan,
+
+PO number is TT-2025-0012.
+
+Payment terms: net 30 as usual?
+
+Sarah
+```
+
+Save to week-2-outputs/barley-supplier-thread.md"
+
+### Step 3: Quick Actions Mode
+
+Sometimes you just want the tasks:
+
+"Create a slash command process-email-actions.md that ONLY outputs:
+- Action items as a checklist
+- With owners and due dates
+- Nothing else"
+
+### Step 4: Response Drafting
+
+Add the ability to draft responses:
+
+"Update process-email.md to include a section that drafts a suggested response if one is needed. Mark it as 'Draft Response (review before sending)'."
+
+### Privacy Note
+
+When processing emails, consider privacy:
+- Remove sensitive information if sharing
+- Process locally when possible
+- Be mindful of confidential content
+
+### Your Turn
+
+Find an email thread that has buried action items. Process it and extract the tasks. How many did you find that you'd forgotten about?
+
+## What You Learned
+
+- Email threads hide important information
+- Structured extraction reveals actions
+- Multiple participants = multiple action owners
+- Quick action mode for busy days
+
+## Example Outputs
+
+- `.claude/commands/process-email.md`
+- `.claude/commands/process-email-actions.md`
+- `barley-supplier-thread.md` with extracted actions
+
+## What's Next?
+
+Tomorrow in [Day 14: Week 2 Review](/week-2/day-14-week-2-review/), we'll build your processing pipeline.
+
+---
+Day 13 of 31 | CoEngineers.ai

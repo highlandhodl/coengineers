@@ -1,0 +1,176 @@
+---
+title: "Day 17: Audio Script Writer"
+description: "Write scripts optimised for text-to-speech with SSML formatting"
+day: 17
+week: 3
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 17: Audio Script Writer" /> */}
+
+## What You'll Learn
+
+- Write scripts optimised for text-to-speech
+- Use SSML tags for pauses and emphasis
+- Create natural-sounding audio content
+- Prepare scripts for ElevenLabs voices
+
+## The Scenario
+
+Thistle & Thorn wants to create audio content: podcast snippets, video voiceovers, and audio guides for distillery tours. ElevenLabs will generate the voice.
+
+## The Slash Command
+
+<SlashCommand code="/w3.d17" />
+
+Create scripts optimised for AI voice generation.
+
+### What We're Building
+Voice-ready scripts with SSML markup for natural-sounding ElevenLabs audio.
+
+### The Scenario
+Thistle & Thorn needs:
+- A 60-second brand story for the website
+- Distillery tour audio guide snippets
+- Podcast intro/outro
+
+Jamie will write the scripts. ElevenLabs will voice them.
+
+### Writing for Ear vs Eye
+
+**Reading:** "Thistle & Thorn Distillery, est. 1892, produces premium single malt whisky using traditional methods."
+
+**Listening:** "Thistle and Thorn has been making whisky since eighteen ninety-two. Four generations of the MacTavish family, using the same methods their great-grandfather used."
+
+Key differences:
+- Shorter sentences
+- Write numbers as spoken
+- Add pauses for emphasis
+- Use contractions (we're, it's)
+- Avoid acronyms
+
+### SSML Basics
+
+```xml
+<speak>
+  Welcome to Thistle and Thorn.
+  <break time="0.5s"/>
+  We've been making whisky for over a century.
+  <emphasis level="strong">Four generations</emphasis>
+  of craft and tradition.
+</speak>
+```
+
+Common tags:
+- `<break time="Xs"/>` - Pause for X seconds
+- `<emphasis level="strong/moderate">` - Stress words
+- `<prosody rate="slow/medium/fast">` - Speaking speed
+
+### Let's Go
+
+#### Step 1: Create the Audio Script Writer
+"Create a slash command at .claude/commands/write-audio-script.md:
+
+# Write Audio Script
+
+You are helping me write scripts for text-to-speech generation (ElevenLabs, etc.).
+
+## Input
+I'll provide:
+- The content or topic
+- Target length (in seconds or words)
+- Tone (professional, warm, energetic, etc.)
+- Where it will be used (website, podcast, tour, etc.)
+
+## Your Task
+Create a voice-optimised script with:
+
+1. **Natural language** - Write for listening, not reading
+2. **Appropriate pacing** - Short sentences, natural pauses
+3. **SSML markup** - Breaks, emphasis where helpful
+4. **Pronunciation guides** - For unusual words
+
+## Output Format
+Provide:
+- Clean script (no SSML, for preview)
+- SSML version (for ElevenLabs)
+- Word count and estimated duration (150 words ≈ 1 minute)
+- Voice recommendations (warm, authoritative, etc.)
+
+Use British English. Natural and conversational."
+
+#### Step 2: Create the Brand Story Script
+"Write a 60-second audio script for Thistle & Thorn's website homepage.
+
+Content to cover:
+- Fourth generation family distillery
+- Speyside location
+- Traditional methods
+- Premium single malt and seasonal gin
+- Visitor experiences available
+
+Tone: Warm, proud, inviting
+Voice: Soft Scottish accent (suggest ElevenLabs voice)
+
+Save to week-3-outputs/brand-story-audio.md"
+
+#### Step 3: Create Tour Guide Snippets
+"Write 3 short (20-second each) audio snippets for a distillery tour:
+
+1. Welcome to the Visitor Centre
+2. Entering the Cask Warehouse
+3. The Tasting Room
+
+Each should be standalone. Include SSML for dramatic pauses.
+Save to week-3-outputs/tour-audio-snippets.md"
+
+#### Step 4: Test in ElevenLabs
+1. Go to elevenlabs.io
+2. Paste your SSML script
+3. Select a voice (try "Charlie" for warm British)
+4. Generate and listen
+5. Iterate on script as needed
+
+#### Step 5: Create a Quick Version
+"Create write-audio-quick.md that takes any text and converts it to a spoken-word script with appropriate pauses. No SSML, just natural language."
+
+### Pronunciation Guide for Thistle & Thorn
+
+| Word | Pronunciation |
+|------|---------------|
+| Speyside | SPAY-side |
+| Whisky | WISS-key (not whis-KEY) |
+| MacTavish | Mac-TAV-ish |
+| Cask | Cahsk (soft 'a') |
+
+### Your Turn
+Write an audio script for something you need:
+- A welcome message
+- An explainer video voiceover
+- A podcast intro
+
+Generate it in ElevenLabs and iterate.
+
+### What You Learned
+- Writing for ear is different from eye
+- Short sentences and pauses matter
+- SSML adds natural emphasis
+- Iteration improves naturalness
+
+## Example Outputs
+
+- `.claude/commands/write-audio-script.md`
+- `.claude/commands/write-audio-quick.md`
+- `brand-story-audio.md` with clean and SSML versions
+- `tour-audio-snippets.md`
+
+## What's Next?
+
+Tomorrow in [Day 18: Diagram Generator](/week-3/day-18-diagram-generator/), we'll build process diagrams with Mermaid.
+
+---
+Day 17 of 31 | CoEngineers.ai

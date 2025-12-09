@@ -49,12 +49,12 @@
   --sl-color-accent: #F7931A;
   --sl-color-accent-high: #402806;
 
-  /* Backgrounds */
-  --sl-color-bg: #FAFAF9;
-  --sl-color-bg-nav: #F5F5F4;
-  --sl-color-bg-sidebar: #F5F5F4;
-  --sl-color-hairline-light: #E7E5E4;
-  --sl-color-hairline: #D6D3D1;
+  /* Backgrounds - warm cream like Claude */
+  --sl-color-bg: #FAF8F5;
+  --sl-color-bg-nav: #F5F3EF;
+  --sl-color-bg-sidebar: #F5F3EF;
+  --sl-color-hairline-light: #EBE8E3;
+  --sl-color-hairline: #DDD9D2;
 
   /* Text colours - CRITICAL: invert grays for light mode */
   --sl-color-text: #1C1917;

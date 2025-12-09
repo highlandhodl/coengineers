@@ -1,0 +1,134 @@
+---
+title: "Day 4: Template Factory"
+description: "Create reusable note templates with frontmatter for consistent structure"
+day: 4
+week: 1
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 4: Template Factory" /> */}
+
+## What You'll Learn
+
+- Understand template-based note creation
+- Design templates for common note types
+- Learn frontmatter basics
+- Create at least 3 reusable templates
+
+## The Scenario
+
+Jamie keeps recreating the same structures. Meeting notes, project briefs, customer records - all start from blank. Templates solve this.
+
+## The Slash Command
+
+<SlashCommand code="/w1.d4" />
+
+Today we build reusable templates for every type of note you create.
+
+### What We're Building
+
+A library of templates: meeting notes, project briefs, person profiles, and any others you need regularly.
+
+### What Makes a Good Template
+
+1. **Frontmatter** - Metadata at the top (title, date, type, tags)
+2. **Consistent sections** - Same structure every time
+3. **Prompts** - Questions or placeholders to fill in
+4. **Flexibility** - Sections you can delete if not needed
+
+### Let's Go
+
+#### Step 1: Meeting Notes Template
+
+Create a template for meeting notes.
+
+```
+Create a meeting notes template at templates/meeting-note.md
+with:
+- Frontmatter: title, date, attendees (list), type: meeting
+- Sections: Attendees, Agenda, Discussion, Decisions, Actions
+- The Actions section should have columns: Action, Owner, Due Date
+- Add placeholder text showing what goes where
+```
+
+#### Step 2: Project Brief Template
+
+Create a template for new projects.
+
+```
+Create a project brief template at templates/project-brief.md
+with:
+- Frontmatter: title, date, status (not-started/active/complete),
+  priority (high/medium/low), owner
+- Sections: Overview, Objectives, Success Criteria, Timeline,
+  Resources Needed, Risks, Next Steps
+- Add guiding questions as placeholders in each section
+```
+
+#### Step 3: Person Profile Template
+
+For tracking customers, contacts, team members.
+
+```
+Create a person profile template at templates/person-profile.md
+with:
+- Frontmatter: name, company, role, relationship (customer/partner/
+  team/contact), last-contact date, tags
+- Sections: Background, Key Interests, Conversation History,
+  Notes, Follow-up Actions
+- This is for Thistle & Thorn tracking their trade customers
+```
+
+#### Step 4: Use a Template
+
+Now let's use one. Ask Claude:
+
+```
+Using my meeting template, create a new meeting note for:
+Meeting: Weekly Marketing Sync
+Date: Today
+Attendees: Jamie, Fiona
+Agenda: Social media plan, Christmas campaign, website updates
+```
+
+#### Step 5: Create Your Own Template
+
+What note type do you create repeatedly?
+
+Ideas:
+- Weekly review
+- Book/article notes
+- Idea capture
+- Daily standup
+- Customer call
+
+```
+Create a template for [YOUR TEMPLATE TYPE] with appropriate
+frontmatter and sections.
+```
+
+### Your Turn
+
+Create at least 2 more templates for notes you regularly create. Use them for something real.
+
+## Example Outputs
+
+- `templates/meeting-note.md`
+- `templates/project-brief.md`
+- `templates/person-profile.md`
+- At least one personal template
+
+## What You Learned
+
+- Templates ensure consistency
+- Frontmatter adds searchable metadata
+- Placeholders guide what to fill in
+- Build templates for your actual workflow
+
+## What's Next?
+
+Tomorrow in [Day 5: The Daily Note](/week-1/day-5-the-daily-note/), we'll build a daily note system.

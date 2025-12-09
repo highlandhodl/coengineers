@@ -1,0 +1,158 @@
+---
+title: "Day 10: YouTube Brain"
+description: "Extract lasting value from every video you watch"
+day: 10
+week: 2
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 10: YouTube Brain" /> */}
+
+## What You'll Learn
+
+- Extract transcripts from YouTube videos
+- Summarise video content effectively
+- Pull key quotes and timestamps
+- Create reference notes from video content
+
+## The Scenario
+
+Jamie watches YouTube videos about whisky marketing, distillery tours, and industry trends. Hours of watching, but nothing captured. Time to extract the value.
+
+## The Slash Command
+
+<SlashCommand code="/w2.d10" />
+
+Extract lasting value from every video you watch.
+
+### What We're Building
+
+A system for processing YouTube video transcripts into structured notes with summaries, key quotes, and actionable insights.
+
+### The Challenge
+
+Jamie watches a 45-minute video on "How Small Distilleries Win on Social Media". Lots of good ideas. Two days later? Can't remember any of it. Video notes fix this.
+
+### Getting Transcripts
+
+**Option 1: yt-dlp (command line)**
+```bash
+yt-dlp --write-auto-sub --skip-download "VIDEO_URL"
+```
+
+**Option 2: YouTube's built-in transcript**
+- Click "..." under video → "Show transcript" → Copy
+
+**Option 3: Services like Downsub, etc.**
+
+### Step 1: Create the YouTube Processor
+
+"Create a slash command at .claude/commands/process-youtube.md:
+
+# Process YouTube Video
+
+You are helping me extract insights from a YouTube video transcript.
+
+## Input
+I'll provide:
+- Video title and URL
+- The transcript (may include timestamps)
+
+## Your Task
+Create a video note with:
+
+1. **Metadata**
+   - Title, channel, URL
+   - Duration (if known)
+   - Date watched: today
+
+2. **Summary** (3-5 sentences)
+   - What's the main message?
+   - Who is this for?
+
+3. **Key Points** (bullet list)
+   - The main ideas/arguments
+   - Limit to 5-7 points
+
+4. **Notable Quotes** (with timestamps if available)
+   - Memorable phrases
+   - Insights worth saving
+
+5. **Action Items / Ideas**
+   - What should I do based on this?
+   - Ideas it sparked
+
+6. **Related Topics**
+   - What else should I explore?
+
+## Output Format
+Markdown with frontmatter. Be concise - distil, don't transcribe."
+
+### Step 2: Process a Sample Video
+
+Here's a transcript excerpt to practise with:
+
+"Process this YouTube video transcript:
+
+Video: 'Marketing Your Craft Distillery in 2024'
+Channel: Spirits Business Weekly
+URL: https://youtube.com/watch?v=example
+
+```
+[0:00] welcome back to spirits business weekly today we're
+talking about how small distilleries can compete with the
+big brands on marketing [0:15] i've been visiting distilleries
+across scotland and the ones winning aren't outspending
+they're out-storying [0:30] first thing authenticity matters
+more than production value people want real not polished
+[1:00] show your process not just your product take people
+behind the scenes [1:30] second user generated content is
+gold encourage visitors to share and reshare everything
+[2:00] third local partnerships punch above your weight
+collaborate with local restaurants cheese makers chocolate
+shops [2:45] fourth email is not dead your email list is
+your most valuable asset own your audience don't rent it
+from social platforms [3:30] finally consistency beats
+virality post regularly rather than hoping for hits...
+```
+
+Save to week-2-outputs/youtube-marketing-distillery.md"
+
+### Step 3: Add to Your Workflow
+
+"Create a folder at 03-resources/video-notes/ for all processed video notes. Add a README explaining the format."
+
+### Step 4: Quick Capture Mode
+
+Sometimes you just need the highlights:
+
+"Create a slash command process-youtube-quick.md that only extracts: 3-sentence summary, top 3 takeaways, and any action items. Super concise."
+
+### Your Turn
+
+Find a YouTube video relevant to your work. Get the transcript and process it. Add to your video notes collection.
+
+## What You Learned
+
+- YouTube transcripts are freely available
+- Long videos distil into short, useful notes
+- Quotes with timestamps are referenceable
+- Two modes: full notes and quick capture
+
+## Example Outputs
+
+- `.claude/commands/process-youtube.md`
+- `.claude/commands/process-youtube-quick.md`
+- `youtube-marketing-distillery.md` with structured notes
+- Video notes folder setup
+
+## What's Next?
+
+Tomorrow in [Day 11: PDF Crusher](/week-2/day-11-pdf-crusher/), we'll rip data from PDF reports.
+
+---
+Day 10 of 31 | CoEngineers.ai

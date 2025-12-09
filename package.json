@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.34.0",
+    "@astrojs/vercel": "^9.0.2",
+    "@supabase/supabase-js": "^2.87.0",
     "astro": "^5.1.0",
+    "resend": "^6.5.2",
     "sharp": "^0.33.0"
   }
 }

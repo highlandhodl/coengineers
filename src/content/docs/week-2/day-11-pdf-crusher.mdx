@@ -1,0 +1,136 @@
+---
+title: "Day 11: PDF Crusher"
+description: "Liberate information locked in PDF documents"
+day: 11
+week: 2
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 11: PDF Crusher" /> */}
+
+## What You'll Learn
+
+- Extract text and data from PDF documents
+- Handle different PDF types (text, scanned, tables)
+- Create markdown summaries from reports
+- Extract specific data points
+
+## The Scenario
+
+Fiona receives industry reports, supplier price lists, and regulatory documents - all as PDFs. The information is locked in. Time to unlock it.
+
+## The Slash Command
+
+<SlashCommand code="/w2.d11" />
+
+Liberate information locked in PDF documents.
+
+### What We're Building
+
+A system for extracting insights, data, and summaries from PDF reports and documents.
+
+### The Challenge
+
+The Scotch Whisky Association sends quarterly industry reports. 40 pages of PDF. Fiona needs to know the three things that affect Thistle & Thorn. Let's find them.
+
+### Claude Code and PDFs
+
+Claude Code can read PDF files directly. Just point it at the file and ask questions.
+
+### Step 1: Create the PDF Processor
+
+"Create a slash command at .claude/commands/process-pdf.md:
+
+# Process PDF Document
+
+You are helping me extract key information from a PDF document.
+
+## Input
+I'll provide a path to a PDF file.
+
+## Your Task
+1. Read the PDF content
+2. Identify what type of document it is
+3. Create a summary with:
+   - Document title and source
+   - Date/version
+   - Key findings (bullet points)
+   - Any tables or data as markdown tables
+   - Action items or implications
+   - Notable quotes
+
+## Output Format
+Markdown file with frontmatter including source file path.
+Preserve important data, discard boilerplate.
+
+If there are tables, convert them to markdown format."
+
+### Step 2: Process a Sample PDF
+
+Let's process an industry report:
+
+"Read the PDF at [PATH TO SAMPLE PDF] and:
+1. Tell me what type of document it is
+2. Summarise the key points relevant to a craft distillery
+3. Extract any statistics or data tables
+4. Save the summary to week-2-outputs/industry-report-summary.md"
+
+### Step 3: Targeted Extraction
+
+Sometimes you need specific data:
+
+"Create a slash command process-pdf-data.md that:
+- Asks what specific data I'm looking for
+- Searches the PDF for relevant sections
+- Extracts only the requested information
+- Outputs as a focused brief"
+
+### Step 4: Handle Tables
+
+PDF tables are tricky. Practise extracting them:
+
+"If the PDF has any tables:
+1. Identify all tables in the document
+2. Convert the most relevant table to markdown format
+3. Explain what the table shows"
+
+### Step 5: Build a Reports Library
+
+"Create a folder at 03-resources/reports/ for processed PDF summaries. Add a README explaining the structure."
+
+### Sample PDF Types to Practise
+
+If you don't have PDFs handy, try:
+- Any industry report (Google "[your industry] report 2024 pdf")
+- A user manual for software you use
+- A research paper from Google Scholar
+- A government publication
+
+### Your Turn
+
+Find a PDF relevant to your work. Process it with your new command. Extract at least one table or data set.
+
+## What You Learned
+
+- Claude Code reads PDFs natively
+- Summaries beat re-reading 40-page documents
+- Tables can be extracted as markdown
+- Targeted extraction for specific data
+
+## Example Outputs
+
+- `.claude/commands/process-pdf.md`
+- `.claude/commands/process-pdf-data.md`
+- `industry-report-summary.md`
+- Reports folder setup
+
+## What's Next?
+
+Tomorrow in [Day 12: Web Archiver](/week-2/day-12-web-archiver/), we'll save articles as clean markdown.
+
+---
+Day 11 of 31 | CoEngineers.ai

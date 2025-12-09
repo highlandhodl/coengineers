@@ -1,0 +1,137 @@
+---
+title: "Day 3: Project Memory"
+description: "Build a CLAUDE.md file that gives Claude persistent memory about your project"
+day: 3
+week: 1
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 3: Project Memory" /> */}
+
+## What You'll Learn
+
+- Understand what CLAUDE.md does (persistent project context)
+- Learn what to include vs exclude
+- Create a CLAUDE.md for a real project
+- Experience Claude "remembering" your context
+
+## The Scenario
+
+Jamie keeps explaining the same things to Claude. "We're a whisky distillery... we use metric measurements... we write in British English..." There must be a better way. There is: CLAUDE.md.
+
+## The Slash Command
+
+<SlashCommand code="/w1.d3" />
+
+Today we teach Claude to remember your project context.
+
+### What We're Building
+
+A CLAUDE.md file that gives Claude persistent memory about your project - who you are, what you're building, how you work.
+
+### What Goes in CLAUDE.md
+
+A typical CLAUDE.md includes:
+
+```markdown
+# Project Name
+
+## Overview
+What this project is about, in 2-3 sentences.
+
+## Key Context
+- Who uses this
+- What problem it solves
+- Important constraints
+
+## Conventions
+- Spelling (British/American)
+- Terminology
+- File naming patterns
+
+## Tech Stack (if applicable)
+- Languages/frameworks
+- Key dependencies
+
+## Patterns
+- Code patterns to follow
+- Document structures used
+- Naming conventions
+```
+
+### Let's Go
+
+#### Step 1: Create CLAUDE.md for Your Learning Project
+
+Navigate to your learning-claude-code project folder.
+
+```
+Create a CLAUDE.md file in my learning-claude-code project.
+Include: an overview explaining I'm learning Claude Code over
+31 days, that I use British English, and that I work in
+[YOUR FIELD/CONTEXT]. Add sections for conventions and patterns.
+```
+
+#### Step 2: Add Specific Context
+
+Now add details relevant to YOUR situation.
+
+```
+Update the CLAUDE.md to include:
+- My role/job context: [YOUR DETAILS]
+- File naming convention: lowercase-with-dashes
+- Preferred output format: markdown with frontmatter
+- Any tools I commonly use: [YOUR TOOLS]
+```
+
+#### Step 3: Test the Memory
+
+Start a fresh conversation and see if Claude remembers.
+
+```
+Based on my project context, what conventions should I follow
+when creating a new document?
+```
+
+Claude should reference your CLAUDE.md without you reminding it.
+
+#### Step 4: Create CLAUDE.md for Thistle & Thorn
+
+Let's practice with the fictional company.
+
+```
+Create a CLAUDE.md for Thistle & Thorn Distillery with:
+- Overview: Craft whisky distillery in Speyside, 4th generation
+- British English spelling
+- Key people: Fiona (owner), Jamie (marketing), Hamish (cooper)
+- Products: Single malt whisky, gin, distillery experiences
+- Tone: Warm, proud heritage, approachable
+```
+
+### Your Turn
+
+Create a CLAUDE.md for a real project of your own. Include:
+- What the project is
+- Your conventions and preferences
+- Any context Claude should always know
+
+## Example Outputs
+
+- CLAUDE.md for learning project
+- CLAUDE.md for Thistle & Thorn
+- Experience of context-aware responses
+
+## What You Learned
+
+- CLAUDE.md gives Claude persistent project memory
+- Put it in the project root folder
+- Include conventions, not conversations
+- Keep it concise - Claude reads it every time
+
+## What's Next?
+
+Tomorrow in [Day 4: Template Factory](/week-1/day-4-template-factory/), we'll create reusable note templates.

@@ -149,3 +149,10 @@ const { id } = Astro.props;
 - [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/)
 - [Overriding Starlight Components](https://starlight.astro.build/guides/overriding-components/)
 - [Starlight CSS & Styling](https://starlight.astro.build/guides/css-and-tailwind/)
+
+## Active Technologies
+- TypeScript (ESM) via Astro 5.x + Astro 5.1, @astrojs/starlight 0.34, Supabase JS client, Resend SDK (001-email-capture)
+- Supabase (PostgreSQL) - subscribers and email_sends tables (001-email-capture)
+
+## Recent Changes
+- 001-email-capture: Added TypeScript (ESM) via Astro 5.x + Astro 5.1, @astrojs/starlight 0.34, Supabase JS client, Resend SDK

@@ -1,0 +1,134 @@
+---
+title: "Day 12: Web Archiver"
+description: "Save web articles as clean, permanent markdown"
+day: 12
+week: 2
+---
+
+import YouTube from '../../../components/YouTube.astro';
+import SlashCommand from '../../../components/SlashCommand.astro';
+
+
+{/* TODO: Add video ID when uploaded */}
+{/* <YouTube id="VIDEO_ID_HERE" title="Day 12: Web Archiver" /> */}
+
+## What You'll Learn
+
+- Fetch and clean web page content
+- Strip ads, navigation, and clutter
+- Save articles as clean markdown
+- Build an article archive
+
+## The Scenario
+
+Jamie bookmarks interesting articles. The bookmarks pile up. Links break. Paywalls appear. Time to archive properly.
+
+## The Slash Command
+
+<SlashCommand code="/w2.d12" />
+
+Save web articles as clean, permanent markdown.
+
+### What We're Building
+
+An archiving system that captures web articles in clean markdown with metadata, notes, and proper organisation.
+
+### The Challenge
+
+Jamie finds a brilliant article on whisky tourism trends. Six months from now they'll want to reference it. But will the link still work? Will it be paywalled? Archive it now.
+
+### Step 1: Create the Web Archiver
+
+"Create a slash command at .claude/commands/archive-webpage.md:
+
+# Archive Web Page
+
+You are helping me save a web article as clean markdown.
+
+## Input
+I'll provide a URL.
+
+## Your Task
+1. Fetch the page content
+2. Extract the main article content
+3. Remove: ads, navigation, sidebars, footers, popups
+4. Convert to clean markdown
+5. Add frontmatter:
+   - title
+   - source (domain)
+   - url
+   - date-archived: today
+   - tags (suggest based on content)
+6. Preserve:
+   - Headings structure
+   - Key images (as markdown image links)
+   - Important links
+   - Author and date if available
+
+## Output Format
+Clean markdown with frontmatter. Reading-focused."
+
+### Step 2: Archive a Sample Article
+
+Let's archive something relevant:
+
+"Archive this URL: [RELEVANT URL]
+
+Save to 03-resources/articles/ with a slug-based filename."
+
+### Step 3: Add Personal Notes
+
+Make archived articles more useful:
+
+"Update archive-webpage.md to also include:
+- A 'My Notes' section at the end for personal annotations
+- A 'Why I Saved This' prompt I should fill in
+- A 'Key Quotes' section with 2-3 notable quotes"
+
+### Step 4: Batch Archive
+
+Sometimes you have a list of URLs:
+
+"I'll give you a list of URLs. For each one, tell me the title and ask if I want to archive it. Then process the ones I approve."
+
+### Step 5: Organise by Topic
+
+"In my articles folder, create subfolders:
+- marketing
+- industry
+- operations
+- reference
+
+Move any archived articles to appropriate subfolders."
+
+### Good Sources to Archive
+
+For practice, try archiving:
+- A blog post you want to remember
+- A how-to article for a tool you use
+- An industry news piece
+- A recipe or guide
+
+### Your Turn
+
+Archive 3 articles you've been meaning to save. Add personal notes to each. Organise by topic.
+
+## What You Learned
+
+- Web content is ephemeral - archive what matters
+- Clean markdown beats cluttered bookmarks
+- Personal notes add context for future you
+- Organisation makes retrieval easy
+
+## Example Outputs
+
+- `.claude/commands/archive-webpage.md`
+- Archived articles with clean formatting
+- Articles folder with topic subfolders
+
+## What's Next?
+
+Tomorrow in [Day 13: Email Processor](/week-2/day-13-email-processor/), we'll turn threads into action items.
+
+---
+Day 12 of 31 | CoEngineers.ai
