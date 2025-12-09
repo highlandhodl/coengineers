@@ -1,106 +1,100 @@
 ---
 title: My AI Story
-description: How I went from AI sceptic to building a course about it
+description: Five eureka moments that led to building this course
 ---
 
-import { Card, CardGrid, Aside, Badge } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 import EmailSignup from '../../../components/EmailSignup.astro';
 
-# My AI Story
+I joined the RAF when I was 16. I was also a really young father, which looking back was a lot to take on. But honestly, those ten years were some of the best of my life. I worked in air traffic control, fighter control, Search and Rescue, and some general intelligence work. I got to travel the world and met some absolutely wonderful people who are still friends today.
 
-<Badge text="Week 1" variant="note" /> <Badge text="5 min read" variant="tip" />
-
-**December 2022.** ChatGPT launches. My LinkedIn feed explodes.
-
-I ignored it for three months.
+The military taught me a lot about data without calling it that. When you're coordinating Search and Rescue or working Distress and Diversion, information has to flow properly or things go wrong. You learn to spot patterns, prioritise what matters, and act quickly. That's just been a thread through everything I've done since.
 
 ---
 
-## The Sceptic Phase
+## The Career Stuff
 
-I'd seen enough tech hype cycles to be cynical. Blockchain was going to revolutionise everything. NFTs were the future of art. Web3 would replace the internet.
+After the RAF, I moved into cyber security at Capgemini, monitoring threats to government estates using SIEM tools. Different context, same kind of problem — lots of data, looking for the signal in the noise.
 
-None of that happened.
+Then I spent time at Atos doing Java development, leading a small team on HMRC projects. I was decent at it, but I kept noticing I was better at figuring out what needed to be built than actually building it.
 
-So when everyone started posting about AI writing their emails, I rolled my eyes. _Another shiny thing for the productivity bros to obsess over._
+QA was where things clicked. I started teaching Hadoop and Spark to consultants, and I genuinely loved it. Making complex tech accessible to people who thought it wasn't for them — that was the thing. I ended up as Director of Innovation, which was great, but the teaching piece stayed with me.
 
-<Aside type="tip" title="Spoiler">
-  I was wrong. Very wrong.
+---
+
+## Teach the Nation to Code
+
+This one was really down to Shafeeq.
+
+Muhammad Shafeeq worked with me at QA, and he really wanted to give this gift back to people. He'd seen how technology had changed his own life and wanted to help others get that first step. I helped him realise that vision, and we kind of travelled the country together, giving up our weekends for years.
+
+The idea was simple: free workshops to help people get their foot in the door. Career changers, people looking at apprenticeships, anyone who thought tech wasn't for them. We'd just show them it wasn't as scary as they thought.
+
+It grew way beyond what we expected. Over 10,000 people across 100 countries. We hit 50% female attendance, which in tech education basically never happens.
+
+<Aside type="note" title="The moment that sticks with me">
+We ran a session at a DWP Job Centre once. By the end of the day, most of the room was signing up for bootcamps. These were people who'd never written code, never thought of themselves as technical. And suddenly they could see a path. That's the bit that makes it worth it.
 </Aside>
 
----
+The philosophy was always the same: meet people where they are, no assumptions. Technology should be accessible to everyone, not just specialists.
 
-## The Moment Everything Changed
-
-**March 2023.** A client asks me to summarise 47 meeting transcripts.
-
-Forty-seven.
-
-I quoted them two weeks and a small fortune. Then, out of curiosity, I pasted one into ChatGPT.
-
-Thirty seconds later, I had a better summary than I'd have written myself.
-
-I did all 47 in an afternoon.
-
-<Card title="The realisation">
-  This wasn't about replacing thinking. It was about **removing the tedious bits** so I could focus
-  on the interesting parts.
-</Card>
+That's still what I believe.
 
 ---
 
-## The Rabbit Hole
+## Five Eureka Moments
 
-From there, I fell down the rabbit hole:
+I didn't have one big AI conversion. It happened in stages.
 
-- **GPT-4** for writing and analysis
-- **Midjourney** for visuals I couldn't design myself
-- **ElevenLabs** for voiceovers that didn't sound robotic
-- **Whisper** for transcription that actually worked
+### 1. GPT-3.5 — "Oh, this actually works"
 
-Each tool solved a specific problem. But they were scattered. Disconnected. I was copying and pasting between a dozen tabs like a madman.
+I was building a training course and realised I could run a few scripts, combine them with something like Synthesia, and suddenly I could make high-quality learning content at scale and at speed. What would've taken weeks took days. That was the first time I thought: okay, this changes things.
 
----
+### 2. Midjourney — "I can finally make visuals"
 
-## Then I Found Claude Code
+I've always been terrible at art. Just awful. But I have ideas for what things should look like — I just could never make them exist. Midjourney let me start building my own unique imagery for decks and content. Not perfect, but mine. For someone who'd always worked around their lack of visual skills, that was pretty cool.
 
-**October 2024.** Anthropic releases Claude Code.
+### 3. ElevenLabs — "A voice coach that actually challenges me"
 
-It wasn't just another chatbot. It was an AI that could:
+I've always learned through voice. Voice notes, audiobooks, podcasts — that's how information sticks for me. But the real revelation with ElevenLabs wasn't just generating audio. It was having a voice coach challenge me on ideas, push back, help me think things through out loud. That's been one of my biggest productivity boosts, honestly.
 
-- Read my files
-- Write new ones
-- Run commands
-- Chain tools together
+### 4. MCP — "Everyone's actually aligning"
 
-One interface. One conversation. Everything connected.
+I love the Model Context Protocol. Not because it's perfect — it has limitations — but I've never seen all the big vendors align on something this quickly. Anthropic, OpenAI, Google, all moving the same direction. The interoperability it enables is still early, but the trajectory is clear. Tools talking to each other. That's where this is going.
 
-<CardGrid>
-  <Card title="Before Claude Code" icon="warning">
-    - 12 browser tabs - Copy-paste everywhere - Manual file management - Broken workflows
-  </Card>
-  <Card title="After Claude Code" icon="approve-check">
-    - One terminal window - Automated pipelines - Files created instantly - Repeatable commands
-  </Card>
-</CardGrid>
+### 5. Claude Code — "Everything connects"
+
+Right, so Claude Code has the worst marketing name of all time because it's actually just an amazing productivity tool.
+
+The problem with all the AI sprawl at the moment is you're constantly context switching between apps. Different tools for different jobs, nothing talking to each other. With Claude Code, you've got a really good LLM (and Opus 4.5 is probably the best I've worked with), plus access to your operating system, plus API calls and MCP for external systems.
+
+The moment it clicked: I had a data model in Obsidian based on customer discovery conversations. I wanted to build an ElevenLabs voice agent. Normally that's hours of work — export, clean up, format, debug, iterate. Instead I described what I wanted. Five minutes later I was talking to a working voice agent that understood my customer data.
+
+Five minutes. That's not incremental. That's different.
 
 ---
 
-## Why I'm Building This Course
+## Why CoEngineers
 
-I spent months figuring out how to use these tools properly. Made every mistake. Broke things. Started over.
+CoEngineers has been in my head for ages. It's really an evolution of Teach the Nation to Code — same philosophy, different tools.
 
-You don't need to do that.
+The people who benefit most from Claude Code aren't developers. Developers already have their workflows. It's customer-facing people who really understand requirements but never thought they could build things themselves. Product managers, consultants, content creators. People like the learners who came through TTNTC and discovered tech wasn't as closed off as they thought.
 
-This course is the shortcut I wish I'd had. Thirty-one days of practical, hands-on lessons that take you from "what's a terminal?" to "I just automated my entire content workflow."
+That's who I'm building this for. Someone who's really customer focused but never thought they could code.
 
-No fluff. No theory. Just tools you can use immediately.
+---
+
+## The AI Community
+
+Generally, I think the AI community and the learning community is an absolute treasure. There's some amazing creators out there — people like Cole Medin who are doing really authentic work trying to solve real problems.
+
+There's also some rubbish content that's been stolen or bastardised from other people. But that's always true. The good stuff is genuinely good, and there's a lot of it.
 
 ---
 
 ## What's Next?
 
-Tomorrow: **My Thoughts on GenAI So Far** — the good, the bad, and the genuinely concerning.
+Tomorrow: **My Thoughts on GenAI So Far** — what actually works, what doesn't, and the bits that concern me.
 
 <EmailSignup
   heading="Want to follow along?"

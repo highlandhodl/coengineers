@@ -1,165 +1,128 @@
 ---
 title: My Claude Code Story
-description: How one tool changed everything about how I work
+description: Why the fifth eureka moment changed everything
 ---
 
-import { Card, CardGrid, Aside, Badge, Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 import EmailSignup from '../../../components/EmailSignup.astro';
 
-# My Claude Code Story
+GPT-3.5 showed me AI could actually work. Midjourney gave me visuals. ElevenLabs opened up audio. MCP showed everyone was aligning.
 
-<Badge text="Week 1" variant="note" /> <Badge text="5 min read" variant="tip" />
-
-I've tried every AI tool going. This is the one that stuck.
+Then Claude Code came along and just connected everything.
 
 ---
 
-## The Problem With Every Other Tool
+## The Problem I Had
 
-Before Claude Code, my AI workflow looked like this:
+Before Claude Code, my AI workflow was a mess. And I don't think I'm unusual in this.
 
-<Steps>
-  1. Open ChatGPT in a browser tab 2. Copy content from a file 3. Paste into chat 4. Wait for
-  response 5. Copy response 6. Paste into a new file 7. Repeat 47 times 8. Lose the will to live
-</Steps>
+I'd have ChatGPT in one tab, some files open locally, a Notion doc somewhere else, maybe an API I'm trying to call. Every task meant bouncing between apps, copying and pasting, losing track of what I'd already processed. It worked, kind of, but it was clunky.
 
-Every. Single. Time.
+MCP promised to fix this with tool interoperability. And it does help — I love MCP, I think the alignment across vendors is genuinely exciting. But in practice, context bloat is real. The more you connect, the slower and messier things get.
 
-The AI was useful. The workflow was painful. I spent more time copying and pasting than actually thinking.
+I needed something simpler.
 
 ---
 
-## What Makes Claude Code Different
+## Why Claude Code Clicked
 
-Claude Code isn't a chatbot. It's an AI that can actually _do things_.
+Right, so Claude Code has the worst marketing name of all time. It sounds like a coding tool for developers. It's not. It's a productivity tool that happens to be accessed through a terminal.
 
-<CardGrid>
-  <Card title="It reads your files" icon="document">
-    No more copy-paste. Point Claude at a folder and it reads everything. Context? Handled.
-  </Card>
-  <Card title="It writes files directly" icon="pencil">
-    Output goes straight to your filesystem. No more copying responses into documents.
-  </Card>
-  <Card title="It runs commands" icon="laptop">
-    Need to process something? Convert a format? Claude can run terminal commands directly.
-  </Card>
-  <Card title="It chains everything" icon="random">
-    Read this file, transform it, write it there, then do the same for the next 50. One command.
-  </Card>
-</CardGrid>
+What makes it different is that you've got three things in one place:
+
+1. **A really good LLM** — Opus 4.5 is probably the best I've worked with
+2. **Access to your operating system** — it can read files, write files, run commands
+3. **External connections** — API calls, MCP servers, whatever you need to integrate
+
+That combination is what makes it powerful. You're not copying and pasting between apps anymore. You describe what you want, and it actually does it.
 
 ---
 
-## My "Holy Shit" Moment
+## The Moment It Clicked
 
-Two weeks after installing Claude Code, I had a task:
+I had customer discovery data sitting in Obsidian. Notes from calls, structured into a data model. I wanted to build an ElevenLabs voice agent that understood that customer context.
 
-> Process 12 hours of interview recordings into structured case studies.
+Normally that's a full day of work. Export the data, clean it up, format it for the API, write the integration code, debug it, test it, iterate. Boring, tedious, necessary.
 
-Old workflow:
+Instead, I described what I wanted to Claude Code. Five minutes later I was talking to a working voice agent that understood my customer data.
 
-- Transcribe with Whisper (manual)
-- Clean up transcripts (manual)
-- Extract key quotes (manual)
-- Structure into case study format (manual)
-- Repeat for each interview
+Five minutes.
 
-Time estimate: 3 days.
+That's when I realised this wasn't just another AI tool. This was a different way of working.
 
-With Claude Code, I wrote one slash command:
-
-```bash
-/process-interview
-```
-
-It:
-
-1. Found all audio files in the folder
-2. Ran Whisper on each one
-3. Cleaned up the transcripts
-4. Extracted key themes and quotes
-5. Generated structured case studies
-6. Saved everything with proper filenames
-
-Time taken: **47 minutes**. While I made coffee.
-
-<Aside type="tip" title="This is the course">
-  That slash command? That's Day 25. You'll build it yourself.
+<Aside type="note" title="The key insight">
+Claude Code isn't about writing code. It's about describing what you want and having something that can actually make it happen. The terminal is just the interface — the value is in the capability.
 </Aside>
 
 ---
 
-## What I've Built Since
+## What I Actually Build With It
 
-Here's a sample of the automations running in my Claude Code setup:
+Here's the real stuff I use Claude Code for:
 
-| Command          | What It Does                                     | Time Saved       |
-| ---------------- | ------------------------------------------------ | ---------------- |
-| `/meeting-notes` | Transforms raw transcripts into structured notes | 30 min → 2 min   |
-| `/blog-draft`    | Turns voice memos into blog post outlines        | 2 hours → 10 min |
-| `/deck-prep`     | Creates Gamma-ready presentation content         | 1 day → 1 hour   |
-| `/newsletter`    | Assembles weekly newsletter from notes           | 3 hours → 15 min |
-| `/proposal`      | Generates client proposals from briefs           | 4 hours → 30 min |
+### Customer workflows
 
-Each one took an afternoon to build. Each one saves hours every week.
+When I'm working with a new customer, I pull their brand kit using the Gemini API, build their discovery notes into an Obsidian data model, and run it through a pipeline to generate a deck. What used to take days takes hours. The AI handles the assembly; I handle the thinking.
+
+### Content processing
+
+Meeting transcripts, voice memos, PDFs, web pages — I've got slash commands that process all of these into structured formats. Same quality every time, no mental overhead.
+
+### Image prompts
+
+I build JSON structures for image generation and iterate on them systematically. It's basically software engineering for visuals. I tweak parameters, see what changes, refine until it's right.
+
+### Voice agents
+
+The ElevenLabs stuff I mentioned. Building conversational agents that actually understand context. AI gets you 80% of the way there; the testing and fine-tuning is where it becomes good.
+
+### Building actual tools
+
+This is the Week 4 content in the course. Spec-driven development where you describe what you want and Claude Code builds it. I've made internal tools, automations, even the CoEngineers website this way.
 
 ---
 
-## Why Not Just Use ChatGPT?
+## Claude Code vs Claude.ai
 
-Fair question. ChatGPT is great for:
+I use both, but for different things.
 
-- Quick questions
-- Brainstorming
-- One-off tasks
+**Claude Code** is for when I need to actually do something. Process files, build pipelines, create outputs, integrate with other tools. It's the execution layer.
 
-But for **repeated workflows**? For **file processing**? For **anything involving your actual work files**?
+**Claude.ai** is for when I need to think something through. Exploring ideas, working through problems, having a conversation. It's the thinking partner.
 
-ChatGPT hits a wall:
-
-- No file system access
-- No command execution
-- No persistent context
-- No automation
-
-Claude Code breaks through that wall.
-
-<Card title="The difference">ChatGPT is a conversation. Claude Code is a tool.</Card>
+Most days I'm in Claude Code because most of my work involves making things, not just discussing them. But Claude.ai is still valuable when I'm at the earlier stages of figuring something out.
 
 ---
 
 ## The Learning Curve
 
-I won't lie — there's a curve.
+I won't pretend there isn't one. If you've never used a terminal before, the first few days feel unfamiliar.
 
-If you've never used a terminal, the first few days will feel unfamiliar. But here's the thing: you don't need to become a developer.
+But here's the thing: you don't need to become a developer. You need to learn three things:
 
-You need to learn:
+1. **Navigate folders** — know where your files are
+2. **Run slash commands** — type `/command-name` and press enter
+3. **Read error messages** — understand when something goes wrong
 
-- How to navigate folders
-- How to run a slash command
-- How to read an error message
+That's Week 1 of the course. After that, you're building real workflows.
 
-That's it. Three skills. Week 1 of the course covers all of them.
+The learning investment is measured in hours. The time savings are measured in weeks per year. That's a trade I'd make every time.
 
 ---
 
-## Is It Worth It?
+## Why I'm Teaching This
 
-Quick maths:
+I built these workflows for myself. They save me hours every week. But I also spent years at QA and with Teach the Nation to Code learning how to make complex technology accessible to people who don't have a technical background.
 
-| Investment                    | Return                       |
-| ----------------------------- | ---------------------------- |
-| 31 days × 30 minutes          | **15.5 hours** learning      |
-| 5 hours/week saved × 50 weeks | **250 hours** saved per year |
+CoEngineers is those two things combined. Real workflows that solve actual problems, taught in a way that doesn't assume you're a developer.
 
-That's a 16x return on time invested. In the first year alone.
+I'm not trying to turn people into programmers. I'm trying to help customer-focused people automate the tedious stuff so they can focus on what actually matters.
 
 ---
 
 ## What's Next?
 
-Next week we get into the course itself. Starting with: **What You'll Learn** — a week-by-week breakdown of the journey.
+Tomorrow: **What You'll Learn** — a week-by-week breakdown of the 31-day journey.
 
 <EmailSignup
   heading="Want to follow along?"

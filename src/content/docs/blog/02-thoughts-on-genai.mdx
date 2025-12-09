@@ -1,132 +1,122 @@
 ---
 title: My Thoughts on GenAI So Far
-description: The good, the bad, and the genuinely concerning
+description: What actually works, what doesn't, and the bits that concern me
 ---
 
-import { Card, CardGrid, Aside, Badge, Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 import EmailSignup from '../../../components/EmailSignup.astro';
 
-# My Thoughts on GenAI So Far
-
-<Badge text="Week 1" variant="note" /> <Badge text="6 min read" variant="tip" />
-
-Two years into the AI revolution, here's what I actually think.
-
-No hype. No doom. Just honest observations from someone who uses these tools every day.
+I've been using AI tools daily for a while now. Here's what I've actually learned — not the theory, the reality.
 
 ---
 
-## The Good
+## What Genuinely Works
 
-Let's start positive.
+### The workflow that saves me days
 
-<CardGrid>
-  <Card title="Speed" icon="rocket">
-    Tasks that took hours now take minutes. Not exaggerating. The 47 transcript summaries weren't a
-    one-off — that's my Tuesday now.
-  </Card>
-  <Card title="Accessibility" icon="open-book">
-    Things I couldn't do before — design, code, audio production — are now within reach. Not
-    perfect, but possible.
-  </Card>
-  <Card title="First Drafts" icon="pencil">
-    AI is brilliant at getting words on a page. The blank page problem? Solved. I edit far more than
-    I write from scratch now.
-  </Card>
-  <Card title="Automation" icon="setting">
-    Repetitive tasks can be templated and repeated. Same quality, every time, without the mental
-    drain.
-  </Card>
-</CardGrid>
+Here's something I do all the time now. When I'm working with a new customer, I use the Gemini API to pull their brand kit. I always ask customers to record our discovery calls, and then I build that into a data model in Obsidian. From there, I run it through a pipeline to build an iteration of a Gemini deck that I can quickly refine.
+
+That whole process used to take days. Now it takes hours. The AI doesn't do the thinking for me — I still need to understand the customer and shape the output — but the grunt work of pulling everything together is just handled.
+
+### Images and graphics
+
+I've always been terrible at art and visual design. Just really bad at it. But here's the thing: building prompts is actually very logical. I love building JSON structures and then doing little tweaks to see what that does to the imagery. It's basically a software engineering approach to visuals.
+
+I use AI-generated images as a base and refine from there. For someone who could never make what they saw in their head, that's been genuinely transformative.
+
+### Voice and audio
+
+ElevenLabs has become one of my core products. I actually used Speechify Studio for a while, but once I found ElevenLabs it just did everything I needed and more. The conversational agents stuff is super interesting — being able to build voice interfaces that actually work opens up a lot of possibilities.
 
 ---
 
-## The Bad
+## The 80% Reality
 
-Now the honest bits.
+AI gets you to about 80% really quickly. The last 20% is still on you.
 
-### It Lies Confidently
+A good example is building ElevenLabs conversational agents. AI can really help you get the initial transcript and some of the question-answer pairs sorted. But until you actually test the agent — speak to it, get to know it a bit — that's where the real fine-tuning happens. You can't skip that part. The testing and iteration is where it becomes something that actually works.
 
-AI doesn't know what it doesn't know. It will invent statistics, cite papers that don't exist, and state falsehoods with absolute conviction.
+Same with any content I put in front of customers. AI gives me a strong starting point, but I'm always refining, checking, making it actually fit the situation.
 
-<Aside type="danger" title="Never trust, always verify">
-  Every fact needs checking. Every citation needs confirming. Treat AI output as a first draft from
-  a confident intern who means well but makes things up.
+---
+
+## What Doesn't Work (Or Goes Wrong)
+
+### Hallucinations are still constant
+
+This still happens all the time. When I'm building learning assets or anything that goes in front of customers, AI just makes up facts. You have to verify everything.
+
+I was building a podcast once in NotebookLM, and it kept saying this fairly derogatory thing at the start. I ran it again and again and couldn't get it to change. That was a good reminder that these tools don't always do what you expect, even when you're being clear about what you want.
+
+### Some automations just don't stick
+
+I love n8n as a tool. When I was at Acelo, we were always looking at automating parts of the sales and marketing process — lead generation, building tailored content for leads. Super interesting what you can do with it. But some of those workflows are harder to make reliable than you'd think. The tools are powerful, but getting them to work consistently takes more effort than the demos suggest.
+
+---
+
+## The Bit That Concerns Me Most
+
+People are naive about what happens to their data, particularly when they're not paying for products.
+
+I see people just dumping large amounts of data into AI tools without any sanitisation. They don't think about where that data goes or what it might be used for.
+
+One of the things I always do — because I store everything in Obsidian locally — is sanitise data using a local LLM before it goes anywhere. I use LM Studio for this. Strip out sensitive stuff, anything that probably shouldn't be in a cloud AI system. It's an extra step, but it matters.
+
+<Aside type="caution" title="Something to think about">
+If you're not paying for the product, you need to think carefully about what you're putting into it. Free doesn't mean consequence-free.
 </Aside>
 
-### The Quality Ceiling
+---
 
-AI can get you to 80% quickly. The last 20%? That's still on you.
+## What People Get Wrong
 
-For some tasks, 80% is plenty. For others, it's not even close. Knowing the difference is a skill you have to develop.
+The biggest fallacy right now is that the tools are still immature. They're not. The tools are actually pretty good.
 
-### The Homogenisation Problem
+The real problem is learning and development — making these tools accessible to people. People are uncertain about AI. They're time-poor. They don't know what they don't know. So they either avoid it entirely or use it badly.
 
-When everyone uses the same tools with the same prompts, everything starts sounding the same.
-
-You know that AI voice:
-
-- "In today's fast-paced world..."
-- "Let's dive in..."
-- "Here's the thing..."
-
-<Card title="The antidote">
-  Use AI for structure and speed, but inject your own voice in the edit. The tool is a starting
-  point, not the destination.
-</Card>
+That's the gap I'm trying to fill with CoEngineers. The tools are ready. People just need help learning them properly.
 
 ---
 
-## The Genuinely Concerning
+## What's Overhyped and Underhyped
 
-<Tabs>
-  <TabItem label="Jobs">
-    Some jobs will disappear. Not all. Not most. But some. The question isn't whether AI will replace you — it's whether someone using AI will.
+**Overhyped:** OpenAI products, honestly. I've been fairly unimpressed with them, and even though they've got significant market lead, I don't have any of them in my day-to-day workflow now. Claude has just been better for how I work.
 
-    The response? Learn the tools. Become the person who uses AI effectively, not the person who pretends it doesn't exist.
-
-  </TabItem>
-  <TabItem label="Misinformation">
-    It's now trivially easy to generate convincing fake content at scale. Fake articles. Fake reviews. Fake testimonials.
-
-    The response? Get better at spotting AI-generated content. Verify sources obsessively. Trust less, check more.
-
-  </TabItem>
-  <TabItem label="Dependency">
-    The more I use these tools, the more I rely on them. What happens when they go down? When pricing changes? When the company pivots?
-
-    The response? Build skills, not just workflows. Understand what the tools are doing so you could do it manually if needed.
-
-  </TabItem>
-</Tabs>
+**Underhyped:** Machine-to-machine payments. I think Bitcoin will probably become a really important tool for this. Having micropayments so agents can do work for each other makes a lot of sense. It's not here yet, but I think it's coming.
 
 ---
 
-## My Current Stack
+## How AI Has Changed My Work
 
-For transparency, here's what I actually use daily:
+What it's made me do is focus on the bits I enjoy most. The tedious stuff gets handled, and I can spend more time on the actual thinking.
 
-| Tool            | Purpose              | Verdict                |
-| --------------- | -------------------- | ---------------------- |
-| **Claude Code** | Everything connected | Can't live without it  |
-| **Claude.ai**   | Long-form thinking   | Primary reasoning tool |
-| **ChatGPT**     | Quick questions      | Fast but shallow       |
-| **Whisper**     | Transcription        | Best in class          |
-| **ElevenLabs**  | Voice synthesis      | Eerily good            |
-| **Midjourney**  | Image generation     | Improving rapidly      |
+But I'd also say: it's really easy to over-delegate things you actually need to think about yourself. AI is great for grunt work. It's not great for the decisions that really matter. I just encourage people to be thoughtful about what they hand off.
 
 ---
 
-## The Bottom Line
+## My Actual Daily Stack
 
-GenAI is a power tool. Like any power tool, it can build things faster or take your fingers off.
+I just use Claude Code now for basically everything. It's become my main interface for AI work.
 
-The people winning right now are the ones who:
+For data sanitisation and local stuff, I use LM Studio with local LLMs. That's about it. I've tried loads of tools, but most of them have dropped out of my workflow.
 
-1. **Use it daily** — fluency comes from repetition
-2. **Stay sceptical** — check everything, trust nothing
-3. **Focus on output** — tools don't matter, results do
-4. **Keep learning** — this space changes weekly
+---
+
+## "Should I Be Worried About AI Taking My Job?"
+
+People ask me this a lot. My honest answer: it's not AI that's going to take your job. It's someone who knows AI.
+
+Learning the tools is probably the most important thing for your future. The people who figure this out early will have a significant advantage. The people who avoid it will find themselves struggling to keep up.
+
+That's not meant to be scary. It's meant to be motivating. These tools aren't that hard to learn if you approach them properly.
+
+---
+
+## Five Years From Now
+
+What I hope my career looks like in five years is the same thing it's always been: empowering people across the spectrum to be successful in their jobs and make the best use of technology.
+
+That's always where I've been at. Teach the Nation to Code, QA, now CoEngineers. Different tools, same mission.
 
 ---
 
