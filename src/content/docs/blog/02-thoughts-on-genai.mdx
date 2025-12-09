@@ -1,130 +1,91 @@
 ---
-title: My Thoughts on GenAI So Far
-description: What actually works, what doesn't, and the bits that concern me
+title: The Day I Wasted
+description: What happens when you dive into AI tools without structure
 ---
 
 import { Aside } from '@astrojs/starlight/components';
 import EmailSignup from '../../../components/EmailSignup.astro';
 
-I've been using AI tools daily for a while now. Here's what I've actually learned — not the theory, the reality.
+I lost a full day. Not to distraction. To enthusiasm.
+
+I was building a productivity tool — a frontend that would house n8n workflows and other automations. I had Claude Code open. I had ideas. I started prompting.
+
+The first few features came together beautifully. A component here, a page there. It felt like magic. I was shipping faster than I ever had.
+
+Then it started to unravel.
 
 ---
 
-## What Genuinely Works
+## The Mess
 
-### The workflow that saves me days
+By hour four, I had a codebase that worked but made no sense. Components duplicated in three places. Styling that contradicted itself. Logic scattered across files with no clear structure.
 
-Here's something I do all the time now. When I'm working with a new customer, I use the Gemini API to pull their brand kit. I always ask customers to record our discovery calls, and then I build that into a data model in Obsidian. From there, I run it through a pipeline to build an iteration of a Gemini deck that I can quickly refine.
+Every new prompt made it worse. Claude would fix one thing and break two others. I'd try to explain the full context, but the context had become incomprehensible. Even to me.
 
-That whole process used to take days. Now it takes hours. The AI doesn't do the thinking for me — I still need to understand the customer and shape the output — but the grunt work of pulling everything together is just handled.
+I wasn't building anymore. I was firefighting.
 
-### Images and graphics
+By the end of the day, I deleted everything and started again.
 
-I've always been terrible at art and visual design. Just really bad at it. But here's the thing: building prompts is actually very logical. I love building JSON structures and then doing little tweaks to see what that does to the imagery. It's basically a software engineering approach to visuals.
-
-I use AI-generated images as a base and refine from there. For someone who could never make what they saw in their head, that's been genuinely transformative.
-
-### Voice and audio
-
-ElevenLabs has become one of my core products. I actually used Speechify Studio for a while, but once I found ElevenLabs it just did everything I needed and more. The conversational agents stuff is super interesting — being able to build voice interfaces that actually work opens up a lot of possibilities.
+A full day. Gone. And I'm not a beginner — I've been building things for years.
 
 ---
 
-## The 80% Reality
+## The Problem
 
-AI gets you to about 80% really quickly. The last 20% is still on you.
+Vibe coding feels productive. You're moving fast. Things appear on screen. Dopamine hits with every successful prompt.
 
-A good example is building ElevenLabs conversational agents. AI can really help you get the initial transcript and some of the question-answer pairs sorted. But until you actually test the agent — speak to it, get to know it a bit — that's where the real fine-tuning happens. You can't skip that part. The testing and iteration is where it becomes something that actually works.
+But without structure, you're building on sand. The AI doesn't know your architecture because you don't have one. It can't maintain consistency because there's nothing to be consistent with.
 
-Same with any content I put in front of customers. AI gives me a strong starting point, but I'm always refining, checking, making it actually fit the situation.
+The magic turns into a mess. And the mess compounds faster than you can fix it.
 
----
-
-## What Doesn't Work (Or Goes Wrong)
-
-### Hallucinations are still constant
-
-This still happens all the time. When I'm building learning assets or anything that goes in front of customers, AI just makes up facts. You have to verify everything.
-
-I was building a podcast once in NotebookLM, and it kept saying this fairly derogatory thing at the start. I ran it again and again and couldn't get it to change. That was a good reminder that these tools don't always do what you expect, even when you're being clear about what you want.
-
-### Some automations just don't stick
-
-I love n8n as a tool. When I was at Acelo, we were always looking at automating parts of the sales and marketing process — lead generation, building tailored content for leads. Super interesting what you can do with it. But some of those workflows are harder to make reliable than you'd think. The tools are powerful, but getting them to work consistently takes more effort than the demos suggest.
-
----
-
-## The Bit That Concerns Me Most
-
-People are naive about what happens to their data, particularly when they're not paying for products.
-
-I see people just dumping large amounts of data into AI tools without any sanitisation. They don't think about where that data goes or what it might be used for.
-
-One of the things I always do — because I store everything in Obsidian locally — is sanitise data using a local LLM before it goes anywhere. I use LM Studio for this. Strip out sensitive stuff, anything that probably shouldn't be in a cloud AI system. It's an extra step, but it matters.
-
-<Aside type="caution" title="Something to think about">
-If you're not paying for the product, you need to think carefully about what you're putting into it. Free doesn't mean consequence-free.
+<Aside type="caution" title="The trap">
+AI tools amplify whatever you bring to them. Bring chaos, get chaos faster. Bring structure, get structure faster.
 </Aside>
 
 ---
 
-## What People Get Wrong
+## The Fix
 
-The biggest fallacy right now is that the tools are still immature. They're not. The tools are actually pretty good.
+When I started again, I used a different approach. Spec-driven development with GitHub Speckit.
 
-The real problem is learning and development — making these tools accessible to people. People are uncertain about AI. They're time-poor. They don't know what they don't know. So they either avoid it entirely or use it badly.
+Before any code, I wrote down what I was building. Not vague ideas — concrete specifications. User stories with acceptance criteria. A clear architecture. Defined boundaries.
 
-That's the gap I'm trying to fill with CoEngineers. The tools are ready. People just need help learning them properly.
+Then I gave Claude Code something to work with. Not "build me a thing" but "implement this specific story against this specific spec."
 
----
-
-## What's Overhyped and Underhyped
-
-**Overhyped:** OpenAI products, honestly. I've been fairly unimpressed with them, and even though they've got significant market lead, I don't have any of them in my day-to-day workflow now. Claude has just been better for how I work.
-
-**Underhyped:** Machine-to-machine payments. I think Bitcoin will probably become a really important tool for this. Having micropayments so agents can do work for each other makes a lot of sense. It's not here yet, but I think it's coming.
+The difference was night and day. Same tool. Same me. Completely different outcome.
 
 ---
 
-## How AI Has Changed My Work
+## What Structure Actually Means
 
-What it's made me do is focus on the bits I enjoy most. The tedious stuff gets handled, and I can spend more time on the actual thinking.
+It's not bureaucracy. It's clarity.
 
-But I'd also say: it's really easy to over-delegate things you actually need to think about yourself. AI is great for grunt work. It's not great for the decisions that really matter. I just encourage people to be thoughtful about what they hand off.
+- **What** are we building? (Product requirements)
+- **Who** is it for? (User context)
+- **How** should it work? (Acceptance criteria)
+- **Where** does this fit? (Architecture)
 
----
+When the AI knows these things, it stops guessing. When you know these things, you can tell if the output is right.
 
-## My Actual Daily Stack
-
-I just use Claude Code now for basically everything. It's become my main interface for AI work.
-
-For data sanitisation and local stuff, I use LM Studio with local LLMs. That's about it. I've tried loads of tools, but most of them have dropped out of my workflow.
-
----
-
-## "Should I Be Worried About AI Taking My Job?"
-
-People ask me this a lot. My honest answer: it's not AI that's going to take your job. It's someone who knows AI.
-
-Learning the tools is probably the most important thing for your future. The people who figure this out early will have a significant advantage. The people who avoid it will find themselves struggling to keep up.
-
-That's not meant to be scary. It's meant to be motivating. These tools aren't that hard to learn if you approach them properly.
+Structure isn't slower. It's faster — because you don't waste days on dead ends.
 
 ---
 
-## Five Years From Now
+## The Lesson
 
-What I hope my career looks like in five years is the same thing it's always been: empowering people across the spectrum to be successful in their jobs and make the best use of technology.
+I share this because I want you to skip the pain.
 
-That's always where I've been at. Teach the Nation to Code, QA, now CoEngineers. Different tools, same mission.
+Week 4 of the course is entirely about this. Spec-driven development. Going from idea to shipped feature with structure at every step.
+
+Not because I read about it somewhere. Because I learned it the hard way, staring at a deleted codebase wondering where the day went.
 
 ---
 
-## What's Next?
+## What's Next
 
-Tomorrow: **My Claude Code Story** — why this specific tool became the centre of my workflow.
+Tomorrow: **Built With What It Teaches** — this course was made with Claude Code. So was this post.
 
 <EmailSignup
-  heading="Want to follow along?"
-  subheading="Get each post delivered to your inbox. No spam, ever."
+  heading="Follow the journey"
+  subheading="Six posts before launch. No spam, ever."
 />
