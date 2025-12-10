@@ -35,11 +35,16 @@ Think about a library. Each book has:
 - A title (visible on the cover)
 - Metadata (author, publication date, genre, ISBN - often on the inside cover or in the library system)
 
-In Obsidian, metadata lives in the 'frontmatter' - a special section at the top of your notes between three dashes (---).
+In Obsidian and other note-taking systems, metadata lives in the 'frontmatter' - a special section at the top of your notes between three dashes (---).
 
-Here's why this matters: Without metadata, you have to remember exactly where a note is or what it's called. With metadata, you can search by type, status, date, project, or any field you define.
+Here's why this matters: Without metadata, you have to remember exactly where a note is or what it's called. With metadata, you can search by type, status, date, project, or any field you define. And when you use AI tools like Claude Code to work with your notes, metadata provides critical context that makes the AI's responses much more accurate and useful.
 
-Let me show you what this looks like."
+Let me show you what this looks like. First, have a look at the before/after examples:
+
+**Action:**
+
+- Display the examples file: `@lesson-modules/theme-1/lab-5-metadata-enrichment/metadata-before-after.md`
+- Walk through the first example (Meeting Notes) to show the transformation"
 
 **Check:** Wait for learner to confirm they're ready
 
@@ -257,36 +262,41 @@ Each note now has:
 
 Your notes are now metadata-enriched and ready for advanced querying."
 
-### Step 5: Using Metadata with Dataview (5 minutes)
+### Step 5: Using Metadata with AI Tools (5 minutes)
 
 **Say:**
-"Brilliant! Now let's talk about why this matters. Obsidian has a community plugin called Dataview that lets you query your notes like a database.
+"Brilliant! Now let's talk about why metadata matters for AI-powered workflows.
 
-For example, with the metadata we've added, you could create queries like:
+When you use Claude Code or other AI assistants with your notes, metadata provides critical context that makes the AI much more effective:
 
+**1. Better Search and Retrieval**
+
+Without metadata, AI can only search by keywords. With metadata, you can ask:
 - 'Show me all meeting notes from last week'
-- 'List all active projects ordered by deadline'
-- 'Find all resource notes about Python'
+- 'Find active projects sorted by priority'
+- 'What research notes do I have about Python?'
 
-Here's what a Dataview query looks like:
+**2. RAG (Retrieval Augmented Generation)**
 
-\`\`\`dataview
-TABLE type, status, created
-FROM #meeting
-WHERE status = \"active\"
-SORT created DESC
-\`\`\`
+When AI systems retrieve your notes to answer questions, they work much better with structured metadata. The type field tells the AI whether it's reading a meeting note, a task list, or research - and it adjusts its response accordingly.
 
-This would show all active meeting notes, sorted by date.
+**3. Automated Workflows**
 
-We won't set up Dataview in this lab, but understanding that metadata enables this kind of powerful querying is important.
+Metadata enables powerful automation. You could ask Claude Code to:
+- Create a weekly summary of all notes with `type: meeting-note`
+- List all `status: active` tasks across projects
+- Find notes related to a specific `project` field
 
-Does that make sense?"
+**4. Knowledge Connections**
 
-**Check:** Wait for learner to confirm understanding
+The `related` and `tags` fields help AI understand how your notes connect, leading to better insights and suggestions.
+
+Let me demonstrate. Ask me to find all notes in a folder and show you which ones have specific metadata fields."
+
+**Check:** Wait for learner to try a metadata-based query
 
 **Say:**
-"The key insight: Metadata turns your vault from a pile of notes into a queryable knowledge base. The more consistent your metadata, the more powerful your queries."
+"The key insight: Metadata turns your notes from isolated files into a queryable knowledge base. When you combine structured metadata with AI tools like Claude Code, you get a powerful system for managing and retrieving information."
 
 ### Step 6: Metadata in Templates (4 minutes)
 

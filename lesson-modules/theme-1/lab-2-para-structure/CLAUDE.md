@@ -28,7 +28,7 @@ By the end of this lab, learners will be able to:
 
 {ifNotFirstInTheme:Welcome back!}
 
-Today we're setting up the PARA method in your Obsidian vault. PARA is a simple but powerful way to organise your notes.
+Today we're setting up the PARA method in your Obsidian vault. PARA is a simple but powerful way to organise your notes, developed by Tiago Forte as part of his 'Building a Second Brain' methodology. If you want to dive deeper into the thinking behind PARA, I'd recommend checking out [Tiago's original article](https://fortelabs.com/blog/para/).
 
 Think of PARA as your digital filing cabinet with four drawers:
 

@@ -50,6 +50,19 @@ This is where **Product Requirements Documents** come in.
 
 Today and tomorrow, you'll learn the product management discipline that sits upstream of development. You'll create two key artefacts:
 
+```mermaid
+flowchart TB
+    A[Product Idea] --> B[Lab 4: PRP]
+    B --> C[Problem Statement]
+    B --> D[User Personas]
+    B --> E[Success Criteria]
+    C --> F[Lab 5: Backlog]
+    D --> F
+    E --> F
+    F --> G[Prioritised Features]
+    G --> H[Development]
+```
+
 **Lab 4 (today):** Product Requirements Prompt (PRP) - The 'why' and 'who'
 **Lab 5 (tomorrow):** Product Backlog - The 'what' (features, prioritised)
 

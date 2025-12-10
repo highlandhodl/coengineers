@@ -53,6 +53,15 @@ You'll use Google's Gemini API to create custom images from text descriptions. T
 
 **The workflow:**
 
+```mermaid
+flowchart LR
+    A[Image Prompts] --> B[Claude Code Script]
+    B --> C[Gemini API]
+    C --> D[Base64 PNG Data]
+    D --> E[Decode & Save]
+    E --> F[Local PNG Files]
+```
+
 1. Write image descriptions in your Obsidian notes
 2. Extract those prompts with Claude Code
 3. Send them to Gemini API

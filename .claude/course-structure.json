@@ -16,10 +16,7 @@
           "path": "lesson-modules/theme-1/lab-1-first-conversation/CLAUDE.md",
           "command": "t1.lb1",
           "description": "Your first interaction with Claude Code",
-          "estimatedMinutes": 20,
-          "supportingMaterials": [
-            "lesson-modules/theme-1/lab-1-first-conversation/learning-log-template.md"
-          ]
+          "estimatedMinutes": 20
         },
         {
           "id": "1.2",
@@ -64,7 +61,10 @@
           "path": "lesson-modules/theme-1/lab-5-metadata-enrichment/CLAUDE.md",
           "command": "t1.lb5",
           "description": "Adding standard metadata to your documents",
-          "estimatedMinutes": 25
+          "estimatedMinutes": 25,
+          "supportingMaterials": [
+            "lesson-modules/theme-1/lab-5-metadata-enrichment/metadata-before-after.md"
+          ]
         }
       ]
     },
@@ -85,7 +85,8 @@
           "supportingMaterials": [
             "lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-raw-1.md",
             "lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-raw-2.md",
-            "lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-raw-3.md"
+            "lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-raw-3.md",
+            "lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-example-output.md"
           ]
         },
         {
@@ -98,7 +99,8 @@
           "estimatedMinutes": 25,
           "supportingMaterials": [
             "lesson-modules/theme-2/lab-2-audio-transcripts/voice-memo-transcript-1.md",
-            "lesson-modules/theme-2/lab-2-audio-transcripts/voice-memo-transcript-2.md"
+            "lesson-modules/theme-2/lab-2-audio-transcripts/voice-memo-transcript-2.md",
+            "lesson-modules/theme-2/lab-2-audio-transcripts/audio-transcript-example-output.md"
           ]
         },
         {
@@ -111,7 +113,8 @@
           "estimatedMinutes": 25,
           "supportingMaterials": [
             "lesson-modules/theme-2/lab-3-email-refinement/email-thread-sample.md",
-            "lesson-modules/theme-2/lab-3-email-refinement/email-dump-sample.md"
+            "lesson-modules/theme-2/lab-3-email-refinement/email-dump-sample.md",
+            "lesson-modules/theme-2/lab-3-email-refinement/email-refinement-example-output.md"
           ]
         },
         {
@@ -123,7 +126,8 @@
           "description": "Synthesising research into structured Obsidian notes",
           "estimatedMinutes": 30,
           "supportingMaterials": [
-            "lesson-modules/theme-2/lab-4-research-synthesis/research-dump-sample.md"
+            "lesson-modules/theme-2/lab-4-research-synthesis/research-dump-sample.md",
+            "lesson-modules/theme-2/lab-4-research-synthesis/research-synthesis-example-output.md"
           ]
         },
         {
@@ -135,7 +139,8 @@
           "description": "Extracting insights from YouTube videos into Obsidian notes",
           "estimatedMinutes": 30,
           "supportingMaterials": [
-            "lesson-modules/theme-2/lab-5-youtube-extraction/youtube-transcript-sample.md"
+            "lesson-modules/theme-2/lab-5-youtube-extraction/youtube-transcript-sample.md",
+            "lesson-modules/theme-2/lab-5-youtube-extraction/youtube-extraction-example-output.md"
           ]
         }
       ]
@@ -179,7 +184,8 @@
           "description": "Creating spreadsheets with Claude Code's xlsx skill",
           "estimatedMinutes": 25,
           "supportingMaterials": [
-            "lesson-modules/theme-3/lab-3-xlsx-creation/coengineers-brandkit.md"
+            "lesson-modules/theme-3/lab-3-xlsx-creation/coengineers-brandkit.md",
+            "lesson-modules/theme-3/lab-3-xlsx-creation/xlsx-sample-data.md"
           ]
         },
         {
@@ -204,7 +210,8 @@
           "estimatedMinutes": 30,
           "supportingMaterials": [
             "lesson-modules/theme-3/lab-5-sow-creation/sow-template.md",
-            "lesson-modules/theme-3/lab-5-sow-creation/coengineers-brandkit.md"
+            "lesson-modules/theme-3/lab-5-sow-creation/coengineers-brandkit.md",
+            "lesson-modules/theme-3/lab-5-sow-creation/customer-brief-sample.md"
           ]
         }
       ]

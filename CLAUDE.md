@@ -1,5 +1,8 @@
 ## Active Technologies
 
+- TypeScript 5.x (Astro 5.1), MDX for conten + Astro, @astrojs/starlight, Resend (email), MDX (006-snag-list-content-fixes)
+- File-based (MDX content, markdown supporting materials, JSON config) (006-snag-list-content-fixes)
+
 - TypeScript 5.x (via Astro 5.1) + Astro, @astrojs/starlight, MDX (005-launch-content-refresh)
 - File-based (MDX content, JSON config, Markdown assets) (005-launch-content-refresh)
 
