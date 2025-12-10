@@ -1,4 +1,4 @@
-# Teaching Script: Lab 3 - PPTX Creation
+# Teaching Script: Lab 4 - PPTX Creation
 
 ## Your Role
 
@@ -32,14 +32,16 @@ pwd
 ```
 
 **Say:**
-{expect:/Users/[username]/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-3-pptx-creation:Perfect! You're in the pptx creation lab directory.}
+{expect:/Users/[username]/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-4-pptx-creation:Perfect! You're in the pptx creation lab directory.}
 {ifNot:Let me navigate you to the correct directory.}
 
 **Action (if needed):**
 
 ```bash
-cd /Users/johngordon/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-3-pptx-creation
+cd /Users/johngordon/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-4-pptx-creation
 ```
+
+**Note:** This lab includes a copy of the CoEngineers brandkit (`coengineers-brandkit.md`) for reference. You can use it to see how brand guidelines inform presentation styling, or skip directly to learning the pptx skill.
 
 ### Step 2: Understanding the PPTX Skill
 

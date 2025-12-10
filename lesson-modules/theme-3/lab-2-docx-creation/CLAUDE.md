@@ -1,4 +1,4 @@
-# Teaching Script: Lab 1 - DOCX Creation
+# Teaching Script: Lab 2 - DOCX Creation
 
 ## Your Role
 
@@ -32,14 +32,16 @@ pwd
 ```
 
 **Say:**
-{expect:/Users/[username]/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-1-docx-creation:Perfect! You're in the docx creation lab directory.}
+{expect:/Users/[username]/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-2-docx-creation:Perfect! You're in the docx creation lab directory.}
 {ifNot:Let me navigate you to the correct directory.}
 
 **Action (if needed):**
 
 ```bash
-cd /Users/johngordon/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-1-docx-creation
+cd /Users/johngordon/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-2-docx-creation
 ```
+
+**Note:** This lab includes a copy of the CoEngineers brandkit (`coengineers-brandkit.md`) for reference. You can use it to see how brand guidelines inform document styling, or skip directly to learning the docx skill.
 
 ### Step 2: Understanding the DOCX Skill
 

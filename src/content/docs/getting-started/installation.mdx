@@ -75,23 +75,52 @@ You should see Claude Code start up. Type "Hello" and hit Enter. If Claude respo
 
 Type `/exit` to quit.
 
+## Step 5: Install Obsidian (Recommended)
+
+Most labs in this course use Obsidian for knowledge management. It's free and works beautifully with the workflows we'll build.
+
+1. Go to [obsidian.md](https://obsidian.md/)
+2. Download the installer for your platform
+3. Install and open Obsidian
+4. Create a new vault called "CoEngineers Workspace" (or any name you like)
+5. Note the folder location — you'll need this in Lab 1
+
+You can skip this for now and come back later, but Themes 1 and 2 will make a lot more sense with Obsidian installed.
+
 ## Troubleshooting
 
 **"command not found: claude"**
 
 - Try closing and reopening your terminal
 - On Mac/Linux, you might need to add npm to your PATH
+- Run `npm config get prefix` to see where npm installs global packages
 
 **"Authentication failed"**
 
 - Make sure you're signed in to the correct Anthropic account
 - Try running `claude auth` again
+- Check your internet connection
+
+**"npm: command not found"**
+
+- Node.js didn't install properly
+- Try reinstalling Node.js from [nodejs.org](https://nodejs.org/)
+- Restart your terminal after installation
+
+**Claude Code starts but won't respond**
+
+- Check your internet connection
+- Verify authentication with `claude auth`
+- Make sure you have API credits available (check your Anthropic dashboard)
 
 **Still stuck?**
 
-- Join our [community](/community/) and ask for help
 - Check the [Claude Code documentation](https://docs.anthropic.com/claude-code)
+- Visit the [Troubleshooting Guide](/reference/troubleshooting/)
+- Review the [FAQ](/reference/faq/)
 
 ## Next Steps
 
 Now that you've got Claude Code installed, check the [Prerequisites](/getting-started/prerequisites/) for the optional tools we'll use throughout the course.
+
+Or jump straight to [Theme 1: Digital Workspace](/theme-1/overview/) to start building your productivity system.

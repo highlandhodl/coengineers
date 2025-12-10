@@ -32,3 +32,8 @@ npm-debug.log*
 
 # Test coverage
 coverage/
+
+# Docs for me
+docs/
+marketing/
+specs/

@@ -1,4 +1,4 @@
-# Teaching Script: Lab 2 - XLSX Creation
+# Teaching Script: Lab 3 - XLSX Creation
 
 ## Your Role
 
@@ -32,14 +32,16 @@ pwd
 ```
 
 **Say:**
-{expect:/Users/[username]/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-2-xlsx-creation:Perfect! You're in the xlsx creation lab directory.}
+{expect:/Users/[username]/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-3-xlsx-creation:Perfect! You're in the xlsx creation lab directory.}
 {ifNot:Let me navigate you to the correct directory.}
 
 **Action (if needed):**
 
 ```bash
-cd /Users/johngordon/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-2-xlsx-creation
+cd /Users/johngordon/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-3-xlsx-creation
 ```
+
+**Note:** This lab includes a copy of the CoEngineers brandkit (`coengineers-brandkit.md`) for reference. You can use it to see how brand guidelines inform spreadsheet styling, or skip directly to learning the xlsx skill.
 
 ### Step 2: Understanding the XLSX Skill
 

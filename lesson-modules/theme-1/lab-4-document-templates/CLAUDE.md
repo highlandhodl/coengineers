@@ -1,4 +1,4 @@
-# Lab 1.3: Document Templates
+# Lab 4: Document Templates
 
 **Teaching Script for Claude Code**
 

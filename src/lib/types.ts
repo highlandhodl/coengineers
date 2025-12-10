@@ -3,11 +3,7 @@
  */
 
 // Valid signup sources
-export type SignupSource =
-  | "website"
-  | "homepage"
-  | "community-page"
-  | "day-page";
+export type SignupSource = "website" | "homepage" | "day-page";
 
 // Request from subscribe form
 export interface SubscribeRequest {

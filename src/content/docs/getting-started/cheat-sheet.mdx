@@ -5,25 +5,40 @@ description: Quick reference for Claude Code commands and patterns
 
 import { Aside } from "@astrojs/starlight/components";
 
-## Essential Commands
+# Cheat Sheet
 
-| Command             | Description                            |
-| ------------------- | -------------------------------------- |
-| `claude`            | Start Claude Code in current directory |
-| `claude "prompt"`   | Send a one-shot prompt                 |
-| `claude -p project` | Start with a specific project context  |
-| `/help`             | Show available commands                |
-| `/clear`            | Clear conversation history             |
-| `/compact`          | Summarise conversation to save tokens  |
+Quick reference for commands, patterns, and workflows you'll use throughout the course.
+
+## Essential Claude Code Commands
+
+| Command             | Description                                    |
+| ------------------- | ---------------------------------------------- |
+| `claude`            | Start Claude Code in current directory         |
+| `claude "prompt"`   | Send a one-shot prompt                         |
+| `claude -p project` | Start with a specific project context          |
+| `/help`             | Show available commands in an active session   |
+| `/clear`            | Clear conversation history                     |
+| `/compact`          | Summarise conversation to save tokens          |
+| `/exit`             | Close Claude Code session                      |
+| `Ctrl+C`            | Cancel current operation or exit (alternative) |
 
 ## Course Slash Commands
 
-| Command               | Lab                         |
-| --------------------- | --------------------------- |
-| `/t1.lb1` - `/t1.lb5` | Theme 1: Digital Workspace  |
-| `/t2.lb1` - `/t2.lb5` | Theme 2: Content Processing |
-| `/t3.lb1` - `/t3.lb5` | Theme 3: Document Creation  |
-| `/t4.lb1` - `/t4.lb5` | Theme 4: External APIs      |
+These are the custom commands created for each lab in this course:
+
+| Command               | Theme                       | What It Does                                |
+| --------------------- | --------------------------- | ------------------------------------------- |
+| `/t1.lb1` - `/t1.lb5` | Theme 1: Digital Workspace  | Set up workspace, templates, knowledge base |
+| `/t2.lb1` - `/t2.lb5` | Theme 2: Content Processing | Process meetings, PDFs, web content, voice  |
+| `/t3.lb1` - `/t3.lb5` | Theme 3: Document Creation  | Generate docs, spreadsheets, presentations  |
+| `/t4.lb1` - `/t4.lb5` | Theme 4: External APIs      | Connect to Gamma, Gemini, ElevenLabs        |
+
+To use a slash command:
+
+1. Start Claude Code in your workspace directory
+2. Type the command (e.g., `/t1.lb1`)
+3. Follow the prompts
+4. Review the output
 
 ## Effective Prompting Patterns
 
@@ -31,7 +46,7 @@ import { Aside } from "@astrojs/starlight/components";
 
 ```
 ❌ "Create a file"
-✅ "Create a file called meeting-notes.md in ~/Documents with today's date as the title"
+✅ "Create a file called meeting-notes.md in ~/Documents/Obsidian/Meetings with today's date as the title"
 ```
 
 ### Provide Context
@@ -52,64 +67,209 @@ import { Aside } from "@astrojs/starlight/components";
    Topic | Decision | Owner | Due Date"
 ```
 
-## File Operations
+### Reference Files
 
-| Task        | Prompt Pattern                                        |
-| ----------- | ----------------------------------------------------- |
-| Create file | "Create a file called X in folder Y with content Z"   |
-| Read file   | "Read @filename.md and summarise the key points"      |
-| Edit file   | "In @filename.md, change X to Y"                      |
-| Search      | "Find all files containing 'keyword' in this project" |
+```
+❌ "Look at the file"
+✅ "Read @project-spec.md and create a task list from the requirements section"
+```
 
-## Skills Reference
+## Common File Operations
 
-<Aside type="tip" title="Claude Code Skills">
-  Skills are built-in capabilities that Claude Code can use to create documents.
+| Task        | Prompt Pattern                                             |
+| ----------- | ---------------------------------------------------------- |
+| Create file | "Create a file called X in folder Y with content Z"        |
+| Read file   | "Read @filename.md and summarise the key points"           |
+| Edit file   | "In @filename.md, change the section on X to say Y"        |
+| Search      | "Find all files in ~/Documents containing the word 'spec'" |
+| Move file   | "Move @old-location.md to ~/Documents/Archive/"            |
+| Rename file | "Rename @draft.md to @final.md"                            |
+
+## Claude Code Skills Reference
+
+<Aside type="tip" title="What are Skills?">
+  Skills are built-in capabilities that Claude Code can use to create specific
+  types of documents. No additional setup required.
 </Aside>
 
-| Skill            | Command                             | Output                   |
-| ---------------- | ----------------------------------- | ------------------------ |
-| docx             | "Use the docx skill to create..."   | Word document            |
-| xlsx             | "Use the xlsx skill to create..."   | Excel spreadsheet        |
-| pptx             | "Use the pptx skill to create..."   | PowerPoint presentation  |
-| brand-guidelines | "Use the brand-guidelines skill..." | Brand guideline document |
+| Skill            | Command Pattern                              | Output                    |
+| ---------------- | -------------------------------------------- | ------------------------- |
+| docx             | "Use the docx skill to create..."            | Word document (.docx)     |
+| xlsx             | "Use the xlsx skill to create..."            | Excel spreadsheet (.xlsx) |
+| pptx             | "Use the pptx skill to create..."            | PowerPoint (.pptx)        |
+| brand-guidelines | "Use the brand-guidelines skill to create... | Brand document (.docx)    |
+
+**Example:**
+
+```
+"Use the pptx skill to create a presentation about quarterly results with:
+- Slide 1: Title slide
+- Slide 2: Revenue chart
+- Slide 3: Key metrics table
+- Slide 4: Next steps"
+```
 
 ## CLAUDE.md Template
+
+Every project benefits from a `CLAUDE.md` file that tells Claude Code how you work:
 
 ```markdown
 # Project Name
 
 ## Overview
 
-Brief description of this project.
+Brief description of this project and what you're building.
 
 ## Key Files
 
-- `src/` - Source code
+- `src/` - Source code or main content
 - `docs/` - Documentation
 - `templates/` - Reusable templates
+- `archive/` - Old versions
 
 ## Conventions
 
-- Use British English
+- Use British English (colour, organisation, behaviour)
 - Dates in DD/MM/YYYY format
 - Markdown for all documentation
+- File names in kebab-case (like-this.md)
 
 ## Common Tasks
 
-- Run build: `npm run build`
-- Run tests: `npm test`
+- Create blog post: "Use the blog-post template to..."
+- Process meeting: "Read @meeting-raw.md and extract..."
+- Generate report: "Use the docx skill to..."
+
+## Context
+
+Add any project-specific context that Claude Code should know about your preferences, workflow, or requirements.
 ```
 
-## Troubleshooting
+## Keyboard Shortcuts (Terminal)
 
-| Issue               | Solution                                                                    |
-| ------------------- | --------------------------------------------------------------------------- |
-| "Command not found" | Ensure Claude Code is installed: `npm install -g @anthropic-ai/claude-code` |
-| "Rate limited"      | Wait a few minutes and try again                                            |
-| "File not found"    | Check the path — use `ls` to verify                                         |
-| "Permission denied" | Check file permissions with `ls -la`                                        |
+These work in most terminals:
+
+| Shortcut      | Action                          |
+| ------------- | ------------------------------- |
+| `Ctrl+C`      | Cancel current operation        |
+| `Ctrl+D`      | Exit Claude Code session        |
+| `↑` / `↓`     | Navigate command history        |
+| `Ctrl+L`      | Clear terminal screen           |
+| `Cmd+K` (Mac) | Clear terminal screen           |
+| `Tab`         | Auto-complete file/folder names |
+
+## Troubleshooting Quick Reference
+
+| Issue                   | Solution                                                                    |
+| ----------------------- | --------------------------------------------------------------------------- |
+| "command not found"     | Ensure Claude Code is installed: `npm install -g @anthropic-ai/claude-code` |
+| "Authentication failed" | Run `claude auth` and sign in again                                         |
+| "Rate limited"          | Wait a few minutes before trying again                                      |
+| "File not found"        | Check the path with `ls` — use absolute paths if relative paths don't work  |
+| "Permission denied"     | Check file permissions with `ls -la filename`                               |
+| "Cannot read file"      | Make sure you're in the right directory — use `pwd` to check                |
+| "API error"             | Check your internet connection and API credits                              |
+| Claude Code won't start | Restart terminal, verify Node.js is installed: `node --version`             |
+
+## When to Ask for Help
+
+**Check the docs when:**
+
+- You need the exact syntax for a command
+- You want to understand how a skill works
+- You're looking for advanced features
+- You're getting an error message you don't understand
+
+**Review the course materials when:**
+
+- You want to adapt a lab for your specific use case
+- You need a refresher on how a workflow works
+- You're looking for similar examples
+
+**Experiment first when:**
+
+- You have a small tweak you want to try
+- You're curious about a variation
+- You want to customise a template
+
+## Common Patterns by Theme
+
+### Theme 1: Digital Workspace
+
+```
+"Create a folder structure in ~/Documents/Obsidian for:
+- Projects
+- Meetings
+- Templates
+- Archive"
+
+"Create a daily note template with sections for:
+- Tasks
+- Notes
+- Meetings
+- Ideas"
+```
+
+### Theme 2: Content Processing
+
+```
+"Read @transcript.txt and create a structured summary with:
+- Key points
+- Action items
+- Decisions made"
+
+"Process @article.pdf and extract the main arguments into a markdown outline"
+```
+
+### Theme 3: Document Creation
+
+```
+"Use the docx skill to create a project proposal with:
+- Executive summary
+- Problem statement
+- Proposed solution
+- Timeline and budget"
+
+"Use the xlsx skill to create a budget tracker with columns:
+- Category
+- Budgeted
+- Actual
+- Variance"
+```
+
+### Theme 4: External APIs
+
+```
+"Call the Gamma API to create a presentation about [topic] with 5 slides"
+
+"Use Google AI Studio to generate an image of [description]"
+
+"Send this text to ElevenLabs to convert to speech: [text]"
+```
+
+## British English Reminders
+
+Common words you'll see throughout the course:
+
+| British        | American (don't use) |
+| -------------- | -------------------- |
+| colour         | color                |
+| organise       | organize             |
+| behaviour      | behavior             |
+| optimised      | optimized            |
+| licence (noun) | license (noun)       |
+| analyse        | analyze              |
+| summarise      | summarize            |
+
+This matters for file names, folder structures, and prompts that use specific terminology.
 
 ---
 
-**Need more help?** Check the [Troubleshooting Guide](/reference/troubleshooting/) or ask in the [Community](/community/).
+**Need more help?** Check the [Troubleshooting Guide](/reference/troubleshooting/) or review the [FAQ](/reference/faq/).
+
+**Want to dive deeper?** Each theme has an overview page that explains the concepts in detail:
+
+- [Theme 1 Overview](/theme-1/overview/)
+- [Theme 2 Overview](/theme-2/overview/)
+- [Theme 3 Overview](/theme-3/overview/)
+- [Theme 4 Overview](/theme-4/overview/)

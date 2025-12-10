@@ -1,0 +1,470 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Image Description Schema",
+  "description": "Structured schema for consistent AI-generated image descriptions across social media, marketing materials, and accessibility contexts",
+  "type": "object",
+  "required": ["imageId", "platform", "primaryDescription", "metadata"],
+  "properties": {
+    "imageId": {
+      "type": "string",
+      "description": "Unique identifier for the image",
+      "pattern": "^[A-Z0-9-]+$",
+      "examples": ["IMG-2025-001", "SOCIAL-LINKEDIN-DEC10"]
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "linkedin",
+        "twitter",
+        "instagram",
+        "facebook",
+        "website",
+        "email",
+        "blog",
+        "presentation",
+        "accessibility"
+      ],
+      "description": "Target platform or use case for the image description"
+    },
+    "primaryDescription": {
+      "type": "object",
+      "description": "Main image description tailored to platform requirements",
+      "required": ["text", "length", "tone"],
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "The actual image description text",
+          "minLength": 10,
+          "maxLength": 5000
+        },
+        "length": {
+          "type": "string",
+          "enum": ["short", "medium", "long"],
+          "description": "Length category: short (50-100 chars), medium (100-300 chars), long (300+ chars)"
+        },
+        "tone": {
+          "type": "string",
+          "enum": [
+            "professional",
+            "casual",
+            "enthusiastic",
+            "educational",
+            "inspirational",
+            "technical"
+          ],
+          "description": "Tone of voice for the description"
+        },
+        "includesHashtags": {
+          "type": "boolean",
+          "description": "Whether the description includes hashtags",
+          "default": false
+        },
+        "includesEmojis": {
+          "type": "boolean",
+          "description": "Whether the description includes emojis",
+          "default": false
+        }
+      }
+    },
+    "altText": {
+      "type": "object",
+      "description": "Accessibility-focused alt text for screen readers",
+      "required": ["text"],
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Concise, descriptive alt text for screen readers",
+          "minLength": 10,
+          "maxLength": 125,
+          "examples": [
+            "Woman working on laptop with Claude Code interface visible on screen",
+            "Team collaboration session showing whiteboard with workflow diagrams"
+          ]
+        },
+        "conveysEmotion": {
+          "type": "boolean",
+          "description": "Whether alt text conveys emotional context of the image",
+          "default": false
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Metadata about the image and description generation",
+      "required": ["createdAt", "brand"],
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when description was generated"
+        },
+        "brand": {
+          "type": "string",
+          "description": "Brand name for brand-specific language and tone",
+          "examples": ["CoEngineers", "TechStart", "Velocity Labs"]
+        },
+        "campaign": {
+          "type": "string",
+          "description": "Marketing campaign identifier if applicable",
+          "examples": ["Q1-2026-Launch", "Feature-Announcement-Dec"]
+        },
+        "targetAudience": {
+          "type": "string",
+          "description": "Primary audience for this image",
+          "examples": [
+            "Product managers",
+            "Content creators",
+            "Non-technical professionals"
+          ]
+        },
+        "languageCode": {
+          "type": "string",
+          "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+          "description": "ISO 639-1 language code (with optional region)",
+          "examples": ["en-GB", "en-US", "fr", "de"],
+          "default": "en-GB"
+        },
+        "aiModel": {
+          "type": "string",
+          "description": "AI model used to generate description",
+          "examples": ["gemini-1.5-pro", "claude-opus-4.5", "gpt-4"]
+        }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "description": "Alternative descriptions for A/B testing or different platforms",
+      "items": {
+        "type": "object",
+        "required": ["variantId", "text", "purpose"],
+        "properties": {
+          "variantId": {
+            "type": "string",
+            "description": "Identifier for this variant",
+            "examples": ["A", "B", "short-version", "technical-audience"]
+          },
+          "text": {
+            "type": "string",
+            "description": "Alternative description text",
+            "minLength": 10
+          },
+          "purpose": {
+            "type": "string",
+            "description": "Why this variant exists",
+            "examples": [
+              "A/B test variant",
+              "Shorter version for mobile",
+              "More technical language",
+              "Broader audience appeal"
+            ]
+          },
+          "performanceNote": {
+            "type": "string",
+            "description": "Notes on how this variant performed if tested"
+          }
+        }
+      }
+    },
+    "contentAnalysis": {
+      "type": "object",
+      "description": "AI-generated analysis of image content",
+      "properties": {
+        "subjects": {
+          "type": "array",
+          "description": "Main subjects or objects in the image",
+          "items": {
+            "type": "string"
+          },
+          "examples": [
+            ["person", "laptop", "office environment"],
+            ["product screenshot", "interface elements", "text"]
+          ]
+        },
+        "colors": {
+          "type": "array",
+          "description": "Dominant colours in the image",
+          "items": {
+            "type": "string"
+          },
+          "examples": [
+            ["blue", "white", "grey"],
+            ["vibrant", "warm tones"]
+          ]
+        },
+        "mood": {
+          "type": "string",
+          "description": "Overall mood or emotion conveyed by image",
+          "examples": [
+            "professional",
+            "energetic",
+            "calm",
+            "collaborative",
+            "focused"
+          ]
+        },
+        "composition": {
+          "type": "string",
+          "description": "Notable compositional elements",
+          "examples": [
+            "centered subject",
+            "rule of thirds",
+            "wide angle",
+            "close-up"
+          ]
+        },
+        "includesText": {
+          "type": "boolean",
+          "description": "Whether image contains readable text",
+          "default": false
+        },
+        "textContent": {
+          "type": "string",
+          "description": "Text visible in image (if includesText is true)"
+        }
+      }
+    },
+    "seo": {
+      "type": "object",
+      "description": "SEO-optimized elements for web use",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "SEO-friendly image title",
+          "maxLength": 70
+        },
+        "caption": {
+          "type": "string",
+          "description": "Caption text for image",
+          "maxLength": 200
+        },
+        "keywords": {
+          "type": "array",
+          "description": "Relevant keywords for image search",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "examples": [
+            [
+              "AI productivity",
+              "Claude Code",
+              "workflow automation",
+              "product management"
+            ]
+          ]
+        },
+        "suggestedFilename": {
+          "type": "string",
+          "description": "SEO-friendly filename suggestion",
+          "pattern": "^[a-z0-9-]+\\.(jpg|png|webp)$",
+          "examples": [
+            "claude-code-workflow-dashboard.jpg",
+            "team-collaboration-ai-tools.png"
+          ]
+        }
+      }
+    },
+    "brandCompliance": {
+      "type": "object",
+      "description": "Brand guideline compliance checks",
+      "properties": {
+        "meetsGuidelines": {
+          "type": "boolean",
+          "description": "Whether description meets brand guidelines",
+          "default": true
+        },
+        "usesApprovedLanguage": {
+          "type": "boolean",
+          "description": "Uses brand-approved terminology and tone",
+          "default": true
+        },
+        "britishEnglish": {
+          "type": "boolean",
+          "description": "Uses British English spelling (colour, organisation, etc.)",
+          "default": true
+        },
+        "concerns": {
+          "type": "array",
+          "description": "Any brand compliance concerns",
+          "items": {
+            "type": "string"
+          },
+          "examples": [
+            [
+              "Uses American spelling 'color' instead of 'colour'",
+              "Tone may be too casual for brand guidelines"
+            ]
+          ]
+        }
+      }
+    },
+    "callToAction": {
+      "type": "object",
+      "description": "Optional call-to-action for marketing contexts",
+      "properties": {
+        "includesCTA": {
+          "type": "boolean",
+          "description": "Whether description includes a call-to-action",
+          "default": false
+        },
+        "ctaText": {
+          "type": "string",
+          "description": "Call-to-action text",
+          "examples": [
+            "Learn more at coengineers.ai",
+            "Start your 31-day journey today",
+            "Download the free guide"
+          ]
+        },
+        "ctaLink": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL for the call-to-action"
+        }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "description": "Tracking where and how this description is used",
+      "properties": {
+        "publishedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When description was first published"
+        },
+        "platforms": {
+          "type": "array",
+          "description": "Platforms where this description has been used",
+          "items": {
+            "type": "string"
+          }
+        },
+        "performanceMetrics": {
+          "type": "object",
+          "description": "Performance data for this description",
+          "properties": {
+            "impressions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "engagements": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "clickThroughRate": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "CTR as decimal (0.05 = 5%)"
+            }
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or context about this image description"
+    }
+  },
+  "examples": [
+    {
+      "imageId": "SOCIAL-LINKEDIN-001",
+      "platform": "linkedin",
+      "primaryDescription": {
+        "text": "Excited to share how our team transformed client reporting with Claude Code! What used to take 3 hours now takes 15 minutes. Discover how AI-powered workflows are revolutionising productivity for product teams. #ProductManagement #AIProductivity #ClaudeCode",
+        "length": "medium",
+        "tone": "enthusiastic",
+        "includesHashtags": true,
+        "includesEmojis": false
+      },
+      "altText": {
+        "text": "Screenshot of Claude Code interface showing an automated client report being generated with data visualisations",
+        "conveysEmotion": false
+      },
+      "metadata": {
+        "createdAt": "2025-12-10T14:30:00Z",
+        "brand": "CoEngineers",
+        "campaign": "Feature-Showcase-Dec",
+        "targetAudience": "Product managers",
+        "languageCode": "en-GB",
+        "aiModel": "gemini-1.5-pro"
+      },
+      "contentAnalysis": {
+        "subjects": ["software interface", "report dashboard", "data charts"],
+        "colors": ["blue", "white", "cyan"],
+        "mood": "professional",
+        "composition": "centered screenshot",
+        "includesText": true,
+        "textContent": "Client Monthly Report - Q4 2025"
+      },
+      "seo": {
+        "title": "AI-Powered Client Report Generation with Claude Code",
+        "caption": "Automated client reporting saves hours of manual work",
+        "keywords": [
+          "AI reporting",
+          "Claude Code",
+          "productivity automation",
+          "client reports"
+        ],
+        "suggestedFilename": "claude-code-client-report-automation.jpg"
+      },
+      "brandCompliance": {
+        "meetsGuidelines": true,
+        "usesApprovedLanguage": true,
+        "britishEnglish": true,
+        "concerns": []
+      },
+      "callToAction": {
+        "includesCTA": true,
+        "ctaText": "Start your 31-day journey at coengineers.ai",
+        "ctaLink": "https://coengineers.ai"
+      }
+    },
+    {
+      "imageId": "BLOG-HERO-001",
+      "platform": "blog",
+      "primaryDescription": {
+        "text": "A product manager reviews workflow documentation on their laptop whilst sitting in a modern office environment. Natural lighting illuminates the workspace, and the screen displays a Claude Code interface with project templates. This scene represents the shift towards AI-augmented productivity in professional settings.",
+        "length": "long",
+        "tone": "professional",
+        "includesHashtags": false,
+        "includesEmojis": false
+      },
+      "altText": {
+        "text": "Product manager working on laptop showing Claude Code workflow templates in bright modern office",
+        "conveysEmotion": false
+      },
+      "metadata": {
+        "createdAt": "2025-12-10T10:15:00Z",
+        "brand": "CoEngineers",
+        "targetAudience": "Non-technical professionals",
+        "languageCode": "en-GB",
+        "aiModel": "gemini-1.5-pro"
+      },
+      "contentAnalysis": {
+        "subjects": ["person", "laptop", "office workspace", "natural light"],
+        "colors": ["natural tones", "blue screen glow", "neutral background"],
+        "mood": "focused",
+        "composition": "environmental portrait",
+        "includesText": false
+      },
+      "seo": {
+        "title": "Modern Product Management with AI Workflow Tools",
+        "caption": "Integrating Claude Code into daily product management workflows",
+        "keywords": [
+          "product management",
+          "AI tools",
+          "workflow automation",
+          "professional productivity"
+        ],
+        "suggestedFilename": "product-manager-claude-code-workspace.jpg"
+      },
+      "brandCompliance": {
+        "meetsGuidelines": true,
+        "usesApprovedLanguage": true,
+        "britishEnglish": true,
+        "concerns": []
+      }
+    }
+  ]
+}

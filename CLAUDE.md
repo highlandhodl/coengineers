@@ -1,5 +1,8 @@
 ## Active Technologies
 
+- TypeScript 5.x (via Astro 5.1) + Astro, @astrojs/starlight, MDX (005-launch-content-refresh)
+- File-based (MDX content, JSON config, Markdown assets) (005-launch-content-refresh)
+
 - TypeScript 5.x (via Astro 5.1) + Astro, @astrojs/starlight, @supabase/supabase-js, Resend (001-course-restructure)
 - Supabase PostgreSQL (existing schema unchanged), JSON (course-structure.json) (001-course-restructure)
 

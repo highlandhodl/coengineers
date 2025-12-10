@@ -47,13 +47,12 @@ export default defineConfig({
           collapsed: true,
           items: [
             { label: "The Lie I Believed", slug: "reasons/reason-1" },
-            { label: "The Day I Wasted", slug: "reasons/reason-2" },
-            { label: "Built With What It Teaches", slug: "reasons/reason-3" },
-            { label: "What You'll Learn", slug: "reasons/reason-4" },
-            { label: "Who It's For", slug: "reasons/reason-5" },
+            { label: "The Time Wasted", slug: "reasons/reason-2" },
+            { label: "The Technology Is Here", slug: "reasons/reason-3" },
+            { label: "Why You Need To Do This", slug: "reasons/reason-4" },
             {
-              label: "Why It's Different",
-              slug: "reasons/reason-6",
+              label: "What You Will Gain",
+              slug: "reasons/reason-5",
               badge: { text: "🚀", variant: "note" },
             },
           ],
@@ -81,16 +80,16 @@ export default defineConfig({
               slug: "theme-1/lab-2-para-structure",
             },
             {
-              label: "Lab 3: Document Templates",
-              slug: "theme-1/lab-3-document-templates",
+              label: "Lab 3: Folder Structures",
+              slug: "theme-1/lab-3-folder-structures",
             },
             {
-              label: "Lab 4: Metadata Enrichment",
-              slug: "theme-1/lab-4-metadata-enrichment",
+              label: "Lab 4: Document Templates",
+              slug: "theme-1/lab-4-document-templates",
             },
             {
-              label: "Lab 5: Project Memory",
-              slug: "theme-1/lab-5-project-memory",
+              label: "Lab 5: Metadata Enrichment",
+              slug: "theme-1/lab-5-metadata-enrichment",
             },
           ],
         },
@@ -127,20 +126,20 @@ export default defineConfig({
           items: [
             { label: "Overview", slug: "theme-3/overview" },
             {
-              label: "Lab 1: DOCX Creation",
-              slug: "theme-3/lab-1-docx-creation",
+              label: "Lab 1: Brandkit Creation",
+              slug: "theme-3/lab-1-brandkit-creation",
             },
             {
-              label: "Lab 2: XLSX Creation",
-              slug: "theme-3/lab-2-xlsx-creation",
+              label: "Lab 2: DOCX Creation",
+              slug: "theme-3/lab-2-docx-creation",
             },
             {
-              label: "Lab 3: PPTX Creation",
-              slug: "theme-3/lab-3-pptx-creation",
+              label: "Lab 3: XLSX Creation",
+              slug: "theme-3/lab-3-xlsx-creation",
             },
             {
-              label: "Lab 4: Brandkit Creation",
-              slug: "theme-3/lab-4-brandkit-creation",
+              label: "Lab 4: PPTX Creation",
+              slug: "theme-3/lab-4-pptx-creation",
             },
             {
               label: "Lab 5: SOW Creation",
@@ -183,10 +182,6 @@ export default defineConfig({
             { label: "Glossary", slug: "reference/glossary" },
             { label: "FAQ", slug: "reference/faq" },
           ],
-        },
-        {
-          label: "Community",
-          slug: "community",
         },
         {
           label: "Privacy Policy",

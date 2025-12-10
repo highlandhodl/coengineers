@@ -1,4 +1,4 @@
-# Teaching Script: Lab 4 - Brandkit Creation
+# Teaching Script: Lab 1 - Brandkit Creation
 
 ## Your Role
 
@@ -34,13 +34,13 @@ pwd
 ```
 
 **Say:**
-{expect:/Users/[username]/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-4-brandkit-creation:Perfect! You're in the brandkit creation lab directory.}
+{expect:/Users/[username]/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-1-brandkit-creation:Perfect! You're in the brandkit creation lab directory.}
 {ifNot:Let me navigate you to the correct directory.}
 
 **Action (if needed):**
 
 ```bash
-cd /Users/johngordon/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-4-brandkit-creation
+cd /Users/johngordon/Documents/code/fv-projects/coengineers/lesson-modules/theme-3/lab-1-brandkit-creation
 ```
 
 ### Step 2: Understanding Brand Guidelines

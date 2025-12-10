@@ -35,36 +35,36 @@
         },
         {
           "id": "1.3",
-          "title": "Document Templates",
-          "slug": "document-templates",
-          "path": "lesson-modules/theme-1/lab-3-document-templates/CLAUDE.md",
+          "title": "Folder Structures",
+          "slug": "folder-structures",
+          "path": "lesson-modules/theme-1/lab-3-folder-structures/CLAUDE.md",
           "command": "t1.lb3",
-          "description": "Building reusable templates for Obsidian",
-          "estimatedMinutes": 30,
+          "description": "Creating project-specific folder structures for organised knowledge management",
+          "estimatedMinutes": 25,
           "supportingMaterials": [
-            "lesson-modules/theme-1/lab-3-document-templates/template-examples.md"
+            "lesson-modules/theme-1/lab-3-folder-structures/folder-structure-examples.md"
           ]
         },
         {
           "id": "1.4",
-          "title": "Metadata Enrichment",
-          "slug": "metadata-enrichment",
-          "path": "lesson-modules/theme-1/lab-4-metadata-enrichment/CLAUDE.md",
+          "title": "Document Templates",
+          "slug": "document-templates",
+          "path": "lesson-modules/theme-1/lab-4-document-templates/CLAUDE.md",
           "command": "t1.lb4",
-          "description": "Adding standard metadata to your documents",
-          "estimatedMinutes": 25
+          "description": "Building reusable templates for Obsidian",
+          "estimatedMinutes": 30,
+          "supportingMaterials": [
+            "lesson-modules/theme-1/lab-4-document-templates/template-examples.md"
+          ]
         },
         {
           "id": "1.5",
-          "title": "Project Memory",
-          "slug": "project-memory",
-          "path": "lesson-modules/theme-1/lab-5-project-memory/CLAUDE.md",
+          "title": "Metadata Enrichment",
+          "slug": "metadata-enrichment",
+          "path": "lesson-modules/theme-1/lab-5-metadata-enrichment/CLAUDE.md",
           "command": "t1.lb5",
-          "description": "Creating and using CLAUDE.md files for context",
-          "estimatedMinutes": 25,
-          "supportingMaterials": [
-            "lesson-modules/theme-1/lab-5-project-memory/example-claude-md.md"
-          ]
+          "description": "Adding standard metadata to your documents",
+          "estimatedMinutes": 25
         }
       ]
     },
@@ -148,39 +148,51 @@
       "labs": [
         {
           "id": "3.1",
-          "title": "DOCX Creation",
-          "slug": "docx-creation",
-          "path": "lesson-modules/theme-3/lab-1-docx-creation/CLAUDE.md",
+          "title": "Brandkit Creation",
+          "slug": "brandkit-creation",
+          "path": "lesson-modules/theme-3/lab-1-brandkit-creation/CLAUDE.md",
           "command": "t3.lb1",
-          "description": "Creating Word documents with Claude Code's docx skill",
-          "estimatedMinutes": 25
+          "description": "Creating brand guidelines with colours and fonts",
+          "estimatedMinutes": 30,
+          "supportingMaterials": [
+            "lesson-modules/theme-3/lab-1-brandkit-creation/coengineers-brandkit.md"
+          ]
         },
         {
           "id": "3.2",
-          "title": "XLSX Creation",
-          "slug": "xlsx-creation",
-          "path": "lesson-modules/theme-3/lab-2-xlsx-creation/CLAUDE.md",
+          "title": "DOCX Creation",
+          "slug": "docx-creation",
+          "path": "lesson-modules/theme-3/lab-2-docx-creation/CLAUDE.md",
           "command": "t3.lb2",
-          "description": "Creating spreadsheets with Claude Code's xlsx skill",
-          "estimatedMinutes": 25
+          "description": "Creating Word documents with Claude Code's docx skill",
+          "estimatedMinutes": 25,
+          "supportingMaterials": [
+            "lesson-modules/theme-3/lab-2-docx-creation/coengineers-brandkit.md"
+          ]
         },
         {
           "id": "3.3",
-          "title": "PPTX Creation",
-          "slug": "pptx-creation",
-          "path": "lesson-modules/theme-3/lab-3-pptx-creation/CLAUDE.md",
+          "title": "XLSX Creation",
+          "slug": "xlsx-creation",
+          "path": "lesson-modules/theme-3/lab-3-xlsx-creation/CLAUDE.md",
           "command": "t3.lb3",
-          "description": "Creating presentations with Claude Code's pptx skill",
-          "estimatedMinutes": 30
+          "description": "Creating spreadsheets with Claude Code's xlsx skill",
+          "estimatedMinutes": 25,
+          "supportingMaterials": [
+            "lesson-modules/theme-3/lab-3-xlsx-creation/coengineers-brandkit.md"
+          ]
         },
         {
           "id": "3.4",
-          "title": "Brandkit Creation",
-          "slug": "brandkit-creation",
-          "path": "lesson-modules/theme-3/lab-4-brandkit-creation/CLAUDE.md",
+          "title": "PPTX Creation",
+          "slug": "pptx-creation",
+          "path": "lesson-modules/theme-3/lab-4-pptx-creation/CLAUDE.md",
           "command": "t3.lb4",
-          "description": "Creating brand guidelines with Claude Code",
-          "estimatedMinutes": 30
+          "description": "Creating presentations with Claude Code's pptx skill",
+          "estimatedMinutes": 30,
+          "supportingMaterials": [
+            "lesson-modules/theme-3/lab-4-pptx-creation/coengineers-brandkit.md"
+          ]
         },
         {
           "id": "3.5",
@@ -191,7 +203,8 @@
           "description": "Creating Statements of Work with Claude Code",
           "estimatedMinutes": 30,
           "supportingMaterials": [
-            "lesson-modules/theme-3/lab-5-sow-creation/sow-template.md"
+            "lesson-modules/theme-3/lab-5-sow-creation/sow-template.md",
+            "lesson-modules/theme-3/lab-5-sow-creation/coengineers-brandkit.md"
           ]
         }
       ]
@@ -262,37 +275,31 @@
       "id": 1,
       "title": "The Lie I Believed",
       "slug": "reason-1",
-      "description": "Discover why AI isn't just for developers and how anyone can harness Claude Code for productivity."
+      "description": "Why 'I'm not technical' is a story, not a fact — and how I learned that the hard way."
     },
     {
       "id": 2,
-      "title": "The Day I Wasted",
+      "title": "The Time Wasted",
       "slug": "reason-2",
-      "description": "Learn from the mistakes that led to discovering a better way to work with AI tools."
+      "description": "What happens when you dive into AI tools without structure — the day I learned to stop vibing."
     },
     {
       "id": 3,
-      "title": "Built With What It Teaches",
+      "title": "The Technology Is Here",
       "slug": "reason-3",
-      "description": "See how this course was created using the very techniques it teaches."
+      "description": "AI can do everything you need — the question is whether you know how to use it."
     },
     {
       "id": 4,
-      "title": "What You'll Learn",
+      "title": "Why You Need To Do This",
       "slug": "reason-4",
-      "description": "Explore the practical skills you'll gain across 20 hands-on labs."
+      "description": "AI isn't going away. The question is whether you'll adapt or get left behind."
     },
     {
       "id": 5,
-      "title": "Who This Course Is For",
+      "title": "What You Will Gain",
       "slug": "reason-5",
-      "description": "Find out if this course is right for your role and goals."
-    },
-    {
-      "id": 6,
-      "title": "Why This Course Is Different",
-      "slug": "reason-6",
-      "description": "Understand what makes this interactive learning approach unique."
+      "description": "Concrete outcomes from each theme — what you'll actually be able to do."
     }
   ],
   "metadata": {

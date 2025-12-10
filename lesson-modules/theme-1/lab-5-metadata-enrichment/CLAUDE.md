@@ -1,6 +1,4 @@
-# Lab 1.4: Metadata Enrichment
-
-**Teaching Script for Claude Code**
+# Lab 5: Metadata Enrichment
 
 **Teaching Script for Claude Code**
 

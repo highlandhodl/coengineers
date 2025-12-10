@@ -177,7 +177,7 @@ function isValidEmail(email: string): boolean {
  * Validate signup source.
  */
 function isValidSource(source: string): source is SignupSource {
-  return ["website", "homepage", "community-page", "day-page"].includes(source);
+  return ["website", "homepage", "day-page"].includes(source);
 }
 
 /**

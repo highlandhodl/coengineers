@@ -57,7 +57,7 @@ function getWelcomeEmailHtml(unsubscribeUrl: string, siteUrl: string): string {
           <tr>
             <td style="padding: 40px 40px 20px 40px; text-align: center; border-bottom: 3px solid #F97316;">
               <h1 style="margin: 0; font-size: 28px; font-weight: 700; color: #F97316;">CoEngineers</h1>
-              <p style="margin: 8px 0 0 0; font-size: 14px; color: #666;">31 Days of Claude Code</p>
+              <p style="margin: 8px 0 0 0; font-size: 14px; color: #666;">20 Labs Across 4 Themes</p>
             </td>
           </tr>
 
@@ -67,11 +67,11 @@ function getWelcomeEmailHtml(unsubscribeUrl: string, siteUrl: string): string {
               <h2 style="margin: 0 0 20px 0; font-size: 24px; color: #1a1a1a;">You're in! 🎉</h2>
 
               <p style="margin: 0 0 16px 0; font-size: 16px; color: #333;">
-                Thanks for signing up for <strong>31 Days of Claude Code</strong>. You've just taken the first step towards becoming a productivity powerhouse.
+                Thanks for signing up for <strong>CoEngineers</strong>. You've just taken the first step towards becoming a productivity powerhouse.
               </p>
 
               <p style="margin: 0 0 24px 0; font-size: 16px; color: #333;">
-                On <strong>1st January 2026</strong>, you'll receive Day 1's video in your inbox. Until then, here's how to prepare:
+                On <strong>1st January 2026</strong>, you'll receive Lab 1's video in your inbox. Until then, here's how to prepare:
               </p>
 
               <!-- Action Links -->
@@ -83,11 +83,8 @@ function getWelcomeEmailHtml(unsubscribeUrl: string, siteUrl: string): string {
                       <li style="margin-bottom: 8px;">
                         <a href="https://docs.anthropic.com/en/docs/claude-code/getting-started" style="color: #F97316; text-decoration: none;">Install Claude Code</a> – Get set up in 5 minutes
                       </li>
-                      <li style="margin-bottom: 8px;">
-                        <a href="https://linkedin.com/company/coengineers" style="color: #F97316; text-decoration: none;">Follow on LinkedIn</a> – Tips and updates
-                      </li>
                       <li>
-                        <a href="${siteUrl}/community" style="color: #F97316; text-decoration: none;">Join the Community</a> – Coming soon!
+                        <a href="https://linkedin.com/company/coengineers" style="color: #F97316; text-decoration: none;">Follow on LinkedIn</a> – Tips and updates
                       </li>
                     </ul>
                   </td>
