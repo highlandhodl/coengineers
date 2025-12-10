@@ -63,26 +63,26 @@
 
 ### 2.1 Slash Commands (20 commands)
 
-- [ ] T029 [P] [US1] Create slash command `.claude/commands/t1.lb1.md` for First Conversation per reference/example-slash-command.md
-- [ ] T030 [P] [US1] Create slash command `.claude/commands/t1.lb2.md` for PARA Structure
-- [ ] T031 [P] [US1] Create slash command `.claude/commands/t1.lb3.md` for Document Templates
-- [ ] T032 [P] [US1] Create slash command `.claude/commands/t1.lb4.md` for Metadata Enrichment
-- [ ] T033 [P] [US1] Create slash command `.claude/commands/t1.lb5.md` for Project Memory
-- [ ] T034 [P] [US1] Create slash command `.claude/commands/t2.lb1.md` for Meeting Notes
-- [ ] T035 [P] [US1] Create slash command `.claude/commands/t2.lb2.md` for Audio Transcripts
-- [ ] T036 [P] [US1] Create slash command `.claude/commands/t2.lb3.md` for Email Refinement
-- [ ] T037 [P] [US1] Create slash command `.claude/commands/t2.lb4.md` for Research Synthesis
-- [ ] T038 [P] [US1] Create slash command `.claude/commands/t2.lb5.md` for YouTube Extraction
-- [ ] T039 [P] [US1] Create slash command `.claude/commands/t3.lb1.md` for DOCX Creation
-- [ ] T040 [P] [US1] Create slash command `.claude/commands/t3.lb2.md` for XLSX Creation
-- [ ] T041 [P] [US1] Create slash command `.claude/commands/t3.lb3.md` for PPTX Creation
-- [ ] T042 [P] [US1] Create slash command `.claude/commands/t3.lb4.md` for Brandkit Creation
-- [ ] T043 [P] [US1] Create slash command `.claude/commands/t3.lb5.md` for SOW Creation
-- [ ] T044 [P] [US1] Create slash command `.claude/commands/t4.lb1.md` for Gamma Presentations
-- [ ] T045 [P] [US1] Create slash command `.claude/commands/t4.lb2.md` for Gemini Images
-- [ ] T046 [P] [US1] Create slash command `.claude/commands/t4.lb3.md` for ElevenLabs Audio
-- [ ] T047 [P] [US1] Create slash command `.claude/commands/t4.lb4.md` for PRD Creation
-- [ ] T048 [P] [US1] Create slash command `.claude/commands/t4.lb5.md` for Product Backlog
+- [X] T029 [P] [US1] Create slash command `.claude/commands/t1.lb1.md` for First Conversation per reference/example-slash-command.md
+- [X] T030 [P] [US1] Create slash command `.claude/commands/t1.lb2.md` for PARA Structure
+- [X] T031 [P] [US1] Create slash command `.claude/commands/t1.lb3.md` for Document Templates
+- [X] T032 [P] [US1] Create slash command `.claude/commands/t1.lb4.md` for Metadata Enrichment
+- [X] T033 [P] [US1] Create slash command `.claude/commands/t1.lb5.md` for Project Memory
+- [X] T034 [P] [US1] Create slash command `.claude/commands/t2.lb1.md` for Meeting Notes
+- [X] T035 [P] [US1] Create slash command `.claude/commands/t2.lb2.md` for Audio Transcripts
+- [X] T036 [P] [US1] Create slash command `.claude/commands/t2.lb3.md` for Email Refinement
+- [X] T037 [P] [US1] Create slash command `.claude/commands/t2.lb4.md` for Research Synthesis
+- [X] T038 [P] [US1] Create slash command `.claude/commands/t2.lb5.md` for YouTube Extraction
+- [X] T039 [P] [US1] Create slash command `.claude/commands/t3.lb1.md` for DOCX Creation
+- [X] T040 [P] [US1] Create slash command `.claude/commands/t3.lb2.md` for XLSX Creation
+- [X] T041 [P] [US1] Create slash command `.claude/commands/t3.lb3.md` for PPTX Creation
+- [X] T042 [P] [US1] Create slash command `.claude/commands/t3.lb4.md` for Brandkit Creation
+- [X] T043 [P] [US1] Create slash command `.claude/commands/t3.lb5.md` for SOW Creation
+- [X] T044 [P] [US1] Create slash command `.claude/commands/t4.lb1.md` for Gamma Presentations
+- [X] T045 [P] [US1] Create slash command `.claude/commands/t4.lb2.md` for Gemini Images
+- [X] T046 [P] [US1] Create slash command `.claude/commands/t4.lb3.md` for ElevenLabs Audio
+- [X] T047 [P] [US1] Create slash command `.claude/commands/t4.lb4.md` for PRD Creation
+- [X] T048 [P] [US1] Create slash command `.claude/commands/t4.lb5.md` for Product Backlog
 
 **🔖 GIT CHECKPOINT M2**: `git add . && git commit -m "feat(001): Phase 2.1 - All 20 slash commands created"`
 
