@@ -1,4 +1,6 @@
 ## Active Technologies
+- TypeScript 5.x (via Astro 5.1) + Astro, @astrojs/starlight, @supabase/supabase-js, Resend (001-course-restructure)
+- Supabase PostgreSQL (existing schema unchanged), JSON (course-structure.json) (001-course-restructure)
 
 - Node.js 18+, TypeScript 5.x (via Astro) + Astro 5.1, @astrojs/starlight, @supabase/supabase-js, Resend (004-production-release)
 - Supabase PostgreSQL (external service, service role access only) (004-production-release)

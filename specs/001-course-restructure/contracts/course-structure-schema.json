@@ -1,0 +1,199 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://coengineers.ai/schemas/course-structure.json",
+  "title": "CoEngineers Course Structure",
+  "description": "Schema for the theme-based course structure with 4 themes and 20 labs",
+  "type": "object",
+  "required": ["version", "lastUpdated", "structure", "themes", "metadata"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the course structure"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 date of last update"
+    },
+    "structure": {
+      "type": "string",
+      "const": "themes",
+      "description": "Structure type identifier"
+    },
+    "themes": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/definitions/Theme"
+      },
+      "description": "Array of 4 themes"
+    },
+    "reasons": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/definitions/Reason"
+      },
+      "description": "Array of 6 shareable reason pages"
+    },
+    "metadata": {
+      "$ref": "#/definitions/Metadata"
+    }
+  },
+  "definitions": {
+    "Theme": {
+      "type": "object",
+      "required": ["id", "name", "description", "pillar", "labs"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[1-4]$",
+          "description": "Theme identifier (1-4)"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 50,
+          "description": "Display name for navigation"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Brief theme description"
+        },
+        "pillar": {
+          "type": "string",
+          "enum": [
+            "OS Driver (Obsidian)",
+            "LLM Capabilities",
+            "Claude Code Skills",
+            "External Tool Integration"
+          ],
+          "description": "Claude Code capability pillar"
+        },
+        "labs": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/definitions/Lab"
+          },
+          "description": "Array of 5 labs within this theme"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Lab": {
+      "type": "object",
+      "required": ["id", "title", "slug", "path", "command", "description", "estimatedMinutes"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[1-4]\\.[1-5]$",
+          "description": "Lab identifier in format theme.lab (e.g., 2.3)"
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Display title for navigation and headers"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "URL-friendly identifier for routing"
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^lesson-modules/theme-[1-4]/lab-[1-5]-[a-z-]+/CLAUDE\\.md$",
+          "description": "Relative path to CLAUDE.md teaching script"
+        },
+        "command": {
+          "type": "string",
+          "pattern": "^t[1-4]\\.lb[1-5]$",
+          "description": "Slash command in format tN.lbN"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Brief description for overview pages"
+        },
+        "estimatedMinutes": {
+          "type": "integer",
+          "minimum": 15,
+          "maximum": 45,
+          "description": "Expected completion time (target ≤30)"
+        },
+        "supportingMaterials": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\.md$"
+          },
+          "description": "Array of paths to optional supporting files"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Reason": {
+      "type": "object",
+      "required": ["id", "title", "slug", "description"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6,
+          "description": "Reason number (1-6)"
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Compelling title for social sharing"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^reason-[1-6]$",
+          "description": "URL-friendly identifier"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Meta description for social previews"
+        },
+        "shareText": {
+          "type": "string",
+          "maxLength": 280,
+          "description": "Pre-written social media copy (Twitter length)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Metadata": {
+      "type": "object",
+      "required": ["totalLabs", "totalThemes", "targetAudience", "language"],
+      "properties": {
+        "totalLabs": {
+          "type": "integer",
+          "const": 20,
+          "description": "Total number of labs (always 20)"
+        },
+        "totalThemes": {
+          "type": "integer",
+          "const": 4,
+          "description": "Total number of themes (always 4)"
+        },
+        "targetAudience": {
+          "type": "string",
+          "description": "Description of target learner audience"
+        },
+        "language": {
+          "type": "string",
+          "const": "en-GB",
+          "description": "Content language (British English)"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

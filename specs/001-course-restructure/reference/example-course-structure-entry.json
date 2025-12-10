@@ -1,0 +1,86 @@
+{
+  "_comment": "Example course-structure.json entry for a single lab",
+  "_note": "This shows the structure for the new theme/lab format",
+
+  "themes": [
+    {
+      "id": "2",
+      "name": "Content Processing",
+      "description": "Transform raw content into structured Obsidian notes",
+      "theme": "Input to insight",
+      "labs": [
+        {
+          "id": "2.1",
+          "title": "Meeting Notes to Obsidian",
+          "slug": "meeting-notes-obsidian",
+          "path": "lesson-modules/theme-2/lab-1-meeting-notes/CLAUDE.md",
+          "command": "t2.lb1",
+          "description": "Creating structured Obsidian notes from meeting transcripts",
+          "estimatedMinutes": 25,
+          "supportingMaterials": [
+            "lesson-modules/theme-2/lab-1-meeting-notes/meeting-transcript-sample.md"
+          ]
+        },
+        {
+          "id": "2.2",
+          "title": "Audio to Obsidian",
+          "slug": "audio-obsidian",
+          "path": "lesson-modules/theme-2/lab-2-audio-notes/CLAUDE.md",
+          "command": "t2.lb2",
+          "description": "Creating structured Obsidian notes from audio transcripts",
+          "estimatedMinutes": 25,
+          "supportingMaterials": [
+            "lesson-modules/theme-2/lab-2-audio-notes/voice-memo-transcript.md"
+          ]
+        },
+        {
+          "id": "2.3",
+          "title": "Email to Obsidian",
+          "slug": "email-obsidian",
+          "path": "lesson-modules/theme-2/lab-3-email-notes/CLAUDE.md",
+          "command": "t2.lb3",
+          "description": "Refining email collections into structured Obsidian notes",
+          "estimatedMinutes": 25,
+          "supportingMaterials": [
+            "lesson-modules/theme-2/lab-3-email-notes/email-thread-sample.md"
+          ]
+        },
+        {
+          "id": "2.4",
+          "title": "Research to Obsidian",
+          "slug": "research-obsidian",
+          "path": "lesson-modules/theme-2/lab-4-research-notes/CLAUDE.md",
+          "command": "t2.lb4",
+          "description": "Refining research into structured Obsidian notes",
+          "estimatedMinutes": 30,
+          "supportingMaterials": [
+            "lesson-modules/theme-2/lab-4-research-notes/research-dump-sample.md"
+          ]
+        },
+        {
+          "id": "2.5",
+          "title": "YouTube to Obsidian",
+          "slug": "youtube-obsidian",
+          "path": "lesson-modules/theme-2/lab-5-youtube-notes/CLAUDE.md",
+          "command": "t2.lb5",
+          "description": "Taking YouTube content and refining it into structured Obsidian notes",
+          "estimatedMinutes": 30,
+          "supportingMaterials": [
+            "lesson-modules/theme-2/lab-5-youtube-notes/youtube-transcript-sample.md"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "_keyFields": {
+    "id": "Theme.Lab format (e.g., '2.3' = Theme 2, Lab 3)",
+    "title": "Human-readable lab title",
+    "slug": "URL-friendly identifier for navigation",
+    "path": "Path to CLAUDE.md teaching script",
+    "command": "Slash command pattern: t{theme}.lb{lab}",
+    "description": "Brief description for navigation and overview",
+    "estimatedMinutes": "Expected completion time",
+    "supportingMaterials": "Optional array of supporting file paths"
+  }
+}

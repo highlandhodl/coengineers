@@ -106,24 +106,24 @@ Read the file @meeting-notes-raw.md and summarise the key action items.
 
 When you encounter variables in curly braces, resolve them from `course-structure.json`:
 
-| Variable             | Description          | Resolution                                    |
-| -------------------- | -------------------- | --------------------------------------------- |
-| `{labId}`            | Current lab ID       | From course-structure.json based on command   |
-| `{labTitle}`         | Current lab title    | From course-structure.json                    |
-| `{themeId}`          | Current theme ID     | From course-structure.json                    |
-| `{themeName}`        | Current theme name   | From course-structure.json                    |
-| `{nextLabId}`        | Next lab ID          | Next lab in course-structure.json sequence    |
-| `{nextLabTitle}`     | Next lab title       | Next lab's title                              |
-| `{nextCommand}`      | Next slash command   | Next lab's command value                      |
-| `{prevLabId}`        | Previous lab ID      | Previous lab in sequence                      |
-| `{prevLabTitle}`     | Previous lab title   | Previous lab's title                          |
-| `{estimatedMinutes}` | Lesson duration      | From course-structure.json                    |
+| Variable             | Description        | Resolution                                  |
+| -------------------- | ------------------ | ------------------------------------------- |
+| `{dayId)}            | Current day ID     | From course-structure.json based on command |
+| `{dayTitle}`         | Current day title  | From course-structure.json                  |
+| `{weekId}`           | Current week ID    | From course-structure.json                  |
+| `{weekName}`         | Current week name  | From course-structure.json                  |
+| `{nextDayId}`        | Next day ID        | Next day in course-structure.json sequence  |
+| `{nextDayTitle}`     | Next day title     | Next day's title                            |
+| `{nextCommand}`      | Next slash command | Next day's command value                    |
+| `{prevDayId}`        | Previous day ID    | Previous day in sequence                    |
+| `{prevDayTitle}`     | Previous day title | Previous day's title                        |
+| `{estimatedMinutes}` | Lesson duration    | From course-structure.json                  |
 
 ### Resolution Process
 
-1. When loading a teaching script, first identify the current lab from the command name
-2. Look up the lab in course-structure.json
-3. Calculate next/previous labs by position in the themes array
+1. When loading a teaching script, first identify the current day from the command name
+2. Look up the day in course-structure.json
+3. Calculate next/previous days by position in the weeks array
 4. Replace all variable placeholders before presenting content
 
 ---
@@ -137,22 +137,22 @@ Position-aware content uses conditional wrappers:
 ```markdown
 {ifFirstInCourse:Welcome to your very first lesson!}
 {ifNotFirstInCourse:Welcome back!}
-{ifFirstInTheme:This is the start of a new theme - exciting!}
-{ifLastInTheme:You've completed another theme - brilliant work!}
+{ifFirstInWeek:This is the start of a new week - exciting!}
+{ifLastInWeek:You've completed another week - brilliant work!}
 {ifLastInCourse:Congratulations! You've completed the entire course!}
-{ifNotLastInCourse:Ready for more? Your next lesson is {nextLabTitle}.}
+{ifNotLastInCourse:Ready for more? Your next lesson is {nextDayTitle}.}
 ```
 
 ### Evaluation Rules
 
-| Conditional                 | True When                               |
-| --------------------------- | --------------------------------------- |
-| `{ifFirstInCourse:...}`     | Lab ID is "1.1"                         |
-| `{ifNotFirstInCourse:...}`  | Lab ID is NOT "1.1"                     |
-| `{ifFirstInTheme:...}`      | Lab is first in its theme's labs array  |
-| `{ifLastInTheme:...}`       | Lab is last in its theme's labs array   |
-| `{ifLastInCourse:...}`      | Lab ID is "4.5"                         |
-| `{ifNotLastInCourse:...}`   | Lab ID is NOT "4.5"                     |
+| Conditional                | True When                             |
+| -------------------------- | ------------------------------------- |
+| `{ifFirstInCourse:...}`    | Day ID is "1.1"                       |
+| `{ifNotFirstInCourse:...}` | Day ID is NOT "1.1"                   |
+| `{ifFirstInWeek:...}`      | Day is first in its week's days array |
+| `{ifLastInWeek:...}`       | Day is last in its week's days array  |
+| `{ifLastInCourse:...}`     | Day is "bonus.31"                     |
+| `{ifNotLastInCourse:...}`  | Day is NOT "bonus.31"                 |
 
 ### Processing
 
@@ -174,7 +174,7 @@ When a script mentions `@filename.md`, this refers to a file in the same lesson 
 Read @meeting-notes-raw.md and identify the key decisions made.
 ```
 
-**Resolution:** If current lesson is `lesson-modules/theme-2/lab-1-meeting-notes/`, then `@meeting-notes-raw.md` resolves to `lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-raw.md`.
+**Resolution:** If current lesson is `lesson-modules/week-2/day-8-meeting-tamer/`, then `@meeting-notes-raw.md` resolves to `lesson-modules/week-2/day-8-meeting-tamer/meeting-notes-raw.md`.
 
 ### File Format
 
@@ -272,16 +272,16 @@ At the end of each teaching script, there's a "Success Criteria" section. Use th
 Always end with the navigation prompt (resolved from variables):
 
 ```markdown
-{ifNotLastInCourse:Ready for more? Type `/{nextCommand}` to start {nextLabTitle}.}
+{ifNotLastInCourse:Ready for more? Type `/{nextCommand}` to start {nextDayTitle}.}
 {ifLastInCourse:That's a wrap on the entire course! You've done brilliantly.}
 ```
 
-### Theme Transitions
+### Week Transitions
 
-When ending a theme (lab 5 of any theme):
+When ending a week (day 7, 14, 21, 28):
 
 ```markdown
-{ifLastInTheme:That's Theme {themeId} complete! Take a well-deserved break. When you're ready, Theme {nextThemeId} awaits.}
+{ifLastInWeek:That's Week {weekId} complete! Take a well-deserved break. When you're ready, Week {nextWeekId} awaits.}
 ```
 
 ---

@@ -1,395 +1,304 @@
 {
-  "version": "1.0.0",
-  "lastUpdated": "2025-12-09",
-  "weeks": [
+  "version": "2.0.0",
+  "lastUpdated": "2025-12-10",
+  "structure": "themes",
+  "themes": [
     {
       "id": "1",
-      "name": "Foundations",
-      "description": "Core Claude Code mechanics and setup",
-      "theme": "Getting started with confidence",
-      "days": [
+      "name": "Building Your Digital Workspace",
+      "description": "Set up Obsidian with PARA, templates, and Claude Code memory",
+      "pillar": "OS Driver (Obsidian)",
+      "labs": [
         {
           "id": "1.1",
           "title": "First Conversation",
           "slug": "first-conversation",
-          "path": "lesson-modules/week-1/day-1-first-conversation/CLAUDE.md",
-          "command": "w1.d1",
+          "path": "lesson-modules/theme-1/lab-1-first-conversation/CLAUDE.md",
+          "command": "t1.lb1",
           "description": "Your first interaction with Claude Code",
           "estimatedMinutes": 20,
           "supportingMaterials": [
-            "lesson-modules/week-1/day-1-first-conversation/learning-log-template.md"
+            "lesson-modules/theme-1/lab-1-first-conversation/learning-log-template.md"
           ]
         },
         {
           "id": "1.2",
-          "title": "Your Digital Home",
-          "slug": "your-digital-home",
-          "path": "lesson-modules/week-1/day-2-your-digital-home/CLAUDE.md",
-          "command": "w1.d2",
-          "description": "Setting up your Claude Code workspace",
+          "title": "PARA Structure",
+          "slug": "para-structure",
+          "path": "lesson-modules/theme-1/lab-2-para-structure/CLAUDE.md",
+          "command": "t1.lb2",
+          "description": "Creating a reusable folder structure for Obsidian",
           "estimatedMinutes": 25,
           "supportingMaterials": [
-            "lesson-modules/week-1/day-2-your-digital-home/project-scaffold-example.md"
+            "lesson-modules/theme-1/lab-2-para-structure/para-template.md"
           ]
         },
         {
           "id": "1.3",
-          "title": "Project Memory",
-          "slug": "project-memory",
-          "path": "lesson-modules/week-1/day-3-project-memory/CLAUDE.md",
-          "command": "w1.d3",
-          "description": "Creating and using CLAUDE.md files",
-          "estimatedMinutes": 25,
-          "supportingMaterials": ["lesson-modules/week-1/day-3-project-memory/example-claude-md.md"]
+          "title": "Document Templates",
+          "slug": "document-templates",
+          "path": "lesson-modules/theme-1/lab-3-document-templates/CLAUDE.md",
+          "command": "t1.lb3",
+          "description": "Building reusable templates for Obsidian",
+          "estimatedMinutes": 30,
+          "supportingMaterials": [
+            "lesson-modules/theme-1/lab-3-document-templates/template-examples.md"
+          ]
         },
         {
           "id": "1.4",
-          "title": "Template Factory",
-          "slug": "template-factory",
-          "path": "lesson-modules/week-1/day-4-template-factory/CLAUDE.md",
-          "command": "w1.d4",
-          "description": "Building reusable templates",
-          "estimatedMinutes": 30,
-          "supportingMaterials": ["lesson-modules/week-1/day-4-template-factory/template-examples/"]
+          "title": "Metadata Enrichment",
+          "slug": "metadata-enrichment",
+          "path": "lesson-modules/theme-1/lab-4-metadata-enrichment/CLAUDE.md",
+          "command": "t1.lb4",
+          "description": "Adding standard metadata to your documents",
+          "estimatedMinutes": 25
         },
         {
           "id": "1.5",
-          "title": "The Daily Note",
-          "slug": "the-daily-note",
-          "path": "lesson-modules/week-1/day-5-the-daily-note/CLAUDE.md",
-          "command": "w1.d5",
-          "description": "Automating daily documentation",
+          "title": "Project Memory",
+          "slug": "project-memory",
+          "path": "lesson-modules/theme-1/lab-5-project-memory/CLAUDE.md",
+          "command": "t1.lb5",
+          "description": "Creating and using CLAUDE.md files for context",
           "estimatedMinutes": 25,
           "supportingMaterials": [
-            "lesson-modules/week-1/day-5-the-daily-note/daily-note-template.md"
+            "lesson-modules/theme-1/lab-5-project-memory/example-claude-md.md"
           ]
-        },
-        {
-          "id": "1.6",
-          "title": "Your First Slash Command",
-          "slug": "your-first-slash-command",
-          "path": "lesson-modules/week-1/day-6-your-first-slash-command/CLAUDE.md",
-          "command": "w1.d6",
-          "description": "Creating custom commands",
-          "estimatedMinutes": 30,
-          "supportingMaterials": [
-            "lesson-modules/week-1/day-6-your-first-slash-command/example-slash-command.md"
-          ]
-        },
-        {
-          "id": "1.7",
-          "title": "Week 1 Review",
-          "slug": "week-1-review",
-          "path": "lesson-modules/week-1/day-7-week-1-review/CLAUDE.md",
-          "command": "w1.d7",
-          "description": "Consolidating your foundation skills",
-          "estimatedMinutes": 20
         }
       ]
     },
     {
       "id": "2",
       "name": "Content Processing",
-      "description": "Transform raw content into polished outputs",
-      "theme": "Input to insight",
-      "days": [
+      "description": "Transform raw content into structured Obsidian notes",
+      "pillar": "LLM Capabilities",
+      "labs": [
         {
-          "id": "2.8",
-          "title": "Meeting Tamer",
-          "slug": "meeting-tamer",
-          "path": "lesson-modules/week-2/day-8-meeting-tamer/CLAUDE.md",
-          "command": "w2.d8",
-          "description": "Processing meeting notes into action items",
-          "estimatedMinutes": 30,
-          "supportingMaterials": [
-            "lesson-modules/week-2/day-8-meeting-tamer/meeting-notes-raw-1.md",
-            "lesson-modules/week-2/day-8-meeting-tamer/meeting-notes-raw-2.md",
-            "lesson-modules/week-2/day-8-meeting-tamer/meeting-notes-raw-3.md"
-          ]
-        },
-        {
-          "id": "2.9",
-          "title": "Voice to Text",
-          "slug": "voice-to-text",
-          "path": "lesson-modules/week-2/day-9-voice-to-text/CLAUDE.md",
-          "command": "w2.d9",
-          "description": "Cleaning up voice transcriptions",
+          "id": "2.1",
+          "title": "Meeting Notes to Obsidian",
+          "slug": "meeting-notes",
+          "path": "lesson-modules/theme-2/lab-1-meeting-notes/CLAUDE.md",
+          "command": "t2.lb1",
+          "description": "Creating structured Obsidian notes from meeting transcripts",
           "estimatedMinutes": 25,
           "supportingMaterials": [
-            "lesson-modules/week-2/day-9-voice-to-text/voice-memo-transcript-1.md",
-            "lesson-modules/week-2/day-9-voice-to-text/voice-memo-transcript-2.md"
+            "lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-raw-1.md",
+            "lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-raw-2.md",
+            "lesson-modules/theme-2/lab-1-meeting-notes/meeting-notes-raw-3.md"
           ]
         },
         {
-          "id": "2.10",
-          "title": "YouTube Brain",
-          "slug": "youtube-brain",
-          "path": "lesson-modules/week-2/day-10-youtube-brain/CLAUDE.md",
-          "command": "w2.d10",
-          "description": "Extracting insights from video content",
-          "estimatedMinutes": 30,
-          "supportingMaterials": [
-            "lesson-modules/week-2/day-10-youtube-brain/youtube-transcript-sample.md"
-          ]
-        },
-        {
-          "id": "2.11",
-          "title": "PDF Crusher",
-          "slug": "pdf-crusher",
-          "path": "lesson-modules/week-2/day-11-pdf-crusher/CLAUDE.md",
-          "command": "w2.d11",
-          "description": "Processing and summarising documents",
-          "estimatedMinutes": 30,
-          "supportingMaterials": ["lesson-modules/week-2/day-11-pdf-crusher/sample-report.md"]
-        },
-        {
-          "id": "2.12",
-          "title": "Web Archiver",
-          "slug": "web-archiver",
-          "path": "lesson-modules/week-2/day-12-web-archiver/CLAUDE.md",
-          "command": "w2.d12",
-          "description": "Capturing and organising web content",
+          "id": "2.2",
+          "title": "Audio Transcripts to Obsidian",
+          "slug": "audio-transcripts",
+          "path": "lesson-modules/theme-2/lab-2-audio-transcripts/CLAUDE.md",
+          "command": "t2.lb2",
+          "description": "Converting voice memo transcripts into structured notes",
           "estimatedMinutes": 25,
           "supportingMaterials": [
-            "lesson-modules/week-2/day-12-web-archiver/web-page-content-sample.md"
+            "lesson-modules/theme-2/lab-2-audio-transcripts/voice-memo-transcript-1.md",
+            "lesson-modules/theme-2/lab-2-audio-transcripts/voice-memo-transcript-2.md"
           ]
         },
         {
-          "id": "2.13",
-          "title": "Email Processor",
-          "slug": "email-processor",
-          "path": "lesson-modules/week-2/day-13-email-processor/CLAUDE.md",
-          "command": "w2.d13",
-          "description": "Managing and processing email threads",
+          "id": "2.3",
+          "title": "Email Refinement to Obsidian",
+          "slug": "email-refinement",
+          "path": "lesson-modules/theme-2/lab-3-email-refinement/CLAUDE.md",
+          "command": "t2.lb3",
+          "description": "Refining email threads into structured Obsidian notes",
+          "estimatedMinutes": 25,
+          "supportingMaterials": [
+            "lesson-modules/theme-2/lab-3-email-refinement/email-thread-sample.md",
+            "lesson-modules/theme-2/lab-3-email-refinement/email-dump-sample.md"
+          ]
+        },
+        {
+          "id": "2.4",
+          "title": "Research Synthesis to Obsidian",
+          "slug": "research-synthesis",
+          "path": "lesson-modules/theme-2/lab-4-research-synthesis/CLAUDE.md",
+          "command": "t2.lb4",
+          "description": "Synthesising research into structured Obsidian notes",
           "estimatedMinutes": 30,
           "supportingMaterials": [
-            "lesson-modules/week-2/day-13-email-processor/email-thread-sample.md",
-            "lesson-modules/week-2/day-13-email-processor/email-dump-sample.md"
+            "lesson-modules/theme-2/lab-4-research-synthesis/research-dump-sample.md"
           ]
         },
         {
-          "id": "2.14",
-          "title": "Week 2 Review",
-          "slug": "week-2-review",
-          "path": "lesson-modules/week-2/day-14-week-2-review/CLAUDE.md",
-          "command": "w2.d14",
-          "description": "Mastering content processing workflows",
-          "estimatedMinutes": 20
+          "id": "2.5",
+          "title": "YouTube Extraction to Obsidian",
+          "slug": "youtube-extraction",
+          "path": "lesson-modules/theme-2/lab-5-youtube-extraction/CLAUDE.md",
+          "command": "t2.lb5",
+          "description": "Extracting insights from YouTube videos into Obsidian notes",
+          "estimatedMinutes": 30,
+          "supportingMaterials": [
+            "lesson-modules/theme-2/lab-5-youtube-extraction/youtube-transcript-sample.md"
+          ]
         }
       ]
     },
     {
       "id": "3",
-      "name": "Creative Outputs",
-      "description": "Generate professional creative content",
-      "theme": "From brief to brilliant",
-      "days": [
+      "name": "Document Creation",
+      "description": "Create professional documents using Claude Code skills",
+      "pillar": "Claude Code Skills",
+      "labs": [
         {
-          "id": "3.15",
-          "title": "Presentation Builder",
-          "slug": "presentation-builder",
-          "path": "lesson-modules/week-3/day-15-presentation-builder/CLAUDE.md",
-          "command": "w3.d15",
-          "description": "Creating presentation outlines and content",
-          "estimatedMinutes": 35,
-          "supportingMaterials": [
-            "lesson-modules/week-3/day-15-presentation-builder/presentation-brief.md",
-            "lesson-modules/week-3/day-15-presentation-builder/presentation-content-notes.md"
-          ]
+          "id": "3.1",
+          "title": "DOCX Creation",
+          "slug": "docx-creation",
+          "path": "lesson-modules/theme-3/lab-1-docx-creation/CLAUDE.md",
+          "command": "t3.lb1",
+          "description": "Creating Word documents with Claude Code's docx skill",
+          "estimatedMinutes": 25
         },
         {
-          "id": "3.16",
-          "title": "Image Prompter",
-          "slug": "image-prompter",
-          "path": "lesson-modules/week-3/day-16-image-prompter/CLAUDE.md",
-          "command": "w3.d16",
-          "description": "Crafting effective image generation prompts",
-          "estimatedMinutes": 30,
-          "supportingMaterials": ["lesson-modules/week-3/day-16-image-prompter/image-brief.md"]
+          "id": "3.2",
+          "title": "XLSX Creation",
+          "slug": "xlsx-creation",
+          "path": "lesson-modules/theme-3/lab-2-xlsx-creation/CLAUDE.md",
+          "command": "t3.lb2",
+          "description": "Creating spreadsheets with Claude Code's xlsx skill",
+          "estimatedMinutes": 25
         },
         {
-          "id": "3.17",
-          "title": "Audio Script Writer",
-          "slug": "audio-script-writer",
-          "path": "lesson-modules/week-3/day-17-audio-script-writer/CLAUDE.md",
-          "command": "w3.d17",
-          "description": "Writing scripts for podcasts and videos",
-          "estimatedMinutes": 35,
-          "supportingMaterials": ["lesson-modules/week-3/day-17-audio-script-writer/audio-brief.md"]
+          "id": "3.3",
+          "title": "PPTX Creation",
+          "slug": "pptx-creation",
+          "path": "lesson-modules/theme-3/lab-3-pptx-creation/CLAUDE.md",
+          "command": "t3.lb3",
+          "description": "Creating presentations with Claude Code's pptx skill",
+          "estimatedMinutes": 30
         },
         {
-          "id": "3.18",
-          "title": "Diagram Generator",
-          "slug": "diagram-generator",
-          "path": "lesson-modules/week-3/day-18-diagram-generator/CLAUDE.md",
-          "command": "w3.d18",
-          "description": "Creating diagrams with Mermaid syntax",
-          "estimatedMinutes": 30,
-          "supportingMaterials": [
-            "lesson-modules/week-3/day-18-diagram-generator/diagram-requirements.md"
-          ]
+          "id": "3.4",
+          "title": "Brandkit Creation",
+          "slug": "brandkit-creation",
+          "path": "lesson-modules/theme-3/lab-4-brandkit-creation/CLAUDE.md",
+          "command": "t3.lb4",
+          "description": "Creating brand guidelines with Claude Code",
+          "estimatedMinutes": 30
         },
         {
-          "id": "3.19",
-          "title": "Social Thread Maker",
-          "slug": "social-thread-maker",
-          "path": "lesson-modules/week-3/day-19-social-thread-maker/CLAUDE.md",
-          "command": "w3.d19",
-          "description": "Crafting engaging social media content",
-          "estimatedMinutes": 25,
-          "supportingMaterials": [
-            "lesson-modules/week-3/day-19-social-thread-maker/social-content-brief.md"
-          ]
-        },
-        {
-          "id": "3.20",
-          "title": "Video Brief Creator",
-          "slug": "video-brief-creator",
-          "path": "lesson-modules/week-3/day-20-video-brief-creator/CLAUDE.md",
-          "command": "w3.d20",
-          "description": "Planning video content and shot lists",
+          "id": "3.5",
+          "title": "SOW Creation",
+          "slug": "sow-creation",
+          "path": "lesson-modules/theme-3/lab-5-sow-creation/CLAUDE.md",
+          "command": "t3.lb5",
+          "description": "Creating Statements of Work with Claude Code",
           "estimatedMinutes": 30,
           "supportingMaterials": [
-            "lesson-modules/week-3/day-20-video-brief-creator/video-concept-notes.md"
+            "lesson-modules/theme-3/lab-5-sow-creation/sow-template.md"
           ]
-        },
-        {
-          "id": "3.21",
-          "title": "Week 3 Review",
-          "slug": "week-3-review",
-          "path": "lesson-modules/week-3/day-21-week-3-review/CLAUDE.md",
-          "command": "w3.d21",
-          "description": "Creative outputs mastery check",
-          "estimatedMinutes": 20
         }
       ]
     },
     {
       "id": "4",
-      "name": "Building Software",
-      "description": "From product idea to shipped feature",
-      "theme": "Spec-driven development",
-      "days": [
+      "name": "External API Integrations",
+      "description": "Extend your workflows with external tools and APIs",
+      "pillar": "External Tool Integration",
+      "labs": [
         {
-          "id": "4.22",
-          "title": "The Product Idea",
-          "slug": "the-product-idea",
-          "path": "lesson-modules/week-4/day-22-the-product-idea/CLAUDE.md",
-          "command": "w4.d22",
-          "description": "Creating a Product Requirements Prompt",
-          "estimatedMinutes": 40,
-          "supportingMaterials": [
-            "lesson-modules/week-4/day-22-the-product-idea/prp-template.md",
-            "lesson-modules/week-4/day-22-the-product-idea/example-prp-filled.md"
-          ]
+          "id": "4.1",
+          "title": "Gamma Presentations",
+          "slug": "gamma-presentations",
+          "path": "lesson-modules/theme-4/lab-1-gamma-presentations/CLAUDE.md",
+          "command": "t4.lb1",
+          "description": "Creating presentations using the Gamma API",
+          "estimatedMinutes": 30
         },
         {
-          "id": "4.23",
-          "title": "The Product Backlog",
-          "slug": "the-product-backlog",
-          "path": "lesson-modules/week-4/day-23-the-product-backlog/CLAUDE.md",
-          "command": "w4.d23",
-          "description": "Building a prioritised backlog",
-          "estimatedMinutes": 35,
-          "supportingMaterials": [
-            "lesson-modules/week-4/day-23-the-product-backlog/backlog-template.md"
-          ]
+          "id": "4.2",
+          "title": "Gemini Images",
+          "slug": "gemini-images",
+          "path": "lesson-modules/theme-4/lab-2-gemini-images/CLAUDE.md",
+          "command": "t4.lb2",
+          "description": "Generating images using the Gemini API",
+          "estimatedMinutes": 30
         },
         {
-          "id": "4.24",
-          "title": "The User Story",
-          "slug": "the-user-story",
-          "path": "lesson-modules/week-4/day-24-the-user-story/CLAUDE.md",
-          "command": "w4.d24",
-          "description": "Writing detailed user stories",
-          "estimatedMinutes": 35,
-          "supportingMaterials": [
-            "lesson-modules/week-4/day-24-the-user-story/user-story-template.md"
-          ]
+          "id": "4.3",
+          "title": "ElevenLabs Audio",
+          "slug": "elevenlabs-audio",
+          "path": "lesson-modules/theme-4/lab-3-elevenlabs-audio/CLAUDE.md",
+          "command": "t4.lb3",
+          "description": "Creating audio with the ElevenLabs API",
+          "estimatedMinutes": 30
         },
         {
-          "id": "4.25",
-          "title": "Code the Story",
-          "slug": "code-the-story",
-          "path": "lesson-modules/week-4/day-25-code-the-story/CLAUDE.md",
-          "command": "w4.d25",
-          "description": "Implementing with Claude Code",
-          "estimatedMinutes": 45,
-          "supportingMaterials": ["lesson-modules/week-4/day-25-code-the-story/coding-guidance.md"]
-        },
-        {
-          "id": "4.26",
-          "title": "Test the Story",
-          "slug": "test-the-story",
-          "path": "lesson-modules/week-4/day-26-test-the-story/CLAUDE.md",
-          "command": "w4.d26",
-          "description": "Verification and quality assurance",
-          "estimatedMinutes": 35,
-          "supportingMaterials": ["lesson-modules/week-4/day-26-test-the-story/test-template.md"]
-        },
-        {
-          "id": "4.27",
-          "title": "Document the Story",
-          "slug": "document-the-story",
-          "path": "lesson-modules/week-4/day-27-document-the-story/CLAUDE.md",
-          "command": "w4.d27",
-          "description": "Creating comprehensive documentation",
+          "id": "4.4",
+          "title": "PRD Creation",
+          "slug": "prd-creation",
+          "path": "lesson-modules/theme-4/lab-4-prd-creation/CLAUDE.md",
+          "command": "t4.lb4",
+          "description": "Creating Product Requirements Documents",
           "estimatedMinutes": 30,
           "supportingMaterials": [
-            "lesson-modules/week-4/day-27-document-the-story/readme-template.md"
+            "lesson-modules/theme-4/lab-4-prd-creation/prp-template.md",
+            "lesson-modules/theme-4/lab-4-prd-creation/example-prp-filled.md"
           ]
         },
         {
-          "id": "4.28",
-          "title": "Ship It!",
-          "slug": "ship-it",
-          "path": "lesson-modules/week-4/day-28-ship-it/CLAUDE.md",
-          "command": "w4.d28",
-          "description": "Deployment and retrospective",
-          "estimatedMinutes": 35,
-          "supportingMaterials": ["lesson-modules/week-4/day-28-ship-it/deployment-checklist.md"]
-        }
-      ]
-    },
-    {
-      "id": "bonus",
-      "name": "Bonus: Advanced Topics",
-      "description": "Advanced methodologies and capstone project",
-      "theme": "Level up",
-      "days": [
-        {
-          "id": "bonus.29",
-          "title": "BMAD Method",
-          "slug": "bmad-method",
-          "path": "lesson-modules/bonus/day-29-bmad-method/CLAUDE.md",
-          "command": "bonus.d29",
-          "description": "Brief, Map, Analyse, Deliver workflow",
-          "estimatedMinutes": 40,
-          "supportingMaterials": ["lesson-modules/bonus/day-29-bmad-method/bmad-template.md"]
-        },
-        {
-          "id": "bonus.30",
-          "title": "PRP Framework",
-          "slug": "prp-framework",
-          "path": "lesson-modules/bonus/day-30-prp-framework/CLAUDE.md",
-          "command": "bonus.d30",
-          "description": "Advanced Product Requirements Prompts",
-          "estimatedMinutes": 40,
+          "id": "4.5",
+          "title": "Product Backlog",
+          "slug": "product-backlog",
+          "path": "lesson-modules/theme-4/lab-5-product-backlog/CLAUDE.md",
+          "command": "t4.lb5",
+          "description": "Building a prioritised product backlog",
+          "estimatedMinutes": 30,
           "supportingMaterials": [
-            "lesson-modules/bonus/day-30-prp-framework/advanced-prp-template.md"
+            "lesson-modules/theme-4/lab-5-product-backlog/backlog-template.md"
           ]
-        },
-        {
-          "id": "bonus.31",
-          "title": "Ship It! Capstone",
-          "slug": "ship-it-capstone",
-          "path": "lesson-modules/bonus/day-31-ship-it/CLAUDE.md",
-          "command": "bonus.d31",
-          "description": "Build and ship your own project",
-          "estimatedMinutes": 60,
-          "supportingMaterials": ["lesson-modules/bonus/day-31-ship-it/capstone-project-brief.md"]
         }
       ]
     }
-  ]
+  ],
+  "reasons": [
+    {
+      "id": 1,
+      "title": "The Lie I Believed",
+      "slug": "reason-1",
+      "description": "Discover why AI isn't just for developers and how anyone can harness Claude Code for productivity."
+    },
+    {
+      "id": 2,
+      "title": "The Day I Wasted",
+      "slug": "reason-2",
+      "description": "Learn from the mistakes that led to discovering a better way to work with AI tools."
+    },
+    {
+      "id": 3,
+      "title": "Built With What It Teaches",
+      "slug": "reason-3",
+      "description": "See how this course was created using the very techniques it teaches."
+    },
+    {
+      "id": 4,
+      "title": "What You'll Learn",
+      "slug": "reason-4",
+      "description": "Explore the practical skills you'll gain across 20 hands-on labs."
+    },
+    {
+      "id": 5,
+      "title": "Who This Course Is For",
+      "slug": "reason-5",
+      "description": "Find out if this course is right for your role and goals."
+    },
+    {
+      "id": 6,
+      "title": "Why This Course Is Different",
+      "slug": "reason-6",
+      "description": "Understand what makes this interactive learning approach unique."
+    }
+  ],
+  "metadata": {
+    "totalLabs": 20,
+    "totalThemes": 4,
+    "targetAudience": "Product managers, content creators, knowledge workers",
+    "language": "en-GB"
+  }
 }
