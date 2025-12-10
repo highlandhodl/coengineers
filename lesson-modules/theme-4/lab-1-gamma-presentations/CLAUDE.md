@@ -78,6 +78,15 @@ The Gamma API lets you do this programmatically - meaning you can take content f
 
 **Here's the workflow we'll build:**
 
+```mermaid
+flowchart LR
+    A[Obsidian Note] --> B[Extract Content]
+    B --> C[Format with --- breaks]
+    C --> D[Send to Gamma API]
+    D --> E[Presentation URL]
+    E --> F[View & Edit in Gamma]
+```
+
 1. **Extract content** from an Obsidian note (your meeting notes, project outline, etc.)
 2. **Format it** as structured text with slide breaks
 3. **Send it** to Gamma API with your preferences (theme, style, image generation)

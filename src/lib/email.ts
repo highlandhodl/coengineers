@@ -71,20 +71,57 @@ function getWelcomeEmailHtml(unsubscribeUrl: string, siteUrl: string): string {
               </p>
 
               <p style="margin: 0 0 24px 0; font-size: 16px; color: #333;">
-                On <strong>1st January 2026</strong>, you'll receive Lab 1's video in your inbox. Until then, here's how to prepare:
+                When you're ready to start, everything you need is waiting. Here's how to prepare:
               </p>
 
-              <!-- Action Links -->
-              <table role="presentation" style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+              <!-- Prerequisites -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
                 <tr>
                   <td style="padding: 16px; background-color: #FFF7ED; border-radius: 6px; border-left: 4px solid #F97316;">
-                    <p style="margin: 0 0 12px 0; font-size: 15px; color: #333;"><strong>While you wait:</strong></p>
+                    <p style="margin: 0 0 12px 0; font-size: 15px; color: #333;"><strong>What you'll need:</strong></p>
                     <ul style="margin: 0; padding-left: 20px; color: #333; font-size: 15px;">
                       <li style="margin-bottom: 8px;">
-                        <a href="https://docs.anthropic.com/en/docs/claude-code/getting-started" style="color: #F97316; text-decoration: none;">Install Claude Code</a> – Get set up in 5 minutes
+                        <strong>Claude Code licence</strong> – <a href="https://www.anthropic.com/pricing" style="color: #F97316; text-decoration: none;">Anthropic pricing</a> (required for all labs)
                       </li>
                       <li>
-                        <a href="https://linkedin.com/company/coengineers" style="color: #F97316; text-decoration: none;">Follow on LinkedIn</a> – Tips and updates
+                        <strong>API licence</strong> – Optional, only needed for Theme 4's external API labs
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Code Access -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
+                <tr>
+                  <td style="padding: 16px; background-color: #F0FDF4; border-radius: 6px; border-left: 4px solid #22C55E;">
+                    <p style="margin: 0 0 12px 0; font-size: 15px; color: #333;"><strong>Get the course code:</strong></p>
+                    <ul style="margin: 0; padding-left: 20px; color: #333; font-size: 15px;">
+                      <li style="margin-bottom: 8px;">
+                        <strong>Option 1:</strong> Clone via Claude Code – <code style="background: #E5E7EB; padding: 2px 6px; border-radius: 4px; font-size: 13px;">gh repo clone coengineers/course-materials</code>
+                      </li>
+                      <li>
+                        <strong>Option 2:</strong> <a href="https://github.com/coengineers/course-materials/archive/refs/heads/main.zip" style="color: #22C55E; text-decoration: none;">Download as ZIP</a>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Preparation Steps -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+                <tr>
+                  <td style="padding: 16px; background-color: #EFF6FF; border-radius: 6px; border-left: 4px solid #3B82F6;">
+                    <p style="margin: 0 0 12px 0; font-size: 15px; color: #333;"><strong>Before you begin:</strong></p>
+                    <ul style="margin: 0; padding-left: 20px; color: #333; font-size: 15px;">
+                      <li style="margin-bottom: 8px;">
+                        <a href="https://docs.anthropic.com/en/docs/claude-code/getting-started" style="color: #3B82F6; text-decoration: none;">Install Claude Code</a> – Get set up in 5 minutes
+                      </li>
+                      <li style="margin-bottom: 8px;">
+                        Install <a href="https://obsidian.md" style="color: #3B82F6; text-decoration: none;">Obsidian</a> – Free note-taking app for Themes 1-2
+                      </li>
+                      <li>
+                        <a href="https://linkedin.com/company/coengineers" style="color: #3B82F6; text-decoration: none;">Follow on LinkedIn</a> – Tips and updates
                       </li>
                     </ul>
                   </td>

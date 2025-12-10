@@ -53,6 +53,15 @@ Text-to-speech (TTS) technology has advanced dramatically. Modern TTS doesn't so
 
 **The workflow:**
 
+```mermaid
+flowchart LR
+    A[Text Content] --> B[Select Voice]
+    B --> C[ElevenLabs API]
+    C --> D[MP3 Audio Data]
+    D --> E[Save Locally]
+    E --> F[Play or Integrate]
+```
+
 1. Extract text content from Obsidian notes
 2. Choose an appropriate voice from ElevenLabs library
 3. Send text to ElevenLabs API with voice settings

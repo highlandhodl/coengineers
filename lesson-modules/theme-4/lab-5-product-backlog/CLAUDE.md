@@ -20,6 +20,17 @@ By the end of this lab, learners will be able to:
 **Say:**
 "Brilliant — you've made it to the final lab in Theme 4! This is where we tie everything together. You've got a PRD (Product Requirements Document) and now we need to turn it into something a development team can actually work from.
 
+```mermaid
+flowchart LR
+    A[PRD/PRP] --> B[Extract Features]
+    B --> C[Write User Stories]
+    C --> D[Add Acceptance Criteria]
+    D --> E[Prioritise - MoSCoW]
+    E --> F[Estimate Effort]
+    F --> G[Product Backlog]
+    G --> H[Sprint Planning]
+```
+
 A PRD tells us WHAT we're building and WHY. A product backlog tells us HOW we're going to build it, in what ORDER, and breaks everything down into manageable pieces.
 
 Let's start by looking at the sample PRD we'll be working with."
