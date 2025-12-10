@@ -1,5 +1,5 @@
-import type { APIContext } from 'astro';
-import { getSupabaseClient } from '../../lib/supabase';
+import type { APIContext } from "astro";
+import { getSupabaseClient } from "../../lib/supabase";
 
 export const prerender = false;
 
@@ -10,19 +10,19 @@ export const prerender = false;
  * One-click unsubscribe as per email best practices.
  */
 export async function GET(context: APIContext): Promise<Response> {
-  const token = context.url.searchParams.get('token');
+  const token = context.url.searchParams.get("token");
 
   // Validate token exists and is UUID format
   if (!token || !isValidUUID(token)) {
     return new Response(
       JSON.stringify({
         success: false,
-        error: 'Invalid unsubscribe link.',
+        error: "Invalid unsubscribe link.",
       }),
       {
         status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      }
+        headers: { "Content-Type": "application/json" },
+      },
     );
   }
 
@@ -31,21 +31,21 @@ export async function GET(context: APIContext): Promise<Response> {
 
     // Look up subscriber by token
     const { data: subscriber, error: selectError } = await supabase
-      .from('subscribers')
-      .select('id, email, unsubscribed')
-      .eq('unsubscribe_token', token)
+      .from("subscribers")
+      .select("id, email, unsubscribed")
+      .eq("unsubscribe_token", token)
       .single();
 
     if (selectError || !subscriber) {
       return new Response(
         JSON.stringify({
           success: false,
-          error: 'Subscription not found.',
+          error: "Subscription not found.",
         }),
         {
           status: 404,
-          headers: { 'Content-Type': 'application/json' },
-        }
+          headers: { "Content-Type": "application/json" },
+        },
       );
     }
 
@@ -53,49 +53,49 @@ export async function GET(context: APIContext): Promise<Response> {
     if (subscriber.unsubscribed) {
       return new Response(getUnsubscribedHtml(), {
         status: 200,
-        headers: { 'Content-Type': 'text/html' },
+        headers: { "Content-Type": "text/html" },
       });
     }
 
     // Mark as unsubscribed
     const { error: updateError } = await supabase
-      .from('subscribers')
+      .from("subscribers")
       .update({
         unsubscribed: true,
         unsubscribed_at: new Date().toISOString(),
       })
-      .eq('id', subscriber.id);
+      .eq("id", subscriber.id);
 
     if (updateError) {
-      console.error('Unsubscribe update error:', updateError);
+      console.error("Unsubscribe update error:", updateError);
       return new Response(
         JSON.stringify({
           success: false,
-          error: 'Something went wrong. Please try again.',
+          error: "Something went wrong. Please try again.",
         }),
         {
           status: 500,
-          headers: { 'Content-Type': 'application/json' },
-        }
+          headers: { "Content-Type": "application/json" },
+        },
       );
     }
 
     // Return confirmation HTML
     return new Response(getUnsubscribedHtml(), {
       status: 200,
-      headers: { 'Content-Type': 'text/html' },
+      headers: { "Content-Type": "text/html" },
     });
   } catch (error) {
-    console.error('Unsubscribe endpoint error:', error);
+    console.error("Unsubscribe endpoint error:", error);
     return new Response(
       JSON.stringify({
         success: false,
-        error: 'Something went wrong. Please try again.',
+        error: "Something went wrong. Please try again.",
       }),
       {
         status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      }
+        headers: { "Content-Type": "application/json" },
+      },
     );
   }
 }
@@ -104,7 +104,8 @@ export async function GET(context: APIContext): Promise<Response> {
  * Validate UUID format.
  */
 function isValidUUID(str: string): boolean {
-  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  const uuidRegex =
+    /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   return uuidRegex.test(str);
 }
 

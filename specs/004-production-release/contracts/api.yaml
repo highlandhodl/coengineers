@@ -1,0 +1,193 @@
+openapi: 3.0.3
+info:
+  title: CoEngineers Email API
+  description: API for email subscription and unsubscription on the CoEngineers learning platform.
+  version: 1.0.0
+  contact:
+    name: CoEngineers
+    url: https://coengineers.ai
+
+servers:
+  - url: https://coengineers.ai/api
+    description: Production
+  - url: http://localhost:4321/api
+    description: Development
+
+paths:
+  /subscribe:
+    post:
+      summary: Subscribe to email updates
+      description: |
+        Subscribe a new email address to the mailing list.
+        Handles both JSON and form-encoded requests.
+        Implements upsert logic for duplicate emails.
+      operationId: subscribe
+      tags:
+        - Email
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SubscribeRequest"
+            examples:
+              newSubscriber:
+                summary: New subscriber
+                value:
+                  email: user@example.com
+                  source: homepage
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/SubscribeRequest"
+      responses:
+        "201":
+          description: Successfully subscribed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessResponse"
+              example:
+                success: true
+                message: "You're in! Check your inbox."
+        "200":
+          description: Already subscribed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessResponse"
+              example:
+                success: true
+                message: "You're already subscribed!"
+        "400":
+          description: Invalid email address
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                success: false
+                error: "Please enter a valid email address."
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                success: false
+                error: "Something went wrong. Please try again later."
+
+  /unsubscribe:
+    get:
+      summary: Unsubscribe from email updates
+      description: |
+        Unsubscribe a user via their unique token.
+        One-click unsubscribe as per email best practices.
+        Returns HTML confirmation page on success.
+      operationId: unsubscribe
+      tags:
+        - Email
+      parameters:
+        - name: token
+          in: query
+          required: true
+          description: UUID token from unsubscribe link in email
+          schema:
+            type: string
+            format: uuid
+          example: 550e8400-e29b-41d4-a716-446655440000
+      responses:
+        "200":
+          description: Successfully unsubscribed (returns HTML page)
+          content:
+            text/html:
+              schema:
+                type: string
+              example: |
+                <!DOCTYPE html>
+                <html lang="en-GB">
+                <head><title>Unsubscribed - CoEngineers</title></head>
+                <body>
+                  <h1>You've been unsubscribed</h1>
+                  <p>Sorry to see you go.</p>
+                </body>
+                </html>
+        "400":
+          description: Invalid or missing token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                success: false
+                error: "Invalid unsubscribe link."
+        "404":
+          description: Subscriber not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                success: false
+                error: "Subscription not found."
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                success: false
+                error: "Something went wrong. Please try again."
+
+components:
+  schemas:
+    SubscribeRequest:
+      type: object
+      required:
+        - email
+      properties:
+        email:
+          type: string
+          format: email
+          description: Subscriber's email address
+          example: user@example.com
+        source:
+          type: string
+          enum:
+            - website
+            - homepage
+            - community-page
+            - day-page
+          default: website
+          description: Where the signup form was displayed
+
+    SuccessResponse:
+      type: object
+      required:
+        - success
+        - message
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        message:
+          type: string
+          description: User-friendly success message
+
+    ErrorResponse:
+      type: object
+      required:
+        - success
+        - error
+      properties:
+        success:
+          type: boolean
+          enum: [false]
+        error:
+          type: string
+          description: User-friendly error message
+
+tags:
+  - name: Email
+    description: Email subscription management

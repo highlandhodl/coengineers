@@ -20,37 +20,37 @@
 
 ### 1.1 Core Configuration
 
-- [X] T001 Update `.claude/SCRIPT_INSTRUCTIONS.md` with theme/lab variable names ({themeId}, {labId}, {nextCommand}, etc.) per reference/SCRIPT_INSTRUCTIONS.md
-- [X] T002 Create new `.claude/course-structure.json` with theme-based structure per contracts/course-structure-schema.json and data-model.md
-- [X] T003 Update `astro.config.mjs` sidebar configuration per quickstart.md structure (Reasons, Getting Started, Theme 1-4, Reference)
+- [x] T001 Update `.claude/SCRIPT_INSTRUCTIONS.md` with theme/lab variable names ({themeId}, {labId}, {nextCommand}, etc.) per reference/SCRIPT_INSTRUCTIONS.md
+- [x] T002 Create new `.claude/course-structure.json` with theme-based structure per contracts/course-structure-schema.json and data-model.md
+- [x] T003 Update `astro.config.mjs` sidebar configuration per quickstart.md structure (Reasons, Getting Started, Theme 1-4, Reference)
 
 ### 1.2 Directory Structure
 
-- [X] T004 [P] Create directory `src/content/docs/theme-1/`
-- [X] T005 [P] Create directory `src/content/docs/theme-2/`
-- [X] T006 [P] Create directory `src/content/docs/theme-3/`
-- [X] T007 [P] Create directory `src/content/docs/theme-4/`
-- [X] T008 [P] Create directory `src/content/docs/reasons/`
-- [X] T009 [P] Create directory `lesson-modules/theme-1/lab-1-first-conversation/`
-- [X] T010 [P] Create directory `lesson-modules/theme-1/lab-2-para-structure/`
-- [X] T011 [P] Create directory `lesson-modules/theme-1/lab-3-document-templates/`
-- [X] T012 [P] Create directory `lesson-modules/theme-1/lab-4-metadata-enrichment/`
-- [X] T013 [P] Create directory `lesson-modules/theme-1/lab-5-project-memory/`
-- [X] T014 [P] Create directory `lesson-modules/theme-2/lab-1-meeting-notes/`
-- [X] T015 [P] Create directory `lesson-modules/theme-2/lab-2-audio-transcripts/`
-- [X] T016 [P] Create directory `lesson-modules/theme-2/lab-3-email-refinement/`
-- [X] T017 [P] Create directory `lesson-modules/theme-2/lab-4-research-synthesis/`
-- [X] T018 [P] Create directory `lesson-modules/theme-2/lab-5-youtube-extraction/`
-- [X] T019 [P] Create directory `lesson-modules/theme-3/lab-1-docx-creation/`
-- [X] T020 [P] Create directory `lesson-modules/theme-3/lab-2-xlsx-creation/`
-- [X] T021 [P] Create directory `lesson-modules/theme-3/lab-3-pptx-creation/`
-- [X] T022 [P] Create directory `lesson-modules/theme-3/lab-4-brandkit-creation/`
-- [X] T023 [P] Create directory `lesson-modules/theme-3/lab-5-sow-creation/`
-- [X] T024 [P] Create directory `lesson-modules/theme-4/lab-1-gamma-presentations/`
-- [X] T025 [P] Create directory `lesson-modules/theme-4/lab-2-gemini-images/`
-- [X] T026 [P] Create directory `lesson-modules/theme-4/lab-3-elevenlabs-audio/`
-- [X] T027 [P] Create directory `lesson-modules/theme-4/lab-4-prd-creation/`
-- [X] T028 [P] Create directory `lesson-modules/theme-4/lab-5-product-backlog/`
+- [x] T004 [P] Create directory `src/content/docs/theme-1/`
+- [x] T005 [P] Create directory `src/content/docs/theme-2/`
+- [x] T006 [P] Create directory `src/content/docs/theme-3/`
+- [x] T007 [P] Create directory `src/content/docs/theme-4/`
+- [x] T008 [P] Create directory `src/content/docs/reasons/`
+- [x] T009 [P] Create directory `lesson-modules/theme-1/lab-1-first-conversation/`
+- [x] T010 [P] Create directory `lesson-modules/theme-1/lab-2-para-structure/`
+- [x] T011 [P] Create directory `lesson-modules/theme-1/lab-3-document-templates/`
+- [x] T012 [P] Create directory `lesson-modules/theme-1/lab-4-metadata-enrichment/`
+- [x] T013 [P] Create directory `lesson-modules/theme-1/lab-5-project-memory/`
+- [x] T014 [P] Create directory `lesson-modules/theme-2/lab-1-meeting-notes/`
+- [x] T015 [P] Create directory `lesson-modules/theme-2/lab-2-audio-transcripts/`
+- [x] T016 [P] Create directory `lesson-modules/theme-2/lab-3-email-refinement/`
+- [x] T017 [P] Create directory `lesson-modules/theme-2/lab-4-research-synthesis/`
+- [x] T018 [P] Create directory `lesson-modules/theme-2/lab-5-youtube-extraction/`
+- [x] T019 [P] Create directory `lesson-modules/theme-3/lab-1-docx-creation/`
+- [x] T020 [P] Create directory `lesson-modules/theme-3/lab-2-xlsx-creation/`
+- [x] T021 [P] Create directory `lesson-modules/theme-3/lab-3-pptx-creation/`
+- [x] T022 [P] Create directory `lesson-modules/theme-3/lab-4-brandkit-creation/`
+- [x] T023 [P] Create directory `lesson-modules/theme-3/lab-5-sow-creation/`
+- [x] T024 [P] Create directory `lesson-modules/theme-4/lab-1-gamma-presentations/`
+- [x] T025 [P] Create directory `lesson-modules/theme-4/lab-2-gemini-images/`
+- [x] T026 [P] Create directory `lesson-modules/theme-4/lab-3-elevenlabs-audio/`
+- [x] T027 [P] Create directory `lesson-modules/theme-4/lab-4-prd-creation/`
+- [x] T028 [P] Create directory `lesson-modules/theme-4/lab-5-product-backlog/`
 
 **🔖 GIT CHECKPOINT M1**: `git add . && git commit -m "feat(001): Phase 1 - Setup foundation and directory structure"`
 
@@ -63,26 +63,26 @@
 
 ### 2.1 Slash Commands (20 commands)
 
-- [X] T029 [P] [US1] Create slash command `.claude/commands/t1.lb1.md` for First Conversation per reference/example-slash-command.md
-- [X] T030 [P] [US1] Create slash command `.claude/commands/t1.lb2.md` for PARA Structure
-- [X] T031 [P] [US1] Create slash command `.claude/commands/t1.lb3.md` for Document Templates
-- [X] T032 [P] [US1] Create slash command `.claude/commands/t1.lb4.md` for Metadata Enrichment
-- [X] T033 [P] [US1] Create slash command `.claude/commands/t1.lb5.md` for Project Memory
-- [X] T034 [P] [US1] Create slash command `.claude/commands/t2.lb1.md` for Meeting Notes
-- [X] T035 [P] [US1] Create slash command `.claude/commands/t2.lb2.md` for Audio Transcripts
-- [X] T036 [P] [US1] Create slash command `.claude/commands/t2.lb3.md` for Email Refinement
-- [X] T037 [P] [US1] Create slash command `.claude/commands/t2.lb4.md` for Research Synthesis
-- [X] T038 [P] [US1] Create slash command `.claude/commands/t2.lb5.md` for YouTube Extraction
-- [X] T039 [P] [US1] Create slash command `.claude/commands/t3.lb1.md` for DOCX Creation
-- [X] T040 [P] [US1] Create slash command `.claude/commands/t3.lb2.md` for XLSX Creation
-- [X] T041 [P] [US1] Create slash command `.claude/commands/t3.lb3.md` for PPTX Creation
-- [X] T042 [P] [US1] Create slash command `.claude/commands/t3.lb4.md` for Brandkit Creation
-- [X] T043 [P] [US1] Create slash command `.claude/commands/t3.lb5.md` for SOW Creation
-- [X] T044 [P] [US1] Create slash command `.claude/commands/t4.lb1.md` for Gamma Presentations
-- [X] T045 [P] [US1] Create slash command `.claude/commands/t4.lb2.md` for Gemini Images
-- [X] T046 [P] [US1] Create slash command `.claude/commands/t4.lb3.md` for ElevenLabs Audio
-- [X] T047 [P] [US1] Create slash command `.claude/commands/t4.lb4.md` for PRD Creation
-- [X] T048 [P] [US1] Create slash command `.claude/commands/t4.lb5.md` for Product Backlog
+- [x] T029 [P] [US1] Create slash command `.claude/commands/t1.lb1.md` for First Conversation per reference/example-slash-command.md
+- [x] T030 [P] [US1] Create slash command `.claude/commands/t1.lb2.md` for PARA Structure
+- [x] T031 [P] [US1] Create slash command `.claude/commands/t1.lb3.md` for Document Templates
+- [x] T032 [P] [US1] Create slash command `.claude/commands/t1.lb4.md` for Metadata Enrichment
+- [x] T033 [P] [US1] Create slash command `.claude/commands/t1.lb5.md` for Project Memory
+- [x] T034 [P] [US1] Create slash command `.claude/commands/t2.lb1.md` for Meeting Notes
+- [x] T035 [P] [US1] Create slash command `.claude/commands/t2.lb2.md` for Audio Transcripts
+- [x] T036 [P] [US1] Create slash command `.claude/commands/t2.lb3.md` for Email Refinement
+- [x] T037 [P] [US1] Create slash command `.claude/commands/t2.lb4.md` for Research Synthesis
+- [x] T038 [P] [US1] Create slash command `.claude/commands/t2.lb5.md` for YouTube Extraction
+- [x] T039 [P] [US1] Create slash command `.claude/commands/t3.lb1.md` for DOCX Creation
+- [x] T040 [P] [US1] Create slash command `.claude/commands/t3.lb2.md` for XLSX Creation
+- [x] T041 [P] [US1] Create slash command `.claude/commands/t3.lb3.md` for PPTX Creation
+- [x] T042 [P] [US1] Create slash command `.claude/commands/t3.lb4.md` for Brandkit Creation
+- [x] T043 [P] [US1] Create slash command `.claude/commands/t3.lb5.md` for SOW Creation
+- [x] T044 [P] [US1] Create slash command `.claude/commands/t4.lb1.md` for Gamma Presentations
+- [x] T045 [P] [US1] Create slash command `.claude/commands/t4.lb2.md` for Gemini Images
+- [x] T046 [P] [US1] Create slash command `.claude/commands/t4.lb3.md` for ElevenLabs Audio
+- [x] T047 [P] [US1] Create slash command `.claude/commands/t4.lb4.md` for PRD Creation
+- [x] T048 [P] [US1] Create slash command `.claude/commands/t4.lb5.md` for Product Backlog
 
 **🔖 GIT CHECKPOINT M2**: `git add . && git commit -m "feat(001): Phase 2.1 - All 20 slash commands created"`
 
@@ -338,16 +338,19 @@ Phase 8 (Verification) → Final
 ### Recommended Execution Strategy (Solo Developer)
 
 **Day 1 Focus - Foundation + Core Content:**
+
 1. Phase 1 complete → Commit M1
 2. Phase 2.1 (Slash Commands) → Commit M2
 3. Phase 2.2-2.5 (Teaching Scripts) → Commits M3-M6
 
 **Day 2 Focus - MDX + Navigation:**
+
 1. Phase 2.6 (MDX Lab Pages) → Commit M7
 2. Phase 3 (Landing Page) → Commit M8
 3. Phase 5 (Theme Overviews) → Commit M10
 
 **Day 3 Focus - Polish + Cleanup:**
+
 1. Phase 4 (Reasons) → Commit M9
 2. Phase 6 (Cheat Sheet) → Commit M11
 3. Phase 7 (Cleanup) → Commit M12
@@ -376,55 +379,56 @@ mkdir -p lesson-modules/theme-1/{lab-1-first-conversation,lab-2-para-structure,l
 
 ### Labs with HIGH Reuse (adapt existing CLAUDE.md)
 
-| New Lab | Source Day | Copy Supporting Materials? |
-|---------|------------|---------------------------|
-| T1.L1 | Day 1 | Yes - learning-log-template.md |
-| T1.L2 | Day 2 | No - create new PARA template |
-| T1.L3 | Day 4 | No - create new template-examples.md |
-| T1.L5 | Day 3 | Yes - example-claude-md.md |
-| T2.L1 | Day 8 | Yes - meeting-notes-raw-*.md |
-| T2.L2 | Day 9 | Yes - voice-memo-transcript-*.md |
-| T2.L3 | Day 13 | Yes - email-*-sample.md |
-| T2.L5 | Day 10 | Yes - youtube-transcript-sample.md |
-| T3.L3 | Day 15 | Partial - adapt for pptx skill |
-| T4.L2 | Day 16 | Partial - add Gemini API from research.md |
-| T4.L3 | Day 17 | Partial - add ElevenLabs API from research.md |
-| T4.L4 | Day 22 | Yes - prp-template.md, example-prp-filled.md |
-| T4.L5 | Day 23 | Yes - backlog-template.md |
+| New Lab | Source Day | Copy Supporting Materials?                    |
+| ------- | ---------- | --------------------------------------------- |
+| T1.L1   | Day 1      | Yes - learning-log-template.md                |
+| T1.L2   | Day 2      | No - create new PARA template                 |
+| T1.L3   | Day 4      | No - create new template-examples.md          |
+| T1.L5   | Day 3      | Yes - example-claude-md.md                    |
+| T2.L1   | Day 8      | Yes - meeting-notes-raw-\*.md                 |
+| T2.L2   | Day 9      | Yes - voice-memo-transcript-\*.md             |
+| T2.L3   | Day 13     | Yes - email-\*-sample.md                      |
+| T2.L5   | Day 10     | Yes - youtube-transcript-sample.md            |
+| T3.L3   | Day 15     | Partial - adapt for pptx skill                |
+| T4.L2   | Day 16     | Partial - add Gemini API from research.md     |
+| T4.L3   | Day 17     | Partial - add ElevenLabs API from research.md |
+| T4.L4   | Day 22     | Yes - prp-template.md, example-prp-filled.md  |
+| T4.L5   | Day 23     | Yes - backlog-template.md                     |
 
 ### Labs Requiring NEW Content
 
-| New Lab | Focus | Reference |
-|---------|-------|-----------|
-| T1.L4 | Metadata/Frontmatter | Obsidian metadata practices |
-| T2.L4 | Research Synthesis | Adapt from Day 12 Web Archiver |
-| T3.L1 | DOCX Creation | Claude Code docx skill |
-| T3.L2 | XLSX Creation | Claude Code xlsx skill |
-| T3.L4 | Brandkit Creation | Brand guidelines skill |
-| T3.L5 | SOW Creation | Statement of Work template |
-| T4.L1 | Gamma Presentations | research.md Gamma API section |
+| New Lab | Focus                | Reference                      |
+| ------- | -------------------- | ------------------------------ |
+| T1.L4   | Metadata/Frontmatter | Obsidian metadata practices    |
+| T2.L4   | Research Synthesis   | Adapt from Day 12 Web Archiver |
+| T3.L1   | DOCX Creation        | Claude Code docx skill         |
+| T3.L2   | XLSX Creation        | Claude Code xlsx skill         |
+| T3.L4   | Brandkit Creation    | Brand guidelines skill         |
+| T3.L5   | SOW Creation         | Statement of Work template     |
+| T4.L1   | Gamma Presentations  | research.md Gamma API section  |
 
 ---
 
 ## Summary
 
-| Metric | Count |
-|--------|-------|
-| **Total Tasks** | 149 |
-| **Phase 1 (Setup)** | 28 |
-| **Phase 2 (US1: Labs)** | 72 |
-| **Phase 3 (US2: Landing)** | 4 |
-| **Phase 4 (US3: Reasons)** | 7 |
-| **Phase 5 (US4: Navigation)** | 6 |
-| **Phase 6 (US5: Getting Started)** | 3 |
-| **Phase 7 (Cleanup)** | 16 |
-| **Phase 8 (Verification)** | 13 |
-| **Git Checkpoints** | 13 |
-| **Parallel Opportunities** | 80+ tasks marked [P] |
+| Metric                             | Count                |
+| ---------------------------------- | -------------------- |
+| **Total Tasks**                    | 149                  |
+| **Phase 1 (Setup)**                | 28                   |
+| **Phase 2 (US1: Labs)**            | 72                   |
+| **Phase 3 (US2: Landing)**         | 4                    |
+| **Phase 4 (US3: Reasons)**         | 7                    |
+| **Phase 5 (US4: Navigation)**      | 6                    |
+| **Phase 6 (US5: Getting Started)** | 3                    |
+| **Phase 7 (Cleanup)**              | 16                   |
+| **Phase 8 (Verification)**         | 13                   |
+| **Git Checkpoints**                | 13                   |
+| **Parallel Opportunities**         | 80+ tasks marked [P] |
 
 ### MVP Scope (US1 + US2 Only)
 
 For minimum viable launch:
+
 - Complete Phases 1-3 (Tasks T001-T104)
 - Skip Phase 4 (Reasons) - can add after launch
 - Complete Phase 5 (Navigation required)

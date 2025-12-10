@@ -1,4 +1,4 @@
-import { Resend } from 'resend';
+import { Resend } from "resend";
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
@@ -9,12 +9,16 @@ const resend = new Resend(import.meta.env.RESEND_API_KEY);
  * @param unsubscribeToken - UUID token for unsubscribe link
  * @returns Resend response data with message ID
  */
-export async function sendWelcomeEmail(email: string, unsubscribeToken: string) {
-  const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://coengineers.ai';
+export async function sendWelcomeEmail(
+  email: string,
+  unsubscribeToken: string,
+) {
+  const siteUrl = import.meta.env.PUBLIC_SITE_URL || "https://coengineers.ai";
   const unsubscribeUrl = `${siteUrl}/api/unsubscribe?token=${unsubscribeToken}`;
 
   // Use test sender in development, production sender when domain is verified
-  const fromAddress = import.meta.env.RESEND_FROM_EMAIL || 'CoEngineers <onboarding@resend.dev>';
+  const fromAddress =
+    import.meta.env.RESEND_FROM_EMAIL || "CoEngineers <onboarding@resend.dev>";
 
   const { data, error } = await resend.emails.send({
     from: fromAddress,
@@ -24,7 +28,7 @@ export async function sendWelcomeEmail(email: string, unsubscribeToken: string) 
   });
 
   if (error) {
-    console.error('Resend error:', error);
+    console.error("Resend error:", error);
     throw new Error(`Email failed: ${error.message}`);
   }
 

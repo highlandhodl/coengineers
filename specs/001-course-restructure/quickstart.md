@@ -14,12 +14,14 @@ This document provides implementation guidance for the course restructure. Use t
 The restructure should be implemented in this order to maintain a working site throughout:
 
 ### Phase 1: Foundation (Parallel-Safe)
+
 1. **Update course-structure.json** - New theme/lab format
 2. **Update SCRIPT_INSTRUCTIONS.md** - New variable names
 3. **Update astro.config.mjs sidebar** - New navigation structure
 4. **Update custom.css** - Already has Bitcoin orange ✅
 
 ### Phase 2: Content Creation (Parallel-Safe)
+
 5. **Create theme directories** - `src/content/docs/theme-N/`
 6. **Create lesson-modules theme directories** - `lesson-modules/theme-N/`
 7. **Create 20 slash commands** - `.claude/commands/tN.lbN.md`
@@ -29,6 +31,7 @@ The restructure should be implemented in this order to maintain a working site t
 11. **Create 6 reasons pages** - Social sharing content
 
 ### Phase 3: Cleanup (After Phase 2 Complete)
+
 12. **Remove old week directories** - `src/content/docs/week-N/`
 13. **Remove old lesson-modules** - `lesson-modules/week-N/`
 14. **Remove old slash commands** - `.claude/commands/wN.dN.md`
@@ -37,6 +40,7 @@ The restructure should be implemented in this order to maintain a working site t
 17. **Archive/remove obsolete tests** - Per FR-024
 
 ### Phase 4: Verification
+
 18. **Build check** - `npm run build`
 19. **Navigation test** - All labs reachable in ≤3 clicks
 20. **Slash command test** - All 20 commands execute
@@ -53,8 +57,8 @@ title: "Lab N: Title"
 description: "Brief description for meta tags"
 ---
 
-import YouTube from '../../../components/YouTube.astro';
-import SlashCommand from '../../../components/SlashCommand.astro';
+import YouTube from "../../../components/YouTube.astro";
+import SlashCommand from "../../../components/SlashCommand.astro";
 
 ## Learning Objectives
 
@@ -180,6 +184,7 @@ Today we're tackling [topic]. By the end, you'll have [tangible outcome]."
 "Brilliant work! You've learned how to [skill summary].
 
 **Key takeaways:**
+
 - Point 1
 - Point 2
 - Point 3
@@ -193,6 +198,7 @@ Today we're tackling [topic]. By the end, you'll have [tangible outcome]."
 ## Common Questions & Answers
 
 ### Q: [Anticipated question]?
+
 **A:** [Helpful answer]
 
 ---
@@ -209,30 +215,32 @@ Today we're tackling [topic]. By the end, you'll have [tangible outcome]."
 ## Content Reuse Strategy
 
 ### Labs with Existing Content (Adapt)
+
 These labs can reuse significant content from existing days:
 
-| New Lab | Source Day | Reuse Level |
-|---------|------------|-------------|
-| T1.L1 | Day 1 | High - adapt CLAUDE.md |
-| T1.L5 | Day 3 | High - adapt CLAUDE.md |
-| T2.L1 | Day 8 | High - adapt CLAUDE.md + samples |
-| T2.L2 | Day 9 | High - adapt CLAUDE.md + samples |
-| T2.L3 | Day 13 | High - adapt CLAUDE.md + samples |
-| T2.L5 | Day 10 | High - adapt CLAUDE.md + samples |
-| T4.L4 | Day 22 | Medium - adapt PRD content |
-| T4.L5 | Day 23 | Medium - adapt backlog content |
+| New Lab | Source Day | Reuse Level                      |
+| ------- | ---------- | -------------------------------- |
+| T1.L1   | Day 1      | High - adapt CLAUDE.md           |
+| T1.L5   | Day 3      | High - adapt CLAUDE.md           |
+| T2.L1   | Day 8      | High - adapt CLAUDE.md + samples |
+| T2.L2   | Day 9      | High - adapt CLAUDE.md + samples |
+| T2.L3   | Day 13     | High - adapt CLAUDE.md + samples |
+| T2.L5   | Day 10     | High - adapt CLAUDE.md + samples |
+| T4.L4   | Day 22     | Medium - adapt PRD content       |
+| T4.L5   | Day 23     | Medium - adapt backlog content   |
 
 ### Labs Requiring New Content
+
 These labs need fresh teaching scripts:
 
-| New Lab | Notes |
-|---------|-------|
-| T1.L2 | PARA structure - focus on Obsidian folder patterns |
-| T1.L3 | Document templates - new Obsidian-focused content |
-| T1.L4 | Metadata enrichment - new content for frontmatter |
-| T2.L4 | Research synthesis - similar to Day 12 but reframed |
-| T3.L1-L5 | All new - Claude Code skills focus |
-| T4.L1-L3 | All new - external API integration |
+| New Lab  | Notes                                               |
+| -------- | --------------------------------------------------- |
+| T1.L2    | PARA structure - focus on Obsidian folder patterns  |
+| T1.L3    | Document templates - new Obsidian-focused content   |
+| T1.L4    | Metadata enrichment - new content for frontmatter   |
+| T2.L4    | Research synthesis - similar to Day 12 but reframed |
+| T3.L1-L5 | All new - Claude Code skills focus                  |
+| T4.L1-L3 | All new - external API integration                  |
 
 ---
 
@@ -330,6 +338,7 @@ sidebar: [
 The new `getting-started/cheat-sheet.mdx` should include:
 
 ### Essential Commands
+
 - `/help` - Get help
 - `/clear` - Clear conversation
 - `/compact` - Compact mode
@@ -337,14 +346,17 @@ The new `getting-started/cheat-sheet.mdx` should include:
 - `/memory` - View memory
 
 ### Course Commands
+
 - `/t1.lb1` through `/t4.lb5` - Launch labs
 
 ### Keyboard Shortcuts
+
 - `Ctrl+C` - Cancel current operation
 - `Ctrl+R` - Rerun last command
 - Up/Down arrows - Command history
 
 ### Quick Tips
+
 - "Be specific about what you want"
 - "Use @filename to reference files"
 - "Ask Claude to explain its reasoning"

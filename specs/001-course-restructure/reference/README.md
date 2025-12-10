@@ -4,12 +4,12 @@ This folder contains reference documentation for the lab file structure. Use the
 
 ## Contents
 
-| File | Purpose |
-| ---- | ------- |
-| `SCRIPT_INSTRUCTIONS.md` | Common teaching rules for all CLAUDE.md scripts (Say/Check/Action blocks, British English, variables, conditionals) |
-| `example-slash-command.md` | Pattern for slash command entry points (`/tN.lbN`) |
-| `example-CLAUDE-teaching-script.md` | Pattern for detailed teaching scripts with full section breakdown |
-| `example-course-structure-entry.json` | JSON structure for course-structure.json entries |
+| File                                  | Purpose                                                                                                             |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `SCRIPT_INSTRUCTIONS.md`              | Common teaching rules for all CLAUDE.md scripts (Say/Check/Action blocks, British English, variables, conditionals) |
+| `example-slash-command.md`            | Pattern for slash command entry points (`/tN.lbN`)                                                                  |
+| `example-CLAUDE-teaching-script.md`   | Pattern for detailed teaching scripts with full section breakdown                                                   |
+| `example-course-structure-entry.json` | JSON structure for course-structure.json entries                                                                    |
 
 ## Lab File Structure
 

@@ -106,18 +106,18 @@ Read the file @meeting-notes-raw.md and summarise the key action items.
 
 When you encounter variables in curly braces, resolve them from `course-structure.json`:
 
-| Variable             | Description          | Resolution                                    |
-| -------------------- | -------------------- | --------------------------------------------- |
-| `{labId}`            | Current lab ID       | From course-structure.json based on command   |
-| `{labTitle}`         | Current lab title    | From course-structure.json                    |
-| `{themeId}`          | Current theme ID     | From course-structure.json                    |
-| `{themeName}`        | Current theme name   | From course-structure.json                    |
-| `{nextLabId}`        | Next lab ID          | Next lab in course-structure.json sequence    |
-| `{nextLabTitle}`     | Next lab title       | Next lab's title                              |
-| `{nextCommand}`      | Next slash command   | Next lab's command value                      |
-| `{prevLabId}`        | Previous lab ID      | Previous lab in sequence                      |
-| `{prevLabTitle}`     | Previous lab title   | Previous lab's title                          |
-| `{estimatedMinutes}` | Lesson duration      | From course-structure.json                    |
+| Variable             | Description        | Resolution                                  |
+| -------------------- | ------------------ | ------------------------------------------- |
+| `{labId}`            | Current lab ID     | From course-structure.json based on command |
+| `{labTitle}`         | Current lab title  | From course-structure.json                  |
+| `{themeId}`          | Current theme ID   | From course-structure.json                  |
+| `{themeName}`        | Current theme name | From course-structure.json                  |
+| `{nextLabId}`        | Next lab ID        | Next lab in course-structure.json sequence  |
+| `{nextLabTitle}`     | Next lab title     | Next lab's title                            |
+| `{nextCommand}`      | Next slash command | Next lab's command value                    |
+| `{prevLabId}`        | Previous lab ID    | Previous lab in sequence                    |
+| `{prevLabTitle}`     | Previous lab title | Previous lab's title                        |
+| `{estimatedMinutes}` | Lesson duration    | From course-structure.json                  |
 
 ### Resolution Process
 
@@ -145,14 +145,14 @@ Position-aware content uses conditional wrappers:
 
 ### Evaluation Rules
 
-| Conditional                 | True When                               |
-| --------------------------- | --------------------------------------- |
-| `{ifFirstInCourse:...}`     | Lab ID is "1.1"                         |
-| `{ifNotFirstInCourse:...}`  | Lab ID is NOT "1.1"                     |
-| `{ifFirstInTheme:...}`      | Lab is first in its theme's labs array  |
-| `{ifLastInTheme:...}`       | Lab is last in its theme's labs array   |
-| `{ifLastInCourse:...}`      | Lab ID is "4.5"                         |
-| `{ifNotLastInCourse:...}`   | Lab ID is NOT "4.5"                     |
+| Conditional                | True When                              |
+| -------------------------- | -------------------------------------- |
+| `{ifFirstInCourse:...}`    | Lab ID is "1.1"                        |
+| `{ifNotFirstInCourse:...}` | Lab ID is NOT "1.1"                    |
+| `{ifFirstInTheme:...}`     | Lab is first in its theme's labs array |
+| `{ifLastInTheme:...}`      | Lab is last in its theme's labs array  |
+| `{ifLastInCourse:...}`     | Lab ID is "4.5"                        |
+| `{ifNotLastInCourse:...}`  | Lab ID is NOT "4.5"                    |
 
 ### Processing
 

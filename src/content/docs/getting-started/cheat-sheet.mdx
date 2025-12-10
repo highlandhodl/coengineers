@@ -1,0 +1,115 @@
+---
+title: Cheat Sheet
+description: Quick reference for Claude Code commands and patterns
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+## Essential Commands
+
+| Command             | Description                            |
+| ------------------- | -------------------------------------- |
+| `claude`            | Start Claude Code in current directory |
+| `claude "prompt"`   | Send a one-shot prompt                 |
+| `claude -p project` | Start with a specific project context  |
+| `/help`             | Show available commands                |
+| `/clear`            | Clear conversation history             |
+| `/compact`          | Summarise conversation to save tokens  |
+
+## Course Slash Commands
+
+| Command               | Lab                         |
+| --------------------- | --------------------------- |
+| `/t1.lb1` - `/t1.lb5` | Theme 1: Digital Workspace  |
+| `/t2.lb1` - `/t2.lb5` | Theme 2: Content Processing |
+| `/t3.lb1` - `/t3.lb5` | Theme 3: Document Creation  |
+| `/t4.lb1` - `/t4.lb5` | Theme 4: External APIs      |
+
+## Effective Prompting Patterns
+
+### Be Specific
+
+```
+❌ "Create a file"
+✅ "Create a file called meeting-notes.md in ~/Documents with today's date as the title"
+```
+
+### Provide Context
+
+```
+❌ "Summarise this"
+✅ "Read the meeting transcript in @meeting-raw.md and extract:
+   1. Key decisions made
+   2. Action items with owners
+   3. Questions for follow-up"
+```
+
+### Request Format
+
+```
+❌ "Give me a summary"
+✅ "Summarise this in a markdown table with columns:
+   Topic | Decision | Owner | Due Date"
+```
+
+## File Operations
+
+| Task        | Prompt Pattern                                        |
+| ----------- | ----------------------------------------------------- |
+| Create file | "Create a file called X in folder Y with content Z"   |
+| Read file   | "Read @filename.md and summarise the key points"      |
+| Edit file   | "In @filename.md, change X to Y"                      |
+| Search      | "Find all files containing 'keyword' in this project" |
+
+## Skills Reference
+
+<Aside type="tip" title="Claude Code Skills">
+  Skills are built-in capabilities that Claude Code can use to create documents.
+</Aside>
+
+| Skill            | Command                             | Output                   |
+| ---------------- | ----------------------------------- | ------------------------ |
+| docx             | "Use the docx skill to create..."   | Word document            |
+| xlsx             | "Use the xlsx skill to create..."   | Excel spreadsheet        |
+| pptx             | "Use the pptx skill to create..."   | PowerPoint presentation  |
+| brand-guidelines | "Use the brand-guidelines skill..." | Brand guideline document |
+
+## CLAUDE.md Template
+
+```markdown
+# Project Name
+
+## Overview
+
+Brief description of this project.
+
+## Key Files
+
+- `src/` - Source code
+- `docs/` - Documentation
+- `templates/` - Reusable templates
+
+## Conventions
+
+- Use British English
+- Dates in DD/MM/YYYY format
+- Markdown for all documentation
+
+## Common Tasks
+
+- Run build: `npm run build`
+- Run tests: `npm test`
+```
+
+## Troubleshooting
+
+| Issue               | Solution                                                                    |
+| ------------------- | --------------------------------------------------------------------------- |
+| "Command not found" | Ensure Claude Code is installed: `npm install -g @anthropic-ai/claude-code` |
+| "Rate limited"      | Wait a few minutes and try again                                            |
+| "File not found"    | Check the path — use `ls` to verify                                         |
+| "Permission denied" | Check file permissions with `ls -la`                                        |
+
+---
+
+**Need more help?** Check the [Troubleshooting Guide](/reference/troubleshooting/) or ask in the [Community](/community/).

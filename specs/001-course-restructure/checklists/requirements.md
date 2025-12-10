@@ -33,13 +33,14 @@
 
 ## Clarifications Completed
 
-| Session | Questions | Sections Updated |
-| ------- | --------- | ---------------- |
-| 2025-12-10 | 1 | Key Entities (Lab File Structure), Reference folder created |
+| Session    | Questions | Sections Updated                                            |
+| ---------- | --------- | ----------------------------------------------------------- |
+| 2025-12-10 | 1         | Key Entities (Lab File Structure), Reference folder created |
 
 ### Clarification Details
 
 **Q1: Lab File Structure**
+
 - **Question**: Should the existing lab file structure be mandatory for every lab?
 - **Answer**: Yes, strict structure required - all 4 components mandatory (slash command, CLAUDE.md, course-structure entry, SCRIPT_INSTRUCTIONS reference), with optional supporting materials where lab content requires them.
 - **Impact**: Added "Lab File Structure" section to Key Entities, created `reference/` folder with implementation patterns.

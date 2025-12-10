@@ -1,0 +1,92 @@
+---
+title: The Day I Wasted
+description: What happens when you dive into AI tools without structure
+---
+
+import { Aside } from "@astrojs/starlight/components";
+import EmailSignup from "../../../components/EmailSignup.astro";
+
+I lost a full day. Not to distraction. To enthusiasm.
+
+I was building a productivity tool — a frontend that would house n8n workflows and other automations. I had Claude Code open. I had ideas. I started prompting.
+
+The first few features came together beautifully. A component here, a page there. It felt like magic. I was shipping faster than I ever had.
+
+Then it started to unravel.
+
+---
+
+## The Mess
+
+By hour four, I had a codebase that worked but made no sense. Components duplicated in three places. Styling that contradicted itself. Logic scattered across files with no clear structure.
+
+Every new prompt made it worse. Claude would fix one thing and break two others. I'd try to explain the full context, but the context had become incomprehensible. Even to me.
+
+I wasn't building anymore. I was firefighting.
+
+By the end of the day, I deleted everything and started again.
+
+A full day. Gone. And I'm not a beginner — I've been building things for years.
+
+---
+
+## The Problem
+
+Vibe coding feels productive. You're moving fast. Things appear on screen. Dopamine hits with every successful prompt.
+
+But without structure, you're building on sand. The AI doesn't know your architecture because you don't have one. It can't maintain consistency because there's nothing to be consistent with.
+
+The magic turns into a mess. And the mess compounds faster than you can fix it.
+
+<Aside type="caution" title="The trap">
+  AI tools amplify whatever you bring to them. Bring chaos, get chaos faster.
+  Bring structure, get structure faster.
+</Aside>
+
+---
+
+## The Fix
+
+When I started again, I used a different approach. Spec-driven development with GitHub Speckit.
+
+Before any code, I wrote down what I was building. Not vague ideas — concrete specifications. User stories with acceptance criteria. A clear architecture. Defined boundaries.
+
+Then I gave Claude Code something to work with. Not "build me a thing" but "implement this specific story against this specific spec."
+
+The difference was night and day. Same tool. Same me. Completely different outcome.
+
+---
+
+## What Structure Actually Means
+
+It's not bureaucracy. It's clarity.
+
+- **What** are we building? (Product requirements)
+- **Who** is it for? (User context)
+- **How** should it work? (Acceptance criteria)
+- **Where** does this fit? (Architecture)
+
+When the AI knows these things, it stops guessing. When you know these things, you can tell if the output is right.
+
+Structure isn't slower. It's faster — because you don't waste days on dead ends.
+
+---
+
+## The Lesson
+
+I share this because I want you to skip the pain.
+
+Week 4 of the course is entirely about this. Spec-driven development. Going from idea to shipped feature with structure at every step.
+
+Not because I read about it somewhere. Because I learned it the hard way, staring at a deleted codebase wondering where the day went.
+
+---
+
+## What's Next
+
+Tomorrow: **Built With What It Teaches** — this course was made with Claude Code. So was this post.
+
+<EmailSignup
+  heading="Follow the journey"
+  subheading="Six posts before launch. No spam, ever."
+/>

@@ -87,7 +87,15 @@
     },
     "Lab": {
       "type": "object",
-      "required": ["id", "title", "slug", "path", "command", "description", "estimatedMinutes"],
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "path",
+        "command",
+        "description",
+        "estimatedMinutes"
+      ],
       "properties": {
         "id": {
           "type": "string",

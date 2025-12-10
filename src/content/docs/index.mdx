@@ -1,9 +1,9 @@
 ---
-title: 31 Days of Claude Code
-description: From chaos to production assets. No coding required.
+title: Master Claude Code in 20 Labs
+description: From messy inputs to polished outputs. No coding required.
 template: splash
 hero:
-  tagline: A free 31-day course teaching you to automate your workflow with Claude Code. Start learning today.
+  tagline: A free course teaching you to automate your workflow with Claude Code. Start learning today.
   actions:
     - text: Start Free Course
       link: /getting-started/introduction/
@@ -14,35 +14,58 @@ hero:
       icon: external
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
-import EmailSignup from '../../components/EmailSignup.astro';
+import { LinkCard, CardGrid, Aside } from "@astrojs/starlight/components";
+import EmailSignup from "../../components/EmailSignup.astro";
 
-<CardGrid stagger>
+---
+
+## Four Themes. Twenty Labs. Zero Coding.
+
+Each theme builds on the last. By the end, you'll have a complete productivity system powered by Claude Code.
+
+<CardGrid>
   <LinkCard
-    title="Week 1: Foundations"
-    href="/week-1/overview/"
-    description="Your first conversation, folder structure, project memory, templates, daily notes, and custom slash commands."
+    title="Theme 1: Digital Workspace"
+    href="/theme-1/overview/"
+    description="Set up Obsidian with PARA, templates, metadata, and project memory."
   />
   <LinkCard
-    title="Week 2: Content Processing"
-    href="/week-2/overview/"
-    description="Transform meeting transcripts, voice memos, YouTube videos, PDFs, web pages, and emails into structured notes."
+    title="Theme 2: Content Processing"
+    href="/theme-2/overview/"
+    description="Transform meetings, emails, research, and videos into structured notes."
   />
   <LinkCard
-    title="Week 3: Creative Outputs"
-    href="/week-3/overview/"
-    description="Generate presentations, image prompts, audio scripts, diagrams, social content, and video briefs."
+    title="Theme 3: Document Creation"
+    href="/theme-3/overview/"
+    description="Create Word docs, spreadsheets, presentations, and brand guidelines."
   />
   <LinkCard
-    title="Week 4: Building Software"
-    href="/week-4/overview/"
-    description="Spec-driven development: from product idea to shipped feature in 7 days."
-  />
-  <LinkCard
-    title="Bonus: Capstone"
-    href="/bonus/overview/"
-    description="BMAD Method, PRP Framework, and shipping your own project."
+    title="Theme 4: External APIs"
+    href="/theme-4/overview/"
+    description="Integrate Gamma, Gemini, ElevenLabs, and build product documentation."
   />
 </CardGrid>
 
-<EmailSignup heading="Get course updates and tips" />
+---
+
+## Why This Course?
+
+<Aside type="tip" title="Built with what it teaches">
+  This entire website was built using the workflows you'll learn. Every lab has
+  been tested and refined.
+</Aside>
+
+- **No coding required** — If you can follow a recipe, you can follow this course
+- **20-30 minutes per lab** — Less than a Netflix episode
+- **Immediate results** — Create real outputs from day one
+- **Free forever** — No upsells, no premium tiers
+
+---
+
+## Get Notified
+
+<EmailSignup
+  heading="Join the learning community"
+  subheading="Course updates and tips. No spam, ever."
+  source="homepage"
+/>

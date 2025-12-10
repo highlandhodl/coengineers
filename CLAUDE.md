@@ -1,4 +1,5 @@
 ## Active Technologies
+
 - TypeScript 5.x (via Astro 5.1) + Astro, @astrojs/starlight, @supabase/supabase-js, Resend (001-course-restructure)
 - Supabase PostgreSQL (existing schema unchanged), JSON (course-structure.json) (001-course-restructure)
 
@@ -221,12 +222,12 @@ Tests use Vitest with mocked external services:
 
 ```typescript
 // Example test structure
-describe('POST /api/subscribe', () => {
+describe("POST /api/subscribe", () => {
   beforeEach(() => {
     vi.clearAllMocks();
   });
 
-  it('creates new subscriber with valid email', async () => {
+  it("creates new subscriber with valid email", async () => {
     // Arrange
     mockSupabaseSelect.mockResolvedValueOnce({ data: null });
     mockSupabaseInsert.mockResolvedValueOnce({ data: mockSubscriber });

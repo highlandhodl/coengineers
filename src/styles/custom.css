@@ -1,5 +1,5 @@
 /* Google Fonts import - must be first */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 /* CoEngineers Brand Styles
    Bitcoin Orange + Claude-inspired neutrals
@@ -30,8 +30,10 @@
   --sl-color-hairline: #44403c;
 
   /* Typography */
-  --sl-font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --sl-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  --sl-font:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --sl-font-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
 
   /* Font sizes */
   --sl-text-h1: 2.25rem;
@@ -44,7 +46,7 @@
 }
 
 /* Light mode overrides */
-:root[data-theme='light'] {
+:root[data-theme="light"] {
   --sl-color-accent-low: #fef3e2;
   --sl-color-accent: #f7931a;
   --sl-color-accent-high: #402806;
@@ -53,8 +55,8 @@
   --sl-color-bg: #faf8f5;
   --sl-color-bg-nav: #f5f3ef;
   --sl-color-bg-sidebar: #f5f3ef;
-  --sl-color-hairline-light: #ebe8e3;
-  --sl-color-hairline: #ddd9d2;
+  --sl-color-hairline-light: #e7e5e4;
+  --sl-color-hairline: #d6d3d1;
 
   /* Text colours - CRITICAL: invert grays for light mode */
   --sl-color-text: #1c1917;
@@ -72,6 +74,81 @@
 
   /* Headings */
   --sl-color-heading: #1c1917;
+}
+
+/* Light mode specific fixes for Starlight components */
+[data-theme="light"] .sl-markdown-content,
+[data-theme="light"] main {
+  color: #1c1917;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #1c1917;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] li,
+[data-theme="light"] td,
+[data-theme="light"] th {
+  color: #292524;
+}
+
+[data-theme="light"] code {
+  background: #e7e5e4;
+  color: #1c1917;
+}
+
+[data-theme="light"] pre {
+  background: #f5f3ef;
+  border-color: #d6d3d1;
+}
+
+[data-theme="light"] pre code {
+  background: transparent;
+}
+
+[data-theme="light"] .card {
+  background: #ffffff;
+  border-color: #e7e5e4;
+}
+
+[data-theme="light"] .sl-link-card {
+  background: #ffffff;
+  border-color: #e7e5e4;
+}
+
+[data-theme="light"] .sl-link-card:hover {
+  border-color: var(--sl-color-accent);
+}
+
+/* Light mode sidebar text */
+[data-theme="light"] nav a,
+[data-theme="light"] .sidebar-content a {
+  color: #44403c;
+}
+
+[data-theme="light"] nav a:hover,
+[data-theme="light"] .sidebar-content a:hover {
+  color: #1c1917;
+}
+
+/* Light mode table styling */
+[data-theme="light"] table {
+  border-color: #e7e5e4;
+}
+
+[data-theme="light"] th {
+  background: #f5f3ef;
+  border-color: #e7e5e4;
+}
+
+[data-theme="light"] td {
+  border-color: #e7e5e4;
 }
 
 /* Link styling with Bitcoin Orange */
@@ -96,21 +173,37 @@ code {
   border-radius: 0.25rem;
 }
 
-/* Button-like links */
+/* Button-like links - dark text on orange for better contrast */
 .sl-link-button {
   background: var(--sl-color-accent) !important;
   border-color: var(--sl-color-accent) !important;
-  color: white !important;
+  color: #1c1917 !important;
+  font-weight: 600 !important;
 }
 
 .sl-link-button:hover {
-  background: #e8850f !important;
-  border-color: #e8850f !important;
-  color: white !important;
+  background: #ffaa33 !important;
+  border-color: #ffaa33 !important;
+  color: #1c1917 !important;
+}
+
+/* Hero action buttons - ensure readable text */
+.hero-actions a[href],
+.sl-hero a.sl-link-button,
+[data-hero] a {
+  color: #1c1917 !important;
+  font-weight: 600 !important;
+}
+
+/* Primary variant should have dark text */
+a[data-variant="primary"],
+.sl-link-button--primary {
+  background: var(--sl-color-accent) !important;
+  color: #1c1917 !important;
 }
 
 /* Sidebar active state */
-[aria-current='page'] {
+[aria-current="page"] {
   background: rgba(247, 147, 26, 0.1);
   border-left: 3px solid var(--sl-color-accent);
 }
@@ -213,49 +306,100 @@ code {
   }
 
   /* Hero section adjustments */
-  .hero {
-    padding: 2rem 1rem;
+  .hero,
+  [data-hero] {
+    padding: 1.5rem 1rem;
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 1.75rem;
+  .hero h1,
+  [data-hero] h1 {
+    font-size: 1.625rem;
     line-height: 1.2;
+  }
+
+  /* Hero tagline */
+  .hero .tagline,
+  [data-hero] .tagline {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   /* Countdown timer wrapping on mobile */
   .countdown {
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .countdown-container {
+    margin: 1.5rem 0;
   }
 
   .countdown-unit {
-    padding: 0.75rem 1rem;
-    min-width: 4rem;
+    padding: 0.625rem 0.875rem;
+    min-width: 3.5rem;
   }
 
   .countdown-value {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 
   .countdown-label {
     font-size: 0.625rem;
   }
 
+  .countdown-heading {
+    font-size: 1rem;
+  }
+
   /* Card grid single column on mobile */
-  .card-grid {
+  .card-grid,
+  [class*="CardGrid"] {
+    display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 1rem;
+    gap: 0.75rem !important;
+  }
+
+  /* Link cards mobile */
+  .sl-link-card,
+  [class*="LinkCard"] {
+    padding: 1rem !important;
   }
 
   /* Email signup mobile tweaks */
   .email-signup {
-    padding: 1rem;
+    padding: 1.25rem;
     margin: 1.5rem 0;
+    border-radius: 0.75rem;
   }
 
   .email-signup h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .email-signup input[type="email"] {
     font-size: 1rem;
+    padding: 1rem 1.25rem;
+    min-height: 3rem;
+  }
+
+  .email-signup input[type="email"]::placeholder {
+    font-size: 1rem;
+  }
+
+  .email-signup button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    min-height: 3rem;
+    width: 100%;
+  }
+
+  .email-signup-consent {
+    font-size: 0.8125rem;
+    text-align: left;
+    justify-content: flex-start;
   }
 
   /* Buttons full width on mobile */
@@ -263,6 +407,7 @@ code {
     width: 100%;
     justify-content: center;
     padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
   }
 
   /* Better touch targets */
@@ -272,9 +417,22 @@ code {
   }
 
   /* Reduce content padding */
-  .sl-container {
+  .sl-container,
+  main {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  /* Aside boxes on mobile */
+  .sl-aside,
+  aside {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  /* Horizontal rules spacing */
+  hr {
+    margin: 1.5rem 0;
   }
 }
 

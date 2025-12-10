@@ -20,6 +20,7 @@ Transform the existing 31-day week-based course into a focused 4-theme structure
 **Scale/Scope**: 20 labs across 4 themes, 6 reasons pages, simplified landing page
 
 **External API Integrations** (Theme 4 Labs - guidance-only, not embedded):
+
 - **Gamma API**: Presentation generation from Obsidian notes
 - **Gemini API**: Image generation from text prompts
 - **ElevenLabs API**: Text-to-speech audio generation
@@ -28,15 +29,16 @@ Transform the existing 31-day week-based course into a focused 4-theme structure
 
 _GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
-| Principle | Status | Notes |
-|-----------|--------|-------|
-| **I. Learner-First Design** | ✅ PASS | Labs are self-contained, completable in <30 min, no jargon |
-| **II. British English Throughout** | ✅ PASS | All content uses British spellings (colour, organisation, behaviour) |
-| **III. Progressive Disclosure** | ✅ PASS | 4 themes build logically: workspace → content → documents → APIs |
-| **IV. Interactive Learning (Tool-as-Teacher)** | ✅ PASS | Retaining Say/Check/Action pattern in all CLAUDE.md scripts |
-| **V. Spec-Driven Development** | ✅ PASS | Following speckit workflow, this plan precedes implementation |
+| Principle                                      | Status  | Notes                                                                |
+| ---------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| **I. Learner-First Design**                    | ✅ PASS | Labs are self-contained, completable in <30 min, no jargon           |
+| **II. British English Throughout**             | ✅ PASS | All content uses British spellings (colour, organisation, behaviour) |
+| **III. Progressive Disclosure**                | ✅ PASS | 4 themes build logically: workspace → content → documents → APIs     |
+| **IV. Interactive Learning (Tool-as-Teacher)** | ✅ PASS | Retaining Say/Check/Action pattern in all CLAUDE.md scripts          |
+| **V. Spec-Driven Development**                 | ✅ PASS | Following speckit workflow, this plan precedes implementation        |
 
 **Content Standards Compliance:**
+
 - [x] MDX files validate against frontmatter schema
 - [x] Supporting materials use .md extension (Obsidian-compatible)
 - [x] Slash commands follow naming convention: `t{theme}.lb{lab}` pattern
@@ -199,43 +201,43 @@ lesson-modules/
 
 ### Theme 1: Building Your Digital Workspace (Obsidian + Claude Code Foundation)
 
-| New Lab | Old Day | Title | Focus |
-|---------|---------|-------|-------|
-| T1.L1 | Day 1 | First Conversation | Claude Code basics |
-| T1.L2 | Day 2 | PARA Structure | Reusable folder structure for Obsidian |
-| T1.L3 | Day 4 | Document Templates | Building templates for Obsidian |
-| T1.L4 | Day 5 | Metadata Enrichment | Standard metadata for documents |
-| T1.L5 | Day 3 | Project Memory | CLAUDE.md files and context |
+| New Lab | Old Day | Title               | Focus                                  |
+| ------- | ------- | ------------------- | -------------------------------------- |
+| T1.L1   | Day 1   | First Conversation  | Claude Code basics                     |
+| T1.L2   | Day 2   | PARA Structure      | Reusable folder structure for Obsidian |
+| T1.L3   | Day 4   | Document Templates  | Building templates for Obsidian        |
+| T1.L4   | Day 5   | Metadata Enrichment | Standard metadata for documents        |
+| T1.L5   | Day 3   | Project Memory      | CLAUDE.md files and context            |
 
 ### Theme 2: Content Processing (Input → Obsidian Notes)
 
-| New Lab | Old Day | Title | Focus |
-|---------|---------|-------|-------|
-| T2.L1 | Day 8 | Meeting Notes | Meeting transcript → Obsidian note |
-| T2.L2 | Day 9 | Audio Transcripts | Voice memo → Obsidian note |
-| T2.L3 | Day 13 | Email Refinement | Email thread → Obsidian note |
-| T2.L4 | Day 12 | Research Synthesis | Research dump → Obsidian note |
-| T2.L5 | Day 10 | YouTube Extraction | Video content → Obsidian note |
+| New Lab | Old Day | Title              | Focus                              |
+| ------- | ------- | ------------------ | ---------------------------------- |
+| T2.L1   | Day 8   | Meeting Notes      | Meeting transcript → Obsidian note |
+| T2.L2   | Day 9   | Audio Transcripts  | Voice memo → Obsidian note         |
+| T2.L3   | Day 13  | Email Refinement   | Email thread → Obsidian note       |
+| T2.L4   | Day 12  | Research Synthesis | Research dump → Obsidian note      |
+| T2.L5   | Day 10  | YouTube Extraction | Video content → Obsidian note      |
 
 ### Theme 3: Document Creation (Claude Code Skills)
 
-| New Lab | Old Day | Title | Focus |
-|---------|---------|-------|-------|
-| T3.L1 | NEW | DOCX Creation | Using docx skill |
-| T3.L2 | NEW | XLSX Creation | Using xlsx skill |
-| T3.L3 | Day 15 | PPTX Creation | Using pptx skill |
-| T3.L4 | NEW | Brandkit Creation | Using brandkit skill |
-| T3.L5 | NEW | SOW Creation | Statement of work |
+| New Lab | Old Day | Title             | Focus                |
+| ------- | ------- | ----------------- | -------------------- |
+| T3.L1   | NEW     | DOCX Creation     | Using docx skill     |
+| T3.L2   | NEW     | XLSX Creation     | Using xlsx skill     |
+| T3.L3   | Day 15  | PPTX Creation     | Using pptx skill     |
+| T3.L4   | NEW     | Brandkit Creation | Using brandkit skill |
+| T3.L5   | NEW     | SOW Creation      | Statement of work    |
 
 ### Theme 4: External API Integrations
 
-| New Lab | Old Day | Title | Focus |
-|---------|---------|-------|-------|
-| T4.L1 | NEW | Gamma Presentations | Gamma API integration |
-| T4.L2 | Day 16 | Gemini Images | Gemini image generation |
-| T4.L3 | Day 17 | ElevenLabs Audio | Text-to-speech |
-| T4.L4 | Day 22 | PRD Creation | Product Requirements Document |
-| T4.L5 | Day 23 | Product Backlog | Backlog from notes |
+| New Lab | Old Day | Title               | Focus                         |
+| ------- | ------- | ------------------- | ----------------------------- |
+| T4.L1   | NEW     | Gamma Presentations | Gamma API integration         |
+| T4.L2   | Day 16  | Gemini Images       | Gemini image generation       |
+| T4.L3   | Day 17  | ElevenLabs Audio    | Text-to-speech                |
+| T4.L4   | Day 22  | PRD Creation        | Product Requirements Document |
+| T4.L5   | Day 23  | Product Backlog     | Backlog from notes            |
 
 ### Content Removed (No Direct Mapping)
 
@@ -249,10 +251,10 @@ lesson-modules/
 
 No constitutional violations requiring justification. The restructure simplifies from 31 days to 20 labs whilst maintaining the core interactive learning pattern.
 
-| Aspect | Old Structure | New Structure | Rationale |
-|--------|--------------|---------------|-----------|
-| Content units | 31 days + bonus | 20 labs | More focused, eliminates filler |
-| Organisation | 5 weeks | 4 themes | Clearer pillar alignment |
-| Command pattern | `w{week}.d{day}` | `t{theme}.lb{lab}` | Reflects theme-based structure |
-| Blog posts | 6 varied posts | 6 "reasons" | Optimised for social sharing |
-| Getting Started | 3 pages | 4 pages | Added cheat sheet reference |
+| Aspect          | Old Structure    | New Structure      | Rationale                       |
+| --------------- | ---------------- | ------------------ | ------------------------------- |
+| Content units   | 31 days + bonus  | 20 labs            | More focused, eliminates filler |
+| Organisation    | 5 weeks          | 4 themes           | Clearer pillar alignment        |
+| Command pattern | `w{week}.d{day}` | `t{theme}.lb{lab}` | Reflects theme-based structure  |
+| Blog posts      | 6 varied posts   | 6 "reasons"        | Optimised for social sharing    |
+| Getting Started | 3 pages          | 4 pages            | Added cheat sheet reference     |

@@ -54,6 +54,7 @@ This file demonstrates the pattern for detailed teaching scripts that drive the 
 ## Common Questions & Answers
 
 ### Q: [Anticipated question]?
+
 **A:** [Helpful answer]
 
 ---
@@ -70,15 +71,18 @@ This file demonstrates the pattern for detailed teaching scripts that drive the 
 ## Key Sections Explained
 
 ### 1. Header & Role
+
 - Title with lab ID
 - Reference to SCRIPT_INSTRUCTIONS.md
 - Instructor persona (British English, warm, knowledgeable)
 
 ### 2. Learning Objectives
+
 - 3-5 specific, actionable outcomes
 - Use verbs: "process", "create", "identify", "build"
 
 ### 3. Teaching Flow
+
 - Timed steps (total ~20-30 minutes)
 - **Say:** blocks for verbatim instructor dialogue
 - **Check:** blocks as gates (learner must respond)
@@ -86,6 +90,7 @@ This file demonstrates the pattern for detailed teaching scripts that drive the 
 - **Present it like this:** blocks for output formatting
 
 ### 4. Conditional Content
+
 ```markdown
 {ifFirstInTheme:Welcome to Theme 2 - Content Processing!}
 {ifNotFirstInTheme:Welcome back!}
@@ -94,17 +99,20 @@ This file demonstrates the pattern for detailed teaching scripts that drive the 
 ```
 
 ### 5. File References
+
 ```markdown
 - @meeting-notes-raw-1.md (references file in same folder)
 - @template.md (another supporting material)
 ```
 
 ### 6. Common Questions
+
 - Anticipate 3-5 likely questions
 - Provide clear, helpful answers
 - May reference future lessons
 
 ### 7. Success Criteria
+
 - How to know the learner succeeded
 - Used for instructor feedback at end
 
@@ -130,6 +138,7 @@ Today we're tackling something you've probably dealt with: meeting notes that ar
 Create a file called `meeting-processor-template.md` in the current lesson folder with this content:
 
 \`\`\`markdown
+
 # Meeting Notes Processor Template
 
 Use this template whenever you need to process raw meeting notes.
@@ -137,9 +146,10 @@ Use this template whenever you need to process raw meeting notes.
 ## Prompt Template
 
 Read [MEETING_FILE] and extract:
+
 1. **Key Decisions** - What was decided?
 2. **Action Items** - Who needs to do what by when?
-\`\`\`
+   \`\`\`
 ```
 
 ### Check Block Examples
@@ -159,11 +169,13 @@ Read [MEETING_FILE] and extract:
 ## Tone Guidelines
 
 **Do:**
+
 - Use British English ("colour", "recognise", "brilliant")
 - Be warm and encouraging
 - Use phrases like "Right, let's...", "Brilliant!", "Have a look at..."
 
 **Don't:**
+
 - Be condescending
 - Use corporate jargon
 - Over-explain or pad content

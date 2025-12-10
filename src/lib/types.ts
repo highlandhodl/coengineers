@@ -3,7 +3,11 @@
  */
 
 // Valid signup sources
-export type SignupSource = 'website' | 'homepage' | 'community-page' | 'day-page';
+export type SignupSource =
+  | "website"
+  | "homepage"
+  | "community-page"
+  | "day-page";
 
 // Request from subscribe form
 export interface SubscribeRequest {
@@ -41,7 +45,7 @@ export interface Subscriber {
 export interface EmailSend {
   id: string;
   subscriber_id: string;
-  email_type: 'welcome';
+  email_type: "welcome";
   sent_at: string;
   resend_id: string | null;
 }
