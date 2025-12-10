@@ -33,7 +33,7 @@ npm-debug.log*
 # Test coverage
 coverage/
 
-# Docs for me
-docs/
-marketing/
-specs/
+# Docs for me (root level only)
+/docs/
+/marketing/
+/specs/
