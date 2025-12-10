@@ -1,64 +1,52 @@
-# Obsidian Template Examples
+# Template Examples
 
-This document provides example templates for common note types in Obsidian.
+This document provides example templates for common note types. These are simple structures you can copy, fill in, and use repeatedly.
 
 ---
 
 ## Meeting Notes Template
 
 ```markdown
----
-created: { { date } }
-modified: { { date } }
-type: meeting-note
-status: active
-project: { { project } }
-attendees: { { attendees } }
-tags: [meeting, { { project } }]
----
+# Meeting Notes - [Title]
 
-# Meeting Notes - {{title}}
-
-**Date:** {{date}}
-**Duration:** {{duration}}
-**Location:** {{location}}
+**Date:** [Date]
+**Time:** [Start - End]
+**Location:** [Room/Call link]
+**Duration:** [Length]
 
 ## Attendees
 
-- {{attendee1}}
-- {{attendee2}}
+- [Name 1]
+- [Name 2]
+- [Name 3]
 
 ## Agenda
 
-1. {{agenda-item-1}}
-2. {{agenda-item-2}}
+1. [Topic 1]
+2. [Topic 2]
+3. [Topic 3]
 
 ## Discussion Notes
 
-{{discussion}}
+[Write key discussion points here]
 
 ## Decisions Made
 
-- {{decision1}}
-- {{decision2}}
+- [Decision 1]
+- [Decision 2]
 
 ## Action Items
 
-- [ ] {{action1}} - **Owner:** {{owner1}} - **Due:** {{due-date1}}
-- [ ] {{action2}} - **Owner:** {{owner2}} - **Due:** {{due-date2}}
+- [ ] [Action] - Owner: [Name] - Due: [Date]
+- [ ] [Action] - Owner: [Name] - Due: [Date]
 
 ## Next Steps
 
-{{next-steps}}
-
-## Related Notes
-
-- [[{{related-note-1}}]]
-- [[{{related-note-2}}]]
+[What happens next]
 
 ---
 
-**Next Meeting:** {{next-meeting-date}}
+**Next Meeting:** [Date/Time]
 ```
 
 ---
@@ -66,61 +54,53 @@ tags: [meeting, { { project } }]
 ## Daily Note Template
 
 ```markdown
----
-created: { { date } }
-type: daily-note
-mood: { { mood } }
-energy: { { energy-level } }
-tags: [daily]
----
-
-# Daily Note - {{date}}
+# Daily Note - [Date]
 
 ## Morning Intention
 
-{{morning-intention}}
+[What I want to focus on today]
 
 ## Focus for Today
 
-- {{focus1}}
-- {{focus2}}
-- {{focus3}}
+- [Priority 1]
+- [Priority 2]
+- [Priority 3]
 
 ## Time Blocks
 
-**09:00 - 11:00:** {{time-block-1}}
-**11:00 - 13:00:** {{time-block-2}}
-**14:00 - 16:00:** {{time-block-3}}
-**16:00 - 18:00:** {{time-block-4}}
+**09:00 - 11:00:** [Deep work task]
+**11:00 - 13:00:** [Meetings/calls]
+**14:00 - 16:00:** [Project work]
+**16:00 - 18:00:** [Admin/wrap-up]
 
 ## Completed Tasks
 
-- [x] {{completed1}}
-- [x] {{completed2}}
+- [x] [Task 1]
+- [x] [Task 2]
 
 ## In Progress
 
-- [ ] {{in-progress1}}
-- [ ] {{in-progress2}}
+- [ ] [Task 1]
+- [ ] [Task 2]
 
 ## Notes & Ideas
 
-- {{note1}}
-- {{note2}}
+- [Note 1]
+- [Note 2]
 
 ## Gratitude
 
-- {{gratitude1}}
-- {{gratitude2}}
-- {{gratitude3}}
+- [Something good 1]
+- [Something good 2]
+- [Something good 3]
 
 ## Evening Reflection
 
-{{evening-reflection}}
+[How did the day go? What did I learn?]
 
 ---
 
-**Tomorrow's Priority:** {{tomorrow-priority}}
+**Tomorrow's Priority:** [One thing to focus on]
 ```
 
 ---
@@ -128,75 +108,66 @@ tags: [daily]
 ## Project Planning Template
 
 ```markdown
----
-created: { { date } }
-modified: { { date } }
-type: project-note
-status: { { status } }
-project: { { project-name } }
-deadline: { { deadline } }
-priority: { { priority } }
-tags: [project, planning]
----
-
-# Project Plan - {{project-name}}
+# Project Plan - [Project Name]
 
 ## Project Overview
 
-**Goal:** {{goal}}
-**Deadline:** {{deadline}}
-**Status:** {{status}}
-**Priority:** {{priority}}
+**Goal:** [What are we trying to achieve?]
+**Deadline:** [When does it need to be done?]
+**Status:** [Planning/In Progress/On Hold/Complete]
+**Priority:** [High/Medium/Low]
 
 ## Context
 
-{{context}}
+[Why are we doing this project? What's the background?]
 
 ## Objectives
 
-1. {{objective1}}
-2. {{objective2}}
-3. {{objective3}}
+1. [Objective 1]
+2. [Objective 2]
+3. [Objective 3]
 
 ## Key Deliverables
 
-- [ ] {{deliverable1}}
-- [ ] {{deliverable2}}
-- [ ] {{deliverable3}}
+- [ ] [Deliverable 1]
+- [ ] [Deliverable 2]
+- [ ] [Deliverable 3]
 
 ## Milestones
 
-| Milestone      | Target Date | Status      |
-| -------------- | ----------- | ----------- |
-| {{milestone1}} | {{date1}}   | {{status1}} |
-| {{milestone2}} | {{date2}}   | {{status2}} |
+| Milestone   | Target Date | Status      |
+| ----------- | ----------- | ----------- |
+| [Phase 1]   | [Date]      | [Status]    |
+| [Phase 2]   | [Date]      | [Status]    |
+| [Completed] | [Date]      | [Status]    |
 
 ## Stakeholders
 
-- **Project Lead:** {{lead}}
-- **Team Members:** {{team}}
-- **Stakeholders:** {{stakeholders}}
+- **Project Lead:** [Name]
+- **Team Members:** [Names]
+- **Stakeholders:** [Names]
 
 ## Resources Needed
 
-- {{resource1}}
-- {{resource2}}
+- [Resource 1]
+- [Resource 2]
 
 ## Risks & Mitigation
 
-| Risk      | Impact      | Mitigation      |
-| --------- | ----------- | --------------- |
-| {{risk1}} | {{impact1}} | {{mitigation1}} |
+| Risk     | Impact | Mitigation  |
+| -------- | ------ | ----------- |
+| [Risk 1] | High   | [Plan]      |
+| [Risk 2] | Medium | [Plan]      |
 
 ## Success Criteria
 
-- {{criterion1}}
-- {{criterion2}}
+- [Criterion 1]
+- [Criterion 2]
 
 ## Related Notes
 
-- [[{{related1}}]]
-- [[{{related2}}]]
+- [[Related Project]]
+- [[Related Document]]
 ```
 
 ---
@@ -204,72 +175,59 @@ tags: [project, planning]
 ## Book Summary Template
 
 ```markdown
----
-created: { { date } }
-modified: { { date } }
-type: book-summary
-status: { { reading-status } }
-author: { { author } }
-published: { { year } }
-genre: { { genre } }
-rating: { { rating } }
-tags: [book, { { genre } }]
----
+# Book Summary - [Title]
 
-# Book Summary - {{title}}
-
-**Author:** {{author}}
-**Published:** {{year}}
-**Pages:** {{pages}}
-**ISBN:** {{isbn}}
-**Rating:** {{rating}}/5
+**Author:** [Author Name]
+**Published:** [Year]
+**Pages:** [Number]
+**Rating:** [X/5 stars]
 
 ## Key Takeaways
 
-1. {{takeaway1}}
-2. {{takeaway2}}
-3. {{takeaway3}}
+1. [Takeaway 1]
+2. [Takeaway 2]
+3. [Takeaway 3]
 
 ## Main Arguments
 
-{{main-arguments}}
+[What is the book's central thesis? What is it trying to convince you of?]
 
 ## Chapter Summaries
 
-### Chapter 1: {{chapter1-title}}
+### Chapter 1: [Title]
 
-{{chapter1-summary}}
+[Summary]
 
-### Chapter 2: {{chapter2-title}}
+### Chapter 2: [Title]
 
-{{chapter2-summary}}
+[Summary]
 
 ## Quotes & Highlights
 
-> {{quote1}}
-> — Page {{page1}}
+> "[Quote 1]"
+> — Page [Number]
 
-> {{quote2}}
-> — Page {{page2}}
+> "[Quote 2]"
+> — Page [Number]
 
 ## Personal Reflections
 
-{{reflections}}
+[What did you think? Do you agree? How does this connect to what you already know?]
 
 ## How I'll Apply This
 
-- {{application1}}
-- {{application2}}
+- [Application 1]
+- [Application 2]
 
 ## Related Books
 
-- [[{{related-book1}}]]
-- [[{{related-book2}}]]
+- [[Related Book 1]]
+- [[Related Book 2]]
 
 ## Related Topics
 
-- [[{{related-topic1}}]]
-- [[{{related-topic2}}]]
+- [[Topic 1]]
+- [[Topic 2]]
 ```
 
 ---
@@ -277,74 +235,60 @@ tags: [book, { { genre } }]
 ## Decision Log Template
 
 ```markdown
----
-created: { { date } }
-modified: { { date } }
-type: decision-log
-status: { { status } }
-project: { { project } }
-decision-maker: { { decision-maker } }
-tags: [decision, { { project } }]
----
+# Decision Log - [Decision Title]
 
-# Decision Log - {{decision-title}}
-
-**Date:** {{date}}
-**Decision Maker:** {{decision-maker}}
-**Status:** {{status}}
+**Date:** [Date]
+**Decision Maker:** [Name]
+**Status:** [Proposed/Approved/Rejected/Superseded]
 
 ## Context
 
-{{context}}
+[Why is this decision needed? What problem are we solving?]
 
 ## Decision
 
-{{decision}}
+[What was decided?]
 
 ## Options Considered
 
-### Option 1: {{option1}}
+### Option 1: [Name]
 
 **Pros:**
-
-- {{pro1}}
-- {{pro2}}
+- [Pro 1]
+- [Pro 2]
 
 **Cons:**
+- [Con 1]
+- [Con 2]
 
-- {{con1}}
-- {{con2}}
-
-### Option 2: {{option2}}
+### Option 2: [Name]
 
 **Pros:**
-
-- {{pro1}}
-- {{pro2}}
+- [Pro 1]
+- [Pro 2]
 
 **Cons:**
-
-- {{con1}}
-- {{con2}}
+- [Con 1]
+- [Con 2]
 
 ## Rationale
 
-{{rationale}}
+[Why was this option chosen over alternatives?]
 
 ## Consequences
 
-- {{consequence1}}
-- {{consequence2}}
+- [Consequence 1]
+- [Consequence 2]
 
 ## Action Items
 
-- [ ] {{action1}}
-- [ ] {{action2}}
+- [ ] [Action 1]
+- [ ] [Action 2]
 
 ## Related Decisions
 
-- [[{{related-decision1}}]]
-- [[{{related-decision2}}]]
+- [[Previous Decision]]
+- [[Related Decision]]
 ```
 
 ---
@@ -352,76 +296,66 @@ tags: [decision, { { project } }]
 ## Retrospective Template
 
 ```markdown
----
-created: { { date } }
-modified: { { date } }
-type: retrospective
-project: { { project } }
-period: { { period } }
-tags: [retrospective, { { project } }]
----
+# Retrospective - [Project/Sprint Name]
 
-# Retrospective - {{title}}
-
-**Period:** {{period}}
-**Date:** {{date}}
-**Participants:** {{participants}}
+**Period:** [Start Date - End Date]
+**Date:** [Retro Date]
+**Participants:** [Names]
 
 ## What Went Well 🎉
 
-- {{went-well1}}
-- {{went-well2}}
-- {{went-well3}}
+- [Thing 1]
+- [Thing 2]
+- [Thing 3]
 
 ## What Didn't Go Well 🤔
 
-- {{went-wrong1}}
-- {{went-wrong2}}
-- {{went-wrong3}}
+- [Thing 1]
+- [Thing 2]
+- [Thing 3]
 
 ## What We Learned 💡
 
-- {{learned1}}
-- {{learned2}}
-- {{learned3}}
+- [Learning 1]
+- [Learning 2]
+- [Learning 3]
 
 ## Action Items for Next Time
 
-- [ ] {{action1}}
-- [ ] {{action2}}
-- [ ] {{action3}}
+- [ ] [Action 1]
+- [ ] [Action 2]
+- [ ] [Action 3]
 
 ## Metrics
 
-| Metric      | Target      | Actual      | Variance      |
-| ----------- | ----------- | ----------- | ------------- |
-| {{metric1}} | {{target1}} | {{actual1}} | {{variance1}} |
-| {{metric2}} | {{target2}} | {{actual2}} | {{variance2}} |
+| Metric     | Target | Actual | Notes   |
+| ---------- | ------ | ------ | ------- |
+| [Metric 1] | [X]    | [Y]    | [Notes] |
+| [Metric 2] | [X]    | [Y]    | [Notes] |
 
 ## Shoutouts 🙌
 
-- {{shoutout1}}
-- {{shoutout2}}
+- [Recognition 1]
+- [Recognition 2]
 
 ## Related Retrospectives
 
-- [[{{previous-retro}}]]
+- [[Previous Retro]]
 ```
 
 ---
 
 ## How to Use These Templates
 
-1. **Save to Resources/Templates/** - Copy these to your Obsidian vault's template folder
-2. **Enable Templates plugin** - Activate the Core Plugin in Obsidian settings
-3. **Set template folder** - Point Obsidian to Resources/Templates/
-4. **Create hotkey** - Set up a keyboard shortcut for inserting templates
-5. **Fill placeholders** - Replace {{placeholders}} with real values
+1. **Copy the template** - Select the entire template and copy it
+2. **Create a new note** - Make a new file with a descriptive name
+3. **Paste and fill in** - Replace the [bracketed] sections with your actual content
+4. **Delete unused sections** - Remove any sections that don't apply to your use case
+5. **Save and use** - Your template folder becomes a productivity tool
 
 ## Customisation Tips
 
-- Add or remove sections based on your needs
-- Adjust frontmatter fields to match your metadata standards
-- Create variations for different contexts (e.g., Meeting-Notes-Brief vs Meeting-Notes-Detailed)
-- Include dataview queries if you use that plugin
-- Add emoji for visual scanning (optional)
+- **Add or remove sections** - These are starting points, not rules
+- **Create variations** - Meeting-Notes-Brief vs Meeting-Notes-Detailed
+- **Keep it simple** - Only include sections you actually use
+- **Iterate** - Your templates will improve as you use them

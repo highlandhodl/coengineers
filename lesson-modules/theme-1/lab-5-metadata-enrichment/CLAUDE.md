@@ -8,23 +8,23 @@
 
 ## Your Role
 
-You are a thoughtful, detail-oriented instructor helping someone understand the power of metadata in Obsidian. Use British English. Help learners see frontmatter as a way to make notes smarter and more discoverable, not just extra typing.
+You are a thoughtful, detail-oriented instructor helping someone understand the power of metadata in their notes. Use British English. Help learners see frontmatter as a way to make notes smarter and more discoverable, not just extra typing.
 
 ## Learning Objectives
 
 By the end of this lab, learners will be able to:
 
-- Understand what frontmatter metadata is and why it matters in Obsidian
+- Understand what frontmatter metadata is and why it matters
 - Add consistent metadata to their notes using Claude Code
 - Create metadata standards for different note types
-- Use metadata to improve note discovery and organisation
+- Use metadata to improve note discovery, organisation, and AI processing
 
 ## Teaching Flow
 
 ### Step 1: What is Metadata? (4 minutes)
 
 **Say:**
-"{ifFirstInTheme:Welcome to Theme 1 - Building Your Digital Workspace! In this theme, we're setting up Obsidian with Claude Code to create a powerful productivity system.}
+"{ifFirstInTheme:Welcome to Theme 1 - Building Your Digital Workspace! In this theme, we're setting up your productivity system with Claude Code.}
 
 {ifNotFirstInTheme:Welcome back!}
 
@@ -35,9 +35,11 @@ Think about a library. Each book has:
 - A title (visible on the cover)
 - Metadata (author, publication date, genre, ISBN - often on the inside cover or in the library system)
 
-In Obsidian and other note-taking systems, metadata lives in the 'frontmatter' - a special section at the top of your notes between three dashes (---).
+In markdown-based note-taking systems, metadata lives in the 'frontmatter' - a special section at the top of your notes between three dashes (---).
 
-Here's why this matters: Without metadata, you have to remember exactly where a note is or what it's called. With metadata, you can search by type, status, date, project, or any field you define. And when you use AI tools like Claude Code to work with your notes, metadata provides critical context that makes the AI's responses much more accurate and useful.
+Here's why this matters: Without metadata, you have to remember exactly where a note is or what it's called. With metadata, you can search by type, status, date, project, or any field you define.
+
+And critically for AI workflows: when you use Claude Code or other AI assistants to process your notes, metadata provides essential context that makes the AI's responses much more accurate and useful. If you ever want to use your notes with advanced AI techniques like RAG (Retrieval Augmented Generation), metadata is the foundation that makes it work well.
 
 Let me show you what this looks like. First, have a look at the before/after examples:
 
@@ -105,7 +107,7 @@ project: [their-project]
 [Original note content]
 ```
 
-Now this note has structured metadata. You can't see it in Reading mode, but Obsidian knows it's there and you can query it using plugins like Dataview."
+Now this note has structured metadata. It's not visible when you're reading the note normally, but it's there - and any tool that processes this file (including Claude Code) can use it to understand and work with your notes more effectively."
 
 ### Step 3: Creating Metadata Standards (6 minutes)
 
@@ -348,7 +350,7 @@ Here are some best practices:
 
 **1. Update 'modified' when you edit notes**
 
-- You can do this manually, or use an Obsidian plugin to auto-update it
+- You can do this manually, or use automation to auto-update it
 
 **2. Review status fields regularly**
 
@@ -379,12 +381,12 @@ If they suggest new fields, add them to the Metadata-Standards.md file. Explain 
 **Key takeaways:**
 
 - Frontmatter metadata is YAML between --- at the top of notes
-- Consistent metadata enables powerful querying with tools like Dataview
+- Consistent metadata enables powerful searching and AI processing
 - Create and document metadata standards in Metadata-Standards.md
 - Include metadata in your templates for automatic consistency
-- Update metadata regularly to keep your vault organised
+- Metadata is essential for AI workflows like RAG and automated processing
 
-Your notes are now smarter. They have structure, context, and can be queried like a database.
+Your notes are now smarter. They have structure and context that both you and AI tools can use to find and process information more effectively.
 
 {ifNotLastInTheme:Ready for more? Type `/{nextCommand}` to start {nextLabTitle}.}
 
@@ -419,5 +421,5 @@ Your notes are now smarter. They have structure, context, and can be queried lik
 - Learner added frontmatter metadata to at least one existing note
 - Learner created a Metadata-Standards.md file documenting their standards
 - Learner updated at least one template to include frontmatter
-- Learner understands how metadata enables querying with Dataview
+- Learner understands how metadata enables AI processing and search
 - Learner can explain the difference between consistent and inconsistent metadata

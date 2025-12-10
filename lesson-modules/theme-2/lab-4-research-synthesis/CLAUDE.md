@@ -53,10 +53,30 @@ Have a quick read. What's the one insight you'd want to remember from this in si
 
 **Check:** Wait for learner to review and identify key insight
 
-### Step 3: Smart Article Processing (7 minutes)
+### Step 3: See the Example Output (3 minutes)
 
 **Say:**
-"Right, so you've identified the core insight. Now let's systematically extract everything useful from this article.
+"Before we process, let me show you what a properly processed research note looks like. Have a look at the example output:
+
+**Action:**
+Display: `@research-synthesis-example-output.md`
+
+Notice how it's structured:
+- Frontmatter metadata (type, source, topic, confidence, tags)
+- One-sentence summary
+- Key insights extracted and organised
+- Actionable takeaways
+- Related concepts and questions for exploration
+- Personal notes section
+
+This is what we're aiming for - turning passive reading into active knowledge. When you're ready, let's do this ourselves."
+
+**Check:** Wait for learner to confirm they've reviewed the example
+
+### Step 4: Smart Article Processing (7 minutes)
+
+**Say:**
+"Now let's systematically extract everything useful from the article.
 
 Here's a processing prompt that works for most research content:
 
@@ -117,7 +137,7 @@ Read @web-page-content-sample.md and create a structured reading note.
 **Personal note:** [Your own reflection or context]
 ```
 
-### Step 4: Different Content Types (5 minutes)
+### Step 5: Different Content Types (5 minutes)
 
 **Say:**
 "Brilliant! That structure works for most articles, but let's adapt it for different content types.
@@ -149,7 +169,7 @@ For opinion pieces, you'd want:
 
 Always adapt the structure to how you'll actually use the information later."
 
-### Step 5: Multi-Source Research (6 minutes)
+### Step 6: Multi-Source Research (6 minutes)
 
 **Say:**
 "Now here's where this gets powerful: research synthesis across multiple sources.
@@ -188,7 +208,7 @@ The pattern is:
 
 This is how you turn reading into actual learning."
 
-### Step 6: The Personal Knowledge Base Pattern (5 minutes)
+### Step 7: The Personal Knowledge Base Pattern (5 minutes)
 
 **Say:**
 "One more pattern I want to show you: building a personal knowledge base.
@@ -214,7 +234,7 @@ Create an enhanced reading note showing how this content would connect to a hypo
 
 Tools like Obsidian, Notion, or even a well-organised folder of markdown files work brilliantly for this. The key is consistent processing, not the tool itself."
 
-### Step 7: Wrap-up (2 minutes)
+### Step 8: Wrap-up (2 minutes)
 
 **Say:**
 "That's Lab 4 complete! You can now turn research and web content into reusable knowledge.

@@ -46,10 +46,50 @@ What do you notice about trying to scan this for useful information?"
 
 **Check:** Wait for learner to review and share observations
 
-### Step 3: Basic Extraction (7 minutes)
+### Step 3: See the Example Output (4 minutes)
 
 **Say:**
-"Right, so raw transcripts are hard to scan. Let's fix that.
+"Before we process, let me show you what a properly processed video note looks like - and importantly, how to organise these in your knowledge base.
+
+**Action:**
+Display: `@youtube-extraction-example-output.md`
+
+Notice several things:
+
+**The structure:**
+- Frontmatter metadata (type, source, channel, url, duration, tags)
+- Video summary capturing the main thesis
+- Key concepts extracted and explained
+- Timestamps for jumping to specific sections
+- Quotes worth saving
+- Action items from the content
+- Personal takeaways section
+
+**The folder organisation:**
+Look at the 'Suggested Obsidian Folder Structure' section. For video notes, a good pattern is:
+
+```
+Resources/
+├── Videos/
+│   ├── Productivity/
+│   │   ├── Building a Second Brain - Complete Overview.md
+│   │   └── PARA Method Deep Dive.md
+│   ├── Technology/
+│   │   └── Claude Code Introduction.md
+│   └── Business/
+│       └── Startup Fundraising Basics.md
+```
+
+Videos grouped by topic under Resources, following your PARA structure. This keeps related content together and makes it easy to find.
+
+When you're ready, let's create something similar."
+
+**Check:** Wait for learner to confirm they've reviewed the example
+
+### Step 4: Basic Extraction (7 minutes)
+
+**Say:**
+"Now let's fix that hard-to-scan transcript.
 
 Here's your first extraction prompt. Ask me to:
 
@@ -103,7 +143,7 @@ Read @youtube-transcript-sample.md and extract the structured information.
 **Worth watching?** [Your assessment based on content quality and relevance]
 ```
 
-### Step 4: Different Video Types (6 minutes)
+### Step 5: Different Video Types (6 minutes)
 
 **Say:**
 "Brilliant! Now, different videos need different extraction patterns.
@@ -128,7 +168,7 @@ Process the transcript again with the technical conference-focused lens. Show ho
 - Are you researching a topic? (Conference format)
 - Are you understanding perspectives? (Interview format)"
 
-### Step 5: Time-Stamped Navigation (5 minutes)
+### Step 6: Time-Stamped Navigation (5 minutes)
 
 **Say:**
 "Now here's something clever. Sometimes you DO want to watch parts of the video, just not all of it.
@@ -151,7 +191,7 @@ Particularly useful for:
 - Podcast interviews (jump to the topic you care about)
 - Conference talks (jump to the case study or demo)"
 
-### Step 6: Comparative Analysis (5 minutes)
+### Step 7: Comparative Analysis (5 minutes)
 
 **Say:**
 "One more powerful technique: comparing multiple videos on the same topic.
@@ -176,7 +216,7 @@ Here's the pattern:
 3. Get a synthesis showing agreements, disagreements, and unique contributions
 4. Watch the full videos only if you need deeper detail"
 
-### Step 7: Wrap-up (2 minutes)
+### Step 8: Wrap-up (2 minutes)
 
 **Say:**
 "That's Lab 5 complete - and that's the end of Theme 2! You can now extract insights from video content at speed.
@@ -186,6 +226,7 @@ Here's the pattern:
 - Video transcripts let you learn without linear watching
 - Different video types need different extraction structures
 - Timestamps let you jump to key moments in the original video
+- Organise video notes in Resources/Videos/ with topic subfolders
 - Comparative analysis across multiple videos is powerful for research
 - Always specify what you're trying to learn or accomplish
 

@@ -49,10 +49,28 @@ Take 2-3 minutes to skim through these. Notice what's clear and what's confusing
 
 **Check:** Wait for learner to review files and share observations
 
-### Step 3: Process the First Meeting (8 minutes)
+### Step 3: See the Example Output (3 minutes)
 
 **Say:**
-"Brilliant observations. Now let's process the first one together - the product roadmap discussion.
+"Before we process, let me show you what a properly processed meeting note looks like. Have a look at the example output file:
+
+**Action:**
+Display: `@meeting-notes-example-output.md`
+
+Notice how it's structured:
+- Frontmatter metadata at the top (type, project, attendees, tags)
+- Clear sections for decisions, action items, discussion summary
+- Action items in a table with owner and due date
+- Open questions captured separately
+
+This is what we're aiming for. When you're ready, let's create something similar from the raw notes."
+
+**Check:** Wait for learner to confirm they've reviewed the example
+
+### Step 4: Process the First Meeting (8 minutes)
+
+**Say:**
+"Now let's process the first raw meeting notes together - the product roadmap discussion.
 
 Here's what I want you to ask me to do:
 
@@ -96,7 +114,7 @@ Read @meeting-notes-raw-1.md and extract the structured information as requested
 **Agenda:** [Topics to cover]
 ```
 
-### Step 4: Pattern Recognition (5 minutes)
+### Step 5: Pattern Recognition (5 minutes)
 
 **Say:**
 "See how that works? We took rambling notes and extracted the critical information. The structure makes it immediately actionable.
@@ -110,7 +128,7 @@ Type out your prompt and I'll execute it for you."
 **Action:**
 Execute the learner's prompt against @meeting-notes-raw-2.md. If their prompt is unclear or missing key elements, gently suggest improvements before processing.
 
-### Step 5: Build a Reusable Template (6 minutes)
+### Step 6: Build a Reusable Template (6 minutes)
 
 **Say:**
 "Excellent! Now let's make this repeatable. You don't want to rewrite this prompt every time you have meeting notes.
@@ -155,7 +173,7 @@ Format as a clean summary suitable for sharing with the team.
 
 **Check:** Wait for learner to process the third file
 
-### Step 6: Real-World Application (4 minutes)
+### Step 7: Real-World Application (4 minutes)
 
 **Say:**
 "Brilliant work! You've now processed three different types of meetings, each with slightly different needs.
@@ -178,7 +196,7 @@ One more thing: You can process multiple meeting files at once. Just list them i
 
 Handy for weekly roundups or sprint retrospectives."
 
-### Step 7: Wrap-up (2 minutes)
+### Step 8: Wrap-up (2 minutes)
 
 **Say:**
 "That's Lab 1 complete! You've learnt how to transform chaotic meeting notes into clear, actionable summaries.

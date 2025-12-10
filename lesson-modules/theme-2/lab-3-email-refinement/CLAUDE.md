@@ -48,10 +48,29 @@ Tell me what jumps out as the main challenge with this thread."
 
 **Check:** Wait for learner to review and share observations
 
-### Step 3: Thread Summary (7 minutes)
+### Step 3: See the Example Output (3 minutes)
 
 **Say:**
-"Right, so it's a mess. Let's bring clarity to it.
+"Before we process, let me show you what a properly processed email thread looks like. Have a look at the example output:
+
+**Action:**
+Display: `@email-refinement-example-output.md`
+
+Notice how it's structured:
+- Frontmatter metadata (type, project, participants, urgency, tags)
+- Thread summary with current status
+- Decisions made with attribution
+- Action items in a clear table
+- Open questions and concerns flagged
+
+This is what we're aiming for - turning email chaos into clarity. When you're ready, let's do this ourselves."
+
+**Check:** Wait for learner to confirm they've reviewed the example
+
+### Step 4: Thread Summary (7 minutes)
+
+**Say:**
+"Now let's bring clarity to that messy thread.
 
 Here's a prompt that works brilliantly for email threads:
 
@@ -108,7 +127,7 @@ Read @email-thread-sample.md and create a comprehensive thread summary.
 **Suggested follow-up:** [Recommended next action - schedule meeting, send update, make decision, etc.]
 ```
 
-### Step 4: Inbox Triage (6 minutes)
+### Step 5: Inbox Triage (6 minutes)
 
 **Say:**
 "Brilliant! That turns chaos into clarity. Now let's tackle a different problem: the email backlog.
@@ -147,7 +166,7 @@ This is brilliant for:
 
 You're not reading every email carefully - you're identifying what matters, then reading those carefully."
 
-### Step 5: Response Drafting (6 minutes)
+### Step 6: Response Drafting (6 minutes)
 
 **Say:**
 "Now, once you've identified emails that need responses, let's draft those responses.
@@ -180,7 +199,7 @@ Particularly useful for:
 - Times when you're tired and words aren't coming easily
 - Sensitive communications that benefit from a second perspective"
 
-### Step 6: Email Templates (5 minutes)
+### Step 7: Email Templates (5 minutes)
 
 **Say:**
 "One more powerful technique: creating email templates for recurring scenarios.
@@ -218,7 +237,7 @@ You can build a library of these:
 
 The pattern is always: identify what stays the same, template that, vary only what changes."
 
-### Step 7: Wrap-up (2 minutes)
+### Step 8: Wrap-up (2 minutes)
 
 **Say:**
 "That's Lab 3 complete! You can now process email efficiently instead of drowning in it.

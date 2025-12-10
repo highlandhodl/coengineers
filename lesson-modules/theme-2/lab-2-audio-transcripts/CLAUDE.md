@@ -47,10 +47,29 @@ When you're ready, tell me what you notice about the structure - or lack of it!"
 
 **Check:** Wait for learner to review and share observations
 
-### Step 3: First Transformation (7 minutes)
+### Step 3: See the Example Output (3 minutes)
 
 **Say:**
-"Right, so you've seen the chaos. Now let's bring order to it.
+"Before we transform, let me show you what a properly processed voice memo looks like. Have a look at the example output:
+
+**Action:**
+Display: `@audio-transcript-example-output.md`
+
+Notice how it's structured:
+- Frontmatter metadata (type, project, source, duration, speaker, tags)
+- Key ideas extracted and organised
+- Action items clearly listed
+- Raw thoughts preserved for reference
+- Related notes and next steps
+
+This is what we're aiming for - turning stream-of-consciousness into structured, actionable notes. When you're ready, let's do this ourselves."
+
+**Check:** Wait for learner to confirm they've reviewed the example
+
+### Step 4: First Transformation (7 minutes)
+
+**Say:**
+"Now let's bring order to the chaos.
 
 Here's what makes voice-to-text cleanup different from other processing:
 
@@ -90,7 +109,7 @@ Read @voice-memo-transcript-1.md and process according to the learner's request.
 **Note:** Transcribed and cleaned from voice memo recorded [date if available]
 ```
 
-### Step 4: Understand the Techniques (5 minutes)
+### Step 5: Understand the Techniques (5 minutes)
 
 **Say:**
 "See what happened there? Let me break down the transformation:
@@ -110,7 +129,7 @@ Now your turn: Process the second transcript (@voice-memo-transcript-2.md). This
 **Action:**
 Execute the learner's prompt. If they haven't considered the technical-specific elements, suggest additions before processing.
 
-### Step 5: Different Cleanup Levels (5 minutes)
+### Step 6: Different Cleanup Levels (5 minutes)
 
 **Say:**
 "Brilliant! Now here's something important: not all transcripts need the same level of cleanup.
@@ -149,7 +168,7 @@ Which level do you think works best for the technical bug investigation you just
 
 **Check:** Wait for learner's response and brief discussion
 
-### Step 6: Batch Processing (4 minutes)
+### Step 7: Batch Processing (4 minutes)
 
 **Say:**
 "One more powerful technique: processing multiple voice memos at once to find themes.
@@ -171,7 +190,7 @@ Read both @voice-memo-transcript-1.md and @voice-memo-transcript-2.md and presen
 
 You're finding signal in noise at scale."
 
-### Step 7: Wrap-up (2 minutes)
+### Step 8: Wrap-up (2 minutes)
 
 **Say:**
 "That's Lab 2 complete! You can now transform messy voice transcriptions into polished content.
